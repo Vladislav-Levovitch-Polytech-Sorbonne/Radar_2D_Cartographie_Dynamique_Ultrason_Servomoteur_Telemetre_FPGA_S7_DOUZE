@@ -1,0 +1,89 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\vladi\Desktop\Elec\Architecture SE\Radar_2D_Vlad\simu\Telemetre
+Ede10_lite_telemetre_us_to_cm
+Z1 w1732874587
+Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 8../../src/DE10_Lite_Telemetre_us_to_cm.vhd
+Z5 F../../src/DE10_Lite_Telemetre_us_to_cm.vhd
+l0
+L5
+VnjZFU`lnOPM:=ZjB5?diK2
+Z6 OV;C;6.5b;42
+31
+Z7 o-93 -O0
+Z8 tExplicit 1
+!s100 >iX:^_h`bP40L=i@h6Hd;2
+Artl
+R2
+R3
+DEx4 work 28 de10_lite_telemetre_us_to_cm 0 22 njZFU`lnOPM:=ZjB5?diK2
+l27
+L17
+Vhl0_iIN8ldg^JWYAAlg9?3
+R6
+31
+Z9 Mx2 4 ieee 14 std_logic_1164
+Z10 Mx1 4 ieee 11 numeric_std
+R7
+R8
+!s100 K3j=fl2V>Ae<G2N]cP0]20
+Etelemetre_hc_sr04
+Z11 w1732868707
+R2
+R3
+Z12 8../../src/DE10-Lite_Telemetre_us_to_cm.vhd
+Z13 F../../src/DE10-Lite_Telemetre_us_to_cm.vhd
+l0
+L5
+VVPR0KBU;9GmY]ZE=dSfja0
+R6
+31
+R7
+R8
+!s100 oYnLA8zh?Z[HO7^EcO>_I3
+Artl
+R2
+R3
+DEx4 work 17 telemetre_hc_sr04 0 22 VPR0KBU;9GmY]ZE=dSfja0
+l27
+L17
+VomHYV@DM0ZUMA5i<h`HVX3
+R6
+31
+R9
+R10
+R7
+R8
+!s100 W1E2U]5BzefQ[oG_9E0P43
+Etest_bench_de10_lite_telemetre_us_to_cm_entity
+Z14 w1732869764
+R2
+R3
+Z15 8DE10-Lite_Telemetre_us_to_cm_TEST_BENCH.vhdl
+Z16 FDE10-Lite_Telemetre_us_to_cm_TEST_BENCH.vhdl
+l0
+L5
+Va7H=>K<O:M6RYcYl3F5W93
+!s100 CS1A4WNdD14l@I4KT2A>m1
+R6
+31
+R7
+R8
+Atest_bench_de10_lite_telemetre_us_to_cm_architecture
+R2
+R3
+Z17 DEx4 work 46 test_bench_de10_lite_telemetre_us_to_cm_entity 0 22 a7H=>K<O:M6RYcYl3F5W93
+l28
+L8
+Z18 Vz>EGo_^F@3za1UOUOT9`U3
+Z19 !s100 =Wkf^6;aJclU>3kYQ[jcK3
+R6
+31
+R9
+R10
+R7
+R8

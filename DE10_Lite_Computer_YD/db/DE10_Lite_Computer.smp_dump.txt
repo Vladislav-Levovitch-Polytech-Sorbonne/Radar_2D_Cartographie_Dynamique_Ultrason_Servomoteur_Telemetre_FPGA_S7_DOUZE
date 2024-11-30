@@ -1,0 +1,102 @@
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_VGA_Subsystem:vga_subsystem|Computer_System_VGA_Subsystem_VGA_Pixel_Scaler:vga_pixel_scaler|altera_up_video_scaler_multiply_height:Multiply_Height|s_multiply_height
+Name s_multiply_height.STATE_0_GET_CURRENT_LINE s_multiply_height.STATE_2_OUTPUT_LAST_LINE s_multiply_height.STATE_1_LOOP_FIFO 
+s_multiply_height.STATE_0_GET_CURRENT_LINE 0 0 0 
+s_multiply_height.STATE_1_LOOP_FIFO 1 0 1 
+s_multiply_height.STATE_2_OUTPUT_LAST_LINE 1 1 0 
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_VGA_Subsystem:vga_subsystem|Computer_System_VGA_Subsystem_VGA_Pixel_DMA:vga_pixel_dma|altera_up_video_dma_to_stream:From_Memory_to_Stream|s_dma_to_stream
+Name s_dma_to_stream.STATE_3_MAX_PENDING_READS_STALL s_dma_to_stream.STATE_2_READ_BUFFER s_dma_to_stream.STATE_1_WAIT_FOR_LAST_PIXEL s_dma_to_stream.STATE_0_IDLE 
+s_dma_to_stream.STATE_0_IDLE 0 0 0 0 
+s_dma_to_stream.STATE_1_WAIT_FOR_LAST_PIXEL 0 0 1 1 
+s_dma_to_stream.STATE_2_READ_BUFFER 0 1 0 1 
+s_dma_to_stream.STATE_3_MAX_PENDING_READS_STALL 1 0 0 1 
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_VGA_Subsystem:vga_subsystem|Computer_System_VGA_Subsystem_Char_Buf_Subsystem:char_buf_subsystem|Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Char_Buf_Scaler:char_buf_scaler|altera_up_video_scaler_multiply_height:Multiply_Height|s_multiply_height
+Name s_multiply_height.STATE_0_GET_CURRENT_LINE s_multiply_height.STATE_2_OUTPUT_LAST_LINE s_multiply_height.STATE_1_LOOP_FIFO 
+s_multiply_height.STATE_0_GET_CURRENT_LINE 0 0 0 
+s_multiply_height.STATE_1_LOOP_FIFO 1 0 1 
+s_multiply_height.STATE_2_OUTPUT_LAST_LINE 1 1 0 
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_VGA_Subsystem:vga_subsystem|Computer_System_VGA_Subsystem_Char_Buf_Subsystem:char_buf_subsystem|Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Char_Buf_DMA:char_buf_dma|altera_up_video_dma_to_stream:From_Memory_to_Stream|s_dma_to_stream
+Name s_dma_to_stream.STATE_3_MAX_PENDING_READS_STALL s_dma_to_stream.STATE_2_READ_BUFFER s_dma_to_stream.STATE_1_WAIT_FOR_LAST_PIXEL s_dma_to_stream.STATE_0_IDLE 
+s_dma_to_stream.STATE_0_IDLE 0 0 0 0 
+s_dma_to_stream.STATE_1_WAIT_FOR_LAST_PIXEL 0 0 1 1 
+s_dma_to_stream.STATE_2_READ_BUFFER 0 1 0 1 
+s_dma_to_stream.STATE_3_MAX_PENDING_READS_STALL 1 0 0 1 
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_SDRAM:sdram|m_next
+Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
+m_next.000000001 0 0 0 0 
+m_next.000001000 0 0 1 1 
+m_next.000010000 0 1 0 1 
+m_next.010000000 1 0 0 1 
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_SDRAM:sdram|m_state
+Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
+m_state.000000001 0 0 0 0 0 0 0 0 0 
+m_state.000000010 0 0 0 0 0 0 0 1 1 
+m_state.000000100 0 0 0 0 0 0 1 0 1 
+m_state.000001000 0 0 0 0 0 1 0 0 1 
+m_state.000010000 0 0 0 0 1 0 0 0 1 
+m_state.000100000 0 0 0 1 0 0 0 0 1 
+m_state.001000000 0 0 1 0 0 0 0 0 1 
+m_state.010000000 0 1 0 0 0 0 0 0 1 
+m_state.100000000 1 0 0 0 0 0 0 0 1 
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_SDRAM:sdram|i_next
+Name i_next.111 i_next.101 i_next.010 i_next.000 
+i_next.000 0 0 0 0 
+i_next.010 0 0 1 1 
+i_next.101 0 1 0 1 
+i_next.111 1 0 0 1 
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_SDRAM:sdram|i_state
+Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
+i_state.000 0 0 0 0 0 0 
+i_state.001 0 0 0 0 1 1 
+i_state.010 0 0 0 1 0 1 
+i_state.011 0 0 1 0 0 1 
+i_state.101 0 1 0 0 0 1 
+i_state.111 1 0 0 0 0 1 
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_Nios2:nios2|Computer_System_Nios2_cpu:cpu|Computer_System_Nios2_cpu_nios2_oci:the_Computer_System_Nios2_cpu_nios2_oci|Computer_System_Nios2_cpu_debug_slave_wrapper:the_Computer_System_Nios2_cpu_debug_slave_wrapper|Computer_System_Nios2_cpu_debug_slave_tck:the_Computer_System_Nios2_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_JTAG_to_FPGA_Bridge:jtag_to_fpga_bridge|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|state
+Name state.READ_SEND_WAIT state.READ_SEND_ISSUE state.READ_DATA_WAIT state.READ_CMD_WAIT state.READ_ASSERT state.RETURN_PACKET state.WRITE_WAIT state.GET_WRITE_DATA state.GET_ADDR4 state.GET_ADDR3 state.GET_ADDR2 state.GET_ADDR1 state.GET_SIZE2 state.GET_SIZE1 state.GET_EXTRA state.0000 
+state.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.GET_EXTRA 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.GET_SIZE1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.GET_SIZE2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.GET_ADDR1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.GET_ADDR2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.GET_ADDR3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.GET_ADDR4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.GET_WRITE_DATA 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.WRITE_WAIT 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.RETURN_PACKET 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.READ_ASSERT 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_CMD_WAIT 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_DATA_WAIT 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_ISSUE 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_WAIT 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_JTAG_to_FPGA_Bridge:jtag_to_fpga_bridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|read_state
+Name read_state.ST_HEADER read_state.ST_READ_DATA read_state.ST_PADDED 
+read_state.ST_HEADER 0 0 0 
+read_state.ST_PADDED 1 0 1 
+read_state.ST_READ_DATA 1 1 0 
+
+State Machine - |DE10_Lite_Computer|Computer_System:The_System|Computer_System_JTAG_to_FPGA_Bridge:jtag_to_fpga_bridge|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|write_state
+Name write_state.ST_WRITE_DATA write_state.ST_HEADER_2 write_state.ST_HEADER_1 write_state.ST_BYPASS 
+write_state.ST_BYPASS 0 0 0 0 
+write_state.ST_HEADER_1 0 0 1 1 
+write_state.ST_HEADER_2 0 1 0 1 
+write_state.ST_WRITE_DATA 1 0 0 1 

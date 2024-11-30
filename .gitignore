@@ -1,0 +1,15 @@
+DE10_Lite_Computer_YD/db/DE10_Lite_Computer.quiproj.14824.rdr.flock
+
+# Ignore les fichiers de simulation
+simu/Telemetre_Avalon/*.wlf
+simu/Telemetre_Avalon/*.wlft*
+simu/Telemetre/*.wlf
+
+simu/Telemetre_Avalon/wlftk6nq6y
+simu/Telemetre_Avalon/wlftxg2gg3
+simu/Telemetre_Avalon/wlftzfqk0n
+simu/Telemetre/vsim.wlf
+simu/Telemetre_Avalon/vsim.wlf
+simu/Telemetre_Avalon/wlft91bjbq
+simu/Telemetre_Avalon/wlftc85cfe
+simu/Telemetre_Avalon/wlftg4w27g 
