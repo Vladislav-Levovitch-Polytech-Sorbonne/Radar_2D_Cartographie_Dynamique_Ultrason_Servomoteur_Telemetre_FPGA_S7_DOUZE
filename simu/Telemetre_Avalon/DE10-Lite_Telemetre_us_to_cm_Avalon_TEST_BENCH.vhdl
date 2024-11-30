@@ -53,19 +53,22 @@ begin
         SIGNAL_Test_Bench_telemetre_Avalon_Rst_n <= '1';
 
         -- Test Calcule distance simple apres 1er trig
+        assert SIGNAL_Test_Bench_telemetre_Avalon_readdata = "00000000000000000000000000000000" report "Etat init" severity error;
         wait until SIGNAL_Test_Bench_telemetre_Avalon_trig = '1';
         wait for 2 ms;
 
-        -- Signal pour démarrer le calcul, active chipselect pour le périphérique
-        SIGNAL_Test_Bench_telemetre_Avalon_chipselect <= '1';
-        SIGNAL_Test_Bench_telemetre_Avalon_read_n <= '1';  -- Operation d'écriture
-
+        -- Activation chipselect pour le peripherique
+        SIGNAL_Test_Bench_telemetre_Avalon_chipselect <= '1'; -- Ecriture ON
         SIGNAL_Test_Bench_telemetre_Avalon_echo <= '1';
+        assert SIGNAL_Test_Bench_telemetre_Avalon_readdata = "00000000000000000000000000000000" report "Ecriture 0 + MAJ 0 Lecture 1" severity error;
+
         wait for 2 ms; -- 
         SIGNAL_Test_Bench_telemetre_Avalon_echo <= '0';
+        wait for 3 ms;
+        SIGNAL_Test_Bench_telemetre_Avalon_read_n <= '1';  -- Operation d ecriture
         wait for 10 ms;
         assert SIGNAL_Test_Bench_telemetre_Avalon_Dist_cm = "0000100001" report "Test 33cm" severity error;
-        assert SIGNAL_Test_Bench_telemetre_Avalon_readdata = "00000000000000000000000000000000" report "Pas Lecture 1" severity error;
+        assert SIGNAL_Test_Bench_telemetre_Avalon_readdata = "00000000000000000000000000100001" report "Ecriture 1 + MAJ 1 Lecture 2" severity error;
 
         -- Test Calcule distance avant RESET 
         wait until SIGNAL_Test_Bench_telemetre_Avalon_trig = '1';
@@ -76,7 +79,7 @@ begin
         SIGNAL_Test_Bench_telemetre_Avalon_echo <= '0';
         wait for 10 ms;
         assert SIGNAL_Test_Bench_telemetre_Avalon_Dist_cm = "0001010010" report "Test 82cm" severity error;
-        assert SIGNAL_Test_Bench_telemetre_Avalon_readdata = "00000000000000000000000000000000" report "Pas Lecture 2" severity error;
+        assert SIGNAL_Test_Bench_telemetre_Avalon_readdata = "00000000000000000000000000100001" report "Ecriture 1 + sans MAJ Lecture 3" severity error;
 
         -- Test interruption avec RESET
         SIGNAL_Test_Bench_telemetre_Avalon_Rst_n <= '0';
