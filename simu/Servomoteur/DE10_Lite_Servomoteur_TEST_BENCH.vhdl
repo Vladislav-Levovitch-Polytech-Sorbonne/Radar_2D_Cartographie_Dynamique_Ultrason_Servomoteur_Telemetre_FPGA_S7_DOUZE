@@ -51,18 +51,54 @@ begin
         SIGNAL_Test_Bench_Servomoteur_reset_n <= '0';
         wait for 200 ns;
         SIGNAL_Test_Bench_Servomoteur_reset_n <= '1';
-
+-- Test Position caracteristique de T_commande, peridode de commande connues 
+        -- Position 900 * 0.1° = 90°
         SIGNAL_Test_Bench_Servomoteur_position <= "1110000100";
-        wait for 10 ms;
+        wait for 1 ms;
+        wait until SIGNAL_Test_Bench_Servomoteur_commande = '1'; -- Debut commande 
+        wait until SIGNAL_Test_Bench_Servomoteur_commande = '0'; -- Fin commande 
+        wait for 5 ms;
 
+        -- Position 45 * 0.1° = 45°
         SIGNAL_Test_Bench_Servomoteur_position <= "0111000010"; -- >> 1 div 900 par 2 = 450 * 0.1° = 45°
-        wait for 10 ms;
+        wait for 1 ms;
+        wait until SIGNAL_Test_Bench_Servomoteur_commande = '1'; -- Debut commande 
+        wait until SIGNAL_Test_Bench_Servomoteur_commande = '0'; -- Fin commande 
+        wait for 5 ms;
 
+        -- Position 0 * 0.1° = 0°
         SIGNAL_Test_Bench_Servomoteur_position <= ( others => '0' );
-        wait for 10 ms;
-        --assert SIGNAL_Test_Bench_telemetre_Dist_cm = "0000000011" report "Test 3cm" severity error;
+        wait for 1 ms;
+        wait until SIGNAL_Test_Bench_Servomoteur_commande = '1'; -- Debut commande 
+        wait until SIGNAL_Test_Bench_Servomoteur_commande = '0'; -- Fin commande 
+        wait for 5 ms;
 
-        wait for 30ms;
+-- Test Position angulaire a decimale de T_commande 
+        -- Position 324 * 0.1° = 32,4°
+        SIGNAL_Test_Bench_Servomoteur_position <= "0101000100";
+        wait for 1 ms;
+        wait until SIGNAL_Test_Bench_Servomoteur_commande = '1'; -- Debut commande 
+        wait for 1 ms; -- 0 ° = 1ms 
+        wait for 356 us; -- 354 * 1,1us = 356,4us
+        assert SIGNAL_Test_Bench_Servomoteur_commande = '1' report "32,4°" severity error;
+        wait for 1 us; -- 354 * 1,1us = 356,4us
+        assert SIGNAL_Test_Bench_Servomoteur_commande = '0' report "32,4°" severity error;
+
+-- Test Reset not
+        wait until SIGNAL_Test_Bench_Servomoteur_commande = '1'; -- Debut commande 
+        wait for 1 ms;
+        SIGNAL_Test_Bench_Servomoteur_reset_n <= '0'; -- Interruption Commande
+        wait for 3 ms;
+        SIGNAL_Test_Bench_Servomoteur_reset_n <= '1'; -- Fin d interruption Commande
+
+        wait for 20ms;
+-- Test du plafond de verre
+        -- Position 900> * 0.1° = 90°
+        SIGNAL_Test_Bench_Servomoteur_position <= ( others => '1' );
+        wait for 1 ms;
+        wait until SIGNAL_Test_Bench_Servomoteur_commande = '1'; -- Debut commande 
+        wait until SIGNAL_Test_Bench_Servomoteur_commande = '0'; -- Fin commande 
+        wait for 5 ms;
         wait;
     end process;
 end test_bench_DE10_Lite_Servomoteur_architecture;
