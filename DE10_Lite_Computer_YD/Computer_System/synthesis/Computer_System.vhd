@@ -8,35 +8,37 @@ use IEEE.numeric_std.all;
 
 entity Computer_System is
 	port (
-		arduino_gpio_export        : inout std_logic_vector(15 downto 0) := (others => '0'); --         arduino_gpio.export
-		arduino_reset_n_export     : out   std_logic;                                        --      arduino_reset_n.export
-		hex3_hex0_export           : out   std_logic_vector(31 downto 0);                    --            hex3_hex0.export
-		hex5_hex4_export           : out   std_logic_vector(15 downto 0);                    --            hex5_hex4.export
-		leds_export                : out   std_logic_vector(9 downto 0);                     --                 leds.export
-		pushbuttons_export         : in    std_logic_vector(1 downto 0)  := (others => '0'); --          pushbuttons.export
-		sdram_addr                 : out   std_logic_vector(12 downto 0);                    --                sdram.addr
-		sdram_ba                   : out   std_logic_vector(1 downto 0);                     --                     .ba
-		sdram_cas_n                : out   std_logic;                                        --                     .cas_n
-		sdram_cke                  : out   std_logic;                                        --                     .cke
-		sdram_cs_n                 : out   std_logic;                                        --                     .cs_n
-		sdram_dq                   : inout std_logic_vector(15 downto 0) := (others => '0'); --                     .dq
-		sdram_dqm                  : out   std_logic_vector(1 downto 0);                     --                     .dqm
-		sdram_ras_n                : out   std_logic;                                        --                     .ras_n
-		sdram_we_n                 : out   std_logic;                                        --                     .we_n
-		sdram_clk_clk              : out   std_logic;                                        --            sdram_clk.clk
-		slider_switches_export     : in    std_logic_vector(9 downto 0)  := (others => '0'); --      slider_switches.export
-		system_pll_ref_clk_clk     : in    std_logic                     := '0';             --   system_pll_ref_clk.clk
-		system_pll_ref_reset_reset : in    std_logic                     := '0';             -- system_pll_ref_reset.reset
-		vga_CLK                    : out   std_logic;                                        --                  vga.CLK
-		vga_HS                     : out   std_logic;                                        --                     .HS
-		vga_VS                     : out   std_logic;                                        --                     .VS
-		vga_BLANK                  : out   std_logic;                                        --                     .BLANK
-		vga_SYNC                   : out   std_logic;                                        --                     .SYNC
-		vga_R                      : out   std_logic_vector(3 downto 0);                     --                     .R
-		vga_G                      : out   std_logic_vector(3 downto 0);                     --                     .G
-		vga_B                      : out   std_logic_vector(3 downto 0);                     --                     .B
-		video_pll_ref_clk_clk      : in    std_logic                     := '0';             --    video_pll_ref_clk.clk
-		video_pll_ref_reset_reset  : in    std_logic                     := '0'              --  video_pll_ref_reset.reset
+		arduino_gpio_export                          : inout std_logic_vector(15 downto 0) := (others => '0'); --            arduino_gpio.export
+		arduino_reset_n_export                       : out   std_logic;                                        --         arduino_reset_n.export
+		avalon_telemetre_output_writeresponsevalid_n : out   std_logic;                                        -- avalon_telemetre_output.writeresponsevalid_n
+		avalon_telemetre_output_beginbursttransfer   : in    std_logic                     := '0';             --                        .beginbursttransfer
+		hex3_hex0_export                             : out   std_logic_vector(31 downto 0);                    --               hex3_hex0.export
+		hex5_hex4_export                             : out   std_logic_vector(15 downto 0);                    --               hex5_hex4.export
+		leds_export                                  : out   std_logic_vector(9 downto 0);                     --                    leds.export
+		pushbuttons_export                           : in    std_logic_vector(1 downto 0)  := (others => '0'); --             pushbuttons.export
+		sdram_addr                                   : out   std_logic_vector(12 downto 0);                    --                   sdram.addr
+		sdram_ba                                     : out   std_logic_vector(1 downto 0);                     --                        .ba
+		sdram_cas_n                                  : out   std_logic;                                        --                        .cas_n
+		sdram_cke                                    : out   std_logic;                                        --                        .cke
+		sdram_cs_n                                   : out   std_logic;                                        --                        .cs_n
+		sdram_dq                                     : inout std_logic_vector(15 downto 0) := (others => '0'); --                        .dq
+		sdram_dqm                                    : out   std_logic_vector(1 downto 0);                     --                        .dqm
+		sdram_ras_n                                  : out   std_logic;                                        --                        .ras_n
+		sdram_we_n                                   : out   std_logic;                                        --                        .we_n
+		sdram_clk_clk                                : out   std_logic;                                        --               sdram_clk.clk
+		slider_switches_export                       : in    std_logic_vector(9 downto 0)  := (others => '0'); --         slider_switches.export
+		system_pll_ref_clk_clk                       : in    std_logic                     := '0';             --      system_pll_ref_clk.clk
+		system_pll_ref_reset_reset                   : in    std_logic                     := '0';             --    system_pll_ref_reset.reset
+		vga_CLK                                      : out   std_logic;                                        --                     vga.CLK
+		vga_HS                                       : out   std_logic;                                        --                        .HS
+		vga_VS                                       : out   std_logic;                                        --                        .VS
+		vga_BLANK                                    : out   std_logic;                                        --                        .BLANK
+		vga_SYNC                                     : out   std_logic;                                        --                        .SYNC
+		vga_R                                        : out   std_logic_vector(3 downto 0);                     --                        .R
+		vga_G                                        : out   std_logic_vector(3 downto 0);                     --                        .G
+		vga_B                                        : out   std_logic_vector(3 downto 0);                     --                        .B
+		video_pll_ref_clk_clk                        : in    std_logic                     := '0';             --       video_pll_ref_clk.clk
+		video_pll_ref_reset_reset                    : in    std_logic                     := '0'              --     video_pll_ref_reset.reset
 	);
 end entity Computer_System;
 
@@ -172,7 +174,6 @@ architecture rtl of Computer_System is
 			i_read                              : out std_logic;                                        -- read
 			i_readdata                          : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			i_waitrequest                       : in  std_logic                     := 'X';             -- waitrequest
-			i_readdatavalid                     : in  std_logic                     := 'X';             -- readdatavalid
 			irq                                 : in  std_logic_vector(31 downto 0) := (others => 'X'); -- irq
 			debug_reset_request                 : out std_logic;                                        -- reset
 			debug_mem_slave_address             : in  std_logic_vector(8 downto 0)  := (others => 'X'); -- address
@@ -183,22 +184,24 @@ architecture rtl of Computer_System is
 			debug_mem_slave_waitrequest         : out std_logic;                                        -- waitrequest
 			debug_mem_slave_write               : in  std_logic                     := 'X';             -- write
 			debug_mem_slave_writedata           : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
-			A_ci_multi_done                     : in  std_logic                     := 'X';             -- done
-			A_ci_multi_result                   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- multi_result
-			A_ci_multi_a                        : out std_logic_vector(4 downto 0);                     -- multi_a
-			A_ci_multi_b                        : out std_logic_vector(4 downto 0);                     -- multi_b
-			A_ci_multi_c                        : out std_logic_vector(4 downto 0);                     -- multi_c
-			A_ci_multi_clk_en                   : out std_logic;                                        -- clk_en
-			A_ci_multi_clock                    : out std_logic;                                        -- clk
-			A_ci_multi_reset                    : out std_logic;                                        -- reset
-			A_ci_multi_reset_req                : out std_logic;                                        -- reset_req
-			A_ci_multi_dataa                    : out std_logic_vector(31 downto 0);                    -- multi_dataa
-			A_ci_multi_datab                    : out std_logic_vector(31 downto 0);                    -- multi_datab
-			A_ci_multi_n                        : out std_logic_vector(7 downto 0);                     -- multi_n
-			A_ci_multi_readra                   : out std_logic;                                        -- multi_readra
-			A_ci_multi_readrb                   : out std_logic;                                        -- multi_readrb
-			A_ci_multi_start                    : out std_logic;                                        -- start
-			A_ci_multi_writerc                  : out std_logic                                         -- multi_writerc
+			E_ci_multi_done                     : in  std_logic                     := 'X';             -- done
+			E_ci_multi_clk_en                   : out std_logic;                                        -- clk_en
+			E_ci_multi_start                    : out std_logic;                                        -- start
+			E_ci_result                         : in  std_logic_vector(31 downto 0) := (others => 'X'); -- result
+			D_ci_a                              : out std_logic_vector(4 downto 0);                     -- a
+			D_ci_b                              : out std_logic_vector(4 downto 0);                     -- b
+			D_ci_c                              : out std_logic_vector(4 downto 0);                     -- c
+			D_ci_n                              : out std_logic_vector(7 downto 0);                     -- n
+			D_ci_readra                         : out std_logic;                                        -- readra
+			D_ci_readrb                         : out std_logic;                                        -- readrb
+			D_ci_writerc                        : out std_logic;                                        -- writerc
+			E_ci_dataa                          : out std_logic_vector(31 downto 0);                    -- dataa
+			E_ci_datab                          : out std_logic_vector(31 downto 0);                    -- datab
+			E_ci_multi_clock                    : out std_logic;                                        -- clk
+			E_ci_multi_reset                    : out std_logic;                                        -- reset
+			E_ci_multi_reset_req                : out std_logic;                                        -- reset_req
+			W_ci_estatus                        : out std_logic;                                        -- estatus
+			W_ci_ipending                       : out std_logic_vector(31 downto 0)                     -- ipending
 		);
 	end component Computer_System_Nios2;
 
@@ -363,29 +366,53 @@ architecture rtl of Computer_System is
 		);
 	end component Computer_System_Video_PLL;
 
+	component DE10_Lite_Telemetre_us_Avalon is
+		port (
+			clk        : in  std_logic                     := 'X'; -- clk
+			chipselect : in  std_logic                     := 'X'; -- chipselect
+			read_n     : in  std_logic                     := 'X'; -- read_n
+			readdata   : out std_logic_vector(31 downto 0);        -- readdata
+			Rst_n      : in  std_logic                     := 'X'; -- reset_n
+			trig       : out std_logic;                            -- writeresponsevalid_n
+			echo       : in  std_logic                     := 'X'  -- beginbursttransfer
+		);
+	end component DE10_Lite_Telemetre_us_Avalon;
+
 	component altera_customins_master_translator is
 		generic (
 			SHARED_COMB_AND_MULTI : integer := 0
 		);
 		port (
+			ci_slave_dataa            : in  std_logic_vector(31 downto 0) := (others => 'X'); -- dataa
+			ci_slave_datab            : in  std_logic_vector(31 downto 0) := (others => 'X'); -- datab
 			ci_slave_result           : out std_logic_vector(31 downto 0);                    -- result
+			ci_slave_n                : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- n
+			ci_slave_readra           : in  std_logic                     := 'X';             -- readra
+			ci_slave_readrb           : in  std_logic                     := 'X';             -- readrb
+			ci_slave_writerc          : in  std_logic                     := 'X';             -- writerc
+			ci_slave_a                : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- a
+			ci_slave_b                : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- b
+			ci_slave_c                : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- c
+			ci_slave_ipending         : in  std_logic_vector(31 downto 0) := (others => 'X'); -- ipending
+			ci_slave_estatus          : in  std_logic                     := 'X';             -- estatus
 			ci_slave_multi_clk        : in  std_logic                     := 'X';             -- clk
 			ci_slave_multi_reset      : in  std_logic                     := 'X';             -- reset
 			ci_slave_multi_clken      : in  std_logic                     := 'X';             -- clk_en
 			ci_slave_multi_reset_req  : in  std_logic                     := 'X';             -- reset_req
 			ci_slave_multi_start      : in  std_logic                     := 'X';             -- start
 			ci_slave_multi_done       : out std_logic;                                        -- done
-			ci_slave_multi_dataa      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- multi_dataa
-			ci_slave_multi_datab      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- multi_datab
-			ci_slave_multi_result     : out std_logic_vector(31 downto 0);                    -- multi_result
-			ci_slave_multi_n          : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- multi_n
-			ci_slave_multi_readra     : in  std_logic                     := 'X';             -- multi_readra
-			ci_slave_multi_readrb     : in  std_logic                     := 'X';             -- multi_readrb
-			ci_slave_multi_writerc    : in  std_logic                     := 'X';             -- multi_writerc
-			ci_slave_multi_a          : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- multi_a
-			ci_slave_multi_b          : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- multi_b
-			ci_slave_multi_c          : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- multi_c
+			comb_ci_master_dataa      : out std_logic_vector(31 downto 0);                    -- dataa
+			comb_ci_master_datab      : out std_logic_vector(31 downto 0);                    -- datab
 			comb_ci_master_result     : in  std_logic_vector(31 downto 0) := (others => 'X'); -- result
+			comb_ci_master_n          : out std_logic_vector(7 downto 0);                     -- n
+			comb_ci_master_readra     : out std_logic;                                        -- readra
+			comb_ci_master_readrb     : out std_logic;                                        -- readrb
+			comb_ci_master_writerc    : out std_logic;                                        -- writerc
+			comb_ci_master_a          : out std_logic_vector(4 downto 0);                     -- a
+			comb_ci_master_b          : out std_logic_vector(4 downto 0);                     -- b
+			comb_ci_master_c          : out std_logic_vector(4 downto 0);                     -- c
+			comb_ci_master_ipending   : out std_logic_vector(31 downto 0);                    -- ipending
+			comb_ci_master_estatus    : out std_logic;                                        -- estatus
 			multi_ci_master_clk       : out std_logic;                                        -- clk
 			multi_ci_master_reset     : out std_logic;                                        -- reset
 			multi_ci_master_clken     : out std_logic;                                        -- clk_en
@@ -402,28 +429,16 @@ architecture rtl of Computer_System is
 			multi_ci_master_a         : out std_logic_vector(4 downto 0);                     -- a
 			multi_ci_master_b         : out std_logic_vector(4 downto 0);                     -- b
 			multi_ci_master_c         : out std_logic_vector(4 downto 0);                     -- c
-			ci_slave_dataa            : in  std_logic_vector(31 downto 0) := (others => 'X'); -- dataa
-			ci_slave_datab            : in  std_logic_vector(31 downto 0) := (others => 'X'); -- datab
-			ci_slave_n                : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- n
-			ci_slave_readra           : in  std_logic                     := 'X';             -- readra
-			ci_slave_readrb           : in  std_logic                     := 'X';             -- readrb
-			ci_slave_writerc          : in  std_logic                     := 'X';             -- writerc
-			ci_slave_a                : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- a
-			ci_slave_b                : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- b
-			ci_slave_c                : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- c
-			ci_slave_ipending         : in  std_logic_vector(31 downto 0) := (others => 'X'); -- ipending
-			ci_slave_estatus          : in  std_logic                     := 'X';             -- estatus
-			comb_ci_master_dataa      : out std_logic_vector(31 downto 0);                    -- dataa
-			comb_ci_master_datab      : out std_logic_vector(31 downto 0);                    -- datab
-			comb_ci_master_n          : out std_logic_vector(7 downto 0);                     -- n
-			comb_ci_master_readra     : out std_logic;                                        -- readra
-			comb_ci_master_readrb     : out std_logic;                                        -- readrb
-			comb_ci_master_writerc    : out std_logic;                                        -- writerc
-			comb_ci_master_a          : out std_logic_vector(4 downto 0);                     -- a
-			comb_ci_master_b          : out std_logic_vector(4 downto 0);                     -- b
-			comb_ci_master_c          : out std_logic_vector(4 downto 0);                     -- c
-			comb_ci_master_ipending   : out std_logic_vector(31 downto 0);                    -- ipending
-			comb_ci_master_estatus    : out std_logic                                         -- estatus
+			ci_slave_multi_dataa      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- multi_dataa
+			ci_slave_multi_datab      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- multi_datab
+			ci_slave_multi_result     : out std_logic_vector(31 downto 0);                    -- multi_result
+			ci_slave_multi_n          : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- multi_n
+			ci_slave_multi_readra     : in  std_logic                     := 'X';             -- multi_readra
+			ci_slave_multi_readrb     : in  std_logic                     := 'X';             -- multi_readrb
+			ci_slave_multi_writerc    : in  std_logic                     := 'X';             -- multi_writerc
+			ci_slave_multi_a          : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- multi_a
+			ci_slave_multi_b          : in  std_logic_vector(4 downto 0)  := (others => 'X'); -- multi_b
+			ci_slave_multi_c          : in  std_logic_vector(4 downto 0)  := (others => 'X')  -- multi_c
 		);
 	end component altera_customins_master_translator;
 
@@ -540,7 +555,6 @@ architecture rtl of Computer_System is
 			Nios2_instruction_master_waitrequest                      : out std_logic;                                        -- waitrequest
 			Nios2_instruction_master_read                             : in  std_logic                     := 'X';             -- read
 			Nios2_instruction_master_readdata                         : out std_logic_vector(31 downto 0);                    -- readdata
-			Nios2_instruction_master_readdatavalid                    : out std_logic;                                        -- readdatavalid
 			VGA_Subsystem_pixel_dma_master_address                    : in  std_logic_vector(31 downto 0) := (others => 'X'); -- address
 			VGA_Subsystem_pixel_dma_master_waitrequest                : out std_logic;                                        -- waitrequest
 			VGA_Subsystem_pixel_dma_master_read                       : in  std_logic                     := 'X';             -- read
@@ -557,6 +571,9 @@ architecture rtl of Computer_System is
 			Arduino_Reset_N_s1_readdata                               : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			Arduino_Reset_N_s1_writedata                              : out std_logic_vector(31 downto 0);                    -- writedata
 			Arduino_Reset_N_s1_chipselect                             : out std_logic;                                        -- chipselect
+			avalon_telemetre_avalon_slave_0_read                      : out std_logic;                                        -- read
+			avalon_telemetre_avalon_slave_0_readdata                  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			avalon_telemetre_avalon_slave_0_chipselect                : out std_logic;                                        -- chipselect
 			HEX3_HEX0_s1_address                                      : out std_logic_vector(1 downto 0);                     -- address
 			HEX3_HEX0_s1_write                                        : out std_logic;                                        -- write
 			HEX3_HEX0_s1_readdata                                     : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
@@ -798,26 +815,28 @@ architecture rtl of Computer_System is
 		);
 	end component computer_system_rst_controller_001;
 
-	signal system_pll_sys_clk_clk                                                   : std_logic;                     -- System_PLL:sys_clk_clk -> [Arduino_GPIO:clk, Arduino_Reset_N:clk, HEX3_HEX0:clk, HEX5_HEX4:clk, Interval_Timer:clk, Interval_Timer_2:clk, JTAG_UART:clk, JTAG_to_FPGA_Bridge:clk_clk, LEDs:clk, Nios2:clk, Onchip_SRAM:clk, Pushbuttons:clk, SDRAM:clk, Slider_Switches:clk, SysID:clock, VGA_Subsystem:sys_clk_clk, irq_mapper:clk, mm_interconnect_0:System_PLL_sys_clk_clk, rst_controller:clk, rst_controller_001:clk]
+	signal system_pll_sys_clk_clk                                                   : std_logic;                     -- System_PLL:sys_clk_clk -> [Arduino_GPIO:clk, Arduino_Reset_N:clk, HEX3_HEX0:clk, HEX5_HEX4:clk, Interval_Timer:clk, Interval_Timer_2:clk, JTAG_UART:clk, JTAG_to_FPGA_Bridge:clk_clk, LEDs:clk, Nios2:clk, Onchip_SRAM:clk, Pushbuttons:clk, SDRAM:clk, Slider_Switches:clk, SysID:clock, VGA_Subsystem:sys_clk_clk, avalon_telemetre:clk, irq_mapper:clk, mm_interconnect_0:System_PLL_sys_clk_clk, rst_controller:clk, rst_controller_001:clk]
 	signal video_pll_vga_clk_clk                                                    : std_logic;                     -- Video_PLL:vga_clk_clk -> VGA_Subsystem:vga_clk_clk
 	signal system_pll_reset_source_reset                                            : std_logic;                     -- System_PLL:reset_source_reset -> [JTAG_to_FPGA_Bridge:clk_reset_reset, rst_controller:reset_in0, rst_controller_001:reset_in1, system_pll_reset_source_reset:in]
 	signal video_pll_reset_source_reset                                             : std_logic;                     -- Video_PLL:reset_source_reset -> video_pll_reset_source_reset:in
-	signal nios2_custom_instruction_master_multi_dataa                              : std_logic_vector(31 downto 0); -- Nios2:A_ci_multi_dataa -> Nios2_custom_instruction_master_translator:ci_slave_multi_dataa
-	signal nios2_custom_instruction_master_multi_writerc                            : std_logic;                     -- Nios2:A_ci_multi_writerc -> Nios2_custom_instruction_master_translator:ci_slave_multi_writerc
-	signal nios2_custom_instruction_master_multi_result                             : std_logic_vector(31 downto 0); -- Nios2_custom_instruction_master_translator:ci_slave_multi_result -> Nios2:A_ci_multi_result
-	signal nios2_custom_instruction_master_clk                                      : std_logic;                     -- Nios2:A_ci_multi_clock -> Nios2_custom_instruction_master_translator:ci_slave_multi_clk
-	signal nios2_custom_instruction_master_multi_datab                              : std_logic_vector(31 downto 0); -- Nios2:A_ci_multi_datab -> Nios2_custom_instruction_master_translator:ci_slave_multi_datab
-	signal nios2_custom_instruction_master_start                                    : std_logic;                     -- Nios2:A_ci_multi_start -> Nios2_custom_instruction_master_translator:ci_slave_multi_start
-	signal nios2_custom_instruction_master_multi_b                                  : std_logic_vector(4 downto 0);  -- Nios2:A_ci_multi_b -> Nios2_custom_instruction_master_translator:ci_slave_multi_b
-	signal nios2_custom_instruction_master_multi_c                                  : std_logic_vector(4 downto 0);  -- Nios2:A_ci_multi_c -> Nios2_custom_instruction_master_translator:ci_slave_multi_c
-	signal nios2_custom_instruction_master_reset_req                                : std_logic;                     -- Nios2:A_ci_multi_reset_req -> Nios2_custom_instruction_master_translator:ci_slave_multi_reset_req
-	signal nios2_custom_instruction_master_done                                     : std_logic;                     -- Nios2_custom_instruction_master_translator:ci_slave_multi_done -> Nios2:A_ci_multi_done
-	signal nios2_custom_instruction_master_multi_a                                  : std_logic_vector(4 downto 0);  -- Nios2:A_ci_multi_a -> Nios2_custom_instruction_master_translator:ci_slave_multi_a
-	signal nios2_custom_instruction_master_clk_en                                   : std_logic;                     -- Nios2:A_ci_multi_clk_en -> Nios2_custom_instruction_master_translator:ci_slave_multi_clken
-	signal nios2_custom_instruction_master_reset                                    : std_logic;                     -- Nios2:A_ci_multi_reset -> Nios2_custom_instruction_master_translator:ci_slave_multi_reset
-	signal nios2_custom_instruction_master_multi_readrb                             : std_logic;                     -- Nios2:A_ci_multi_readrb -> Nios2_custom_instruction_master_translator:ci_slave_multi_readrb
-	signal nios2_custom_instruction_master_multi_readra                             : std_logic;                     -- Nios2:A_ci_multi_readra -> Nios2_custom_instruction_master_translator:ci_slave_multi_readra
-	signal nios2_custom_instruction_master_multi_n                                  : std_logic_vector(7 downto 0);  -- Nios2:A_ci_multi_n -> Nios2_custom_instruction_master_translator:ci_slave_multi_n
+	signal nios2_custom_instruction_master_readra                                   : std_logic;                     -- Nios2:D_ci_readra -> Nios2_custom_instruction_master_translator:ci_slave_readra
+	signal nios2_custom_instruction_master_a                                        : std_logic_vector(4 downto 0);  -- Nios2:D_ci_a -> Nios2_custom_instruction_master_translator:ci_slave_a
+	signal nios2_custom_instruction_master_b                                        : std_logic_vector(4 downto 0);  -- Nios2:D_ci_b -> Nios2_custom_instruction_master_translator:ci_slave_b
+	signal nios2_custom_instruction_master_c                                        : std_logic_vector(4 downto 0);  -- Nios2:D_ci_c -> Nios2_custom_instruction_master_translator:ci_slave_c
+	signal nios2_custom_instruction_master_readrb                                   : std_logic;                     -- Nios2:D_ci_readrb -> Nios2_custom_instruction_master_translator:ci_slave_readrb
+	signal nios2_custom_instruction_master_clk                                      : std_logic;                     -- Nios2:E_ci_multi_clock -> Nios2_custom_instruction_master_translator:ci_slave_multi_clk
+	signal nios2_custom_instruction_master_ipending                                 : std_logic_vector(31 downto 0); -- Nios2:W_ci_ipending -> Nios2_custom_instruction_master_translator:ci_slave_ipending
+	signal nios2_custom_instruction_master_start                                    : std_logic;                     -- Nios2:E_ci_multi_start -> Nios2_custom_instruction_master_translator:ci_slave_multi_start
+	signal nios2_custom_instruction_master_reset_req                                : std_logic;                     -- Nios2:E_ci_multi_reset_req -> Nios2_custom_instruction_master_translator:ci_slave_multi_reset_req
+	signal nios2_custom_instruction_master_done                                     : std_logic;                     -- Nios2_custom_instruction_master_translator:ci_slave_multi_done -> Nios2:E_ci_multi_done
+	signal nios2_custom_instruction_master_n                                        : std_logic_vector(7 downto 0);  -- Nios2:D_ci_n -> Nios2_custom_instruction_master_translator:ci_slave_n
+	signal nios2_custom_instruction_master_result                                   : std_logic_vector(31 downto 0); -- Nios2_custom_instruction_master_translator:ci_slave_result -> Nios2:E_ci_result
+	signal nios2_custom_instruction_master_estatus                                  : std_logic;                     -- Nios2:W_ci_estatus -> Nios2_custom_instruction_master_translator:ci_slave_estatus
+	signal nios2_custom_instruction_master_clk_en                                   : std_logic;                     -- Nios2:E_ci_multi_clk_en -> Nios2_custom_instruction_master_translator:ci_slave_multi_clken
+	signal nios2_custom_instruction_master_datab                                    : std_logic_vector(31 downto 0); -- Nios2:E_ci_datab -> Nios2_custom_instruction_master_translator:ci_slave_datab
+	signal nios2_custom_instruction_master_dataa                                    : std_logic_vector(31 downto 0); -- Nios2:E_ci_dataa -> Nios2_custom_instruction_master_translator:ci_slave_dataa
+	signal nios2_custom_instruction_master_reset                                    : std_logic;                     -- Nios2:E_ci_multi_reset -> Nios2_custom_instruction_master_translator:ci_slave_multi_reset
+	signal nios2_custom_instruction_master_writerc                                  : std_logic;                     -- Nios2:D_ci_writerc -> Nios2_custom_instruction_master_translator:ci_slave_writerc
 	signal nios2_custom_instruction_master_translator_multi_ci_master_readra        : std_logic;                     -- Nios2_custom_instruction_master_translator:multi_ci_master_readra -> Nios2_custom_instruction_master_multi_xconnect:ci_slave_readra
 	signal nios2_custom_instruction_master_translator_multi_ci_master_a             : std_logic_vector(4 downto 0);  -- Nios2_custom_instruction_master_translator:multi_ci_master_a -> Nios2_custom_instruction_master_multi_xconnect:ci_slave_a
 	signal nios2_custom_instruction_master_translator_multi_ci_master_b             : std_logic_vector(4 downto 0);  -- Nios2_custom_instruction_master_translator:multi_ci_master_b -> Nios2_custom_instruction_master_multi_xconnect:ci_slave_b
@@ -881,7 +900,6 @@ architecture rtl of Computer_System is
 	signal nios2_instruction_master_waitrequest                                     : std_logic;                     -- mm_interconnect_0:Nios2_instruction_master_waitrequest -> Nios2:i_waitrequest
 	signal nios2_instruction_master_address                                         : std_logic_vector(27 downto 0); -- Nios2:i_address -> mm_interconnect_0:Nios2_instruction_master_address
 	signal nios2_instruction_master_read                                            : std_logic;                     -- Nios2:i_read -> mm_interconnect_0:Nios2_instruction_master_read
-	signal nios2_instruction_master_readdatavalid                                   : std_logic;                     -- mm_interconnect_0:Nios2_instruction_master_readdatavalid -> Nios2:i_readdatavalid
 	signal vga_subsystem_pixel_dma_master_waitrequest                               : std_logic;                     -- mm_interconnect_0:VGA_Subsystem_pixel_dma_master_waitrequest -> VGA_Subsystem:pixel_dma_master_waitrequest
 	signal vga_subsystem_pixel_dma_master_readdata                                  : std_logic_vector(15 downto 0); -- mm_interconnect_0:VGA_Subsystem_pixel_dma_master_readdata -> VGA_Subsystem:pixel_dma_master_readdata
 	signal vga_subsystem_pixel_dma_master_address                                   : std_logic_vector(31 downto 0); -- VGA_Subsystem:pixel_dma_master_address -> mm_interconnect_0:VGA_Subsystem_pixel_dma_master_address
@@ -895,6 +913,9 @@ architecture rtl of Computer_System is
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read                       : std_logic;                     -- mm_interconnect_0:JTAG_UART_avalon_jtag_slave_read -> mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:in
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write                      : std_logic;                     -- mm_interconnect_0:JTAG_UART_avalon_jtag_slave_write -> mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:in
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata                  : std_logic_vector(31 downto 0); -- mm_interconnect_0:JTAG_UART_avalon_jtag_slave_writedata -> JTAG_UART:av_writedata
+	signal mm_interconnect_0_avalon_telemetre_avalon_slave_0_chipselect             : std_logic;                     -- mm_interconnect_0:avalon_telemetre_avalon_slave_0_chipselect -> avalon_telemetre:chipselect
+	signal mm_interconnect_0_avalon_telemetre_avalon_slave_0_readdata               : std_logic_vector(31 downto 0); -- avalon_telemetre:readdata -> mm_interconnect_0:avalon_telemetre_avalon_slave_0_readdata
+	signal mm_interconnect_0_avalon_telemetre_avalon_slave_0_read                   : std_logic;                     -- mm_interconnect_0:avalon_telemetre_avalon_slave_0_read -> mm_interconnect_0_avalon_telemetre_avalon_slave_0_read:in
 	signal mm_interconnect_0_vga_subsystem_char_buffer_control_slave_readdata       : std_logic_vector(31 downto 0); -- VGA_Subsystem:char_buffer_control_slave_readdata -> mm_interconnect_0:VGA_Subsystem_char_buffer_control_slave_readdata
 	signal mm_interconnect_0_vga_subsystem_char_buffer_control_slave_address        : std_logic_vector(1 downto 0);  -- mm_interconnect_0:VGA_Subsystem_char_buffer_control_slave_address -> VGA_Subsystem:char_buffer_control_slave_address
 	signal mm_interconnect_0_vga_subsystem_char_buffer_control_slave_read           : std_logic;                     -- mm_interconnect_0:VGA_Subsystem_char_buffer_control_slave_read -> VGA_Subsystem:char_buffer_control_slave_read
@@ -1005,6 +1026,7 @@ architecture rtl of Computer_System is
 	signal video_pll_reset_source_reset_ports_inv                                   : std_logic;                     -- video_pll_reset_source_reset:inv -> VGA_Subsystem:vga_reset_reset_n
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv             : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:inv -> JTAG_UART:av_read_n
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv            : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:inv -> JTAG_UART:av_write_n
+	signal mm_interconnect_0_avalon_telemetre_avalon_slave_0_read_ports_inv         : std_logic;                     -- mm_interconnect_0_avalon_telemetre_avalon_slave_0_read:inv -> avalon_telemetre:read_n
 	signal mm_interconnect_0_sdram_s1_read_ports_inv                                : std_logic;                     -- mm_interconnect_0_sdram_s1_read:inv -> SDRAM:az_rd_n
 	signal mm_interconnect_0_sdram_s1_byteenable_ports_inv                          : std_logic_vector(1 downto 0);  -- mm_interconnect_0_sdram_s1_byteenable:inv -> SDRAM:az_be_n
 	signal mm_interconnect_0_sdram_s1_write_ports_inv                               : std_logic;                     -- mm_interconnect_0_sdram_s1_write:inv -> SDRAM:az_wr_n
@@ -1016,7 +1038,7 @@ architecture rtl of Computer_System is
 	signal mm_interconnect_0_arduino_reset_n_s1_write_ports_inv                     : std_logic;                     -- mm_interconnect_0_arduino_reset_n_s1_write:inv -> Arduino_Reset_N:write_n
 	signal mm_interconnect_0_interval_timer_s1_write_ports_inv                      : std_logic;                     -- mm_interconnect_0_interval_timer_s1_write:inv -> Interval_Timer:write_n
 	signal mm_interconnect_0_interval_timer_2_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_interval_timer_2_s1_write:inv -> Interval_Timer_2:write_n
-	signal rst_controller_reset_out_reset_ports_inv                                 : std_logic;                     -- rst_controller_reset_out_reset:inv -> [Arduino_GPIO:reset_n, Arduino_Reset_N:reset_n, HEX3_HEX0:reset_n, HEX5_HEX4:reset_n, Interval_Timer:reset_n, Interval_Timer_2:reset_n, JTAG_UART:rst_n, LEDs:reset_n, Pushbuttons:reset_n, SDRAM:reset_n, Slider_Switches:reset_n, SysID:reset_n]
+	signal rst_controller_reset_out_reset_ports_inv                                 : std_logic;                     -- rst_controller_reset_out_reset:inv -> [Arduino_GPIO:reset_n, Arduino_Reset_N:reset_n, HEX3_HEX0:reset_n, HEX5_HEX4:reset_n, Interval_Timer:reset_n, Interval_Timer_2:reset_n, JTAG_UART:rst_n, LEDs:reset_n, Pushbuttons:reset_n, SDRAM:reset_n, Slider_Switches:reset_n, SysID:reset_n, avalon_telemetre:Rst_n]
 	signal rst_controller_001_reset_out_reset_ports_inv                             : std_logic;                     -- rst_controller_001_reset_out_reset:inv -> Nios2:reset_n
 
 begin
@@ -1156,7 +1178,6 @@ begin
 			i_read                              => nios2_instruction_master_read,                       --                          .read
 			i_readdata                          => nios2_instruction_master_readdata,                   --                          .readdata
 			i_waitrequest                       => nios2_instruction_master_waitrequest,                --                          .waitrequest
-			i_readdatavalid                     => nios2_instruction_master_readdatavalid,              --                          .readdatavalid
 			irq                                 => nios2_irq_irq,                                       --                       irq.irq
 			debug_reset_request                 => nios2_debug_reset_request_reset,                     --       debug_reset_request.reset
 			debug_mem_slave_address             => mm_interconnect_0_nios2_debug_mem_slave_address,     --           debug_mem_slave.address
@@ -1167,22 +1188,24 @@ begin
 			debug_mem_slave_waitrequest         => mm_interconnect_0_nios2_debug_mem_slave_waitrequest, --                          .waitrequest
 			debug_mem_slave_write               => mm_interconnect_0_nios2_debug_mem_slave_write,       --                          .write
 			debug_mem_slave_writedata           => mm_interconnect_0_nios2_debug_mem_slave_writedata,   --                          .writedata
-			A_ci_multi_done                     => nios2_custom_instruction_master_done,                -- custom_instruction_master.done
-			A_ci_multi_result                   => nios2_custom_instruction_master_multi_result,        --                          .multi_result
-			A_ci_multi_a                        => nios2_custom_instruction_master_multi_a,             --                          .multi_a
-			A_ci_multi_b                        => nios2_custom_instruction_master_multi_b,             --                          .multi_b
-			A_ci_multi_c                        => nios2_custom_instruction_master_multi_c,             --                          .multi_c
-			A_ci_multi_clk_en                   => nios2_custom_instruction_master_clk_en,              --                          .clk_en
-			A_ci_multi_clock                    => nios2_custom_instruction_master_clk,                 --                          .clk
-			A_ci_multi_reset                    => nios2_custom_instruction_master_reset,               --                          .reset
-			A_ci_multi_reset_req                => nios2_custom_instruction_master_reset_req,           --                          .reset_req
-			A_ci_multi_dataa                    => nios2_custom_instruction_master_multi_dataa,         --                          .multi_dataa
-			A_ci_multi_datab                    => nios2_custom_instruction_master_multi_datab,         --                          .multi_datab
-			A_ci_multi_n                        => nios2_custom_instruction_master_multi_n,             --                          .multi_n
-			A_ci_multi_readra                   => nios2_custom_instruction_master_multi_readra,        --                          .multi_readra
-			A_ci_multi_readrb                   => nios2_custom_instruction_master_multi_readrb,        --                          .multi_readrb
-			A_ci_multi_start                    => nios2_custom_instruction_master_start,               --                          .start
-			A_ci_multi_writerc                  => nios2_custom_instruction_master_multi_writerc        --                          .multi_writerc
+			E_ci_multi_done                     => nios2_custom_instruction_master_done,                -- custom_instruction_master.done
+			E_ci_multi_clk_en                   => nios2_custom_instruction_master_clk_en,              --                          .clk_en
+			E_ci_multi_start                    => nios2_custom_instruction_master_start,               --                          .start
+			E_ci_result                         => nios2_custom_instruction_master_result,              --                          .result
+			D_ci_a                              => nios2_custom_instruction_master_a,                   --                          .a
+			D_ci_b                              => nios2_custom_instruction_master_b,                   --                          .b
+			D_ci_c                              => nios2_custom_instruction_master_c,                   --                          .c
+			D_ci_n                              => nios2_custom_instruction_master_n,                   --                          .n
+			D_ci_readra                         => nios2_custom_instruction_master_readra,              --                          .readra
+			D_ci_readrb                         => nios2_custom_instruction_master_readrb,              --                          .readrb
+			D_ci_writerc                        => nios2_custom_instruction_master_writerc,             --                          .writerc
+			E_ci_dataa                          => nios2_custom_instruction_master_dataa,               --                          .dataa
+			E_ci_datab                          => nios2_custom_instruction_master_datab,               --                          .datab
+			E_ci_multi_clock                    => nios2_custom_instruction_master_clk,                 --                          .clk
+			E_ci_multi_reset                    => nios2_custom_instruction_master_reset,               --                          .reset
+			E_ci_multi_reset_req                => nios2_custom_instruction_master_reset_req,           --                          .reset_req
+			W_ci_estatus                        => nios2_custom_instruction_master_estatus,             --                          .estatus
+			W_ci_ipending                       => nios2_custom_instruction_master_ipending             --                          .ipending
 		);
 
 	nios2_floating_point : component fpoint_wrapper
@@ -1337,29 +1360,52 @@ begin
 			reset_source_reset => video_pll_reset_source_reset  -- reset_source.reset
 		);
 
+	avalon_telemetre : component DE10_Lite_Telemetre_us_Avalon
+		port map (
+			clk        => system_pll_sys_clk_clk,                                           --          clock.clk
+			chipselect => mm_interconnect_0_avalon_telemetre_avalon_slave_0_chipselect,     -- avalon_slave_0.chipselect
+			read_n     => mm_interconnect_0_avalon_telemetre_avalon_slave_0_read_ports_inv, --               .read_n
+			readdata   => mm_interconnect_0_avalon_telemetre_avalon_slave_0_readdata,       --               .readdata
+			Rst_n      => rst_controller_reset_out_reset_ports_inv,                         --        reset_n.reset_n
+			trig       => avalon_telemetre_output_writeresponsevalid_n,                     --      telemetre.writeresponsevalid_n
+			echo       => avalon_telemetre_output_beginbursttransfer                        --               .beginbursttransfer
+		);
+
 	nios2_custom_instruction_master_translator : component altera_customins_master_translator
 		generic map (
-			SHARED_COMB_AND_MULTI => 0
+			SHARED_COMB_AND_MULTI => 1
 		)
 		port map (
-			ci_slave_result           => open,                                                                 --        ci_slave.result
+			ci_slave_dataa            => nios2_custom_instruction_master_dataa,                                --        ci_slave.dataa
+			ci_slave_datab            => nios2_custom_instruction_master_datab,                                --                .datab
+			ci_slave_result           => nios2_custom_instruction_master_result,                               --                .result
+			ci_slave_n                => nios2_custom_instruction_master_n,                                    --                .n
+			ci_slave_readra           => nios2_custom_instruction_master_readra,                               --                .readra
+			ci_slave_readrb           => nios2_custom_instruction_master_readrb,                               --                .readrb
+			ci_slave_writerc          => nios2_custom_instruction_master_writerc,                              --                .writerc
+			ci_slave_a                => nios2_custom_instruction_master_a,                                    --                .a
+			ci_slave_b                => nios2_custom_instruction_master_b,                                    --                .b
+			ci_slave_c                => nios2_custom_instruction_master_c,                                    --                .c
+			ci_slave_ipending         => nios2_custom_instruction_master_ipending,                             --                .ipending
+			ci_slave_estatus          => nios2_custom_instruction_master_estatus,                              --                .estatus
 			ci_slave_multi_clk        => nios2_custom_instruction_master_clk,                                  --                .clk
 			ci_slave_multi_reset      => nios2_custom_instruction_master_reset,                                --                .reset
 			ci_slave_multi_clken      => nios2_custom_instruction_master_clk_en,                               --                .clk_en
 			ci_slave_multi_reset_req  => nios2_custom_instruction_master_reset_req,                            --                .reset_req
 			ci_slave_multi_start      => nios2_custom_instruction_master_start,                                --                .start
 			ci_slave_multi_done       => nios2_custom_instruction_master_done,                                 --                .done
-			ci_slave_multi_dataa      => nios2_custom_instruction_master_multi_dataa,                          --                .multi_dataa
-			ci_slave_multi_datab      => nios2_custom_instruction_master_multi_datab,                          --                .multi_datab
-			ci_slave_multi_result     => nios2_custom_instruction_master_multi_result,                         --                .multi_result
-			ci_slave_multi_n          => nios2_custom_instruction_master_multi_n,                              --                .multi_n
-			ci_slave_multi_readra     => nios2_custom_instruction_master_multi_readra,                         --                .multi_readra
-			ci_slave_multi_readrb     => nios2_custom_instruction_master_multi_readrb,                         --                .multi_readrb
-			ci_slave_multi_writerc    => nios2_custom_instruction_master_multi_writerc,                        --                .multi_writerc
-			ci_slave_multi_a          => nios2_custom_instruction_master_multi_a,                              --                .multi_a
-			ci_slave_multi_b          => nios2_custom_instruction_master_multi_b,                              --                .multi_b
-			ci_slave_multi_c          => nios2_custom_instruction_master_multi_c,                              --                .multi_c
-			comb_ci_master_result     => open,                                                                 --  comb_ci_master.result
+			comb_ci_master_dataa      => open,                                                                 --  comb_ci_master.dataa
+			comb_ci_master_datab      => open,                                                                 --                .datab
+			comb_ci_master_result     => open,                                                                 --                .result
+			comb_ci_master_n          => open,                                                                 --                .n
+			comb_ci_master_readra     => open,                                                                 --                .readra
+			comb_ci_master_readrb     => open,                                                                 --                .readrb
+			comb_ci_master_writerc    => open,                                                                 --                .writerc
+			comb_ci_master_a          => open,                                                                 --                .a
+			comb_ci_master_b          => open,                                                                 --                .b
+			comb_ci_master_c          => open,                                                                 --                .c
+			comb_ci_master_ipending   => open,                                                                 --                .ipending
+			comb_ci_master_estatus    => open,                                                                 --                .estatus
 			multi_ci_master_clk       => nios2_custom_instruction_master_translator_multi_ci_master_clk,       -- multi_ci_master.clk
 			multi_ci_master_reset     => nios2_custom_instruction_master_translator_multi_ci_master_reset,     --                .reset
 			multi_ci_master_clken     => nios2_custom_instruction_master_translator_multi_ci_master_clk_en,    --                .clk_en
@@ -1376,28 +1422,16 @@ begin
 			multi_ci_master_a         => nios2_custom_instruction_master_translator_multi_ci_master_a,         --                .a
 			multi_ci_master_b         => nios2_custom_instruction_master_translator_multi_ci_master_b,         --                .b
 			multi_ci_master_c         => nios2_custom_instruction_master_translator_multi_ci_master_c,         --                .c
-			ci_slave_dataa            => "00000000000000000000000000000000",                                   --     (terminated)
-			ci_slave_datab            => "00000000000000000000000000000000",                                   --     (terminated)
-			ci_slave_n                => "00000000",                                                           --     (terminated)
-			ci_slave_readra           => '0',                                                                  --     (terminated)
-			ci_slave_readrb           => '0',                                                                  --     (terminated)
-			ci_slave_writerc          => '0',                                                                  --     (terminated)
-			ci_slave_a                => "00000",                                                              --     (terminated)
-			ci_slave_b                => "00000",                                                              --     (terminated)
-			ci_slave_c                => "00000",                                                              --     (terminated)
-			ci_slave_ipending         => "00000000000000000000000000000000",                                   --     (terminated)
-			ci_slave_estatus          => '0',                                                                  --     (terminated)
-			comb_ci_master_dataa      => open,                                                                 --     (terminated)
-			comb_ci_master_datab      => open,                                                                 --     (terminated)
-			comb_ci_master_n          => open,                                                                 --     (terminated)
-			comb_ci_master_readra     => open,                                                                 --     (terminated)
-			comb_ci_master_readrb     => open,                                                                 --     (terminated)
-			comb_ci_master_writerc    => open,                                                                 --     (terminated)
-			comb_ci_master_a          => open,                                                                 --     (terminated)
-			comb_ci_master_b          => open,                                                                 --     (terminated)
-			comb_ci_master_c          => open,                                                                 --     (terminated)
-			comb_ci_master_ipending   => open,                                                                 --     (terminated)
-			comb_ci_master_estatus    => open                                                                  --     (terminated)
+			ci_slave_multi_dataa      => "00000000000000000000000000000000",                                   --     (terminated)
+			ci_slave_multi_datab      => "00000000000000000000000000000000",                                   --     (terminated)
+			ci_slave_multi_result     => open,                                                                 --     (terminated)
+			ci_slave_multi_n          => "00000000",                                                           --     (terminated)
+			ci_slave_multi_readra     => '0',                                                                  --     (terminated)
+			ci_slave_multi_readrb     => '0',                                                                  --     (terminated)
+			ci_slave_multi_writerc    => '0',                                                                  --     (terminated)
+			ci_slave_multi_a          => "00000",                                                              --     (terminated)
+			ci_slave_multi_b          => "00000",                                                              --     (terminated)
+			ci_slave_multi_c          => "00000"                                                               --     (terminated)
 		);
 
 	nios2_custom_instruction_master_multi_xconnect : component Computer_System_Nios2_custom_instruction_master_multi_xconnect
@@ -1511,7 +1545,6 @@ begin
 			Nios2_instruction_master_waitrequest                      => nios2_instruction_master_waitrequest,                                 --                                                    .waitrequest
 			Nios2_instruction_master_read                             => nios2_instruction_master_read,                                        --                                                    .read
 			Nios2_instruction_master_readdata                         => nios2_instruction_master_readdata,                                    --                                                    .readdata
-			Nios2_instruction_master_readdatavalid                    => nios2_instruction_master_readdatavalid,                               --                                                    .readdatavalid
 			VGA_Subsystem_pixel_dma_master_address                    => vga_subsystem_pixel_dma_master_address,                               --                      VGA_Subsystem_pixel_dma_master.address
 			VGA_Subsystem_pixel_dma_master_waitrequest                => vga_subsystem_pixel_dma_master_waitrequest,                           --                                                    .waitrequest
 			VGA_Subsystem_pixel_dma_master_read                       => vga_subsystem_pixel_dma_master_read,                                  --                                                    .read
@@ -1528,6 +1561,9 @@ begin
 			Arduino_Reset_N_s1_readdata                               => mm_interconnect_0_arduino_reset_n_s1_readdata,                        --                                                    .readdata
 			Arduino_Reset_N_s1_writedata                              => mm_interconnect_0_arduino_reset_n_s1_writedata,                       --                                                    .writedata
 			Arduino_Reset_N_s1_chipselect                             => mm_interconnect_0_arduino_reset_n_s1_chipselect,                      --                                                    .chipselect
+			avalon_telemetre_avalon_slave_0_read                      => mm_interconnect_0_avalon_telemetre_avalon_slave_0_read,               --                     avalon_telemetre_avalon_slave_0.read
+			avalon_telemetre_avalon_slave_0_readdata                  => mm_interconnect_0_avalon_telemetre_avalon_slave_0_readdata,           --                                                    .readdata
+			avalon_telemetre_avalon_slave_0_chipselect                => mm_interconnect_0_avalon_telemetre_avalon_slave_0_chipselect,         --                                                    .chipselect
 			HEX3_HEX0_s1_address                                      => mm_interconnect_0_hex3_hex0_s1_address,                               --                                        HEX3_HEX0_s1.address
 			HEX3_HEX0_s1_write                                        => mm_interconnect_0_hex3_hex0_s1_write,                                 --                                                    .write
 			HEX3_HEX0_s1_readdata                                     => mm_interconnect_0_hex3_hex0_s1_readdata,                              --                                                    .readdata
@@ -1772,6 +1808,8 @@ begin
 	mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv <= not mm_interconnect_0_jtag_uart_avalon_jtag_slave_read;
 
 	mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv <= not mm_interconnect_0_jtag_uart_avalon_jtag_slave_write;
+
+	mm_interconnect_0_avalon_telemetre_avalon_slave_0_read_ports_inv <= not mm_interconnect_0_avalon_telemetre_avalon_slave_0_read;
 
 	mm_interconnect_0_sdram_s1_read_ports_inv <= not mm_interconnect_0_sdram_s1_read;
 

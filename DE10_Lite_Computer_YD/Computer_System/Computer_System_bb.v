@@ -28,7 +28,9 @@ module Computer_System (
 	vga_G,
 	vga_B,
 	video_pll_ref_clk_clk,
-	video_pll_ref_reset_reset);	
+	video_pll_ref_reset_reset,
+	avalon_telemetre_output_writeresponsevalid_n,
+	avalon_telemetre_output_beginbursttransfer);	
 
 	inout	[15:0]	arduino_gpio_export;
 	output		arduino_reset_n_export;
@@ -59,4 +61,6 @@ module Computer_System (
 	output	[3:0]	vga_B;
 	input		video_pll_ref_clk_clk;
 	input		video_pll_ref_reset_reset;
+	output		avalon_telemetre_output_writeresponsevalid_n;
+	input		avalon_telemetre_output_beginbursttransfer;
 endmodule
