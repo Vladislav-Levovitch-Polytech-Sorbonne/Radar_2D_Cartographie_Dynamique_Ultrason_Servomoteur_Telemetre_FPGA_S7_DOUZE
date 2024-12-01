@@ -3,7 +3,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 
-entity DE10_Lite_Computer is
     Port (
         -- Clock pins
         CLOCK_50          : in  std_logic;

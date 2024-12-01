@@ -1,5 +1,5 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate C:\Mac\Home\Documents\DE10_Lite_Computer_YD\Computer_System.qsys --block-symbol-file --output-directory=C:\Mac\Home\Documents\DE10_Lite_Computer_YD\Computer_System --family="MAX 10" --part=10M50DAF484C6GES
+Info: qsys-generate C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\DE10_Lite_Computer_YD\Computer_System.qsys --block-symbol-file --output-directory=C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\DE10_Lite_Computer_YD\Computer_System --family="MAX 10" --part=10M50DAF484C6GES
 Progress: Loading DE10_Lite_Computer_YD/Computer_System.qsys
 Progress: Reading input file
 Progress: Adding Arduino_GPIO [altera_avalon_pio 18.1]
@@ -37,54 +37,11 @@ Progress: Parameterizing module SysID
 Progress: Adding System_PLL [altera_up_avalon_sys_sdram_pll 18.0]
 Progress: Parameterizing module System_PLL
 Progress: Adding VGA_Subsystem [VGA_Subsystem 1.0]
-Progress: Reading input file
-Progress: Adding Char_Buf_Subsystem [Char_Buf_Subsystem 1.0]
-Progress: Reading input file
-Progress: Adding ASCII_to_Image [altera_up_avalon_video_ascii_to_image 18.0]
-Progress: Parameterizing module ASCII_to_Image
-Progress: Adding Char_Buf_DMA [altera_up_avalon_video_dma_controller 18.0]
-Progress: Parameterizing module Char_Buf_DMA
-Progress: Adding Char_Buf_RGB_Resampler [altera_up_avalon_video_rgb_resampler 18.0]
-Progress: Parameterizing module Char_Buf_RGB_Resampler
-Progress: Adding Char_Buf_Scaler [altera_up_avalon_video_scaler 18.0]
-Progress: Parameterizing module Char_Buf_Scaler
-Progress: Adding Onchip_SRAM [altera_avalon_onchip_memory2 18.1]
-Progress: Parameterizing module Onchip_SRAM
-Progress: Adding Set_Black_Transparent [altera_up_avalon_video_change_alpha 18.0]
-Progress: Parameterizing module Set_Black_Transparent
-Progress: Adding Sys_Clk [clock_source 18.1]
-Progress: Parameterizing module Sys_Clk
-Progress: Building connections
-Progress: Parameterizing connections
-Progress: Validating
-Progress: Done reading input file
-Progress: Parameterizing module Char_Buf_Subsystem
-Progress: Adding Sys_Clk [clock_source 18.1]
-Progress: Parameterizing module Sys_Clk
-Progress: Adding VGA_Alpha_Blender [altera_up_avalon_video_alpha_blender 18.0]
-Progress: Parameterizing module VGA_Alpha_Blender
-Progress: Adding VGA_Clk [clock_source 18.1]
-Progress: Parameterizing module VGA_Clk
-Progress: Adding VGA_Controller [altera_up_avalon_video_vga_controller 18.1]
-Warning: altera_up_avalon_video_vga_controller: Catalog mismatch; expected v18.0 but found v18.1
-Progress: Parameterizing module VGA_Controller
-Progress: Adding VGA_Dual_Clock_FIFO [altera_up_avalon_video_dual_clock_buffer 18.0]
-Progress: Parameterizing module VGA_Dual_Clock_FIFO
-Progress: Adding VGA_Pixel_DMA [altera_up_avalon_video_dma_controller 18.0]
-Progress: Parameterizing module VGA_Pixel_DMA
-Progress: Adding VGA_Pixel_FIFO [altera_up_avalon_video_dual_clock_buffer 18.0]
-Progress: Parameterizing module VGA_Pixel_FIFO
-Progress: Adding VGA_Pixel_RGB_Resampler [altera_up_avalon_video_rgb_resampler 18.0]
-Progress: Parameterizing module VGA_Pixel_RGB_Resampler
-Progress: Adding VGA_Pixel_Scaler [altera_up_avalon_video_scaler 18.0]
-Progress: Parameterizing module VGA_Pixel_Scaler
-Progress: Building connections
-Progress: Parameterizing connections
-Progress: Validating
-Progress: Done reading input file
 Progress: Parameterizing module VGA_Subsystem
 Progress: Adding Video_PLL [altera_up_avalon_video_pll 18.0]
 Progress: Parameterizing module Video_PLL
+Progress: Adding avalon_telemetre [avalon_telemetre 1.0]
+Progress: Parameterizing module avalon_telemetre
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
@@ -105,7 +62,7 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate C:\Mac\Home\Documents\DE10_Lite_Computer_YD\Computer_System.qsys --synthesis=VERILOG --output-directory=C:\Mac\Home\Documents\DE10_Lite_Computer_YD\Computer_System\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Info: qsys-generate C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\DE10_Lite_Computer_YD\Computer_System.qsys --synthesis=VHDL --output-directory=C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\DE10_Lite_Computer_YD\Computer_System\synthesis --family="MAX 10" --part=10M50DAF484C6GES
 Progress: Loading DE10_Lite_Computer_YD/Computer_System.qsys
 Progress: Reading input file
 Progress: Adding Arduino_GPIO [altera_avalon_pio 18.1]
@@ -146,6 +103,8 @@ Progress: Adding VGA_Subsystem [VGA_Subsystem 1.0]
 Progress: Parameterizing module VGA_Subsystem
 Progress: Adding Video_PLL [altera_up_avalon_video_pll 18.0]
 Progress: Parameterizing module Video_PLL
+Progress: Adding avalon_telemetre [avalon_telemetre 1.0]
+Progress: Parameterizing module avalon_telemetre
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
@@ -166,50 +125,50 @@ Info: Computer_System: Generating Computer_System "Computer_System" for QUARTUS_
 Warning: Computer_System: "No matching role found for Nios2_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
 Warning: Computer_System: "No matching role found for Nios2_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
 Info: Arduino_GPIO: Starting RTL generation for module 'Computer_System_Arduino_GPIO'
-Info: Arduino_GPIO:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_Arduino_GPIO --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0002_Arduino_GPIO_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0002_Arduino_GPIO_gen//Computer_System_Arduino_GPIO_component_configuration.pl  --do_build_sim=0  ]
+Info: Arduino_GPIO:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_Arduino_GPIO --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0002_Arduino_GPIO_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0002_Arduino_GPIO_gen//Computer_System_Arduino_GPIO_component_configuration.pl  --do_build_sim=0  ]
 Info: Arduino_GPIO: Done RTL generation for module 'Computer_System_Arduino_GPIO'
 Info: Arduino_GPIO: "Computer_System" instantiated altera_avalon_pio "Arduino_GPIO"
 Info: Arduino_Reset_N: Starting RTL generation for module 'Computer_System_Arduino_Reset_N'
-Info: Arduino_Reset_N:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_Arduino_Reset_N --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0003_Arduino_Reset_N_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0003_Arduino_Reset_N_gen//Computer_System_Arduino_Reset_N_component_configuration.pl  --do_build_sim=0  ]
+Info: Arduino_Reset_N:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_Arduino_Reset_N --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0003_Arduino_Reset_N_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0003_Arduino_Reset_N_gen//Computer_System_Arduino_Reset_N_component_configuration.pl  --do_build_sim=0  ]
 Info: Arduino_Reset_N: Done RTL generation for module 'Computer_System_Arduino_Reset_N'
 Info: Arduino_Reset_N: "Computer_System" instantiated altera_avalon_pio "Arduino_Reset_N"
 Info: HEX3_HEX0: Starting RTL generation for module 'Computer_System_HEX3_HEX0'
-Info: HEX3_HEX0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_HEX3_HEX0 --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0004_HEX3_HEX0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0004_HEX3_HEX0_gen//Computer_System_HEX3_HEX0_component_configuration.pl  --do_build_sim=0  ]
+Info: HEX3_HEX0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_HEX3_HEX0 --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0004_HEX3_HEX0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0004_HEX3_HEX0_gen//Computer_System_HEX3_HEX0_component_configuration.pl  --do_build_sim=0  ]
 Info: HEX3_HEX0: Done RTL generation for module 'Computer_System_HEX3_HEX0'
 Info: HEX3_HEX0: "Computer_System" instantiated altera_avalon_pio "HEX3_HEX0"
 Info: HEX5_HEX4: Starting RTL generation for module 'Computer_System_HEX5_HEX4'
-Info: HEX5_HEX4:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_HEX5_HEX4 --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0005_HEX5_HEX4_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0005_HEX5_HEX4_gen//Computer_System_HEX5_HEX4_component_configuration.pl  --do_build_sim=0  ]
+Info: HEX5_HEX4:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_HEX5_HEX4 --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0005_HEX5_HEX4_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0005_HEX5_HEX4_gen//Computer_System_HEX5_HEX4_component_configuration.pl  --do_build_sim=0  ]
 Info: HEX5_HEX4: Done RTL generation for module 'Computer_System_HEX5_HEX4'
 Info: HEX5_HEX4: "Computer_System" instantiated altera_avalon_pio "HEX5_HEX4"
 Info: Interval_Timer: Starting RTL generation for module 'Computer_System_Interval_Timer'
-Info: Interval_Timer:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=Computer_System_Interval_Timer --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0006_Interval_Timer_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0006_Interval_Timer_gen//Computer_System_Interval_Timer_component_configuration.pl  --do_build_sim=0  ]
+Info: Interval_Timer:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=Computer_System_Interval_Timer --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0006_Interval_Timer_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0006_Interval_Timer_gen//Computer_System_Interval_Timer_component_configuration.pl  --do_build_sim=0  ]
 Info: Interval_Timer: Done RTL generation for module 'Computer_System_Interval_Timer'
 Info: Interval_Timer: "Computer_System" instantiated altera_avalon_timer "Interval_Timer"
 Info: JTAG_UART: Starting RTL generation for module 'Computer_System_JTAG_UART'
-Info: JTAG_UART:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Computer_System_JTAG_UART --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0007_JTAG_UART_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0007_JTAG_UART_gen//Computer_System_JTAG_UART_component_configuration.pl  --do_build_sim=0  ]
+Info: JTAG_UART:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Computer_System_JTAG_UART --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0007_JTAG_UART_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0007_JTAG_UART_gen//Computer_System_JTAG_UART_component_configuration.pl  --do_build_sim=0  ]
 Info: JTAG_UART: Done RTL generation for module 'Computer_System_JTAG_UART'
 Info: JTAG_UART: "Computer_System" instantiated altera_avalon_jtag_uart "JTAG_UART"
 Info: JTAG_to_FPGA_Bridge: "Computer_System" instantiated altera_jtag_avalon_master "JTAG_to_FPGA_Bridge"
 Info: LEDs: Starting RTL generation for module 'Computer_System_LEDs'
-Info: LEDs:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_LEDs --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0008_LEDs_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0008_LEDs_gen//Computer_System_LEDs_component_configuration.pl  --do_build_sim=0  ]
+Info: LEDs:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_LEDs --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0008_LEDs_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0008_LEDs_gen//Computer_System_LEDs_component_configuration.pl  --do_build_sim=0  ]
 Info: LEDs: Done RTL generation for module 'Computer_System_LEDs'
 Info: LEDs: "Computer_System" instantiated altera_avalon_pio "LEDs"
 Info: Nios2: "Computer_System" instantiated altera_nios2_gen2 "Nios2"
 Info: Nios2_Floating_Point: "Computer_System" instantiated altera_nios_custom_instr_floating_point "Nios2_Floating_Point"
 Info: Onchip_SRAM: Starting RTL generation for module 'Computer_System_Onchip_SRAM'
-Info: Onchip_SRAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Computer_System_Onchip_SRAM --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0009_Onchip_SRAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0009_Onchip_SRAM_gen//Computer_System_Onchip_SRAM_component_configuration.pl  --do_build_sim=0  ]
+Info: Onchip_SRAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Computer_System_Onchip_SRAM --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0009_Onchip_SRAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0009_Onchip_SRAM_gen//Computer_System_Onchip_SRAM_component_configuration.pl  --do_build_sim=0  ]
 Info: Onchip_SRAM: Done RTL generation for module 'Computer_System_Onchip_SRAM'
 Info: Onchip_SRAM: "Computer_System" instantiated altera_avalon_onchip_memory2 "Onchip_SRAM"
 Info: Pushbuttons: Starting RTL generation for module 'Computer_System_Pushbuttons'
-Info: Pushbuttons:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_Pushbuttons --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0010_Pushbuttons_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0010_Pushbuttons_gen//Computer_System_Pushbuttons_component_configuration.pl  --do_build_sim=0  ]
+Info: Pushbuttons:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_Pushbuttons --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0010_Pushbuttons_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0010_Pushbuttons_gen//Computer_System_Pushbuttons_component_configuration.pl  --do_build_sim=0  ]
 Info: Pushbuttons: Done RTL generation for module 'Computer_System_Pushbuttons'
 Info: Pushbuttons: "Computer_System" instantiated altera_avalon_pio "Pushbuttons"
 Info: SDRAM: Starting RTL generation for module 'Computer_System_SDRAM'
-Info: SDRAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Computer_System_SDRAM --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0011_SDRAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0011_SDRAM_gen//Computer_System_SDRAM_component_configuration.pl  --do_build_sim=0  ]
+Info: SDRAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Computer_System_SDRAM --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0011_SDRAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0011_SDRAM_gen//Computer_System_SDRAM_component_configuration.pl  --do_build_sim=0  ]
 Info: SDRAM: Done RTL generation for module 'Computer_System_SDRAM'
 Info: SDRAM: "Computer_System" instantiated altera_avalon_new_sdram_controller "SDRAM"
 Info: Slider_Switches: Starting RTL generation for module 'Computer_System_Slider_Switches'
-Info: Slider_Switches:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_Slider_Switches --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0012_Slider_Switches_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0012_Slider_Switches_gen//Computer_System_Slider_Switches_component_configuration.pl  --do_build_sim=0  ]
+Info: Slider_Switches:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Computer_System_Slider_Switches --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0012_Slider_Switches_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0012_Slider_Switches_gen//Computer_System_Slider_Switches_component_configuration.pl  --do_build_sim=0  ]
 Info: Slider_Switches: Done RTL generation for module 'Computer_System_Slider_Switches'
 Info: Slider_Switches: "Computer_System" instantiated altera_avalon_pio "Slider_Switches"
 Info: SysID: "Computer_System" instantiated altera_avalon_sysid_qsys "SysID"
@@ -217,6 +176,7 @@ Info: System_PLL: "Computer_System" instantiated altera_up_avalon_sys_sdram_pll 
 Info: avalon_st_adapter: Inserting channel_adapter: channel_adapter_0
 Info: VGA_Subsystem: "Computer_System" instantiated VGA_Subsystem "VGA_Subsystem"
 Info: Video_PLL: "Computer_System" instantiated altera_up_avalon_video_pll "Video_PLL"
+Info: avalon_telemetre: "Computer_System" instantiated avalon_telemetre "avalon_telemetre"
 Info: Nios2_custom_instruction_master_translator: "Computer_System" instantiated altera_customins_master_translator "Nios2_custom_instruction_master_translator"
 Info: Nios2_custom_instruction_master_multi_xconnect: "Computer_System" instantiated altera_customins_xconnect "Nios2_custom_instruction_master_multi_xconnect"
 Info: Nios2_custom_instruction_master_multi_slave_translator0: "Computer_System" instantiated altera_customins_slave_translator "Nios2_custom_instruction_master_multi_slave_translator0"
@@ -239,6 +199,7 @@ Info: avalon_st_adapter_015: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_016: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_017: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_018: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_019: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "Computer_System" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "Computer_System" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "Computer_System" instantiated altera_reset_controller "rst_controller"
@@ -251,19 +212,19 @@ Info: transacto: "JTAG_to_FPGA_Bridge" instantiated altera_avalon_packets_to_mas
 Info: b2p_adapter: "JTAG_to_FPGA_Bridge" instantiated channel_adapter "b2p_adapter"
 Info: p2b_adapter: "JTAG_to_FPGA_Bridge" instantiated channel_adapter "p2b_adapter"
 Info: cpu: Starting RTL generation for module 'Computer_System_Nios2_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Computer_System_Nios2_cpu --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0027_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0027_cpu_gen//Computer_System_Nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2024.11.19 15:58:56 (*) Starting Nios II generation
-Info: cpu: # 2024.11.19 15:58:56 (*)   Checking for plaintext license.
-Info: cpu: # 2024.11.19 15:58:57 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2024.11.19 15:58:57 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2024.11.19 15:58:57 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2024.11.19 15:58:57 (*)   Plaintext license not found.
-Info: cpu: # 2024.11.19 15:58:57 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2024.11.19 15:58:57 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2024.11.19 15:58:57 (*)   Creating all objects for CPU
-Info: cpu: # 2024.11.19 15:58:58 (*)   Generating RTL from CPU objects
-Info: cpu: # 2024.11.19 15:58:58 (*)   Creating plain-text RTL
-Info: cpu: # 2024.11.19 15:58:59 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Computer_System_Nios2_cpu --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0028_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0028_cpu_gen//Computer_System_Nios2_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2024.12.01 14:08:31 (*) Starting Nios II generation
+Info: cpu: # 2024.12.01 14:08:31 (*)   Checking for plaintext license.
+Info: cpu: # 2024.12.01 14:08:33 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2024.12.01 14:08:33 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2024.12.01 14:08:33 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2024.12.01 14:08:33 (*)   Plaintext license not found.
+Info: cpu: # 2024.12.01 14:08:33 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2024.12.01 14:08:33 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.12.01 14:08:33 (*)   Creating all objects for CPU
+Info: cpu: # 2024.12.01 14:08:36 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.12.01 14:08:36 (*)   Creating plain-text RTL
+Info: cpu: # 2024.12.01 14:08:37 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'Computer_System_Nios2_cpu'
 Info: cpu: "Nios2" instantiated altera_nios2_gen2_unit "cpu"
 Info: sys_pll: "System_PLL" instantiated altera_up_altpll "sys_pll"
@@ -299,53 +260,53 @@ Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
 Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
 Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
-Info: router_008: "mm_interconnect_0" instantiated altera_merlin_router "router_008"
-Info: router_011: "mm_interconnect_0" instantiated altera_merlin_router "router_011"
-Info: router_022: "mm_interconnect_0" instantiated altera_merlin_router "router_022"
+Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
+Info: router_012: "mm_interconnect_0" instantiated altera_merlin_router "router_012"
+Info: router_023: "mm_interconnect_0" instantiated altera_merlin_router "router_023"
 Info: JTAG_to_FPGA_Bridge_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "JTAG_to_FPGA_Bridge_master_limiter"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_avalon_sc_fifo.v
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: SDRAM_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "SDRAM_s1_burst_adapter"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
 Info: cmd_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_003"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: cmd_mux_007: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_007"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_008: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_008"
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
-Info: rsp_demux_007: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_007"
+Info: rsp_demux_008: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_008"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_003"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: Nios2_data_master_to_SDRAM_s1_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "Nios2_data_master_to_SDRAM_s1_cmd_width_adapter"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
-Info: avalon_st_adapter_007: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_007"
+Info: avalon_st_adapter_008: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_008"
 Info: ASCII_to_Image: Starting Generation of ASCII to Image Stream Converter
 Info: ASCII_to_Image: "Char_Buf_Subsystem" instantiated altera_up_avalon_video_ascii_to_image "ASCII_to_Image"
 Info: Char_Buf_DMA: Starting Generation of Video DMA Controller
 Info: Char_Buf_DMA: "Char_Buf_Subsystem" instantiated altera_up_avalon_video_dma_controller "Char_Buf_DMA"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_dma_control_slave.v
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_dma_to_memory.v
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_dma_to_stream.v
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_dma_control_slave.v
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_dma_to_memory.v
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_dma_to_stream.v
 Info: Char_Buf_RGB_Resampler: Starting Generation of Video RGB Resampler
 Info: Char_Buf_RGB_Resampler: "Char_Buf_Subsystem" instantiated altera_up_avalon_video_rgb_resampler "Char_Buf_RGB_Resampler"
 Info: Char_Buf_Scaler: Starting Generation of Video Scaler
 Info: Char_Buf_Scaler: "Char_Buf_Subsystem" instantiated altera_up_avalon_video_scaler "Char_Buf_Scaler"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_scaler_shrink.v
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_scaler_multiply_width.v
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_scaler_multiply_height.v
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_scaler_shrink.v
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_scaler_multiply_width.v
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_up_video_scaler_multiply_height.v
 Info: Onchip_SRAM: Starting RTL generation for module 'Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM'
-Info: Onchip_SRAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM --dir=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0068_Onchip_SRAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/YANNDO~1/AppData/Local/Temp/alt0046_1115637003040865662.dir/0068_Onchip_SRAM_gen//Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM_component_configuration.pl  --do_build_sim=0  ]
+Info: Onchip_SRAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM --dir=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0069_Onchip_SRAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/vladi/AppData/Local/Temp/alt0058_1073665874295003792.dir/0069_Onchip_SRAM_gen//Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM_component_configuration.pl  --do_build_sim=0  ]
 Info: Onchip_SRAM: Done RTL generation for module 'Computer_System_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM'
 Info: Onchip_SRAM: "Char_Buf_Subsystem" instantiated altera_avalon_onchip_memory2 "Onchip_SRAM"
 Info: Set_Black_Transparent: Starting Generation of Video Change Alpha Value IP Core
@@ -354,14 +315,14 @@ Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "Char_Buf_Subsystem" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: channel_adapter_0: "avalon_st_adapter" instantiated channel_adapter "channel_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: error_adapter_0: "avalon_st_adapter_007" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_008" instantiated error_adapter "error_adapter_0"
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
 Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/Mac/Home/Documents/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
-Info: Computer_System: Done "Computer_System" with 89 modules, 135 files
+Info: Reusing file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Computer_System: Done "Computer_System" with 90 modules, 138 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis
