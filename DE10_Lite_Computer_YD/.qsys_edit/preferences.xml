@@ -9,8 +9,8 @@
    <export preferredWidth="223" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
- <window width="1918" height="1006" x="1" y="1" />
+ <library expandedCategories="Project,Library" />
+ <window width="1942" height="1030" x="-11" y="-11" />
  <generation synthesis="VHDL" />
  <hdlexample language="VHDL" />
 </preferences>

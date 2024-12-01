@@ -28,12 +28,16 @@ entity DE10_Lite_Computer is
         DRAM_WE_N         : out std_logic;
 
         -- Accelerometer
-        G_SENSOR_CS_N     : out std_logic;
+        G_SENSOR_CS_N     : out std_logic ;
         G_SENSOR_INT      : in  std_logic_vector(2 downto 1);
-        G_SENSOR_SCLK     : out std_logic;
+        G_SENSOR_SCLK     : out std_logic ;
         G_SENSOR_SDI      : inout std_logic;
         G_SENSOR_SDO      : inout std_logic;
 
+		  -- Telemeter
+		  --AVALON_TELEMETRE_OUTPUT_WRITERESPONSEVALID_N : out   std_logic;
+        --AVALON_TELEMETRE_OUTPUT_BEGINBURSTTRANSFER   : in    std_logic;
+		  
         -- 40-Pin Headers
         GPIO              : inout std_logic_vector(35 downto 0);
 
@@ -99,8 +103,11 @@ architecture Behavioral of DE10_Lite_Computer is
             vga_G                       : out   std_logic_vector(3 downto 0);                     -- G
             vga_B                       : out   std_logic_vector(3 downto 0);                     -- B
             video_pll_ref_clk_clk       : in    std_logic                     := 'X';             -- clk
-            video_pll_ref_reset_reset   : in    std_logic                     := 'X'              -- reset
+            video_pll_ref_reset_reset   : in    std_logic                     := 'X';             -- reset
+				avalon_telemetre_output_writeresponsevalid_n : out   std_logic;                       -- writeresponsevalid_n
+            avalon_telemetre_output_beginbursttransfer   : in    std_logic    := 'X'              -- beginbursttransfer
         );
+		  
     end component Computer_System;
 	 
 	 
