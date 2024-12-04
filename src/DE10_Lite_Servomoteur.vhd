@@ -20,6 +20,8 @@ Signal T_SIGNAL_counter         : integer := 0; -- Clock Counter until 20ms
 
 Begin
 
+-- Content
+
 Process( reset_n, Clk )
 
 begin
