@@ -19,13 +19,25 @@ Architecture RTL of DE10_Lite_Servomoteur Is
 
 -- Signal
 Signal T_SIGNAL_counter         : integer := 0; -- Clock Counter until 20ms
+Signal T_SIGNAL_position_EN     : std_logic_vector(15 downto 0) := ( others => '0' );
 
 Begin
 
 -- Content
 
-Process( reset_n, Clk )
 
+Process( reset_n, Clk )
+Begin
+    If (reset_n = '0') Then
+      T_SIGNAL_position_EN <= 0;
+    ElsIf Rising_Edge(clk) Then
+        If (Write_enable = '1') Then
+          T_SIGNAL_position_EN <= to_integer(unsigned(WriteData)); -- MAJ position
+        End If;
+    End If;
+End Process;
+
+Process( reset_n, Clk )
 begin
     If ( reset_n = '0' ) Then
       T_SIGNAL_counter  <=  0;
