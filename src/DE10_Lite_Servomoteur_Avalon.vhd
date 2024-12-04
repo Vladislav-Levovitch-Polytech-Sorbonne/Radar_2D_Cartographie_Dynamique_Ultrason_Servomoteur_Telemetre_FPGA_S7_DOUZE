@@ -2,7 +2,7 @@ Library ieee;
 Use     ieee.std_logic_1164.all;
 Use     ieee.numeric_std.all;
 
-Entity DE10_Lite_Servomoteur Is Port (
+Entity DE10_Lite_Servomoteur_Avalon Is Port (
       -- Host Side
       clk         : In    std_logic;                       -- 50MHz
       reset_n     : In    std_logic;                       -- Reset in low state
@@ -15,7 +15,7 @@ Entity DE10_Lite_Servomoteur Is Port (
     );
 End Entity;
 
-Architecture RTL of DE10_Lite_Servomoteur Is
+Architecture RTL of DE10_Lite_Servomoteur_Avalon Is
 
 -- Signal
 Signal T_SIGNAL_counter         : integer := 0; -- Clock Counter until 20ms
@@ -29,10 +29,10 @@ Begin
 Process( reset_n, Clk )
 Begin
     If (reset_n = '0') Then
-      T_SIGNAL_position_EN <= 0;
+      T_SIGNAL_position_EN <= ( others => '0' );
     ElsIf Rising_Edge(clk) Then
-        If (Write_enable = '1') Then
-          T_SIGNAL_position_EN <= to_integer(unsigned(WriteData)); -- MAJ position
+        If (write_n = '0') Then
+          T_SIGNAL_position_EN <= WriteData; -- MAJ position
         End If;
     End If;
 End Process;
