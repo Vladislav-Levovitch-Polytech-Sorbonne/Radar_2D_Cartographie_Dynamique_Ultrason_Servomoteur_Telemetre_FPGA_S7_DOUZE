@@ -107,6 +107,31 @@ begin
         wait until SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '1'; -- Debut commande 
         wait until SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '0'; -- Fin commande 
         wait for 5 ms;
+
+-- Test ChipSelect 
+        -- CS = 0 devant reset a 0 la commande
+        wait until SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '1'; -- Debut commande
+        wait for 900 us; -- Attendre juste avant la fin de T_min en cas de commande
+        SIGNAL_Test_Bench_Servomoteur_Avalon_chipselect <= '0';
+        wait for 30 ms;
+        assert SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '0' report "CS°" severity error;
+
+        -- CS = 1 retour precedente commande
+        SIGNAL_Test_Bench_Servomoteur_Avalon_chipselect <= '1';
+
+        wait until SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '1'; -- Debut commande 
+        wait until SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '0'; -- Fin commande 
+        wait for 5 ms;
+
+-- Test Write_NOT
+        SIGNAL_Test_Bench_Servomoteur_Avalon_write_n <= '1';
+        SIGNAL_Test_Bench_Servomoteur_Avalon_WriteData <= "0000000111000010";
+        wait until SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '1'; -- Debut commande 
+        wait until SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '0'; -- Fin commande 
+        wait for 5 ms;
+        SIGNAL_Test_Bench_Servomoteur_Avalon_WriteData <= "0010100111000010";
+        wait until SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '1'; -- Debut commande 
+        wait until SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '0'; -- Fin commande 
         wait;
     end process;
 end test_bench_DE10_Lite_Servomoteur_architecture;

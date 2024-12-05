@@ -25,21 +25,20 @@ Begin
 
 -- Content
 
-
-Process( reset_n, Clk )
+Process( reset_n, chipselect, Clk )
 Begin
-    If (reset_n = '0') Then
+    If ( reset_n = '0' ) Then
       T_SIGNAL_position_EN <= ( others => '0' );
-    ElsIf Rising_Edge(clk) Then
-        If (write_n = '0') Then
+    ElsIf Rising_Edge( clk ) Then
+        If ( write_n = '0' ) Then
           T_SIGNAL_position_EN <= WriteData; -- MAJ position
         End If;
     End If;
 End Process;
 
-Process( reset_n, Clk )
+Process( reset_n, chipselect, Clk )
 begin
-    If ( reset_n = '0' ) Then
+    If ( reset_n = '0' or chipselect ='0') Then
       T_SIGNAL_counter  <=  0;
       commande          <= '0';
 

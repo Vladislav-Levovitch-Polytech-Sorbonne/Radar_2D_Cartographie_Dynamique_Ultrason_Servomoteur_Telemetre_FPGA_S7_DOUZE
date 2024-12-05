@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>3 déc. 2024 03:56:19</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1733194579180</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>5 déc. 2024 20:36:52</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1733427412846</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\vladi\Desktop\software\telemetre_dix_bsp</BspGeneratedLocation>
-        <BspSettingsFile>.\settings.bsp</BspSettingsFile>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\Computer_System.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>Nios2</Cpu>
