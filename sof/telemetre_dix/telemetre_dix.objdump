@@ -43,43 +43,43 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  12 .debug_abbrev 00002c74  00000000  00000000  0000dbdf  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_line   00002df0  00000000  00000000  00010853  2**0
+ 13 .debug_line   00002dff  00000000  00000000  00010853  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_frame  00000bc4  00000000  00000000  00013644  2**2
+ 14 .debug_frame  00000bc4  00000000  00000000  00013654  2**2
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    00001ec7  00000000  00000000  00014208  2**0
+ 15 .debug_str    00001ec7  00000000  00000000  00014218  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_loc    00000cd1  00000000  00000000  000160cf  2**0
+ 16 .debug_loc    00000cd1  00000000  00000000  000160df  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_alt_sim_info 00000040  00000000  00000000  00016da0  2**2
+ 17 .debug_alt_sim_info 00000040  00000000  00000000  00016db0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_ranges 000001d8  00000000  00000000  00016de0  2**3
+ 18 .debug_ranges 000001d8  00000000  00000000  00016df0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 19 .thread_model 00000003  00000000  00000000  00018d59  2**0
+ 19 .thread_model 00000003  00000000  00000000  00018d69  2**0
                   CONTENTS, READONLY
- 20 .cpu          00000005  00000000  00000000  00018d5c  2**0
+ 20 .cpu          00000005  00000000  00000000  00018d6c  2**0
                   CONTENTS, READONLY
- 21 .qsys         00000001  00000000  00000000  00018d61  2**0
+ 21 .qsys         00000001  00000000  00000000  00018d71  2**0
                   CONTENTS, READONLY
- 22 .simulation_enabled 00000001  00000000  00000000  00018d62  2**0
+ 22 .simulation_enabled 00000001  00000000  00000000  00018d72  2**0
                   CONTENTS, READONLY
- 23 .sysid_hash   00000004  00000000  00000000  00018d63  2**0
+ 23 .sysid_hash   00000004  00000000  00000000  00018d73  2**0
                   CONTENTS, READONLY
- 24 .sysid_base   00000004  00000000  00000000  00018d67  2**0
+ 24 .sysid_base   00000004  00000000  00000000  00018d77  2**0
                   CONTENTS, READONLY
- 25 .sysid_time   00000004  00000000  00000000  00018d6b  2**0
+ 25 .sysid_time   00000004  00000000  00000000  00018d7b  2**0
                   CONTENTS, READONLY
- 26 .stderr_dev   00000009  00000000  00000000  00018d6f  2**0
+ 26 .stderr_dev   00000009  00000000  00000000  00018d7f  2**0
                   CONTENTS, READONLY
- 27 .stdin_dev    00000009  00000000  00000000  00018d78  2**0
+ 27 .stdin_dev    00000009  00000000  00000000  00018d88  2**0
                   CONTENTS, READONLY
- 28 .stdout_dev   00000009  00000000  00000000  00018d81  2**0
+ 28 .stdout_dev   00000009  00000000  00000000  00018d91  2**0
                   CONTENTS, READONLY
- 29 .sopc_system_name 0000000f  00000000  00000000  00018d8a  2**0
+ 29 .sopc_system_name 0000000f  00000000  00000000  00018d9a  2**0
                   CONTENTS, READONLY
- 30 .quartus_project_dir 00000016  00000000  00000000  00018d99  2**0
+ 30 .quartus_project_dir 00000016  00000000  00000000  00018da9  2**0
                   CONTENTS, READONLY
- 31 .sopcinfo     000f7819  00000000  00000000  00018daf  2**0
+ 31 .sopcinfo     000f7819  00000000  00000000  00018dbf  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00000000 l    d  .entry	00000000 .entry
@@ -739,33 +739,99 @@ int main() {
 
     //unsigned int Ei_Vlad[] = {equivalence_sept_seg[15], equivalence_sept_seg[14], equivalence_sept_seg[13], equivalence_sept_seg[12], equivalence_sept_seg[11]|0x80, equivalence_sept_seg[10]};
 
-	unsigned int Buffer_6_HEX[] = {equivalence_sept_seg[6], equivalence_sept_seg[7], equivalence_sept_seg[8], equivalence_sept_seg[9], equivalence_sept_seg[1], equivalence_sept_seg[0]};
+	unsigned int Buffer_6_HEX[] =
+	{
+			equivalence_sept_seg[0],
      27c:	00800034 	movhi	r2,0
      280:	108c1e04 	addi	r2,r2,12408
-     284:	10800617 	ldw	r2,24(r2)
+     284:	10800017 	ldw	r2,0(r2)
+
+int main() {
+
+    //unsigned int Ei_Vlad[] = {equivalence_sept_seg[15], equivalence_sept_seg[14], equivalence_sept_seg[13], equivalence_sept_seg[12], equivalence_sept_seg[11]|0x80, equivalence_sept_seg[10]};
+
+	unsigned int Buffer_6_HEX[] =
      288:	e0bffa15 	stw	r2,-24(fp)
+	{
+			equivalence_sept_seg[0],
+			equivalence_sept_seg[1],
      28c:	00800034 	movhi	r2,0
      290:	108c1e04 	addi	r2,r2,12408
-     294:	10800717 	ldw	r2,28(r2)
+     294:	10800117 	ldw	r2,4(r2)
+
+int main() {
+
+    //unsigned int Ei_Vlad[] = {equivalence_sept_seg[15], equivalence_sept_seg[14], equivalence_sept_seg[13], equivalence_sept_seg[12], equivalence_sept_seg[11]|0x80, equivalence_sept_seg[10]};
+
+	unsigned int Buffer_6_HEX[] =
      298:	e0bffb15 	stw	r2,-20(fp)
+	{
+			equivalence_sept_seg[0],
+			equivalence_sept_seg[1],
+			equivalence_sept_seg[2],
      29c:	00800034 	movhi	r2,0
      2a0:	108c1e04 	addi	r2,r2,12408
-     2a4:	10800817 	ldw	r2,32(r2)
+     2a4:	10800217 	ldw	r2,8(r2)
+
+int main() {
+
+    //unsigned int Ei_Vlad[] = {equivalence_sept_seg[15], equivalence_sept_seg[14], equivalence_sept_seg[13], equivalence_sept_seg[12], equivalence_sept_seg[11]|0x80, equivalence_sept_seg[10]};
+
+	unsigned int Buffer_6_HEX[] =
      2a8:	e0bffc15 	stw	r2,-16(fp)
+	{
+			equivalence_sept_seg[0],
+			equivalence_sept_seg[1],
+			equivalence_sept_seg[2],
+			equivalence_sept_seg[3],
      2ac:	00800034 	movhi	r2,0
      2b0:	108c1e04 	addi	r2,r2,12408
-     2b4:	10800917 	ldw	r2,36(r2)
+     2b4:	10800317 	ldw	r2,12(r2)
+
+int main() {
+
+    //unsigned int Ei_Vlad[] = {equivalence_sept_seg[15], equivalence_sept_seg[14], equivalence_sept_seg[13], equivalence_sept_seg[12], equivalence_sept_seg[11]|0x80, equivalence_sept_seg[10]};
+
+	unsigned int Buffer_6_HEX[] =
      2b8:	e0bffd15 	stw	r2,-12(fp)
+	{
+			equivalence_sept_seg[0],
+			equivalence_sept_seg[1],
+			equivalence_sept_seg[2],
+			equivalence_sept_seg[3],
+			equivalence_sept_seg[4],
      2bc:	00800034 	movhi	r2,0
      2c0:	108c1e04 	addi	r2,r2,12408
-     2c4:	10800117 	ldw	r2,4(r2)
+     2c4:	10800417 	ldw	r2,16(r2)
+
+int main() {
+
+    //unsigned int Ei_Vlad[] = {equivalence_sept_seg[15], equivalence_sept_seg[14], equivalence_sept_seg[13], equivalence_sept_seg[12], equivalence_sept_seg[11]|0x80, equivalence_sept_seg[10]};
+
+	unsigned int Buffer_6_HEX[] =
      2c8:	e0bffe15 	stw	r2,-8(fp)
+			equivalence_sept_seg[0],
+			equivalence_sept_seg[1],
+			equivalence_sept_seg[2],
+			equivalence_sept_seg[3],
+			equivalence_sept_seg[4],
+			equivalence_sept_seg[5]
      2cc:	00800034 	movhi	r2,0
      2d0:	108c1e04 	addi	r2,r2,12408
-     2d4:	10800017 	ldw	r2,0(r2)
+     2d4:	10800517 	ldw	r2,20(r2)
+
+int main() {
+
+    //unsigned int Ei_Vlad[] = {equivalence_sept_seg[15], equivalence_sept_seg[14], equivalence_sept_seg[13], equivalence_sept_seg[12], equivalence_sept_seg[11]|0x80, equivalence_sept_seg[10]};
+
+	unsigned int Buffer_6_HEX[] =
      2d8:	e0bfff15 	stw	r2,-4(fp)
+			equivalence_sept_seg[4],
+			equivalence_sept_seg[5]
+	};
+
     while (1) {
-        IOWR_ALTERA_AVALON_PIO_DATA(HEX3_HEX0_BASE,
+    	IOWR_ALTERA_AVALON_HEX_3_2_1_0(( Buffer_6_HEX[2] << 8*3 ) | ( Buffer_6_HEX[3] << 8*2 ) | ( Buffer_6_HEX[4] << 8 ) | Buffer_6_HEX[5] );
      2dc:	e0bffc17 	ldw	r2,-16(fp)
      2e0:	1006963a 	slli	r3,r2,24
      2e4:	e0bffd17 	ldw	r2,-12(fp)
@@ -780,9 +846,7 @@ int main() {
      308:	00bfc834 	movhi	r2,65312
      30c:	10800804 	addi	r2,r2,32
      310:	10c00035 	stwio	r3,0(r2)
-            ( Buffer_6_HEX[2] << 8*3 ) | ( Buffer_6_HEX[3] << 8*2 ) | (Buffer_6_HEX[4] << 8) | Buffer_6_HEX[5]);
-
-        IOWR_ALTERA_AVALON_PIO_DATA(HEX5_HEX4_BASE,
+    	IOWR_ALTERA_AVALON_HEX_5_4 (( Buffer_6_HEX[0] << 8) | Buffer_6_HEX[1] );
      314:	e0bffa17 	ldw	r2,-24(fp)
      318:	1006923a 	slli	r3,r2,8
      31c:	e0bffb17 	ldw	r2,-20(fp)
@@ -791,7 +855,6 @@ int main() {
      328:	00bfc834 	movhi	r2,65312
      32c:	10800c04 	addi	r2,r2,48
      330:	10c00035 	stwio	r3,0(r2)
-            ( Buffer_6_HEX[0] << 8) | Buffer_6_HEX[1] );
 
         usleep(500000);
      334:	01000234 	movhi	r4,8
@@ -5176,7 +5239,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
     2b98:	d9400015 	stw	r5,0(sp)
     2b9c:	d9800115 	stw	r6,4(sp)
     2ba0:	d9c00215 	stw	r7,8(sp)
-    2ba4:	00000000 	call	0 <__alt_mem_SDRAM>
+    2ba4:	00000000 	call	0 <__reset>
     2ba8:	d9400017 	ldw	r5,0(sp)
     2bac:	d9800117 	ldw	r6,4(sp)
     2bb0:	d9c00217 	ldw	r7,8(sp)
@@ -5260,7 +5323,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
     2ce0:	10003226 	beq	r2,zero,2dac <__call_exitprocs+0x178>
     2ce4:	a009883a 	mov	r4,r20
     2ce8:	98800015 	stw	r2,0(r19)
-    2cec:	00000000 	call	0 <__alt_mem_SDRAM>
+    2cec:	00000000 	call	0 <__reset>
     2cf0:	9d000017 	ldw	r20,0(r19)
     2cf4:	a03fe41e 	bne	r20,zero,2c88 <__alt_mem_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM+0xf7002c88>
     2cf8:	dfc00a17 	ldw	ra,40(sp)

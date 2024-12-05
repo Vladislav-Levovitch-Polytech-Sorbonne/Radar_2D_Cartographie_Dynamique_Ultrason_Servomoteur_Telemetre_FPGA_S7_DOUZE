@@ -43,13 +43,19 @@ int main() {
 
     //unsigned int Ei_Vlad[] = {equivalence_sept_seg[15], equivalence_sept_seg[14], equivalence_sept_seg[13], equivalence_sept_seg[12], equivalence_sept_seg[11]|0x80, equivalence_sept_seg[10]};
 
-	unsigned int Buffer_6_HEX[] = {equivalence_sept_seg[6], equivalence_sept_seg[7], equivalence_sept_seg[8], equivalence_sept_seg[9], equivalence_sept_seg[1], equivalence_sept_seg[0]};
-    while (1) {
-        IOWR_ALTERA_AVALON_PIO_DATA(HEX3_HEX0_BASE,
-            ( Buffer_6_HEX[2] << 8*3 ) | ( Buffer_6_HEX[3] << 8*2 ) | (Buffer_6_HEX[4] << 8) | Buffer_6_HEX[5]);
+	unsigned int Buffer_6_HEX[] =
+	{
+			equivalence_sept_seg[0],
+			equivalence_sept_seg[1],
+			equivalence_sept_seg[2],
+			equivalence_sept_seg[3],
+			equivalence_sept_seg[4],
+			equivalence_sept_seg[5]
+	};
 
-        IOWR_ALTERA_AVALON_PIO_DATA(HEX5_HEX4_BASE,
-            ( Buffer_6_HEX[0] << 8) | Buffer_6_HEX[1] );
+    while (1) {
+    	IOWR_ALTERA_AVALON_HEX_3_2_1_0(( Buffer_6_HEX[2] << 8*3 ) | ( Buffer_6_HEX[3] << 8*2 ) | ( Buffer_6_HEX[4] << 8 ) | Buffer_6_HEX[5] );
+    	IOWR_ALTERA_AVALON_HEX_5_4 (( Buffer_6_HEX[0] << 8) | Buffer_6_HEX[1] );
 
         usleep(500000);
     }
