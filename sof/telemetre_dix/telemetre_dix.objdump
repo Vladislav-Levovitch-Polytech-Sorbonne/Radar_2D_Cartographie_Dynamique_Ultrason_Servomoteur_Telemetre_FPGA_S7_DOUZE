@@ -739,22 +739,22 @@ int main() {
 
     //unsigned int Ei_Vlad[] = {equivalence_sept_seg[15], equivalence_sept_seg[14], equivalence_sept_seg[13], equivalence_sept_seg[12], equivalence_sept_seg[11]|0x80, equivalence_sept_seg[10]};
 
-	unsigned int Buffer_6_HEX[] = {equivalence_sept_seg[5], equivalence_sept_seg[4], equivalence_sept_seg[3], equivalence_sept_seg[2], equivalence_sept_seg[1], equivalence_sept_seg[0]};
+	unsigned int Buffer_6_HEX[] = {equivalence_sept_seg[6], equivalence_sept_seg[7], equivalence_sept_seg[8], equivalence_sept_seg[9], equivalence_sept_seg[1], equivalence_sept_seg[0]};
      27c:	00800034 	movhi	r2,0
      280:	108c1e04 	addi	r2,r2,12408
-     284:	10800517 	ldw	r2,20(r2)
+     284:	10800617 	ldw	r2,24(r2)
      288:	e0bffa15 	stw	r2,-24(fp)
      28c:	00800034 	movhi	r2,0
      290:	108c1e04 	addi	r2,r2,12408
-     294:	10800417 	ldw	r2,16(r2)
+     294:	10800717 	ldw	r2,28(r2)
      298:	e0bffb15 	stw	r2,-20(fp)
      29c:	00800034 	movhi	r2,0
      2a0:	108c1e04 	addi	r2,r2,12408
-     2a4:	10800317 	ldw	r2,12(r2)
+     2a4:	10800817 	ldw	r2,32(r2)
      2a8:	e0bffc15 	stw	r2,-16(fp)
      2ac:	00800034 	movhi	r2,0
      2b0:	108c1e04 	addi	r2,r2,12408
-     2b4:	10800217 	ldw	r2,8(r2)
+     2b4:	10800917 	ldw	r2,36(r2)
      2b8:	e0bffd15 	stw	r2,-12(fp)
      2bc:	00800034 	movhi	r2,0
      2c0:	108c1e04 	addi	r2,r2,12408
@@ -766,32 +766,32 @@ int main() {
      2d8:	e0bfff15 	stw	r2,-4(fp)
     while (1) {
         IOWR_ALTERA_AVALON_PIO_DATA(HEX3_HEX0_BASE,
-     2dc:	e0bffd17 	ldw	r2,-12(fp)
+     2dc:	e0bffc17 	ldw	r2,-16(fp)
      2e0:	1006963a 	slli	r3,r2,24
-     2e4:	e0bffc17 	ldw	r2,-16(fp)
+     2e4:	e0bffd17 	ldw	r2,-12(fp)
      2e8:	1004943a 	slli	r2,r2,16
      2ec:	1886b03a 	or	r3,r3,r2
-     2f0:	e0bffb17 	ldw	r2,-20(fp)
+     2f0:	e0bffe17 	ldw	r2,-8(fp)
      2f4:	1004923a 	slli	r2,r2,8
      2f8:	1886b03a 	or	r3,r3,r2
-     2fc:	e0bffa17 	ldw	r2,-24(fp)
+     2fc:	e0bfff17 	ldw	r2,-4(fp)
      300:	1884b03a 	or	r2,r3,r2
      304:	1007883a 	mov	r3,r2
      308:	00bfc834 	movhi	r2,65312
      30c:	10800804 	addi	r2,r2,32
      310:	10c00035 	stwio	r3,0(r2)
-            (Buffer_6_HEX[3] << 24) | (Buffer_6_HEX[2] << 16) | (Buffer_6_HEX[1] << 8) | Buffer_6_HEX[0]);
+            ( Buffer_6_HEX[2] << 8*3 ) | ( Buffer_6_HEX[3] << 8*2 ) | (Buffer_6_HEX[4] << 8) | Buffer_6_HEX[5]);
 
         IOWR_ALTERA_AVALON_PIO_DATA(HEX5_HEX4_BASE,
-     314:	e0bfff17 	ldw	r2,-4(fp)
+     314:	e0bffa17 	ldw	r2,-24(fp)
      318:	1006923a 	slli	r3,r2,8
-     31c:	e0bffe17 	ldw	r2,-8(fp)
+     31c:	e0bffb17 	ldw	r2,-20(fp)
      320:	1884b03a 	or	r2,r3,r2
      324:	1007883a 	mov	r3,r2
      328:	00bfc834 	movhi	r2,65312
      32c:	10800c04 	addi	r2,r2,48
      330:	10c00035 	stwio	r3,0(r2)
-            (Buffer_6_HEX[5] << 8) | Buffer_6_HEX[4]);
+            ( Buffer_6_HEX[0] << 8) | Buffer_6_HEX[1] );
 
         usleep(500000);
      334:	01000234 	movhi	r4,8
@@ -5176,7 +5176,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
     2b98:	d9400015 	stw	r5,0(sp)
     2b9c:	d9800115 	stw	r6,4(sp)
     2ba0:	d9c00215 	stw	r7,8(sp)
-    2ba4:	00000000 	call	0 <__reset>
+    2ba4:	00000000 	call	0 <__alt_mem_SDRAM>
     2ba8:	d9400017 	ldw	r5,0(sp)
     2bac:	d9800117 	ldw	r6,4(sp)
     2bb0:	d9c00217 	ldw	r7,8(sp)
@@ -5260,7 +5260,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
     2ce0:	10003226 	beq	r2,zero,2dac <__call_exitprocs+0x178>
     2ce4:	a009883a 	mov	r4,r20
     2ce8:	98800015 	stw	r2,0(r19)
-    2cec:	00000000 	call	0 <__reset>
+    2cec:	00000000 	call	0 <__alt_mem_SDRAM>
     2cf0:	9d000017 	ldw	r20,0(r19)
     2cf4:	a03fe41e 	bne	r20,zero,2c88 <__alt_mem_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM+0xf7002c88>
     2cf8:	dfc00a17 	ldw	ra,40(sp)
