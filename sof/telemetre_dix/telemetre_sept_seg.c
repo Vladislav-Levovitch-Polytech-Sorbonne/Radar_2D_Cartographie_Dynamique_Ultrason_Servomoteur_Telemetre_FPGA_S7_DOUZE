@@ -40,7 +40,7 @@ unsigned int table_sept_seg[] =
 };
 
 int main() {
-	unsigned int distance = 238; // int_test
+	unsigned int distance = 0; // int_test
 
 	// Stockage des donnees a afficher sur les 6 afficheurs Sept segments
 	unsigned int Buffer_6_HEX[] =
@@ -72,7 +72,11 @@ int main() {
     	IOWR_ALTERA_AVALON_HEX_3_2_1_0(( Buffer_6_HEX[2] << 8*3 ) | ( Buffer_6_HEX[3] << 8*2 ) | ( Buffer_6_HEX[4] << 8 ) | Buffer_6_HEX[5] );
     	IOWR_ALTERA_AVALON_HEX_5_4 (( Buffer_6_HEX[0] << 8) | Buffer_6_HEX[1] );
 
-        usleep(500000);
+        usleep(200000); // Delay 1s ~300ooo
+
+        // Simulation de MAJ distance
+        distance +=3;
+        if ( distance >= 370 ) { distance = 2;} //Reinit
     }
     return 0;
 }
