@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-
+entity DE10_Lite_Computer is 
     Port (
         -- Clock pins
         CLOCK_50          : in  std_logic;
@@ -74,37 +74,37 @@ architecture Behavioral of DE10_Lite_Computer is
 	 
 	  component Computer_System is
         port (
-            arduino_gpio_export         : inout std_logic_vector(15 downto 0) := (others => 'X'); -- export
-            arduino_reset_n_export      : out   std_logic;                                        -- export
-            hex3_hex0_export            : out   std_logic_vector(31 downto 0);                    -- export
-            hex5_hex4_export            : out   std_logic_vector(15 downto 0);                    -- export
-            leds_export                 : out   std_logic_vector(9 downto 0);                     -- export
-            pushbuttons_export          : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
-            sdram_addr                  : out   std_logic_vector(12 downto 0);                    -- addr
-            sdram_ba                    : out   std_logic_vector(1 downto 0);                     -- ba
-            sdram_cas_n                 : out   std_logic;                                        -- cas_n
-            sdram_cke                   : out   std_logic;                                        -- cke
-            sdram_cs_n                  : out   std_logic;                                        -- cs_n
-            sdram_dq                    : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
-            sdram_dqm                   : out   std_logic_vector(1 downto 0);                     -- dqm
-            sdram_ras_n                 : out   std_logic;                                        -- ras_n
-            sdram_we_n                  : out   std_logic;                                        -- we_n
-            sdram_clk_clk               : out   std_logic;                                        -- clk
-            slider_switches_export      : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
-            system_pll_ref_clk_clk      : in    std_logic                     := 'X';             -- clk
-            system_pll_ref_reset_reset  : in    std_logic                     := 'X';             -- reset
-            vga_CLK                     : out   std_logic;                                        -- CLK
-            vga_HS                      : out   std_logic;                                        -- HS
-            vga_VS                      : out   std_logic;                                        -- VS
-            vga_BLANK                   : out   std_logic;                                        -- BLANK
-            vga_SYNC                    : out   std_logic;                                        -- SYNC
-            vga_R                       : out   std_logic_vector(3 downto 0);                     -- R
-            vga_G                       : out   std_logic_vector(3 downto 0);                     -- G
-            vga_B                       : out   std_logic_vector(3 downto 0);                     -- B
-            video_pll_ref_clk_clk       : in    std_logic                     := 'X';             -- clk
-            video_pll_ref_reset_reset   : in    std_logic                     := 'X';             -- reset
-				avalon_telemetre_output_writeresponsevalid_n : out   std_logic;                       -- writeresponsevalid_n
-            avalon_telemetre_output_beginbursttransfer   : in    std_logic    := 'X'              -- beginbursttransfer
+            arduino_gpio_export          : inout std_logic_vector(15 downto 0) := (others => 'X'); -- export
+            arduino_reset_n_export       : out   std_logic;                                        -- export
+            hex3_hex0_export             : out   std_logic_vector(31 downto 0);                    -- export
+            hex5_hex4_export             : out   std_logic_vector(15 downto 0);                    -- export
+            leds_export                  : out   std_logic_vector(9 downto 0);                     -- export
+            pushbuttons_export           : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
+            sdram_addr                   : out   std_logic_vector(12 downto 0);                    -- addr
+            sdram_ba                     : out   std_logic_vector(1 downto 0);                     -- ba
+            sdram_cas_n                  : out   std_logic;                                        -- cas_n
+            sdram_cke                    : out   std_logic;                                        -- cke
+            sdram_cs_n                   : out   std_logic;                                        -- cs_n
+            sdram_dq                     : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
+            sdram_dqm                    : out   std_logic_vector(1 downto 0);                     -- dqm
+            sdram_ras_n                  : out   std_logic;                                        -- ras_n
+            sdram_we_n                   : out   std_logic;                                        -- we_n
+            sdram_clk_clk                : out   std_logic;                                        -- clk
+            slider_switches_export       : in    std_logic_vector(9 downto 0)  := (others => 'X'); -- export
+            system_pll_ref_clk_clk       : in    std_logic                     := 'X';             -- clk
+            system_pll_ref_reset_reset   : in    std_logic                     := 'X';             -- reset
+            vga_CLK                      : out   std_logic;                                        -- CLK
+            vga_HS                       : out   std_logic;                                        -- HS
+            vga_VS                       : out   std_logic;                                        -- VS
+            vga_BLANK                    : out   std_logic;                                        -- BLANK
+            vga_SYNC                     : out   std_logic;                                        -- SYNC
+            vga_R                        : out   std_logic_vector(3 downto 0);                     -- R
+            vga_G                        : out   std_logic_vector(3 downto 0);                     -- G
+            vga_B                        : out   std_logic_vector(3 downto 0);                     -- B
+            video_pll_ref_clk_clk        : in    std_logic                     := 'X';             -- clk
+            video_pll_ref_reset_reset    : in    std_logic                     := 'X';             -- reset
+				avalon_telemetre_output_trig : out   std_logic;                       -- writeresponsevalid_n
+            avalon_telemetre_output_echo : in    std_logic    := 'X'              -- beginbursttransfer
         );
 		  
     end component Computer_System;
@@ -159,6 +159,10 @@ begin
             vga_G                     => VGA_G,
             vga_B                     => VGA_B,
 
+				-- Telemetre
+				avalon_telemetre_output_trig => GPIO(1),
+				avalon_telemetre_output_echo => GPIO(3),
+				
             -- SDRAM
             sdram_clk_clk             => DRAM_CLK,
             sdram_addr                => DRAM_ADDR,

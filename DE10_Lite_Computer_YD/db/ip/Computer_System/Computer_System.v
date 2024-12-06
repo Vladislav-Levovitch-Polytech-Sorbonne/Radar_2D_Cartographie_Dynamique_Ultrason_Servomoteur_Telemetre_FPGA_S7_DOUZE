@@ -4,37 +4,37 @@
 
 `timescale 1 ps / 1 ps
 module Computer_System (
-		inout  wire [15:0] arduino_gpio_export,                          //            arduino_gpio.export
-		output wire        arduino_reset_n_export,                       //         arduino_reset_n.export
-		output wire        avalon_telemetre_output_writeresponsevalid_n, // avalon_telemetre_output.writeresponsevalid_n
-		input  wire        avalon_telemetre_output_beginbursttransfer,   //                        .beginbursttransfer
-		output wire [31:0] hex3_hex0_export,                             //               hex3_hex0.export
-		output wire [15:0] hex5_hex4_export,                             //               hex5_hex4.export
-		output wire [9:0]  leds_export,                                  //                    leds.export
-		input  wire [1:0]  pushbuttons_export,                           //             pushbuttons.export
-		output wire [12:0] sdram_addr,                                   //                   sdram.addr
-		output wire [1:0]  sdram_ba,                                     //                        .ba
-		output wire        sdram_cas_n,                                  //                        .cas_n
-		output wire        sdram_cke,                                    //                        .cke
-		output wire        sdram_cs_n,                                   //                        .cs_n
-		inout  wire [15:0] sdram_dq,                                     //                        .dq
-		output wire [1:0]  sdram_dqm,                                    //                        .dqm
-		output wire        sdram_ras_n,                                  //                        .ras_n
-		output wire        sdram_we_n,                                   //                        .we_n
-		output wire        sdram_clk_clk,                                //               sdram_clk.clk
-		input  wire [9:0]  slider_switches_export,                       //         slider_switches.export
-		input  wire        system_pll_ref_clk_clk,                       //      system_pll_ref_clk.clk
-		input  wire        system_pll_ref_reset_reset,                   //    system_pll_ref_reset.reset
-		output wire        vga_CLK,                                      //                     vga.CLK
-		output wire        vga_HS,                                       //                        .HS
-		output wire        vga_VS,                                       //                        .VS
-		output wire        vga_BLANK,                                    //                        .BLANK
-		output wire        vga_SYNC,                                     //                        .SYNC
-		output wire [3:0]  vga_R,                                        //                        .R
-		output wire [3:0]  vga_G,                                        //                        .G
-		output wire [3:0]  vga_B,                                        //                        .B
-		input  wire        video_pll_ref_clk_clk,                        //       video_pll_ref_clk.clk
-		input  wire        video_pll_ref_reset_reset                     //     video_pll_ref_reset.reset
+		inout  wire [15:0] arduino_gpio_export,          //            arduino_gpio.export
+		output wire        arduino_reset_n_export,       //         arduino_reset_n.export
+		output wire        avalon_telemetre_output_trig, // avalon_telemetre_output.trig
+		input  wire        avalon_telemetre_output_echo, //                        .echo
+		output wire [31:0] hex3_hex0_export,             //               hex3_hex0.export
+		output wire [15:0] hex5_hex4_export,             //               hex5_hex4.export
+		output wire [9:0]  leds_export,                  //                    leds.export
+		input  wire [1:0]  pushbuttons_export,           //             pushbuttons.export
+		output wire [12:0] sdram_addr,                   //                   sdram.addr
+		output wire [1:0]  sdram_ba,                     //                        .ba
+		output wire        sdram_cas_n,                  //                        .cas_n
+		output wire        sdram_cke,                    //                        .cke
+		output wire        sdram_cs_n,                   //                        .cs_n
+		inout  wire [15:0] sdram_dq,                     //                        .dq
+		output wire [1:0]  sdram_dqm,                    //                        .dqm
+		output wire        sdram_ras_n,                  //                        .ras_n
+		output wire        sdram_we_n,                   //                        .we_n
+		output wire        sdram_clk_clk,                //               sdram_clk.clk
+		input  wire [9:0]  slider_switches_export,       //         slider_switches.export
+		input  wire        system_pll_ref_clk_clk,       //      system_pll_ref_clk.clk
+		input  wire        system_pll_ref_reset_reset,   //    system_pll_ref_reset.reset
+		output wire        vga_CLK,                      //                     vga.CLK
+		output wire        vga_HS,                       //                        .HS
+		output wire        vga_VS,                       //                        .VS
+		output wire        vga_BLANK,                    //                        .BLANK
+		output wire        vga_SYNC,                     //                        .SYNC
+		output wire [3:0]  vga_R,                        //                        .R
+		output wire [3:0]  vga_G,                        //                        .G
+		output wire [3:0]  vga_B,                        //                        .B
+		input  wire        video_pll_ref_clk_clk,        //       video_pll_ref_clk.clk
+		input  wire        video_pll_ref_reset_reset     //     video_pll_ref_reset.reset
 	);
 
 	wire         system_pll_sys_clk_clk;                                                   // System_PLL:sys_clk_clk -> [Arduino_GPIO:clk, Arduino_Reset_N:clk, HEX3_HEX0:clk, HEX5_HEX4:clk, Interval_Timer:clk, Interval_Timer_2:clk, JTAG_UART:clk, JTAG_to_FPGA_Bridge:clk_clk, LEDs:clk, Nios2:clk, Onchip_SRAM:clk, Pushbuttons:clk, SDRAM:clk, Slider_Switches:clk, SysID:clock, VGA_Subsystem:sys_clk_clk, avalon_telemetre:clk, irq_mapper:clk, mm_interconnect_0:System_PLL_sys_clk_clk, rst_controller:clk, rst_controller_001:clk]
@@ -547,8 +547,8 @@ module Computer_System (
 		.read_n     (~mm_interconnect_0_avalon_telemetre_avalon_slave_0_read),      //               .read_n
 		.readdata   (mm_interconnect_0_avalon_telemetre_avalon_slave_0_readdata),   //               .readdata
 		.Rst_n      (~rst_controller_reset_out_reset),                              //        reset_n.reset_n
-		.trig       (avalon_telemetre_output_writeresponsevalid_n),                 //      telemetre.writeresponsevalid_n
-		.echo       (avalon_telemetre_output_beginbursttransfer)                    //               .beginbursttransfer
+		.trig       (avalon_telemetre_output_trig),                                 //      telemetre.trig
+		.echo       (avalon_telemetre_output_echo)                                  //               .echo
 	);
 
 	altera_customins_master_translator #(

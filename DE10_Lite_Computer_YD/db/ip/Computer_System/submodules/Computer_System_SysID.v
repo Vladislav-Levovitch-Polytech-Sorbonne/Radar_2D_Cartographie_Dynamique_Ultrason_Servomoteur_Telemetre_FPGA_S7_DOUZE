@@ -49,7 +49,7 @@ module Computer_System_SysID (
 
   wire    [ 31: 0] readdata;
   //control_slave, which is an e_avalon_slave
-  assign readdata = address ? 1733015764 : 0;
+  assign readdata = address ? 1733476270 : 0;
 
 endmodule
 

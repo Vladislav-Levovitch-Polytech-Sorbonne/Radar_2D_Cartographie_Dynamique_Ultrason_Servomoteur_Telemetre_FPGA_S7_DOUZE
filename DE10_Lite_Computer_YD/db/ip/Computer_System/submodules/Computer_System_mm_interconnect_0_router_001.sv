@@ -218,14 +218,14 @@ module Computer_System_mm_interconnect_0_router_001
 
     // ( 0x4000000 .. 0x4000004 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 32'h4000000  && read_transaction  ) begin
-            src_channel = 20'b000000000000000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 19;
+            src_channel = 20'b000000000001000000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 18;
     end
 
     // ( 0x4000004 .. 0x4000008 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 32'h4000004  && read_transaction  ) begin
-            src_channel = 20'b000000000001000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 18;
+            src_channel = 20'b000000000000000010;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 19;
     end
 
     // ( 0x8000000 .. 0x8010000 )
