@@ -426,3 +426,168 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 
 !ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 01:56:53.290
 !MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:01:40.965
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:01:41.709
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:01:44.729
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:09:07.221
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:09:08.310
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:09:10.742
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:09:37.935
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:09:38.801
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:09:41.271
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:10:45.244
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:10:46.156
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:10:48.664
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY org.eclipse.cdt.ui 4 0 2024-12-08 02:14:18.073
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element telemetre_sept_seg.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:484)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:573)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:362)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:349)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2024-12-08 02:14:18.077
+!MESSAGE Element telemetre_sept_seg.c does not exist.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:16:44.232
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:16:45.015
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:16:47.668
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:21:41.090
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:21:42.141
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:21:44.830
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:22:33.101
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:22:34.213
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:22:36.676
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:22:39.397
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:22:40.408
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:22:43.208
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:23:08.698
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:23:09.782
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:23:12.621
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:32:29.149
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:32:29.942
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:32:32.315
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:34:18.924
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:34:19.695
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:34:22.176
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:36:41.904
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:36:42.913
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:36:45.441
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:38:10.568
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:38:11.376
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:38:14.020
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:41:42.002
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:41:42.948
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:41:45.645
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:43:41.744
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:43:42.596
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:43:45.244
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:45:11.859
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:45:12.698
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1733480655]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-08 02:45:15.096
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1733480655 /cygdrive/c/Users/vladi/Desktop/software/telemetre_onze/telemetre_onze.elf]
