@@ -1766,3 +1766,557 @@ Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
 [BSP build complete]
 [telemetre_onze build complete]
+04:06:16 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:06:19 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:06:21 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:07:10 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+telemetre_sept_seg.c: In function 'main':
+telemetre_sept_seg.c:113:30: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+         moyenne_distance /= 2,1*TAILLE_FENETRE; // Moyenne entiere
+                              ^
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:07:15 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:08:04 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:08:06 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:08:09 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:09:21 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:09:23 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:09:27 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:12:40 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:13:33 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:14:26 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:16:20 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:16:22 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:16:24 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:17:52 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:17:54 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:18:02 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:20:53 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:20:56 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:20:57 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:24:00 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:24:02 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:27:57 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+telemetre_sept_seg.c: In function 'main':
+telemetre_sept_seg.c:99:29: error: 'NB_PRELEVEMENTS' undeclared (first use in this function)
+         for (int i = 0; i < NB_PRELEVEMENTS; i++)
+                             ^
+telemetre_sept_seg.c:99:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/telemetre_sept_seg.o] Error 1
+04:27:58 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:28:02 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+telemetre_sept_seg.c: In function 'main':
+telemetre_sept_seg.c:99:29: error: 'NB_PRELEVEMENTS' undeclared (first use in this function)
+         for (int i = 0; i < NB_PRELEVEMENTS; i++)
+                             ^
+telemetre_sept_seg.c:99:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/telemetre_sept_seg.o] Error 1
+04:28:28 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+telemetre_sept_seg.c: In function 'main':
+telemetre_sept_seg.c:113:33: error: 'TAILLE_FENETRE' undeclared (first use in this function)
+         moyenne_distance /= 3 * TAILLE_FENETRE;
+                                 ^
+telemetre_sept_seg.c:113:33: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/telemetre_sept_seg.o] Error 1
+04:28:29 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:29:04 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+telemetre_sept_seg.c: In function 'main':
+telemetre_sept_seg.c:113:33: error: 'TAILLE_FENETRE' undeclared (first use in this function)
+         moyenne_distance /= 3 * TAILLE_FENETRE;
+                                 ^
+telemetre_sept_seg.c:113:33: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/telemetre_sept_seg.o] Error 1
+04:29:05 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:29:19 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+telemetre_sept_seg.c: In function 'main':
+telemetre_sept_seg.c:113:33: error: 'TAILLE_FENETRE' undeclared (first use in this function)
+         moyenne_distance /= 3 * TAILLE_FENETRE;
+                                 ^
+telemetre_sept_seg.c:113:33: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/telemetre_sept_seg.o] Error 1
+04:29:20 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:29:45 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:29:47 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:29:55 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:35:11 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+telemetre_sept_seg.c: In function 'main':
+telemetre_sept_seg.c:136:37: error: 'TAILLE_FENETRE' undeclared (first use in this function)
+             moyenne_distance /= 3 * TAILLE_FENETRE;
+                                     ^
+telemetre_sept_seg.c:136:37: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/telemetre_sept_seg.o] Error 1
+04:35:12 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:35:19 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+telemetre_sept_seg.c: In function 'main':
+telemetre_sept_seg.c:136:37: error: 'TAILLE_FENETRE' undeclared (first use in this function)
+             moyenne_distance /= 3 * TAILLE_FENETRE;
+                                     ^
+telemetre_sept_seg.c:136:37: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/telemetre_sept_seg.o] Error 1
+04:35:58 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:36:00 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:36:04 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:36:49 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:36:51 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:36:54 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:37:39 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:37:41 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:37:46 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:39:08 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:39:11 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:39:12 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:40:27 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:40:28 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:40:31 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:42:11 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:42:14 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:42:16 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:43:30 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:43:32 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:43:42 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:43:44 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:43:50 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
+04:48:40 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+Info: Compiling telemetre_sept_seg.c to obj/default/telemetre_sept_seg.o
+nios2-elf-gcc -xc -MP -MMD -c -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//HAL/inc -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp/ -IC:/Users/vladi/Desktop/software/telemetre_onze_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/telemetre_sept_seg.o telemetre_sept_seg.c
+Info: Linking telemetre_onze.elf
+nios2-elf-g++  -T'C:/Users/vladi/Desktop/software/telemetre_onze_bsp//linker.x' -msys-crt0='C:/Users/vladi/Desktop/software/telemetre_onze_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -LC:/Users/vladi/Desktop/software/telemetre_onze_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=telemetre_onze.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o telemetre_onze.elf obj/default/telemetre_sept_seg.o -lm -msys-lib=m
+nios2-elf-insert telemetre_onze.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1733480655 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "c:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD" --jdi C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/DE10_Lite_Computer.jdi --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo
+Info: (telemetre_onze.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating telemetre_onze.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source telemetre_onze.elf >telemetre_onze.objdump
+[telemetre_onze build complete]
+04:48:43 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+make all 
+[BSP build complete]
+04:48:45 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+make all 
+Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
+[BSP build complete]
+[telemetre_onze build complete]
