@@ -103,9 +103,10 @@ architecture Behavioral of DE10_Lite_Computer is
             vga_B                        : out   std_logic_vector(3 downto 0);                     -- B
             video_pll_ref_clk_clk        : in    std_logic                     := 'X';             -- clk
             video_pll_ref_reset_reset    : in    std_logic                     := 'X';             -- reset
-				avalon_telemetre_output_trig : out   std_logic;                       -- writeresponsevalid_n
-            avalon_telemetre_output_echo : in    std_logic    := 'X'              -- beginbursttransfer
-        );
+				avalon_telemetre_output_trig : out   std_logic;   													-- writeresponsevalid_n
+            avalon_telemetre_output_echo : in    std_logic    := 'X';               						-- beginbursttransfer
+				avalon_telemetre_output_dist_cm    : out   std_logic_vector(9 downto 0) 
+		 );
 		  
     end component Computer_System;
 	 
@@ -143,7 +144,7 @@ begin
             pushbuttons_export        => not KEY(1 downto 0),
 				
             -- LEDs
-            leds_export               => LEDR,
+            -- leds_export               => LEDR,
 
             -- Seven Segments
             hex3_hex0_export          => hex3_hex0,
@@ -162,6 +163,7 @@ begin
 				-- Telemetre
 				avalon_telemetre_output_trig => GPIO(1),
 				avalon_telemetre_output_echo => GPIO(3),
+				avalon_telemetre_output_dist_cm => LEDR,
 				
             -- SDRAM
             sdram_clk_clk             => DRAM_CLK,

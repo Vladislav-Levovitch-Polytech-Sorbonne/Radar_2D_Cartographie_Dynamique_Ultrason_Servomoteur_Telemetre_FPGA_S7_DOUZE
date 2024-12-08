@@ -1,9 +1,9 @@
-10:35:44 **** Incremental Build of configuration Nios II for project telemetre_onze ****
+01:48:58 **** Incremental Build of configuration Nios II for project telemetre_onze ****
 make all 
 Info: Building C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/software/telemetre_onze_bsp/
 [BSP build complete]
 [telemetre_onze build complete]
 
-10:35:45 Build Finished (took 1s.22ms)
+01:48:59 Build Finished (took 1s.18ms)
 
