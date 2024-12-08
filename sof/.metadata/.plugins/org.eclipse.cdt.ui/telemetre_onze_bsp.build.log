@@ -1,6 +1,6 @@
-02:45:08 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
+03:28:30 **** Incremental Build of configuration Nios II for project telemetre_onze_bsp ****
 make all 
 [BSP build complete]
 
-02:45:09 Build Finished (took 818ms)
+03:28:31 Build Finished (took 920ms)
 
