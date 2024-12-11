@@ -2,8 +2,10 @@
 module Computer_System (
 	arduino_gpio_export,
 	arduino_reset_n_export,
+	avalon_servomoteur_output_commande,
 	avalon_telemetre_output_trig,
 	avalon_telemetre_output_echo,
+	avalon_telemetre_output_dist_cm,
 	hex3_hex0_export,
 	hex5_hex4_export,
 	leds_export,
@@ -30,13 +32,14 @@ module Computer_System (
 	vga_G,
 	vga_B,
 	video_pll_ref_clk_clk,
-	video_pll_ref_reset_reset,
-	avalon_servomoteur_output_commande);	
+	video_pll_ref_reset_reset);	
 
 	inout	[15:0]	arduino_gpio_export;
 	output		arduino_reset_n_export;
+	output		avalon_servomoteur_output_commande;
 	output		avalon_telemetre_output_trig;
 	input		avalon_telemetre_output_echo;
+	output	[9:0]	avalon_telemetre_output_dist_cm;
 	output	[31:0]	hex3_hex0_export;
 	output	[15:0]	hex5_hex4_export;
 	output	[9:0]	leds_export;
@@ -64,5 +67,4 @@ module Computer_System (
 	output	[3:0]	vga_B;
 	input		video_pll_ref_clk_clk;
 	input		video_pll_ref_reset_reset;
-	output		avalon_servomoteur_output_commande;
 endmodule

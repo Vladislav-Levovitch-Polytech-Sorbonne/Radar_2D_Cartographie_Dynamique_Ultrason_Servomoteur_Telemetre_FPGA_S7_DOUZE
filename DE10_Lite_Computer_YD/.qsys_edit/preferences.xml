@@ -5,12 +5,12 @@
   <columns>
    <connections preferredWidth="239" />
    <irq preferredWidth="34" />
-   <name preferredWidth="206" />
-   <export preferredWidth="223" />
+   <name preferredWidth="298" />
+   <export preferredWidth="357" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
- <window width="1920" height="1017" x="0" y="0" />
+ <library expandedCategories="Project,Library" />
+ <window width="1920" height="1008" x="0" y="0" />
  <generation synthesis="VHDL" path="_PROJECT_NAME_" />
  <hdlexample language="VHDL" />
 </preferences>

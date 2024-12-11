@@ -1,0 +1,21 @@
+23:30:35 **** Incremental Build of configuration Nios II for project servomoteur_telemetre ****
+make all 
+Info: Building C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/servomoteur_telemetre_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/servomoteur_telemetre_bsp/
+Makefile not up to date.
+C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/DE10_Lite_Computer_YD/Computer_System.sopcinfo has been modified since the BSP was generated.
+
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+make[1]: *** [public.mk] Error 1
+make: *** [C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/servomoteur_telemetre_bsp/-recurs-make-lib] Error 2
+
+23:30:37 Build Finished (took 1s.211ms)
+

@@ -1,8 +1,10 @@
 	Computer_System u0 (
 		.arduino_gpio_export                (<connected-to-arduino_gpio_export>),                //              arduino_gpio.export
 		.arduino_reset_n_export             (<connected-to-arduino_reset_n_export>),             //           arduino_reset_n.export
+		.avalon_servomoteur_output_commande (<connected-to-avalon_servomoteur_output_commande>), // avalon_servomoteur_output.commande
 		.avalon_telemetre_output_trig       (<connected-to-avalon_telemetre_output_trig>),       //   avalon_telemetre_output.trig
 		.avalon_telemetre_output_echo       (<connected-to-avalon_telemetre_output_echo>),       //                          .echo
+		.avalon_telemetre_output_dist_cm    (<connected-to-avalon_telemetre_output_dist_cm>),    //                          .dist_cm
 		.hex3_hex0_export                   (<connected-to-hex3_hex0_export>),                   //                 hex3_hex0.export
 		.hex5_hex4_export                   (<connected-to-hex5_hex4_export>),                   //                 hex5_hex4.export
 		.leds_export                        (<connected-to-leds_export>),                        //                      leds.export
@@ -29,7 +31,6 @@
 		.vga_G                              (<connected-to-vga_G>),                              //                          .G
 		.vga_B                              (<connected-to-vga_B>),                              //                          .B
 		.video_pll_ref_clk_clk              (<connected-to-video_pll_ref_clk_clk>),              //         video_pll_ref_clk.clk
-		.video_pll_ref_reset_reset          (<connected-to-video_pll_ref_reset_reset>),          //       video_pll_ref_reset.reset
-		.avalon_servomoteur_output_commande (<connected-to-avalon_servomoteur_output_commande>)  // avalon_servomoteur_output.commande
+		.video_pll_ref_reset_reset          (<connected-to-video_pll_ref_reset_reset>)           //       video_pll_ref_reset.reset
 	);
 

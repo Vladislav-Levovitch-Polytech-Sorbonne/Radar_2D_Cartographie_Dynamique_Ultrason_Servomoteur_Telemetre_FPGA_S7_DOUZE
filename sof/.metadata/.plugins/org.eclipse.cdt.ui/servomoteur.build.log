@@ -1,0 +1,6 @@
+23:48:21 **** Clean-only build of configuration Nios II for project servomoteur ****
+make clean 
+[servomoteur clean complete]
+
+23:48:22 Build Finished (took 486ms)
+

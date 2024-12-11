@@ -508,6 +508,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "GPIO[0]",
+					"strict" : false
+				},
+				{
 					"name" : "GPIO[1]",
 					"strict" : false
 				},

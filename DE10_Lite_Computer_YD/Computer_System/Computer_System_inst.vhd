@@ -2,8 +2,10 @@
 		port (
 			arduino_gpio_export                : inout std_logic_vector(15 downto 0) := (others => 'X'); -- export
 			arduino_reset_n_export             : out   std_logic;                                        -- export
+			avalon_servomoteur_output_commande : out   std_logic;                                        -- commande
 			avalon_telemetre_output_trig       : out   std_logic;                                        -- trig
 			avalon_telemetre_output_echo       : in    std_logic                     := 'X';             -- echo
+			avalon_telemetre_output_dist_cm    : out   std_logic_vector(9 downto 0);                     -- dist_cm
 			hex3_hex0_export                   : out   std_logic_vector(31 downto 0);                    -- export
 			hex5_hex4_export                   : out   std_logic_vector(15 downto 0);                    -- export
 			leds_export                        : out   std_logic_vector(9 downto 0);                     -- export
@@ -30,8 +32,7 @@
 			vga_G                              : out   std_logic_vector(3 downto 0);                     -- G
 			vga_B                              : out   std_logic_vector(3 downto 0);                     -- B
 			video_pll_ref_clk_clk              : in    std_logic                     := 'X';             -- clk
-			video_pll_ref_reset_reset          : in    std_logic                     := 'X';             -- reset
-			avalon_servomoteur_output_commande : out   std_logic                                         -- commande
+			video_pll_ref_reset_reset          : in    std_logic                     := 'X'              -- reset
 		);
 	end component Computer_System;
 
@@ -39,8 +40,10 @@
 		port map (
 			arduino_gpio_export                => CONNECTED_TO_arduino_gpio_export,                --              arduino_gpio.export
 			arduino_reset_n_export             => CONNECTED_TO_arduino_reset_n_export,             --           arduino_reset_n.export
+			avalon_servomoteur_output_commande => CONNECTED_TO_avalon_servomoteur_output_commande, -- avalon_servomoteur_output.commande
 			avalon_telemetre_output_trig       => CONNECTED_TO_avalon_telemetre_output_trig,       --   avalon_telemetre_output.trig
 			avalon_telemetre_output_echo       => CONNECTED_TO_avalon_telemetre_output_echo,       --                          .echo
+			avalon_telemetre_output_dist_cm    => CONNECTED_TO_avalon_telemetre_output_dist_cm,    --                          .dist_cm
 			hex3_hex0_export                   => CONNECTED_TO_hex3_hex0_export,                   --                 hex3_hex0.export
 			hex5_hex4_export                   => CONNECTED_TO_hex5_hex4_export,                   --                 hex5_hex4.export
 			leds_export                        => CONNECTED_TO_leds_export,                        --                      leds.export
@@ -67,7 +70,6 @@
 			vga_G                              => CONNECTED_TO_vga_G,                              --                          .G
 			vga_B                              => CONNECTED_TO_vga_B,                              --                          .B
 			video_pll_ref_clk_clk              => CONNECTED_TO_video_pll_ref_clk_clk,              --         video_pll_ref_clk.clk
-			video_pll_ref_reset_reset          => CONNECTED_TO_video_pll_ref_reset_reset,          --       video_pll_ref_reset.reset
-			avalon_servomoteur_output_commande => CONNECTED_TO_avalon_servomoteur_output_commande  -- avalon_servomoteur_output.commande
+			video_pll_ref_reset_reset          => CONNECTED_TO_video_pll_ref_reset_reset           --       video_pll_ref_reset.reset
 		);
 

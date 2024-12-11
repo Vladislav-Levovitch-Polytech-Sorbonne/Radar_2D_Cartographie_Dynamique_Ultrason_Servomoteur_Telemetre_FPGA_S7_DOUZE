@@ -1,0 +1,9 @@
+23:35:33 **** Incremental Build of configuration Nios II for project servomotor_telemeter ****
+make all 
+Info: Building C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/servomotor_telemeter_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/servomotor_telemeter_bsp/
+[BSP build complete]
+[servomotor_telemeter build complete]
+
+23:35:34 Build Finished (took 866ms)
+

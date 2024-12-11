@@ -585,9 +585,9 @@ architecture rtl of Computer_System is
 			Arduino_Reset_N_s1_readdata                               : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			Arduino_Reset_N_s1_writedata                              : out std_logic_vector(31 downto 0);                    -- writedata
 			Arduino_Reset_N_s1_chipselect                             : out std_logic;                                        -- chipselect
-			avalon_servomoteur_0_avalon_slave_0_write                 : out std_logic;                                        -- write
-			avalon_servomoteur_0_avalon_slave_0_writedata             : out std_logic_vector(15 downto 0);                    -- writedata
-			avalon_servomoteur_0_avalon_slave_0_chipselect            : out std_logic;                                        -- chipselect
+			avalon_servomoteur_avalon_slave_0_write                   : out std_logic;                                        -- write
+			avalon_servomoteur_avalon_slave_0_writedata               : out std_logic_vector(15 downto 0);                    -- writedata
+			avalon_servomoteur_avalon_slave_0_chipselect              : out std_logic;                                        -- chipselect
 			avalon_telemetre_avalon_slave_0_read                      : out std_logic;                                        -- read
 			avalon_telemetre_avalon_slave_0_readdata                  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			avalon_telemetre_avalon_slave_0_chipselect                : out std_logic;                                        -- chipselect
@@ -832,7 +832,7 @@ architecture rtl of Computer_System is
 		);
 	end component computer_system_rst_controller_001;
 
-	signal system_pll_sys_clk_clk                                                   : std_logic;                     -- System_PLL:sys_clk_clk -> [Arduino_GPIO:clk, Arduino_Reset_N:clk, HEX3_HEX0:clk, HEX5_HEX4:clk, Interval_Timer:clk, Interval_Timer_2:clk, JTAG_UART:clk, JTAG_to_FPGA_Bridge:clk_clk, LEDs:clk, Nios2:clk, Onchip_SRAM:clk, Pushbuttons:clk, SDRAM:clk, Slider_Switches:clk, SysID:clock, VGA_Subsystem:sys_clk_clk, avalon_servomoteur_0:clk, avalon_telemetre:clk, irq_mapper:clk, mm_interconnect_0:System_PLL_sys_clk_clk, rst_controller:clk, rst_controller_001:clk]
+	signal system_pll_sys_clk_clk                                                   : std_logic;                     -- System_PLL:sys_clk_clk -> [Arduino_GPIO:clk, Arduino_Reset_N:clk, HEX3_HEX0:clk, HEX5_HEX4:clk, Interval_Timer:clk, Interval_Timer_2:clk, JTAG_UART:clk, JTAG_to_FPGA_Bridge:clk_clk, LEDs:clk, Nios2:clk, Onchip_SRAM:clk, Pushbuttons:clk, SDRAM:clk, Slider_Switches:clk, SysID:clock, VGA_Subsystem:sys_clk_clk, avalon_servomoteur:clk, avalon_telemetre:clk, irq_mapper:clk, mm_interconnect_0:System_PLL_sys_clk_clk, rst_controller:clk, rst_controller_001:clk]
 	signal video_pll_vga_clk_clk                                                    : std_logic;                     -- Video_PLL:vga_clk_clk -> VGA_Subsystem:vga_clk_clk
 	signal system_pll_reset_source_reset                                            : std_logic;                     -- System_PLL:reset_source_reset -> [JTAG_to_FPGA_Bridge:clk_reset_reset, rst_controller:reset_in0, rst_controller_001:reset_in1, system_pll_reset_source_reset:in]
 	signal video_pll_reset_source_reset                                             : std_logic;                     -- Video_PLL:reset_source_reset -> video_pll_reset_source_reset:in
@@ -933,9 +933,9 @@ architecture rtl of Computer_System is
 	signal mm_interconnect_0_avalon_telemetre_avalon_slave_0_chipselect             : std_logic;                     -- mm_interconnect_0:avalon_telemetre_avalon_slave_0_chipselect -> avalon_telemetre:chipselect
 	signal mm_interconnect_0_avalon_telemetre_avalon_slave_0_readdata               : std_logic_vector(31 downto 0); -- avalon_telemetre:readdata -> mm_interconnect_0:avalon_telemetre_avalon_slave_0_readdata
 	signal mm_interconnect_0_avalon_telemetre_avalon_slave_0_read                   : std_logic;                     -- mm_interconnect_0:avalon_telemetre_avalon_slave_0_read -> mm_interconnect_0_avalon_telemetre_avalon_slave_0_read:in
-	signal mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_chipselect         : std_logic;                     -- mm_interconnect_0:avalon_servomoteur_0_avalon_slave_0_chipselect -> avalon_servomoteur_0:chipselect
-	signal mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_write              : std_logic;                     -- mm_interconnect_0:avalon_servomoteur_0_avalon_slave_0_write -> mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_write:in
-	signal mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_writedata          : std_logic_vector(15 downto 0); -- mm_interconnect_0:avalon_servomoteur_0_avalon_slave_0_writedata -> avalon_servomoteur_0:WriteData
+	signal mm_interconnect_0_avalon_servomoteur_avalon_slave_0_chipselect           : std_logic;                     -- mm_interconnect_0:avalon_servomoteur_avalon_slave_0_chipselect -> avalon_servomoteur:chipselect
+	signal mm_interconnect_0_avalon_servomoteur_avalon_slave_0_write                : std_logic;                     -- mm_interconnect_0:avalon_servomoteur_avalon_slave_0_write -> mm_interconnect_0_avalon_servomoteur_avalon_slave_0_write:in
+	signal mm_interconnect_0_avalon_servomoteur_avalon_slave_0_writedata            : std_logic_vector(15 downto 0); -- mm_interconnect_0:avalon_servomoteur_avalon_slave_0_writedata -> avalon_servomoteur:WriteData
 	signal mm_interconnect_0_vga_subsystem_char_buffer_control_slave_readdata       : std_logic_vector(31 downto 0); -- VGA_Subsystem:char_buffer_control_slave_readdata -> mm_interconnect_0:VGA_Subsystem_char_buffer_control_slave_readdata
 	signal mm_interconnect_0_vga_subsystem_char_buffer_control_slave_address        : std_logic_vector(1 downto 0);  -- mm_interconnect_0:VGA_Subsystem_char_buffer_control_slave_address -> VGA_Subsystem:char_buffer_control_slave_address
 	signal mm_interconnect_0_vga_subsystem_char_buffer_control_slave_read           : std_logic;                     -- mm_interconnect_0:VGA_Subsystem_char_buffer_control_slave_read -> VGA_Subsystem:char_buffer_control_slave_read
@@ -1047,7 +1047,7 @@ architecture rtl of Computer_System is
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv             : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:inv -> JTAG_UART:av_read_n
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv            : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:inv -> JTAG_UART:av_write_n
 	signal mm_interconnect_0_avalon_telemetre_avalon_slave_0_read_ports_inv         : std_logic;                     -- mm_interconnect_0_avalon_telemetre_avalon_slave_0_read:inv -> avalon_telemetre:read_n
-	signal mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_write_ports_inv    : std_logic;                     -- mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_write:inv -> avalon_servomoteur_0:write_n
+	signal mm_interconnect_0_avalon_servomoteur_avalon_slave_0_write_ports_inv      : std_logic;                     -- mm_interconnect_0_avalon_servomoteur_avalon_slave_0_write:inv -> avalon_servomoteur:write_n
 	signal mm_interconnect_0_sdram_s1_read_ports_inv                                : std_logic;                     -- mm_interconnect_0_sdram_s1_read:inv -> SDRAM:az_rd_n
 	signal mm_interconnect_0_sdram_s1_byteenable_ports_inv                          : std_logic_vector(1 downto 0);  -- mm_interconnect_0_sdram_s1_byteenable:inv -> SDRAM:az_be_n
 	signal mm_interconnect_0_sdram_s1_write_ports_inv                               : std_logic;                     -- mm_interconnect_0_sdram_s1_write:inv -> SDRAM:az_wr_n
@@ -1059,7 +1059,7 @@ architecture rtl of Computer_System is
 	signal mm_interconnect_0_arduino_reset_n_s1_write_ports_inv                     : std_logic;                     -- mm_interconnect_0_arduino_reset_n_s1_write:inv -> Arduino_Reset_N:write_n
 	signal mm_interconnect_0_interval_timer_s1_write_ports_inv                      : std_logic;                     -- mm_interconnect_0_interval_timer_s1_write:inv -> Interval_Timer:write_n
 	signal mm_interconnect_0_interval_timer_2_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_interval_timer_2_s1_write:inv -> Interval_Timer_2:write_n
-	signal rst_controller_reset_out_reset_ports_inv                                 : std_logic;                     -- rst_controller_reset_out_reset:inv -> [Arduino_GPIO:reset_n, Arduino_Reset_N:reset_n, HEX3_HEX0:reset_n, HEX5_HEX4:reset_n, Interval_Timer:reset_n, Interval_Timer_2:reset_n, JTAG_UART:rst_n, LEDs:reset_n, Pushbuttons:reset_n, SDRAM:reset_n, Slider_Switches:reset_n, SysID:reset_n, avalon_servomoteur_0:reset_n, avalon_telemetre:Rst_n]
+	signal rst_controller_reset_out_reset_ports_inv                                 : std_logic;                     -- rst_controller_reset_out_reset:inv -> [Arduino_GPIO:reset_n, Arduino_Reset_N:reset_n, HEX3_HEX0:reset_n, HEX5_HEX4:reset_n, Interval_Timer:reset_n, Interval_Timer_2:reset_n, JTAG_UART:rst_n, LEDs:reset_n, Pushbuttons:reset_n, SDRAM:reset_n, Slider_Switches:reset_n, SysID:reset_n, avalon_servomoteur:reset_n, avalon_telemetre:Rst_n]
 	signal rst_controller_001_reset_out_reset_ports_inv                             : std_logic;                     -- rst_controller_001_reset_out_reset:inv -> Nios2:reset_n
 
 begin
@@ -1381,14 +1381,14 @@ begin
 			reset_source_reset => video_pll_reset_source_reset  -- reset_source.reset
 		);
 
-	avalon_servomoteur_0 : component DE10_Lite_Servomoteur_Avalon
+	avalon_servomoteur : component DE10_Lite_Servomoteur_Avalon
 		port map (
-			clk        => system_pll_sys_clk_clk,                                                --          clock.clk
-			reset_n    => rst_controller_reset_out_reset_ports_inv,                              --          reset.reset_n
-			chipselect => mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_chipselect,      -- avalon_slave_0.chipselect
-			write_n    => mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_write_ports_inv, --               .write_n
-			WriteData  => mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_writedata,       --               .writedata
-			commande   => avalon_servomoteur_output_commande                                     --    conduit_end.commande
+			clk        => system_pll_sys_clk_clk,                                              --          clock.clk
+			reset_n    => rst_controller_reset_out_reset_ports_inv,                            --          reset.reset_n
+			chipselect => mm_interconnect_0_avalon_servomoteur_avalon_slave_0_chipselect,      -- avalon_slave_0.chipselect
+			write_n    => mm_interconnect_0_avalon_servomoteur_avalon_slave_0_write_ports_inv, --               .write_n
+			WriteData  => mm_interconnect_0_avalon_servomoteur_avalon_slave_0_writedata,       --               .writedata
+			commande   => avalon_servomoteur_output_commande                                   --    conduit_end.commande
 		);
 
 	avalon_telemetre : component DE10_Lite_Telemetre_us_Avalon
@@ -1593,9 +1593,9 @@ begin
 			Arduino_Reset_N_s1_readdata                               => mm_interconnect_0_arduino_reset_n_s1_readdata,                        --                                                    .readdata
 			Arduino_Reset_N_s1_writedata                              => mm_interconnect_0_arduino_reset_n_s1_writedata,                       --                                                    .writedata
 			Arduino_Reset_N_s1_chipselect                             => mm_interconnect_0_arduino_reset_n_s1_chipselect,                      --                                                    .chipselect
-			avalon_servomoteur_0_avalon_slave_0_write                 => mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_write,          --                 avalon_servomoteur_0_avalon_slave_0.write
-			avalon_servomoteur_0_avalon_slave_0_writedata             => mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_writedata,      --                                                    .writedata
-			avalon_servomoteur_0_avalon_slave_0_chipselect            => mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_chipselect,     --                                                    .chipselect
+			avalon_servomoteur_avalon_slave_0_write                   => mm_interconnect_0_avalon_servomoteur_avalon_slave_0_write,            --                   avalon_servomoteur_avalon_slave_0.write
+			avalon_servomoteur_avalon_slave_0_writedata               => mm_interconnect_0_avalon_servomoteur_avalon_slave_0_writedata,        --                                                    .writedata
+			avalon_servomoteur_avalon_slave_0_chipselect              => mm_interconnect_0_avalon_servomoteur_avalon_slave_0_chipselect,       --                                                    .chipselect
 			avalon_telemetre_avalon_slave_0_read                      => mm_interconnect_0_avalon_telemetre_avalon_slave_0_read,               --                     avalon_telemetre_avalon_slave_0.read
 			avalon_telemetre_avalon_slave_0_readdata                  => mm_interconnect_0_avalon_telemetre_avalon_slave_0_readdata,           --                                                    .readdata
 			avalon_telemetre_avalon_slave_0_chipselect                => mm_interconnect_0_avalon_telemetre_avalon_slave_0_chipselect,         --                                                    .chipselect
@@ -1846,7 +1846,7 @@ begin
 
 	mm_interconnect_0_avalon_telemetre_avalon_slave_0_read_ports_inv <= not mm_interconnect_0_avalon_telemetre_avalon_slave_0_read;
 
-	mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_write_ports_inv <= not mm_interconnect_0_avalon_servomoteur_0_avalon_slave_0_write;
+	mm_interconnect_0_avalon_servomoteur_avalon_slave_0_write_ports_inv <= not mm_interconnect_0_avalon_servomoteur_avalon_slave_0_write;
 
 	mm_interconnect_0_sdram_s1_read_ports_inv <= not mm_interconnect_0_sdram_s1_read;
 
