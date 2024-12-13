@@ -1,6 +1,6 @@
-23:48:16 **** Clean-only build of configuration Nios II for project servomoteur_bsp ****
-make clean 
-[BSP clean complete]
+15:03:09 **** Build of configuration Nios II for project servomoteur_bsp ****
+make all 
+[BSP build complete]
 
-23:48:18 Build Finished (took 1s.955ms)
+15:03:10 Build Finished (took 934ms)
 

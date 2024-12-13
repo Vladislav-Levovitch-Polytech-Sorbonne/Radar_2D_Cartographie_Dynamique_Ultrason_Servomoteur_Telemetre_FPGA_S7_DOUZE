@@ -1,0 +1,18 @@
+15:15:52 **** Incremental Build of configuration Nios II for project servomoteur_cent ****
+make all 
+Info: Building ../servomoteur_cent_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../servomoteur_cent_bsp/
+[BSP build complete]
+Info: Compiling servomoteur_cent.c to obj/default/servomoteur_cent.o
+nios2-elf-gcc -xc -MP -MMD -c -I../servomoteur_cent_bsp//HAL/inc -I../servomoteur_cent_bsp/ -I../servomoteur_cent_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/servomoteur_cent.o servomoteur_cent.c
+Info: Linking servomoteur_cent.elf
+nios2-elf-g++  -T'../servomoteur_cent_bsp//linker.x' -msys-crt0='../servomoteur_cent_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../servomoteur_cent_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=servomoteur_cent.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o servomoteur_cent.elf obj/default/servomoteur_cent.o -lm -msys-lib=m
+nios2-elf-insert servomoteur_cent.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734097233 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/servomoteur_cent" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/servomoteur_cent/software/servomoteur_cent_bsp/../../Computer_System.sopcinfo
+Info: (servomoteur_cent.elf) 72 KBytes program size (code + initialized data).
+Info:                        65456 KBytes free for stack + heap.
+Info: Creating servomoteur_cent.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source servomoteur_cent.elf >servomoteur_cent.objdump
+[servomoteur_cent build complete]
+
+15:15:54 Build Finished (took 2s.98ms)
+

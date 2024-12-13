@@ -45,18 +45,18 @@ begin
     ElsIf Rising_Edge( Clk ) Then
       -- echo_r <= echo; 
       -- echo_rr <= echo_r; 
-      If ( T_SIGNAL_counter < 1_000_000 ) Then  -- Full periode is 20ms = 20ns * 1 ooo ooo
+      If ( T_SIGNAL_counter < 2_000_000 ) Then  -- Full periode is 20ms = 2 * 10ns * 1 ooo ooo
           T_SIGNAL_counter <= T_SIGNAL_counter + 1;
 
-          If ( (to_integer (unsigned(WriteData))) > 900 ) Then -- If user ask more than 900 * 0,1 ° => uptade position to max periode (90,0°)
-            If ( T_SIGNAL_counter < 100_000) Then -- 20ns * 100_000 = 2ms
+          If ( (to_integer (unsigned(T_SIGNAL_position_EN))) > 1800 ) Then -- If user ask more than 1800 * 0,1 ° => uptade position to max periode (180,0°)
+            If ( T_SIGNAL_counter < 250_000) Then -- 2 * 10ns * 100_000 = 2.5ms
             commande <= '1';
             Else
             commande <= '0';
             End If;
 
           Else 
-            If ( T_SIGNAL_counter < (50_000 +(to_integer (unsigned(WriteData)))*55 )) Then
+            If ( T_SIGNAL_counter < (50_000 +(to_integer (unsigned(T_SIGNAL_position_EN)))*110 )) Then
             commande <= '1';
             Else
             commande <= '0';

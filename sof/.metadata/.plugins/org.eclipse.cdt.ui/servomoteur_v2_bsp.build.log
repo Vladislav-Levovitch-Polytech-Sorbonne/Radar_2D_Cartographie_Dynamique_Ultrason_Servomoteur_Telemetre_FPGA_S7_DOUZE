@@ -1,6 +1,18 @@
-15:47:36 **** Incremental Build of configuration Nios II for project servomoteur_v2_bsp ****
+14:52:38 **** Incremental Build of configuration Nios II for project servomoteur_v2_bsp ****
 make all 
-[BSP build complete]
+Makefile not up to date.
+../../Computer_System.sopcinfo has been modified since the BSP was generated.
 
-15:47:37 Build Finished (took 717ms)
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+make: *** [public.mk] Error 1
+
+14:52:39 Build Finished (took 920ms)
 

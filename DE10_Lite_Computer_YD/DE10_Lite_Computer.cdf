@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484ES) Path("C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/") File("DE10_Lite_Telemetre_manuel.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484ES) Path("C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/servomoteur_cent/") File("DE10_Lite_Computer.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

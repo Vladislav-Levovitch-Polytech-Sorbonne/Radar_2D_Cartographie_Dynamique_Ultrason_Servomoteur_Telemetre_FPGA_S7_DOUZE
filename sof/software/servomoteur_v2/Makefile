@@ -142,7 +142,7 @@ ACDS_VERSION := 18.1
 ELF := servomoteur_v2.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := hello_world.c
+C_SRCS := servomoteur_telemetre_sept_seg.c
 CXX_SRCS :=
 ASM_SRCS :=
 

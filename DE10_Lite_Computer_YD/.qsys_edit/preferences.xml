@@ -7,10 +7,11 @@
    <irq preferredWidth="34" />
    <name preferredWidth="298" />
    <export preferredWidth="357" />
+   <inputclock preferredWidth="354" />
   </columns>
  </systemtable>
  <library expandedCategories="Project,Library" />
- <window width="1920" height="1008" x="0" y="0" />
+ <window width="1918" height="1006" x="2" y="2" />
  <generation synthesis="VHDL" path="_PROJECT_NAME_" />
  <hdlexample language="VHDL" />
 </preferences>

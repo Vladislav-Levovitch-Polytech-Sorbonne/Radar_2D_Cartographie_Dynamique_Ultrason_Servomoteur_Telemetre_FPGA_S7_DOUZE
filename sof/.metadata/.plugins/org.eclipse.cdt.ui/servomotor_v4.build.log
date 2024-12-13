@@ -1,0 +1,9 @@
+15:19:26 **** Incremental Build of configuration Nios II for project servomotor_v4 ****
+make all 
+Info: Building ../servomotor_v4_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../servomotor_v4_bsp/
+[BSP build complete]
+[servomotor_v4 build complete]
+
+15:19:26 Build Finished (took 883ms)
+

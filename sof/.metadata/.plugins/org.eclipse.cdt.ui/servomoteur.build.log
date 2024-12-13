@@ -1,6 +1,9 @@
-23:48:21 **** Clean-only build of configuration Nios II for project servomoteur ****
-make clean 
-[servomoteur clean complete]
+15:03:07 **** Build of configuration Nios II for project servomoteur ****
+make all 
+Info: Building ../servomoteur_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../servomoteur_bsp/
+[BSP build complete]
+[servomoteur build complete]
 
-23:48:22 Build Finished (took 486ms)
+15:03:09 Build Finished (took 1s.175ms)
 
