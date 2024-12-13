@@ -1,7 +1,34 @@
 /*
  * servomotor.c
  *
+ *  Created on: 1 déc. 2024
+ *      Author: vladi
+ */
+
+/*
+ * servomotor.c
+ *
+ *  Created on: 5 déc. 2024
+ *      Author: vladi
+ */
+
+ /*
+ * servomotor.c
+ *
  *  Created on: 8 déc. 2024
+ *      Author: vladi
+ */
+
+/*
+ * servomoteur.c
+ *
+ *  Created on: 8 déc. 2024
+ *      Author: vladi
+ */
+/*
+ * telemetre_sept_seg.c
+ *
+ *  Created on: 3 dec. 2024
  *      Author: vladi
  */
 
@@ -9,7 +36,7 @@
 #include "io.h"
 #include <stdio.h>
 #include "altera_avalon_pio_regs.h"
-#include "servomotor.h"
+#include "servomoteur_tournant.h"
 #include "unistd.h"  // Pour usleep
 
 #define NB_PRELEVEMENTS 32   // Nombre de prelevements pour la moyenne
@@ -20,8 +47,7 @@
  * #define HEX5_HEX4_BASE 0xff200030
  * #define AVALON_TELEMETRE_BASE 0x4000000
  * SLIDER_SWITCHES_BASE
- * IORD_ALTERA_AVALON_SWITCHES()
- * IOWR_ALTERA_AVALON_SERVOMOTEUR()
+ *
  * */
 
 unsigned int table_sept_seg[] =
@@ -87,12 +113,15 @@ void init_Affichage ()
 
 int main()
 {
-    unsigned int distance = 0;                     // Distance brute mesuree
+    unsigned int distance = 0;                    // Distance brute mesuree
     unsigned int moyenne_distance = 0;            // Moyenne des distances
     unsigned int Buffer_6_HEX[6] = {0};           // Buffer pour l'affichage
     unsigned int somme_distance = 0;              // Somme des distances valides
     unsigned int nb_valeurs_valides = 0;          // Nombre de valeurs valides
     unsigned int nb_valeurs_aberrantes = 0;       // Compteur de valeurs aberrantes
+    unsigned int angle = 0;              		  // Angle reel
+    unsigned int data_angle = 0;                  // Somme des distances valides
+    unsigned int flip_angle = 0;
 
     // Initialisation de l'affichage
     init_Affichage();
@@ -121,14 +150,14 @@ int main()
             }
 
             // Pause entre chaque prelevement
-            usleep(20000);
+            usleep(1000);
         }
 
         // Si trop de valeurs aberrantes, distance moyenne = 0
         if (nb_valeurs_aberrantes > NB_PRELEVEMENTS / 5)
         {
             moyenne_distance = 0;
-            printf("Distance moyenne = 0 cm \tTrop de valeurs aberrantes detectees.\n");
+            // printff("Distance moyenne = 0 cm \tTrop de valeurs aberrantes detectees.\n");
         }
         else if (nb_valeurs_valides > 0) // Calcul de la moyenne si des valeurs valides existent
         {
@@ -136,35 +165,62 @@ int main()
             // Verification des securites
             if (moyenne_distance > 800)
             {
-                printf("Distance moyenne = 0 cm \tDistance moyenne depasse 800 cm, valeur ramenee à 0 cm.\n");
+                // printf("Distance moyenne = 0 cm \tDistance moyenne depasse 800 cm, valeur ramenee à 0 cm.\n");
                 moyenne_distance = 0;
             }
             else if (moyenne_distance >= 300 && moyenne_distance <= 800)
             {
-                printf("Distance moyenne = %d cm \tAttention : Distance moyenne entre 300 et 800 cm. Resultat peu precis.\n", moyenne_distance);
+                // printf("Distance moyenne = %d cm \tAttention : Distance moyenne entre 300 et 800 cm. Resultat peu precis.\n", moyenne_distance);
             }
             else
             {
-                printf("Distance moyenne = %d cm\n", moyenne_distance);
+                // printf("Distance moyenne = %d cm\n", moyenne_distance);
             }
         }
         else // Aucun prelevement valide
         {
             moyenne_distance = 0;
-            printf("Distance moyenne = 0 cm \tAucune valeur valide detectee.\n");
+            // printf("Distance moyenne = 0 cm \tAucune valeur valide detectee.\n");
         }
 
         // Affichage de la distance sur les afficheurs 7 segments
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 3; i++)
         {
             Buffer_6_HEX[5 - i] = table_sept_seg[(moyenne_distance / puissance_10[i]) % 10];
         }
 
+        // Affichage caractere degres
+        Buffer_6_HEX[2] = 0x63;
+
+        Buffer_6_HEX[1] = table_sept_seg[(angle / puissance_10[0]) % 10];
+        Buffer_6_HEX[0] = table_sept_seg[(angle / puissance_10[1]) % 10];
         update_display(Buffer_6_HEX);
 
-        // Pause entre chaque affichage
-        usleep(250000);
-    }
+		if (flip_angle == 0)
+		{
+			data_angle += 8;
+			flip_angle = 1;
+		}
 
+		else // Aucun prelevement valide
+		{
+			data_angle += 9;
+			flip_angle = 0;
+		}
+
+		IOWR_ALTERA_AVALON_SERVOMOTEUR(data_angle); // MAJ Position Servomotor
+			  usleep(1000);
+			  if (data_angle>1540)
+			  {
+				  data_angle = 0;
+				  angle = 0;
+				  IOWR_ALTERA_AVALON_SERVOMOTEUR(data_angle); // Reset Position Servomotor
+				  usleep(1000000); // Temps de retour
+				  // Pause entre chaque affichage
+			  }
+		printf("Angle = %d    Distance moyenne = %d cm\n",angle, moyenne_distance);
+		// MAJ angle
+		angle += 1;
+    }
     return 0;
 }
