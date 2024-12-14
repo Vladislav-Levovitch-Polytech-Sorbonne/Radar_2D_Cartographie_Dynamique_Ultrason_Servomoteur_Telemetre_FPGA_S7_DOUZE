@@ -70,7 +70,8 @@ void update_display(unsigned int* Buffer_6_HEX)
 {
     IOWR_ALTERA_AVALON_HEX_3_2_1_0(
         (Buffer_6_HEX[2] << 24) | (Buffer_6_HEX[3] << 16) |
-        (Buffer_6_HEX[4] << 8) | Buffer_6_HEX[5]);
+        (Buffer_6_HEX[4] << 8) | Buffer_6_HEX[5]
+    );
     IOWR_ALTERA_AVALON_HEX_5_4((Buffer_6_HEX[0] << 8) | Buffer_6_HEX[1]);
 }
 
@@ -92,14 +93,10 @@ void init_affichage()
 
     for (int i = 0; i < 7; i++)
     {
-        if (i < 6)
-        {
+        if (i < 6) {
             Buffer_6_HEX[i] |= (1 << 7); // Allumer le point decimal
-        }
-        else
-        {
-            for (int j = 0; j < 6; j++)
-            {
+        } else {
+            for (int j = 0; j < 6; j++) {
                 Buffer_6_HEX[j] &= ~(1 << 7); // eteindre le point decimal
             }
         }
@@ -134,12 +131,9 @@ int main()
         {
             distance = IORD_ALTERA_AVALON_TELEMETRE();
 
-            if (distance > SEUIL_ABERRANT)
-            {
+            if (distance > SEUIL_ABERRANT) {
                 nb_valeurs_aberrantes++;
-            }
-            else
-            {
+            } else {
                 somme_distance += distance;
                 nb_valeurs_valides++;
             }
@@ -148,45 +142,32 @@ int main()
         }
 
         // Calcul de la distance moyenne
-        if (nb_valeurs_aberrantes > NB_PRELEVEMENTS / 5 || nb_valeurs_valides == 0)
-        {
+        if (nb_valeurs_aberrantes > NB_PRELEVEMENTS / 5 || nb_valeurs_valides == 0) {
             moyenne_distance = 0;
-        }
-        else
-        {
+        } else {
             moyenne_distance = somme_distance / (3 * nb_valeurs_valides) + 1;
-            if (moyenne_distance > 800)
-            {
+            if (moyenne_distance > 800) {
                 moyenne_distance = 0;
             }
         }
 
         // Mise a jour de l affichage
-        for (int i = 0; i < 3; i++)
-        {
+        for (int i = 0; i < 3; i++) {
             Buffer_6_HEX[5 - i] = table_sept_seg[(moyenne_distance / puissance_10[i]) % 10];
         }
-
-        // Limiter l angle à 180
-        if (angle > 180)
-        {
-            angle = 180; // Forcer l angle à 180 si depassement
-        }
-
         Buffer_6_HEX[2] = 0x63; // Caractere "°" pour l affichage
         Buffer_6_HEX[1] = table_sept_seg[(angle / puissance_10[0]) % 10];
         Buffer_6_HEX[0] = table_sept_seg[(angle / puissance_10[1]) % 10];
-        update_display (Buffer_6_HEX);
+        update_display(Buffer_6_HEX);
 
         // Mise a jour de la position du servomoteur
         data_angle += (flip_angle == 0) ? 8 : 9;
-        flip_angle = 1 - flip_angle; // Alterner entre 8 et 9 car il faudrait augmenter de 8,55 pour chaque nouveau degres
+        flip_angle = 1 - flip_angle; // Alterner entre 8 et 9
 
         IOWR_ALTERA_AVALON_SERVOMOTEUR(data_angle);
         usleep(1000);
 
-        if (data_angle > 1540)
-        {
+        if (data_angle > 1540) {
             data_angle = 0;
             angle = 0;
             IOWR_ALTERA_AVALON_SERVOMOTEUR(data_angle);
