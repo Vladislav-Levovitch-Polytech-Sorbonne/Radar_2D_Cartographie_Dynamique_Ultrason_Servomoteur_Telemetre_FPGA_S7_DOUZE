@@ -1256,7 +1256,7 @@ int main()
 
             if (distance > SEUIL_ABERRANT)
      50c:	e0bff817 	ldw	r2,-32(fp)
-     510:	1080fa70 	cmpltui	r2,r2,1001
+     510:	10803ef0 	cmpltui	r2,r2,251
      514:	1000041e 	bne	r2,zero,528 <main+0x94>
             {
                 nb_valeurs_aberrantes++;
@@ -19929,7 +19929,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
    102d4:	d9400015 	stw	r5,0(sp)
    102d8:	d9800115 	stw	r6,4(sp)
    102dc:	d9c00215 	stw	r7,8(sp)
-   102e0:	00000000 	call	0 <__reset>
+   102e0:	00000000 	call	0 <__alt_mem_SDRAM>
    102e4:	d9400017 	ldw	r5,0(sp)
    102e8:	d9800117 	ldw	r6,4(sp)
    102ec:	d9c00217 	ldw	r7,8(sp)
@@ -20013,7 +20013,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
    1041c:	10003226 	beq	r2,zero,104e8 <__call_exitprocs+0x178>
    10420:	a009883a 	mov	r4,r20
    10424:	98800015 	stw	r2,0(r19)
-   10428:	00000000 	call	0 <__reset>
+   10428:	00000000 	call	0 <__alt_mem_SDRAM>
    1042c:	9d000017 	ldw	r20,0(r19)
    10430:	a03fe41e 	bne	r20,zero,103c4 <__alt_mem_VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM+0xf70103c4>
    10434:	dfc00a17 	ldw	ra,40(sp)

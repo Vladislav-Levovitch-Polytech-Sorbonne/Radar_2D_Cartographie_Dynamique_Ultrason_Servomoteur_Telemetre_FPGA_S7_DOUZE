@@ -41,7 +41,7 @@
 #include "unistd.h" // Pour usleep
 
 #define NB_PRELEVEMENTS 32   // Nombre de prelevements pour la moyenne
-#define SEUIL_ABERRANT 250  // Seuil pour detecter une valeur aberrante
+#define SEUIL_ABERRANT 1000  // Seuil pour detecter une valeur aberrante
 
 unsigned int table_sept_seg[] =
 {
