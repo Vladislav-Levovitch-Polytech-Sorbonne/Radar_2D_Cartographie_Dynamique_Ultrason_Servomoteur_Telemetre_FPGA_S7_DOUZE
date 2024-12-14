@@ -20,7 +20,7 @@ architecture test_bench_DE10_Lite_Servomoteur_architecture of test_bench_DE10_Li
     component DE10_Lite_Servomoteur_Avalon
         Port (
             -- Host Side
-            clk         : In    std_logic;                       -- 50MHz
+            clk         : In    std_logic;                       -- 50MHz -- Rectification en fait c est 100MHz et non 50MHz
             reset_n     : In    std_logic;                       -- Reset in low state
             chipselect  : In    std_logic;                       -- Avalon CS
             write_n     : In    std_logic;                       -- Avalon WE (NOT)
@@ -47,9 +47,9 @@ begin
     clk_process : process
     begin
         SIGNAL_Test_Bench_Servomoteur_Avalon_clk <= '0';
-        wait for 10 ns;
+        wait for 5 ns;
         SIGNAL_Test_Bench_Servomoteur_Avalon_clk <= '1';
-        wait for 10 ns;
+        wait for 5 ns;
     end process;
 
     -- Test process
@@ -82,14 +82,15 @@ begin
         wait for 5 ms;
 
 -- Test Position angulaire a decimale de T_commande 
-        -- Position 324 * 0.1° = 32,4°
-        SIGNAL_Test_Bench_Servomoteur_Avalon_WriteData <= "0000000101000100";
+        wait for 5 ms;
+        -- Position 324 * 0.1° = 32,5°
+        SIGNAL_Test_Bench_Servomoteur_Avalon_WriteData <= "0000000101000101";
         wait for 1 ms;
         wait until SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '1'; -- Debut commande 
-        wait for 1 ms; -- 0 ° = 1ms 
-        wait for 356 us; -- 354 * 1,1us = 356,4us
+        wait for 0.5 ms; -- 0 ° = 0,5ms 
+        wait for 305 us; -- 325 * 0,94us = 305,5us
         assert SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '1' report "32,4°" severity error;
-        wait for 1 us; -- 354 * 1,1us = 356,4us
+        wait for 1 us; -- 325 * 0,94us = 305,5us
         assert SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '0' report "32,4°" severity error;
 
 -- Test Reset not
@@ -113,7 +114,9 @@ begin
         wait until SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '1'; -- Debut commande
         wait for 900 us; -- Attendre juste avant la fin de T_min en cas de commande
         SIGNAL_Test_Bench_Servomoteur_Avalon_chipselect <= '0';
-        wait for 30 ms;
+        wait for 10 ms;
+        SIGNAL_Test_Bench_Servomoteur_Avalon_WriteData <= ( others => '0' );
+        wait for 20 ms;
         assert SIGNAL_Test_Bench_Servomoteur_Avalon_commande = '0' report "CS°" severity error;
 
         -- CS = 1 retour precedente commande
@@ -135,3 +138,4 @@ begin
         wait;
     end process;
 end test_bench_DE10_Lite_Servomoteur_architecture;
+-- Certaine valeurs du TestBench releve encore du modele 90°

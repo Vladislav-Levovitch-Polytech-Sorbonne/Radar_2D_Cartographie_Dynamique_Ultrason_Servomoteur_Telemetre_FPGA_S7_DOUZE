@@ -155,6 +155,10 @@ int main()
         else
         {
             moyenne_distance = somme_distance / (3 * nb_valeurs_valides) + 1;
+            if (moyenne_distance > 800)
+            {
+                moyenne_distance = 0;
+            }
         }
 
         // Mise a jour de l affichage
@@ -181,7 +185,7 @@ int main()
         IOWR_ALTERA_AVALON_SERVOMOTEUR(data_angle);
         usleep(1000);
 
-        if (data_angle > 1530)
+        if (data_angle > 1540)
         {
             data_angle = 0;
             angle = 0;
