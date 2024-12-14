@@ -57,19 +57,17 @@ begin
 
     ElsIf Rising_Edge( Clk ) Then
       -- Periode entre trig ( 60 ms minimum )
-      If ( T_SIGNAL_Espacement_trig < 3_000_000 ) Then  -- Propose par Chat GPT
+      If ( T_SIGNAL_Espacement_trig < 6_000_000 ) Then  -- Propose par Chat GPT
         T_SIGNAL_Espacement_trig <= T_SIGNAL_Espacement_trig + 1;
 
       Else
         -- Generation Trig
-        If ( T_SIGNAL_trig_counter < 500 ) Then 
+        If ( T_SIGNAL_trig_counter < 1000 ) Then 
           T_SIGNAL_trig_counter <= T_SIGNAL_trig_counter + 1;
           trig <= '1';
-          Dist_cm <= "0000000000";
-
         Else
           trig <= '0';
-          If ( T_SIGNAL_trig_counter >= 500 ) Then
+          If ( T_SIGNAL_trig_counter >= 1000 ) Then
             T_SIGNAL_Espacement_trig <= 0; -- Reinitialiser le compteur de delai
             T_SIGNAL_trig_counter <= 0;
           End If;
@@ -79,7 +77,7 @@ begin
       -- Comptage de la duree de Echo
       If ( echo = '1' ) Then
         T_SIGNAL_current_mesure <= '1';
-        If ( T_SIGNAL_echo_sub_counter < 200 ) Then
+        If ( T_SIGNAL_echo_sub_counter < 400 ) Then -- Correctif ici double le sous compteur
           T_SIGNAL_echo_sub_counter <= T_SIGNAL_echo_sub_counter + 1;
         Else
           T_SIGNAL_echo_sub_counter <= 0;
@@ -101,3 +99,4 @@ begin
 End Architecture;
 
 -- Co redige avec Chat Generative Pre Trained
+-- Version corrigee pour la suite mais les commentaires dans le rapport ne necessite pas de modification de celui ci.
