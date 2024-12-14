@@ -132,7 +132,7 @@ int main()
         // Lecture des distances
         for (int i = 0; i < NB_PRELEVEMENTS; i++)
         {
-            distance = (IORD_ALTERA_AVALON_TELEMETRE() & 0b1111111111);
+            distance = (IORD_ALTERA_AVALON_TELEMETRE() && ("1111111111"));
 
             if (distance > SEUIL_ABERRANT)
             {
