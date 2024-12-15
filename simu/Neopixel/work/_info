@@ -1,0 +1,120 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\simu\Neopixel
+Ede10_lite_neopixel
+Z1 w1734290577
+Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 8../../src/DE10_Lite_Neopixel.vhd
+Z5 F../../src/DE10_Lite_Neopixel.vhd
+l0
+L5
+V?GAMLDNK7@2>_6N:Rmjne0
+Z6 OV;C;6.5b;42
+31
+Z7 o-93 -O0
+Z8 tExplicit 1
+!s100 32gXMIH^@QI6HSa0QU22=3
+Artl
+R2
+R3
+Z9 DEx4 work 18 de10_lite_neopixel 0 22 ?GAMLDNK7@2>_6N:Rmjne0
+l39
+L15
+V`zHDROQ]dMhaQQX6IDziD0
+R6
+31
+Z10 Mx2 4 ieee 14 std_logic_1164
+Z11 Mx1 4 ieee 11 numeric_std
+R7
+R8
+!s100 ;X^_hJfJbjgL5SRj>>DWK1
+Ede10_lite_neopixel_test_bench
+Z12 w1734288755
+R2
+R3
+Z13 8DE10_Lite_Neopixel_TEST_BENCH.vhdl
+Z14 FDE10_Lite_Neopixel_TEST_BENCH.vhdl
+l0
+L5
+V9<zWATRVVC2JFceHN]2J<3
+R6
+31
+R7
+R8
+!s100 SGhN5OM2c1g8PDS>8H<;U1
+Atest_bench_de10_lite_neopixel_architecture
+R9
+R2
+R3
+DEx4 work 29 de10_lite_neopixel_test_bench 0 22 9<zWATRVVC2JFceHN]2J<3
+l27
+L8
+V85Vzl?;Ihzc<77nTMK4L@0
+R6
+31
+R10
+R11
+R7
+R8
+!s100 ]OE868]H`E90LHYJ3OQGo1
+Ede10_lite_neopixel_test_bench_entity
+Z15 w1734290207
+R2
+R3
+R13
+R14
+l0
+L5
+VPejCP93:DKLGOEMQlMKTY0
+!s100 e^XQ6=n]IbD[elNTMX^[C0
+R6
+31
+R7
+R8
+Atest_bench_de10_lite_neopixel_architecture
+R9
+R2
+R3
+Z16 DEx4 work 36 de10_lite_neopixel_test_bench_entity 0 22 PejCP93:DKLGOEMQlMKTY0
+l27
+L8
+Z17 VLJ@L120E3YX?DUHnXK72d0
+Z18 !s100 20<eHaiDmk18NIG8dKea=0
+R6
+31
+R10
+R11
+R7
+R8
+Etest_bench_de10_lite_neopixel_entity
+Z19 w1734288992
+R2
+R3
+R13
+R14
+l0
+L5
+VVV71aX4ogiFm:`H2H@=YP3
+R6
+31
+R7
+R8
+!s100 RL7YUY0<Za_kzL5bFczo@3
+Atest_bench_de10_lite_neopixel_architecture
+R9
+R2
+R3
+DEx4 work 36 test_bench_de10_lite_neopixel_entity 0 22 VV71aX4ogiFm:`H2H@=YP3
+l27
+L8
+VPaSVP=XE5f1lWMWM9UD_N0
+R6
+31
+R10
+R11
+R7
+R8
+!s100 j60Nd`eWC;UQI?g9[BlfY2
