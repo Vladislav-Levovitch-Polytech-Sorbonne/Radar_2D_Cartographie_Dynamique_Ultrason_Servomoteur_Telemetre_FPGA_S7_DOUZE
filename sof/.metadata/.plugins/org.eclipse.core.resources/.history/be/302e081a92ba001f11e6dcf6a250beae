@@ -12,11 +12,11 @@ int main()
 	  printf("Valeur actuelle : %d.%d°\n", value/10,value%10);
 	  IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, value); // Écriture en binaire
 	  usleep(10000);
-	  value = IORD (SLIDER_SWITCHES_BASE,0)<< 1;
-	  if (value>1793)
+	  if (value>1730)
 	  {
-		  value = 1793;
+		  value = 1730;
 	  }
+	  value = IORD (SLIDER_SWITCHES_BASE,0)<< 1;
   }
   return 0;
 }

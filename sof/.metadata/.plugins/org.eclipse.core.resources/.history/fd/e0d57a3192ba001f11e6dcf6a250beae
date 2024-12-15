@@ -13,9 +13,9 @@ int main()
 	  IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, value); // Écriture en binaire
 	  usleep(10000);
 	  value = IORD (SLIDER_SWITCHES_BASE,0)<< 1;
-	  if (value>1793)
+	  if (value>1730)
 	  {
-		  value = 1793;
+		  value = 1730;
 	  }
   }
   return 0;
