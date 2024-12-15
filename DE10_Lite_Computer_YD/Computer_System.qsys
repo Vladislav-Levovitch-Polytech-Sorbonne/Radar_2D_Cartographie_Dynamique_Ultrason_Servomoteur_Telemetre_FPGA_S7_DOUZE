@@ -81,6 +81,22 @@
          type = "String";
       }
    }
+   element Computer_System
+   {
+      datum _originalDeviceFamily
+      {
+         value = "MAX 10";
+         type = "String";
+      }
+   }
+   element Computer_System
+   {
+      datum _originalDeviceFamily
+      {
+         value = "MAX 10";
+         type = "String";
+      }
+   }
    element HEX3_HEX0
    {
       datum _sortIndex
@@ -960,12 +976,12 @@
  <module
    name="avalon_servomoteur"
    kind="avalon_servomoteur"
-   version="1.0"
+   version="2"
    enabled="1" />
  <module
    name="avalon_telemetre"
    kind="avalon_telemetre"
-   version="1.0"
+   version="2"
    enabled="1" />
  <connection
    kind="avalon"

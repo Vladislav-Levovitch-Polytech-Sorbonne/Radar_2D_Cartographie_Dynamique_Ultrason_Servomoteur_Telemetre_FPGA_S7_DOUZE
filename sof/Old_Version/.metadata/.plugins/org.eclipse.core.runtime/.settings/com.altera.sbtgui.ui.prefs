@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\vladi\\Desktop\\software\\telemetre_onze
-newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\vladi\\Desktop\\Elec\\Architecture_SE\\Radar_2D_Vlad\\DE10_Lite_Computer_YD\\Computer_System.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\vladi\\Desktop\\software\\telemetre_onze_bsp
+newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\vladi\\Desktop\\Elec\\Architecture_SE\\Radar_2D_Vlad\\sof\\servomoteur_tournant\\software\\servomoteur_tournant
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\vladi\\Desktop\\Elec\\Architecture_SE\\Radar_2D_Vlad\\sof\\servomoteur_tournant\\Computer_System.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\vladi\\Desktop\\Elec\\Architecture_SE\\Radar_2D_Vlad\\sof\\servomoteur_tournant\\software\\servomoteur_tournant_bsp

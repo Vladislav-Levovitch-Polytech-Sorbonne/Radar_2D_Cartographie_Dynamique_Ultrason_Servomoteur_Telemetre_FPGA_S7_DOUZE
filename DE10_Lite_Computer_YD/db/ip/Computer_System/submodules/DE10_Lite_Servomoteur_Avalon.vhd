@@ -49,14 +49,14 @@ begin
           T_SIGNAL_counter <= T_SIGNAL_counter + 1;
 
           If ( (to_integer (unsigned(T_SIGNAL_position_EN))) > 1800 ) Then -- If user ask more than 1800 * 0,1 ° => uptade position to max periode (180,0°)
-            If ( T_SIGNAL_counter < 250_000) Then -- 2 * 10ns * 100_000 = 2.5ms
+            If ( T_SIGNAL_counter < 220_000) Then -- 2.2 * 10ns * 100_000 = 2.2ms
             commande <= '1';
             Else
             commande <= '0';
             End If;
 
           Else 
-            If ( T_SIGNAL_counter < (50_000 +(to_integer (unsigned(T_SIGNAL_position_EN)))*110 )) Then
+            If ( T_SIGNAL_counter < (50_000 +(to_integer (unsigned(T_SIGNAL_position_EN)))*94 )) Then
             commande <= '1';
             Else
             commande <= '0';
