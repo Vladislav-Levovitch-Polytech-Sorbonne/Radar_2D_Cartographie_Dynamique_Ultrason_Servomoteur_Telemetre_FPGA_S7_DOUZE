@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+#include "unistd.h"
+#include "stdio.h"
+#include "io.h"
+int value = 0;
+int main()
+{
+  while (1)
+  {
+	  printf("Valeur actuelle : %d\n", value);
+	  IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, value); // Écriture en binaire
+	  usleep(10000);
+	  /*if (value>1800)
+	  {
+		  value = 0;
+		  IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, value);
+		  printf("Valeur actuelle : %d\n", value);
+		  usleep(1000000);
+	  }*/
+	  value = IORD (SLIDER_SWITCHES_BASE,0);
+  }
+  return 0;
+}
