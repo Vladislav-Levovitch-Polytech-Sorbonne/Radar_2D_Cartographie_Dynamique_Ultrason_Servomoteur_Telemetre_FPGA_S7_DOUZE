@@ -1,0 +1,18 @@
+Fitter Status : Successful - Mon Dec 16 10:58:38 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Neopixel_Alone
+Top-level Entity Name : DE10_Lite_Neopixel_50MHz_Alone_mode
+Family : MAX 10
+Device : 10M50DAF484C6GES
+Timing Models : Preliminary
+Total logic elements : 205 / 49,760 ( < 1 % )
+    Total combinational functions : 203 / 49,760 ( < 1 % )
+    Dedicated logic registers : 117 / 49,760 ( < 1 % )
+Total registers : 117
+Total pins : 11 / 360 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,677,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

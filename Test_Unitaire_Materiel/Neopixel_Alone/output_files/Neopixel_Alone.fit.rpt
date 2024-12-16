@@ -1,5 +1,5 @@
 Fitter report for Neopixel_Alone
-Sun Dec 15 22:02:55 2024
+Mon Dec 16 13:44:42 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -66,17 +66,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Dec 15 22:02:55 2024       ;
+; Fitter Status                      ; Successful - Mon Dec 16 13:44:42 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Neopixel_Alone                              ;
-; Top-level Entity Name              ; DE10_Lite_Neopixel_50MHz_Alone_mode         ;
+; Top-level Entity Name              ; DE10_Lite_Neopixel_50MHz_Alone              ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 63 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 63 / 49,760 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 30 / 49,760 ( < 1 % )                       ;
-; Total registers                    ; 30                                          ;
+; Total logic elements               ; 88 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 88 / 49,760 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 42 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 42                                          ;
 ; Total pins                         ; 3 / 360 ( < 1 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
@@ -152,388 +152,388 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.7%      ;
+;     Processors 2-4         ;   1.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Ignored Assignments                                                                                                          ;
-+--------------+-------------------------------------+--------------+-----------------+-----------------------+----------------+
-; Name         ; Ignored Entity                      ; Ignored From ; Ignored To      ; Ignored Value         ; Ignored Source ;
-+--------------+-------------------------------------+--------------+-----------------+-----------------------+----------------+
-; Location     ;                                     ;              ; ADC_CLK_10      ; PIN_N5                ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[0]   ; PIN_AB5               ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[10]  ; PIN_AB19              ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[11]  ; PIN_AA19              ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[12]  ; PIN_Y19               ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[13]  ; PIN_AB20              ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[14]  ; PIN_AB21              ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[15]  ; PIN_AA20              ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[1]   ; PIN_AB6               ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[2]   ; PIN_AB7               ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[3]   ; PIN_AB8               ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[4]   ; PIN_AB9               ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[5]   ; PIN_Y10               ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[6]   ; PIN_AA11              ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[7]   ; PIN_AA12              ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[8]   ; PIN_AB17              ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_IO[9]   ; PIN_AA17              ; QSF Assignment ;
-; Location     ;                                     ;              ; ARDUINO_RESET_N ; PIN_F16               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[0]    ; PIN_U17               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[10]   ; PIN_T20               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[11]   ; PIN_P20               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[12]   ; PIN_R20               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[1]    ; PIN_W19               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[2]    ; PIN_V18               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[3]    ; PIN_U18               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[4]    ; PIN_U19               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[5]    ; PIN_T18               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[6]    ; PIN_T19               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[7]    ; PIN_R18               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[8]    ; PIN_P18               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_ADDR[9]    ; PIN_P19               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_BA[0]      ; PIN_T21               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_BA[1]      ; PIN_T22               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_CAS_N      ; PIN_U21               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_CKE        ; PIN_N22               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_CLK        ; PIN_L14               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_CS_N       ; PIN_U20               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[0]      ; PIN_Y21               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[10]     ; PIN_H21               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[11]     ; PIN_H22               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[12]     ; PIN_G22               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[13]     ; PIN_G20               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[14]     ; PIN_G19               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[15]     ; PIN_F22               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[1]      ; PIN_Y20               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[2]      ; PIN_AA22              ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[3]      ; PIN_AA21              ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[4]      ; PIN_Y22               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[5]      ; PIN_W22               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[6]      ; PIN_W20               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[7]      ; PIN_V21               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[8]      ; PIN_P21               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_DQ[9]      ; PIN_J22               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_LDQM       ; PIN_V22               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_RAS_N      ; PIN_U22               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_UDQM       ; PIN_J21               ; QSF Assignment ;
-; Location     ;                                     ;              ; DRAM_WE_N       ; PIN_V20               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[0]         ; PIN_V10               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[10]        ; PIN_W5                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[11]        ; PIN_AA15              ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[12]        ; PIN_AA14              ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[13]        ; PIN_W13               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[14]        ; PIN_W12               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[15]        ; PIN_AB13              ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[16]        ; PIN_AB12              ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[17]        ; PIN_Y11               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[18]        ; PIN_AB11              ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[19]        ; PIN_W11               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[1]         ; PIN_W10               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[20]        ; PIN_AB10              ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[21]        ; PIN_AA10              ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[22]        ; PIN_AA9               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[23]        ; PIN_Y8                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[24]        ; PIN_AA8               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[25]        ; PIN_Y7                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[26]        ; PIN_AA7               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[27]        ; PIN_Y6                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[28]        ; PIN_AA6               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[29]        ; PIN_Y5                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[30]        ; PIN_AA5               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[31]        ; PIN_Y4                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[32]        ; PIN_AB3               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[33]        ; PIN_Y3                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[34]        ; PIN_AB2               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[35]        ; PIN_AA2               ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[3]         ; PIN_W9                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[4]         ; PIN_V8                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[5]         ; PIN_W8                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[6]         ; PIN_V7                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[7]         ; PIN_W7                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[8]         ; PIN_W6                ; QSF Assignment ;
-; Location     ;                                     ;              ; GPIO[9]         ; PIN_V5                ; QSF Assignment ;
-; Location     ;                                     ;              ; GSENSOR_CS_N    ; PIN_AB16              ; QSF Assignment ;
-; Location     ;                                     ;              ; GSENSOR_INT[1]  ; PIN_Y14               ; QSF Assignment ;
-; Location     ;                                     ;              ; GSENSOR_INT[2]  ; PIN_Y13               ; QSF Assignment ;
-; Location     ;                                     ;              ; GSENSOR_SCLK    ; PIN_AB15              ; QSF Assignment ;
-; Location     ;                                     ;              ; GSENSOR_SDI     ; PIN_V11               ; QSF Assignment ;
-; Location     ;                                     ;              ; GSENSOR_SDO     ; PIN_V12               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX0[0]         ; PIN_C14               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX0[1]         ; PIN_E15               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX0[2]         ; PIN_C15               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX0[3]         ; PIN_C16               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX0[4]         ; PIN_E16               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX0[5]         ; PIN_D17               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX0[6]         ; PIN_C17               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX0[7]         ; PIN_D15               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX1[0]         ; PIN_C18               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX1[1]         ; PIN_D18               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX1[2]         ; PIN_E18               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX1[3]         ; PIN_B16               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX1[4]         ; PIN_A17               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX1[5]         ; PIN_A18               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX1[6]         ; PIN_B17               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX1[7]         ; PIN_A16               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX2[0]         ; PIN_B20               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX2[1]         ; PIN_A20               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX2[2]         ; PIN_B19               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX2[3]         ; PIN_A21               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX2[4]         ; PIN_B21               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX2[5]         ; PIN_C22               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX2[6]         ; PIN_B22               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX2[7]         ; PIN_A19               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX3[0]         ; PIN_F21               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX3[1]         ; PIN_E22               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX3[2]         ; PIN_E21               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX3[3]         ; PIN_C19               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX3[4]         ; PIN_C20               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX3[5]         ; PIN_D19               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX3[6]         ; PIN_E17               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX3[7]         ; PIN_D22               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX4[0]         ; PIN_F18               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX4[1]         ; PIN_E20               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX4[2]         ; PIN_E19               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX4[3]         ; PIN_J18               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX4[4]         ; PIN_H19               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX4[5]         ; PIN_F19               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX4[6]         ; PIN_F20               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX4[7]         ; PIN_F17               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX5[0]         ; PIN_J20               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX5[1]         ; PIN_K20               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX5[2]         ; PIN_L18               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX5[3]         ; PIN_N18               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX5[4]         ; PIN_M20               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX5[5]         ; PIN_N19               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX5[6]         ; PIN_N20               ; QSF Assignment ;
-; Location     ;                                     ;              ; HEX5[7]         ; PIN_L19               ; QSF Assignment ;
-; Location     ;                                     ;              ; KEY[1]          ; PIN_A7                ; QSF Assignment ;
-; Location     ;                                     ;              ; LEDR[0]         ; PIN_A8                ; QSF Assignment ;
-; Location     ;                                     ;              ; LEDR[1]         ; PIN_A9                ; QSF Assignment ;
-; Location     ;                                     ;              ; LEDR[2]         ; PIN_A10               ; QSF Assignment ;
-; Location     ;                                     ;              ; LEDR[3]         ; PIN_B10               ; QSF Assignment ;
-; Location     ;                                     ;              ; LEDR[4]         ; PIN_D13               ; QSF Assignment ;
-; Location     ;                                     ;              ; LEDR[5]         ; PIN_C13               ; QSF Assignment ;
-; Location     ;                                     ;              ; LEDR[6]         ; PIN_E14               ; QSF Assignment ;
-; Location     ;                                     ;              ; LEDR[7]         ; PIN_D14               ; QSF Assignment ;
-; Location     ;                                     ;              ; LEDR[8]         ; PIN_A11               ; QSF Assignment ;
-; Location     ;                                     ;              ; LEDR[9]         ; PIN_B11               ; QSF Assignment ;
-; Location     ;                                     ;              ; MAX10_CLK2_50   ; PIN_N14               ; QSF Assignment ;
-; Location     ;                                     ;              ; SW[0]           ; PIN_C10               ; QSF Assignment ;
-; Location     ;                                     ;              ; SW[1]           ; PIN_C11               ; QSF Assignment ;
-; Location     ;                                     ;              ; SW[2]           ; PIN_D12               ; QSF Assignment ;
-; Location     ;                                     ;              ; SW[3]           ; PIN_C12               ; QSF Assignment ;
-; Location     ;                                     ;              ; SW[4]           ; PIN_A12               ; QSF Assignment ;
-; Location     ;                                     ;              ; SW[5]           ; PIN_B12               ; QSF Assignment ;
-; Location     ;                                     ;              ; SW[6]           ; PIN_A13               ; QSF Assignment ;
-; Location     ;                                     ;              ; SW[7]           ; PIN_A14               ; QSF Assignment ;
-; Location     ;                                     ;              ; SW[8]           ; PIN_B14               ; QSF Assignment ;
-; Location     ;                                     ;              ; SW[9]           ; PIN_F15               ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_B[0]        ; PIN_P1                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_B[1]        ; PIN_T1                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_B[2]        ; PIN_P4                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_B[3]        ; PIN_N2                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_G[0]        ; PIN_W1                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_G[1]        ; PIN_T2                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_G[2]        ; PIN_R2                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_G[3]        ; PIN_R1                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_HS          ; PIN_N3                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_R[0]        ; PIN_AA1               ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_R[1]        ; PIN_V1                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_R[2]        ; PIN_Y2                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_R[3]        ; PIN_Y1                ; QSF Assignment ;
-; Location     ;                                     ;              ; VGA_VS          ; PIN_N1                ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ADC_CLK_10      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[0]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[10]  ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[11]  ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[12]  ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[13]  ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[14]  ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[15]  ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[1]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[2]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[3]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[4]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[5]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[6]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[7]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[8]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_IO[9]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; ARDUINO_RESET_N ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[0]    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[10]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[11]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[12]   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[1]    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[2]    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[3]    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[4]    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[5]    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[6]    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[7]    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[8]    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_ADDR[9]    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_BA[0]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_BA[1]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_CAS_N      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_CKE        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_CLK        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_CS_N       ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[0]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[10]     ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[11]     ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[12]     ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[13]     ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[14]     ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[15]     ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[1]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[2]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[3]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[4]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[5]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[6]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[7]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[8]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_DQ[9]      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_LDQM       ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_RAS_N      ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_UDQM       ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; DRAM_WE_N       ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[10]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[11]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[12]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[13]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[14]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[15]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[16]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[17]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[18]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[19]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[20]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[21]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[22]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[23]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[24]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[25]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[26]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[27]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[28]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[29]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[30]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[31]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[32]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[33]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[34]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[35]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[8]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GPIO[9]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GSENSOR_CS_N    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GSENSOR_INT[1]  ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GSENSOR_INT[2]  ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GSENSOR_SCLK    ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GSENSOR_SDI     ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; GSENSOR_SDO     ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX0[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX0[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX0[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX0[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX0[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX0[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX0[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX0[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX1[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX1[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX1[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX1[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX1[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX1[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX1[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX1[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX2[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX2[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX2[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX2[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX2[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX2[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX2[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX2[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX3[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX3[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX3[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX3[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX3[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX3[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX3[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX3[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX4[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX4[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX4[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX4[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX4[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX4[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX4[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX4[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX5[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX5[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX5[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX5[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX5[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX5[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX5[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; HEX5[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; KEY[0]          ; 3.3 V SCHMITT TRIGGER ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; KEY[1]          ; 3.3 V SCHMITT TRIGGER ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; LEDR[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; LEDR[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; LEDR[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; LEDR[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; LEDR[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; LEDR[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; LEDR[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; LEDR[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; LEDR[8]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; LEDR[9]         ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; MAX10_CLK1_50   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; MAX10_CLK2_50   ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; SW[0]           ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; SW[1]           ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; SW[2]           ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; SW[3]           ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; SW[4]           ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; SW[5]           ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; SW[6]           ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; SW[7]           ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; SW[8]           ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; SW[9]           ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_B[0]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_B[1]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_B[2]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_B[3]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_G[0]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_G[1]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_G[2]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_G[3]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_HS          ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_R[0]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_R[1]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_R[2]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_R[3]        ; 3.3-V LVTTL           ; QSF Assignment ;
-; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone_mode ;              ; VGA_VS          ; 3.3-V LVTTL           ; QSF Assignment ;
-+--------------+-------------------------------------+--------------+-----------------+-----------------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Ignored Assignments                                                                                                     ;
++--------------+--------------------------------+--------------+-----------------+-----------------------+----------------+
+; Name         ; Ignored Entity                 ; Ignored From ; Ignored To      ; Ignored Value         ; Ignored Source ;
++--------------+--------------------------------+--------------+-----------------+-----------------------+----------------+
+; Location     ;                                ;              ; ADC_CLK_10      ; PIN_N5                ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[0]   ; PIN_AB5               ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[10]  ; PIN_AB19              ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[11]  ; PIN_AA19              ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[12]  ; PIN_Y19               ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[13]  ; PIN_AB20              ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[14]  ; PIN_AB21              ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[15]  ; PIN_AA20              ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[1]   ; PIN_AB6               ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[2]   ; PIN_AB7               ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[3]   ; PIN_AB8               ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[4]   ; PIN_AB9               ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[5]   ; PIN_Y10               ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[6]   ; PIN_AA11              ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[7]   ; PIN_AA12              ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[8]   ; PIN_AB17              ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_IO[9]   ; PIN_AA17              ; QSF Assignment ;
+; Location     ;                                ;              ; ARDUINO_RESET_N ; PIN_F16               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[0]    ; PIN_U17               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[10]   ; PIN_T20               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[11]   ; PIN_P20               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[12]   ; PIN_R20               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[1]    ; PIN_W19               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[2]    ; PIN_V18               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[3]    ; PIN_U18               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[4]    ; PIN_U19               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[5]    ; PIN_T18               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[6]    ; PIN_T19               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[7]    ; PIN_R18               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[8]    ; PIN_P18               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_ADDR[9]    ; PIN_P19               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_BA[0]      ; PIN_T21               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_BA[1]      ; PIN_T22               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_CAS_N      ; PIN_U21               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_CKE        ; PIN_N22               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_CLK        ; PIN_L14               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_CS_N       ; PIN_U20               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[0]      ; PIN_Y21               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[10]     ; PIN_H21               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[11]     ; PIN_H22               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[12]     ; PIN_G22               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[13]     ; PIN_G20               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[14]     ; PIN_G19               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[15]     ; PIN_F22               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[1]      ; PIN_Y20               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[2]      ; PIN_AA22              ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[3]      ; PIN_AA21              ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[4]      ; PIN_Y22               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[5]      ; PIN_W22               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[6]      ; PIN_W20               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[7]      ; PIN_V21               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[8]      ; PIN_P21               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_DQ[9]      ; PIN_J22               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_LDQM       ; PIN_V22               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_RAS_N      ; PIN_U22               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_UDQM       ; PIN_J21               ; QSF Assignment ;
+; Location     ;                                ;              ; DRAM_WE_N       ; PIN_V20               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[0]         ; PIN_V10               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[10]        ; PIN_W5                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[11]        ; PIN_AA15              ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[12]        ; PIN_AA14              ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[13]        ; PIN_W13               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[14]        ; PIN_W12               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[15]        ; PIN_AB13              ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[16]        ; PIN_AB12              ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[17]        ; PIN_Y11               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[18]        ; PIN_AB11              ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[19]        ; PIN_W11               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[1]         ; PIN_W10               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[20]        ; PIN_AB10              ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[21]        ; PIN_AA10              ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[22]        ; PIN_AA9               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[23]        ; PIN_Y8                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[24]        ; PIN_AA8               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[25]        ; PIN_Y7                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[26]        ; PIN_AA7               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[27]        ; PIN_Y6                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[28]        ; PIN_AA6               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[29]        ; PIN_Y5                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[30]        ; PIN_AA5               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[31]        ; PIN_Y4                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[32]        ; PIN_AB3               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[33]        ; PIN_Y3                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[34]        ; PIN_AB2               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[35]        ; PIN_AA2               ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[3]         ; PIN_W9                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[4]         ; PIN_V8                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[5]         ; PIN_W8                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[6]         ; PIN_V7                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[7]         ; PIN_W7                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[8]         ; PIN_W6                ; QSF Assignment ;
+; Location     ;                                ;              ; GPIO[9]         ; PIN_V5                ; QSF Assignment ;
+; Location     ;                                ;              ; GSENSOR_CS_N    ; PIN_AB16              ; QSF Assignment ;
+; Location     ;                                ;              ; GSENSOR_INT[1]  ; PIN_Y14               ; QSF Assignment ;
+; Location     ;                                ;              ; GSENSOR_INT[2]  ; PIN_Y13               ; QSF Assignment ;
+; Location     ;                                ;              ; GSENSOR_SCLK    ; PIN_AB15              ; QSF Assignment ;
+; Location     ;                                ;              ; GSENSOR_SDI     ; PIN_V11               ; QSF Assignment ;
+; Location     ;                                ;              ; GSENSOR_SDO     ; PIN_V12               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX0[0]         ; PIN_C14               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX0[1]         ; PIN_E15               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX0[2]         ; PIN_C15               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX0[3]         ; PIN_C16               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX0[4]         ; PIN_E16               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX0[5]         ; PIN_D17               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX0[6]         ; PIN_C17               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX0[7]         ; PIN_D15               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX1[0]         ; PIN_C18               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX1[1]         ; PIN_D18               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX1[2]         ; PIN_E18               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX1[3]         ; PIN_B16               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX1[4]         ; PIN_A17               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX1[5]         ; PIN_A18               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX1[6]         ; PIN_B17               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX1[7]         ; PIN_A16               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX2[0]         ; PIN_B20               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX2[1]         ; PIN_A20               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX2[2]         ; PIN_B19               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX2[3]         ; PIN_A21               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX2[4]         ; PIN_B21               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX2[5]         ; PIN_C22               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX2[6]         ; PIN_B22               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX2[7]         ; PIN_A19               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX3[0]         ; PIN_F21               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX3[1]         ; PIN_E22               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX3[2]         ; PIN_E21               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX3[3]         ; PIN_C19               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX3[4]         ; PIN_C20               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX3[5]         ; PIN_D19               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX3[6]         ; PIN_E17               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX3[7]         ; PIN_D22               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX4[0]         ; PIN_F18               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX4[1]         ; PIN_E20               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX4[2]         ; PIN_E19               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX4[3]         ; PIN_J18               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX4[4]         ; PIN_H19               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX4[5]         ; PIN_F19               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX4[6]         ; PIN_F20               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX4[7]         ; PIN_F17               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX5[0]         ; PIN_J20               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX5[1]         ; PIN_K20               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX5[2]         ; PIN_L18               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX5[3]         ; PIN_N18               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX5[4]         ; PIN_M20               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX5[5]         ; PIN_N19               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX5[6]         ; PIN_N20               ; QSF Assignment ;
+; Location     ;                                ;              ; HEX5[7]         ; PIN_L19               ; QSF Assignment ;
+; Location     ;                                ;              ; KEY[1]          ; PIN_A7                ; QSF Assignment ;
+; Location     ;                                ;              ; LEDR[0]         ; PIN_A8                ; QSF Assignment ;
+; Location     ;                                ;              ; LEDR[1]         ; PIN_A9                ; QSF Assignment ;
+; Location     ;                                ;              ; LEDR[2]         ; PIN_A10               ; QSF Assignment ;
+; Location     ;                                ;              ; LEDR[3]         ; PIN_B10               ; QSF Assignment ;
+; Location     ;                                ;              ; LEDR[4]         ; PIN_D13               ; QSF Assignment ;
+; Location     ;                                ;              ; LEDR[5]         ; PIN_C13               ; QSF Assignment ;
+; Location     ;                                ;              ; LEDR[6]         ; PIN_E14               ; QSF Assignment ;
+; Location     ;                                ;              ; LEDR[7]         ; PIN_D14               ; QSF Assignment ;
+; Location     ;                                ;              ; LEDR[8]         ; PIN_A11               ; QSF Assignment ;
+; Location     ;                                ;              ; LEDR[9]         ; PIN_B11               ; QSF Assignment ;
+; Location     ;                                ;              ; MAX10_CLK2_50   ; PIN_N14               ; QSF Assignment ;
+; Location     ;                                ;              ; SW[0]           ; PIN_C10               ; QSF Assignment ;
+; Location     ;                                ;              ; SW[1]           ; PIN_C11               ; QSF Assignment ;
+; Location     ;                                ;              ; SW[2]           ; PIN_D12               ; QSF Assignment ;
+; Location     ;                                ;              ; SW[3]           ; PIN_C12               ; QSF Assignment ;
+; Location     ;                                ;              ; SW[4]           ; PIN_A12               ; QSF Assignment ;
+; Location     ;                                ;              ; SW[5]           ; PIN_B12               ; QSF Assignment ;
+; Location     ;                                ;              ; SW[6]           ; PIN_A13               ; QSF Assignment ;
+; Location     ;                                ;              ; SW[7]           ; PIN_A14               ; QSF Assignment ;
+; Location     ;                                ;              ; SW[8]           ; PIN_B14               ; QSF Assignment ;
+; Location     ;                                ;              ; SW[9]           ; PIN_F15               ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_B[0]        ; PIN_P1                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_B[1]        ; PIN_T1                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_B[2]        ; PIN_P4                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_B[3]        ; PIN_N2                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_G[0]        ; PIN_W1                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_G[1]        ; PIN_T2                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_G[2]        ; PIN_R2                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_G[3]        ; PIN_R1                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_HS          ; PIN_N3                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_R[0]        ; PIN_AA1               ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_R[1]        ; PIN_V1                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_R[2]        ; PIN_Y2                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_R[3]        ; PIN_Y1                ; QSF Assignment ;
+; Location     ;                                ;              ; VGA_VS          ; PIN_N1                ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ADC_CLK_10      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[0]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[10]  ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[11]  ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[12]  ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[13]  ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[14]  ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[15]  ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[1]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[2]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[3]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[4]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[5]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[6]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[7]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[8]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_IO[9]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; ARDUINO_RESET_N ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[0]    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[10]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[11]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[12]   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[1]    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[2]    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[3]    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[4]    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[5]    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[6]    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[7]    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[8]    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_ADDR[9]    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_BA[0]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_BA[1]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_CAS_N      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_CKE        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_CLK        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_CS_N       ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[0]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[10]     ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[11]     ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[12]     ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[13]     ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[14]     ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[15]     ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[1]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[2]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[3]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[4]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[5]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[6]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[7]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[8]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_DQ[9]      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_LDQM       ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_RAS_N      ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_UDQM       ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; DRAM_WE_N       ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[10]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[11]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[12]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[13]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[14]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[15]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[16]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[17]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[18]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[19]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[20]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[21]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[22]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[23]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[24]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[25]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[26]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[27]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[28]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[29]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[30]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[31]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[32]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[33]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[34]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[35]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[8]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GPIO[9]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GSENSOR_CS_N    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GSENSOR_INT[1]  ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GSENSOR_INT[2]  ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GSENSOR_SCLK    ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GSENSOR_SDI     ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; GSENSOR_SDO     ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX0[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX0[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX0[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX0[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX0[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX0[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX0[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX0[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX1[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX1[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX1[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX1[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX1[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX1[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX1[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX1[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX2[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX2[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX2[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX2[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX2[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX2[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX2[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX2[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX3[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX3[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX3[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX3[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX3[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX3[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX3[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX3[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX4[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX4[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX4[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX4[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX4[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX4[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX4[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX4[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX5[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX5[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX5[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX5[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX5[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX5[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX5[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; HEX5[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; KEY[0]          ; 3.3 V SCHMITT TRIGGER ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; KEY[1]          ; 3.3 V SCHMITT TRIGGER ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; LEDR[0]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; LEDR[1]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; LEDR[2]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; LEDR[3]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; LEDR[4]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; LEDR[5]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; LEDR[6]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; LEDR[7]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; LEDR[8]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; LEDR[9]         ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; MAX10_CLK1_50   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; MAX10_CLK2_50   ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; SW[0]           ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; SW[1]           ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; SW[2]           ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; SW[3]           ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; SW[4]           ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; SW[5]           ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; SW[6]           ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; SW[7]           ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; SW[8]           ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; SW[9]           ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_B[0]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_B[1]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_B[2]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_B[3]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_G[0]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_G[1]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_G[2]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_G[3]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_HS          ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_R[0]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_R[1]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_R[2]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_R[3]        ; 3.3-V LVTTL           ; QSF Assignment ;
+; I/O Standard ; DE10_Lite_Neopixel_50MHz_Alone ;              ; VGA_VS          ; 3.3-V LVTTL           ; QSF Assignment ;
++--------------+--------------------------------+--------------+-----------------+-----------------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -542,8 +542,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 119 ) ; 0.00 % ( 0 / 119 )         ; 0.00 % ( 0 / 119 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 119 ) ; 0.00 % ( 0 / 119 )         ; 0.00 % ( 0 / 119 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 155 ) ; 0.00 % ( 0 / 155 )         ; 0.00 % ( 0 / 155 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 155 ) ; 0.00 % ( 0 / 155 )         ; 0.00 % ( 0 / 155 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -566,7 +566,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 103 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 139 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -582,26 +582,26 @@ The pin-out file can be found in C:/Users/vladi/Desktop/Elec/Architecture_SE/Rad
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 63 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 33                    ;
+; Total logic elements                        ; 88 / 49,760 ( < 1 % ) ;
+;     -- Combinational with no register       ; 46                    ;
 ;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 30                    ;
+;     -- Combinational with a register        ; 42                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 23                    ;
-;     -- 3 input functions                    ; 10                    ;
-;     -- <=2 input functions                  ; 30                    ;
+;     -- 4 input functions                    ; 40                    ;
+;     -- 3 input functions                    ; 17                    ;
+;     -- <=2 input functions                  ; 31                    ;
 ;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 44                    ;
+;     -- normal mode                          ; 69                    ;
 ;     -- arithmetic mode                      ; 19                    ;
 ;                                             ;                       ;
-; Total registers*                            ; 30 / 51,509 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 30 / 49,760 ( < 1 % ) ;
+; Total registers*                            ; 42 / 51,509 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 42 / 49,760 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )     ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 6 / 3,110 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 7 / 3,110 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 3 / 360 ( < 1 % )     ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )        ;
@@ -622,11 +622,11 @@ The pin-out file can be found in C:/Users/vladi/Desktop/Elec/Architecture_SE/Rad
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%    ;
-; Peak interconnect usage (total/H/V)         ; 0.5% / 0.8% / 0.2%    ;
-; Maximum fan-out                             ; 30                    ;
-; Highest non-global fan-out                  ; 30                    ;
-; Total fan-out                               ; 303                   ;
-; Average fan-out                             ; 2.55                  ;
+; Peak interconnect usage (total/H/V)         ; 0.6% / 0.5% / 0.6%    ;
+; Maximum fan-out                             ; 42                    ;
+; Highest non-global fan-out                  ; 39                    ;
+; Total fan-out                               ; 431                   ;
+; Average fan-out                             ; 2.76                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -639,26 +639,26 @@ The pin-out file can be found in C:/Users/vladi/Desktop/Elec/Architecture_SE/Rad
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 63 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 33                   ; 0                              ;
+; Total logic elements                        ; 88 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 46                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
-;     -- Combinational with a register        ; 30                   ; 0                              ;
+;     -- Combinational with a register        ; 42                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 23                   ; 0                              ;
-;     -- 3 input functions                    ; 10                   ; 0                              ;
-;     -- <=2 input functions                  ; 30                   ; 0                              ;
+;     -- 4 input functions                    ; 40                   ; 0                              ;
+;     -- 3 input functions                    ; 17                   ; 0                              ;
+;     -- <=2 input functions                  ; 31                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 44                   ; 0                              ;
+;     -- normal mode                          ; 69                   ; 0                              ;
 ;     -- arithmetic mode                      ; 19                   ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 30                   ; 0                              ;
-;     -- Dedicated logic registers            ; 30 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+; Total registers                             ; 42                   ; 0                              ;
+;     -- Dedicated logic registers            ; 42 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 6 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 7 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 3                    ; 0                              ;
@@ -676,8 +676,8 @@ The pin-out file can be found in C:/Users/vladi/Desktop/Elec/Architecture_SE/Rad
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 309                  ; 8                              ;
-;     -- Registered Connections               ; 114                  ; 0                              ;
+;     -- Total Connections                    ; 437                  ; 8                              ;
+;     -- Registered Connections               ; 181                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -709,8 +709,8 @@ The pin-out file can be found in C:/Users/vladi/Desktop/Elec/Architecture_SE/Rad
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; clk     ; P11   ; 3        ; 34           ; 0            ; 28           ; 30                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; reset_n ; B8    ; 7        ; 46           ; 54           ; 28           ; 30                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; clk     ; P11   ; 3        ; 34           ; 0            ; 28           ; 42                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; reset_n ; B8    ; 7        ; 46           ; 54           ; 28           ; 39                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -1260,13 +1260,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------+-------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                      ;
-+--------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------+-------------------------------------+--------------+
-; Compilation Hierarchy Node           ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                  ; Entity Name                         ; Library Name ;
-+--------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------+-------------------------------------+--------------+
-; |DE10_Lite_Neopixel_50MHz_Alone_mode ; 63 (63)     ; 30 (30)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 3    ; 0            ; 33 (33)      ; 0 (0)             ; 30 (30)          ; 0          ; |DE10_Lite_Neopixel_50MHz_Alone_mode ; DE10_Lite_Neopixel_50MHz_Alone_mode ; work         ;
-+--------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------+-------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                       ;
++---------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------------------+--------------------------------+--------------+
+; Compilation Hierarchy Node      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name             ; Entity Name                    ; Library Name ;
++---------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------------------+--------------------------------+--------------+
+; |DE10_Lite_Neopixel_50MHz_Alone ; 88 (88)     ; 42 (42)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 3    ; 0            ; 46 (46)      ; 0 (0)             ; 42 (42)          ; 0          ; |DE10_Lite_Neopixel_50MHz_Alone ; DE10_Lite_Neopixel_50MHz_Alone ; work         ;
++---------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1277,61 +1277,71 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 ; commande ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clk      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; reset_n  ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; reset_n  ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+-----------------------------------------------------+
-; Pad To Core Delay Chain Fanout                      ;
-+-----------------------+-------------------+---------+
-; Source Pin / Fanout   ; Pad To Core Index ; Setting ;
-+-----------------------+-------------------+---------+
-; clk                   ;                   ;         ;
-; reset_n               ;                   ;         ;
-;      - commande~reg0  ; 1                 ; 6       ;
-;      - reset_done     ; 1                 ; 6       ;
-;      - state          ; 1                 ; 6       ;
-;      - timer[2]       ; 1                 ; 6       ;
-;      - timer[3]       ; 1                 ; 6       ;
-;      - timer[4]       ; 1                 ; 6       ;
-;      - timer[5]       ; 1                 ; 6       ;
-;      - timer[6]       ; 1                 ; 6       ;
-;      - timer[7]       ; 1                 ; 6       ;
-;      - timer[8]       ; 1                 ; 6       ;
-;      - timer[9]       ; 1                 ; 6       ;
-;      - timer[10]      ; 1                 ; 6       ;
-;      - timer[11]      ; 1                 ; 6       ;
-;      - timer[12]      ; 1                 ; 6       ;
-;      - timer[13]      ; 1                 ; 6       ;
-;      - timer[14]      ; 1                 ; 6       ;
-;      - timer[15]      ; 1                 ; 6       ;
-;      - timer[0]       ; 1                 ; 6       ;
-;      - timer[1]       ; 1                 ; 6       ;
-;      - led_index[1]   ; 1                 ; 6       ;
-;      - bit_counter[4] ; 1                 ; 6       ;
-;      - bit_counter[3] ; 1                 ; 6       ;
-;      - data[10]       ; 1                 ; 6       ;
-;      - data[16]       ; 1                 ; 6       ;
-;      - data[0]        ; 1                 ; 6       ;
-;      - current_bit~2  ; 1                 ; 6       ;
-;      - led_index[0]   ; 1                 ; 6       ;
-;      - bit_counter[2] ; 1                 ; 6       ;
-;      - bit_counter[1] ; 1                 ; 6       ;
-;      - bit_counter[0] ; 1                 ; 6       ;
-+-----------------------+-------------------+---------+
++----------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                 ;
++----------------------------------+-------------------+---------+
+; Source Pin / Fanout              ; Pad To Core Index ; Setting ;
++----------------------------------+-------------------+---------+
+; clk                              ;                   ;         ;
+; reset_n                          ;                   ;         ;
+;      - commande~reg0             ; 0                 ; 6       ;
+;      - N_SIGNAL_reset_done       ; 0                 ; 6       ;
+;      - N_SIGNAL_state            ; 0                 ; 6       ;
+;      - N_SIGNAL_current_bit      ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[2]         ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[3]         ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[4]         ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[5]         ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[6]         ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[7]         ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[8]         ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[9]         ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[10]        ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[11]        ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[12]        ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[13]        ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[14]        ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[15]        ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[0]         ; 0                 ; 6       ;
+;      - N_SIGNAL_timer[1]         ; 0                 ; 6       ;
+;      - N_SIGNAL_bit_counter[3]   ; 0                 ; 6       ;
+;      - N_SIGNAL_bit_counter[4]   ; 0                 ; 6       ;
+;      - N_SIGNAL_data[10]         ; 0                 ; 6       ;
+;      - N_SIGNAL_data[11]         ; 0                 ; 6       ;
+;      - N_SIGNAL_bit_counter[0]   ; 0                 ; 6       ;
+;      - N_SIGNAL_bit_counter[1]   ; 0                 ; 6       ;
+;      - N_SIGNAL_bit_counter[2]   ; 0                 ; 6       ;
+;      - N_SIGNAL_data[1]          ; 0                 ; 6       ;
+;      - N_SIGNAL_data[0]          ; 0                 ; 6       ;
+;      - N_SIGNAL_data[22]         ; 0                 ; 6       ;
+;      - N_SIGNAL_data[19]         ; 0                 ; 6       ;
+;      - N_SIGNAL_data[2]          ; 0                 ; 6       ;
+;      - N_SIGNAL_data[6]          ; 0                 ; 6       ;
+;      - N_SIGNAL_current_led[3]~1 ; 0                 ; 6       ;
+;      - N_SIGNAL_led_nb[0]~0      ; 0                 ; 6       ;
+;      - N_SIGNAL_led_index[0]     ; 0                 ; 6       ;
+;      - N_SIGNAL_led_index[1]     ; 0                 ; 6       ;
+;      - N_SIGNAL_led_index[2]     ; 0                 ; 6       ;
+;      - N_SIGNAL_led_index[3]     ; 0                 ; 6       ;
++----------------------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                             ;
-+------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Name             ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; bit_counter[4]~8 ; LCCOMB_X49_Y53_N28 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; clk              ; PIN_P11            ; 30      ; Clock                      ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; commande~11      ; LCCOMB_X46_Y53_N4  ; 17      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; led_index[1]~1   ; LCCOMB_X47_Y53_N30 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; reset_n          ; PIN_B8             ; 30      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-+------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                        ;
++---------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                      ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; N_SIGNAL_bit_counter[3]~9 ; LCCOMB_X45_Y51_N18 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; N_SIGNAL_current_led[3]~1 ; LCCOMB_X45_Y52_N20 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; N_SIGNAL_led_index[0]~3   ; LCCOMB_X45_Y52_N26 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk                       ; PIN_P11            ; 42      ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; commande~10               ; LCCOMB_X46_Y51_N6  ; 17      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; reset_n                   ; PIN_B8             ; 39      ; Async. clear ; no     ; --                   ; --               ; --                        ;
++---------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
@@ -1339,59 +1349,59 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk  ; PIN_P11  ; 30      ; 19                                   ; Global Clock         ; GCLK19           ; --                        ;
+; clk  ; PIN_P11  ; 42      ; 15                                   ; Global Clock         ; GCLK19           ; --                        ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------+
-; Routing Usage Summary                          ;
-+-----------------------+------------------------+
-; Routing Resource Type ; Usage                  ;
-+-----------------------+------------------------+
-; Block interconnects   ; 79 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 0 / 5,382 ( 0 % )      ;
-; C4 interconnects      ; 21 / 106,704 ( < 1 % ) ;
-; Direct links          ; 28 / 148,641 ( < 1 % ) ;
-; Global clocks         ; 1 / 20 ( 5 % )         ;
-; Local interconnects   ; 44 / 49,760 ( < 1 % )  ;
-; NSLEEPs               ; 0 / 500 ( 0 % )        ;
-; R24 interconnects     ; 1 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 43 / 147,764 ( < 1 % ) ;
-+-----------------------+------------------------+
++-------------------------------------------------+
+; Routing Usage Summary                           ;
++-----------------------+-------------------------+
+; Routing Resource Type ; Usage                   ;
++-----------------------+-------------------------+
+; Block interconnects   ; 105 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 0 / 5,382 ( 0 % )       ;
+; C4 interconnects      ; 49 / 106,704 ( < 1 % )  ;
+; Direct links          ; 46 / 148,641 ( < 1 % )  ;
+; Global clocks         ; 1 / 20 ( 5 % )          ;
+; Local interconnects   ; 60 / 49,760 ( < 1 % )   ;
+; NSLEEPs               ; 0 / 500 ( 0 % )         ;
+; R24 interconnects     ; 1 / 5,406 ( < 1 % )     ;
+; R4 interconnects      ; 39 / 147,764 ( < 1 % )  ;
++-----------------------+-------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 10.50) ; Number of LABs  (Total = 6) ;
+; Number of Logic Elements  (Average = 12.57) ; Number of LABs  (Total = 7) ;
 +---------------------------------------------+-----------------------------+
 ; 1                                           ; 1                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
-; 5                                           ; 1                           ;
+; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
+; 9                                           ; 1                           ;
 ; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
-; 12                                          ; 1                           ;
-; 13                                          ; 1                           ;
-; 14                                          ; 0                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 0                           ;
+; 14                                          ; 1                           ;
 ; 15                                          ; 0                           ;
-; 16                                          ; 2                           ;
+; 16                                          ; 4                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.67) ; Number of LABs  (Total = 6) ;
+; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 7) ;
 +------------------------------------+-----------------------------+
-; 1 Async. clear                     ; 3                           ;
-; 1 Clock                            ; 5                           ;
-; 1 Clock enable                     ; 1                           ;
+; 1 Async. clear                     ; 5                           ;
+; 1 Clock                            ; 6                           ;
+; 1 Clock enable                     ; 2                           ;
 ; 1 Sync. clear                      ; 1                           ;
 +------------------------------------+-----------------------------+
 
@@ -1399,7 +1409,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 15.50) ; Number of LABs  (Total = 6) ;
+; Number of Signals Sourced  (Average = 18.57) ; Number of LABs  (Total = 7) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 1                           ;
@@ -1409,78 +1419,86 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 5                                            ; 0                           ;
 ; 6                                            ; 0                           ;
 ; 7                                            ; 0                           ;
-; 8                                            ; 1                           ;
+; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
-; 14                                           ; 0                           ;
+; 14                                           ; 1                           ;
 ; 15                                           ; 0                           ;
-; 16                                           ; 1                           ;
+; 16                                           ; 0                           ;
 ; 17                                           ; 0                           ;
-; 18                                           ; 1                           ;
-; 19                                           ; 0                           ;
+; 18                                           ; 0                           ;
+; 19                                           ; 1                           ;
 ; 20                                           ; 0                           ;
 ; 21                                           ; 0                           ;
-; 22                                           ; 0                           ;
-; 23                                           ; 1                           ;
-; 24                                           ; 0                           ;
+; 22                                           ; 2                           ;
+; 23                                           ; 0                           ;
+; 24                                           ; 1                           ;
 ; 25                                           ; 0                           ;
 ; 26                                           ; 0                           ;
-; 27                                           ; 1                           ;
+; 27                                           ; 0                           ;
+; 28                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 7.00) ; Number of LABs  (Total = 6) ;
+; Number of Signals Sourced Out  (Average = 8.86) ; Number of LABs  (Total = 7) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 2                           ;
-; 2                                               ; 0                           ;
-; 3                                               ; 1                           ;
+; 1                                               ; 1                           ;
+; 2                                               ; 1                           ;
+; 3                                               ; 0                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
 ; 6                                               ; 0                           ;
 ; 7                                               ; 1                           ;
-; 8                                               ; 0                           ;
+; 8                                               ; 1                           ;
 ; 9                                               ; 0                           ;
-; 10                                              ; 0                           ;
+; 10                                              ; 1                           ;
 ; 11                                              ; 0                           ;
 ; 12                                              ; 0                           ;
 ; 13                                              ; 0                           ;
-; 14                                              ; 1                           ;
+; 14                                              ; 0                           ;
 ; 15                                              ; 0                           ;
 ; 16                                              ; 1                           ;
+; 17                                              ; 0                           ;
+; 18                                              ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 9.50) ; Number of LABs  (Total = 6) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 2                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 0                           ;
-; 12                                          ; 1                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 1                           ;
-; 17                                          ; 1                           ;
-+---------------------------------------------+-----------------------------+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++----------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 12.14) ; Number of LABs  (Total = 7) ;
++----------------------------------------------+-----------------------------+
+; 0                                            ; 0                           ;
+; 1                                            ; 0                           ;
+; 2                                            ; 0                           ;
+; 3                                            ; 0                           ;
+; 4                                            ; 1                           ;
+; 5                                            ; 0                           ;
+; 6                                            ; 0                           ;
+; 7                                            ; 0                           ;
+; 8                                            ; 1                           ;
+; 9                                            ; 0                           ;
+; 10                                           ; 0                           ;
+; 11                                           ; 0                           ;
+; 12                                           ; 0                           ;
+; 13                                           ; 1                           ;
+; 14                                           ; 0                           ;
+; 15                                           ; 0                           ;
+; 16                                           ; 0                           ;
+; 17                                           ; 1                           ;
+; 18                                           ; 0                           ;
+; 19                                           ; 0                           ;
+; 20                                           ; 0                           ;
+; 21                                           ; 1                           ;
+; 22                                           ; 1                           ;
++----------------------------------------------+-----------------------------+
 
 
 +------------------------------------------+
@@ -1617,7 +1635,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/src/DE10_Lite_Neopixel_50MHz_Alone_mode.vhd Line: 7
+Info (176353): Automatically promoted node clk~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/src/DE10_Lite_Neopixel_50MHz_Alone.vhd Line: 7
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1818,21 +1836,21 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.18 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.26 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/Test_Unitaire_Materiel/Neopixel_Alone/output_files/Neopixel_Alone.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 190 warnings
     Info: Peak virtual memory: 5636 megabytes
-    Info: Processing ended: Sun Dec 15 22:02:55 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Processing ended: Mon Dec 16 13:44:43 2024
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +----------------------------+

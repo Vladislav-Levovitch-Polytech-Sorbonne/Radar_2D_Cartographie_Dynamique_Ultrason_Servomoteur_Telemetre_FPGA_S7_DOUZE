@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "commande",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "nb_led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "nb_led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "nb_led[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "windows64",
+		"os_name" : "Windows 10",
+		"os_version" : "10.0"
+	},
+	"error" : {
+		"executable" : "quartus",
+		"comment" : "not_applicable",
+		"error_message" : "Access Violation at 0X00007FF8B6015BD0",
+		"source_file" : "unknown",
+		"line" : "0",
+		"stack_trace" : "\t0x7ff8b6015bcf: pgm_pgmio + 0x85bcf (?get_asc_mode_info@PGMIO_SEC_BITFIELD@@QEBAKXZ + 0xf)\n\t0x7ff8c177189a: pgm_pgme + 0x6189a (?ip_access_flash@PGME_ZIPPLEBACK_ALGORITHM@@IEAA_NHKKKKIIE@Z + 0x2ba)\n\t0x7ff8c17b5a6e: pgm_pgme + 0xa5a6e (?speedmode@PGME_ZIPPLEBACK_ALGORITHM@@QEAA_NI@Z + 0x62e)\n\t0x7ff8c1749037: pgm_pgme + 0x39037 (?engage@PGME_PROGRAMMER@@QEAA_NW4PGM_PROGRAMMING_MODE@@PEAV?$vector@PEAVPGM_CHAIN_ELEMENT@@V?$allocator@PEAVPGM_CHAIN_ELEMENT@@@std@@@std@@_NPEAK@Z + 0x2547)\n\t0x7ff8c156d425: pgm_pgmwq + 0x7d425 (?run@PGMWQ_PROGRAMMING_THREAD@@MEAAXXZ + 0x25)\n\t 0x643d95b7: QtCore4 + 0x295b7 (?start@QThread@@QEAAXW4Priority@1@@Z + 0x427)\n\t0x7ff9426a4f7e: MSVCR120 + 0x24f7e (_beginthreadex + 0x106)\n\t0x7ff9426a5125: MSVCR120 + 0x25125 (_endthreadex + 0x191)\n\t0x7ff958efe8d6: KERNEL32 + 0x2e8d6 (BaseThreadInitThunk + 0x16)\n\t0x7ff95a33fbcb: ntdll + 0xdfbcb (RtlUserThreadStart + 0x2b)\n",
+		"subsystem" : "unknown"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "18.1.0",
+		"build" : "625",
+		"edition" : "Lite Edition"
+	}
+}

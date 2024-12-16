@@ -5,10 +5,8 @@
   <columns>
    <connections preferredWidth="63" />
    <irq preferredWidth="34" />
-   <export preferredWidth="295" />
-   <inputclock preferredWidth="192" />
   </columns>
  </systemtable>
  <library expandedCategories="Project,Library" />
- <window width="1942" height="1030" x="-11" y="-11" />
+ <window width="1100" height="800" x="0" y="0" />
 </preferences>
