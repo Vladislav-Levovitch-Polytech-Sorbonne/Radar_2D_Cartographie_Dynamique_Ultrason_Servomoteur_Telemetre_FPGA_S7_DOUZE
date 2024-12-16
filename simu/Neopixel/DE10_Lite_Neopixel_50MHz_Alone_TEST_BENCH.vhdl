@@ -10,7 +10,7 @@ architecture test_bench_DE10_Lite_Neopixel_50MHz_Alone_architecture of DE10_Lite
     -- Signal
     signal SIGNAL_Test_Bench_Neopixel_clk        : std_logic := '0';
     signal SIGNAL_Test_Bench_Neopixel_reset_n    : std_logic := '1';
-    -- signal SIGNAL_Test_Bench_Neopixel_nb_led     : std_logic_vector(7 downto 0) := ( others => '0' );
+    signal SIGNAL_Test_Bench_Neopixel_nb_led     : std_logic_vector(7 downto 0) := ( others => '0' );
 
     signal SIGNAL_Test_Bench_Neopixel_commande   : std_logic;
 
@@ -19,7 +19,7 @@ architecture test_bench_DE10_Lite_Neopixel_50MHz_Alone_architecture of DE10_Lite
         Port (
             clk         : In    std_logic;
             reset_n     : In    std_logic;
-            -- nb_led      : In    std_logic_vector(7 downto 0);
+            nb_led      : In    std_logic_vector(7 downto 0);
 
             commande    : Out   std_logic
         );
@@ -32,7 +32,7 @@ begin
         Port map (
             clk         => SIGNAL_Test_Bench_Neopixel_clk,
             reset_n     => SIGNAL_Test_Bench_Neopixel_reset_n,
-            -- nb_led      => SIGNAL_Test_Bench_Neopixel_nb_led,
+            nb_led      => SIGNAL_Test_Bench_Neopixel_nb_led,
 
             commande    => SIGNAL_Test_Bench_Neopixel_commande
         );
@@ -50,13 +50,23 @@ begin
     Test_bench : process
     begin
         -- Reset
-        -- SIGNAL_Test_Bench_Neopixel_nb_led <= "00000011";
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000011";
         SIGNAL_Test_Bench_Neopixel_reset_n <= '0';
         wait for 500 ns;
         SIGNAL_Test_Bench_Neopixel_reset_n <= '1';
 
-        wait for 2 ms;
-        -- SIGNAL_Test_Bench_Neopixel_nb_led <= "00000111";
+        wait for 550 us;
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000111";
+        wait for 350 us;
+        SIGNAL_Test_Bench_Neopixel_reset_n <= '0';
+        wait for 500 ns;
+        SIGNAL_Test_Bench_Neopixel_reset_n <= '1';
+        
+        wait for 1000 us;
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "11111111";
+
+
+
         wait;
     end process;
 end test_bench_DE10_Lite_Neopixel_50MHz_Alone_architecture;
