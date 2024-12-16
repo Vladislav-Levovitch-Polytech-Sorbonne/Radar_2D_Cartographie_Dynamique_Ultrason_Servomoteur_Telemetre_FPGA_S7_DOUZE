@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2024.12.16.13:43:59 -->
+ <!-- 2024.12.16.22:34:31 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1734353039</value>
+  <value>1734384871</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -559,6 +559,12 @@ parameters are a RESULT of the module parameters. -->
     <direction>Output</direction>
     <width>1</width>
     <role>commande_neopixel</role>
+   </port>
+   <port>
+    <name>nb_led</name>
+    <direction>Input</direction>
+    <width>8</width>
+    <role>nb_led</role>
    </port>
   </interface>
  </module>

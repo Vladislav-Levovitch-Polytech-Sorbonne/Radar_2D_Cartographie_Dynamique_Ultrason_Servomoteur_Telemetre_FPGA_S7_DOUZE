@@ -14,6 +14,22 @@
 				{
 					"name" : "reset_n",
 					"strict" : false
+				},
+				{
+					"name" : "nb_led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "nb_led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "nb_led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "nb_led[0]",
+					"strict" : false
 				}
 			]
 		}

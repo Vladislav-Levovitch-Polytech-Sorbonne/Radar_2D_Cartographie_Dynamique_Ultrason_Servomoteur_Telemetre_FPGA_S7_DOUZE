@@ -5,12 +5,12 @@ use ieee.numeric_std.all;
 entity DE10_Lite_Neopixel_TEST_BENCH_entity is
 end DE10_Lite_Neopixel_TEST_BENCH_entity;
 
-architecture test_bench_DE10_Lite_Neopixel_architecture of DE10_Lite_Neopixel_TEST_BENCH_entity is
+architecture DE10_Lite_Neopixel_TEST_BENCH_architecture of DE10_Lite_Neopixel_TEST_BENCH_entity is
 
     -- Signal
     signal SIGNAL_Test_Bench_Neopixel_clk        : std_logic := '0';
     signal SIGNAL_Test_Bench_Neopixel_reset_n    : std_logic := '1';
-    -- signal SIGNAL_Test_Bench_Neopixel_position   : std_logic_vector(9 downto 0) := ( others => '0' );
+    signal SIGNAL_Test_Bench_Neopixel_nb_led     : std_logic_vector(7 downto 0) := ( others => '0' );
 
     signal SIGNAL_Test_Bench_Neopixel_commande   : std_logic;
 
@@ -19,7 +19,8 @@ architecture test_bench_DE10_Lite_Neopixel_architecture of DE10_Lite_Neopixel_TE
         Port (
             clk         : In    std_logic;
             reset_n     : In    std_logic;
-            -- position    : In    std_logic_vector(9 downto 0);
+            nb_led      : In    std_logic_vector(7 downto 0);
+
             commande    : Out   std_logic
         );
     end component;
@@ -31,7 +32,8 @@ begin
         Port map (
             clk         => SIGNAL_Test_Bench_Neopixel_clk,
             reset_n     => SIGNAL_Test_Bench_Neopixel_reset_n,
-            -- position    => SIGNAL_Test_Bench_Neopixel_position,
+            nb_led      => SIGNAL_Test_Bench_Neopixel_nb_led,
+
             commande    => SIGNAL_Test_Bench_Neopixel_commande
         );
 
@@ -48,9 +50,21 @@ begin
     Test_bench : process
     begin
         -- Reset
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000011";
         SIGNAL_Test_Bench_Neopixel_reset_n <= '0';
         wait for 500 ns;
         SIGNAL_Test_Bench_Neopixel_reset_n <= '1';
+
+        wait for 550 us;
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000111";
+        wait for 350 us;
+        SIGNAL_Test_Bench_Neopixel_reset_n <= '0';
+        wait for 500 ns;
+        SIGNAL_Test_Bench_Neopixel_reset_n <= '1';
+        
+        wait for 1000 us;
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "11111111";
+
         wait;
     end process;
-end test_bench_DE10_Lite_Neopixel_architecture;
+end;

@@ -6,7 +6,7 @@ entity DE10_Lite_Neopixel_50MHz_Alone is
     port (
         clk         : in  std_logic;       -- horloge Version Alone 50 MHz
         reset_n     : in  std_logic;       -- reset actif bas
-
+        nb_led      : in  std_logic_vector(7 downto 0);
 
         commande    : out std_logic        -- signal WS2812
     );
@@ -31,7 +31,7 @@ architecture RTL of DE10_Lite_Neopixel_50MHz_Alone is
     signal N_SIGNAL_current_bit : std_logic := '0';                        -- Bit actuel en cours de transmission
     signal N_SIGNAL_current_led : std_logic_vector(3 downto 0)  := (others => '0');
 
-    signal N_SIGNAL_led_nb : std_logic_vector(3 downto 0) := "1111";       -- (others => '0');
+    signal N_SIGNAL_led_nb : std_logic_vector(7 downto 0) := (others => '0');
 
     signal N_SIGNAL_data        : std_logic_vector(23 downto 0);           -- Donnees pour LED en cours
 
@@ -51,29 +51,32 @@ begin
         N_SIGNAL_data         <= (others => '0');
         commande <= '0';
     elsif rising_edge(clk) and reset_n = '1' then
-        -- selection des donnees en fonction de l index des LEDs
+        -- Selection des donnees en fonction de l index des LEDs
         case N_SIGNAL_led_index is
-            when "0000" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Pink
-            when "0001" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Pink
-            when "0010" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Pink
-            when "0011" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Pink
-            when "0100" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Pink
+            when "0000" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Bleu_Green
+            when "0001" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Bleu_Green
+            when "0010" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Bleu_Green
+            when "0011" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Bleu_Green
+            when "0100" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Bleu_Green
             when "0101" => N_SIGNAL_data <= Couleur_1;      -- Led 5 to 8 Orange
             when "0110" => N_SIGNAL_data <= Couleur_1;      -- Led 5 to 8 Orange
             when "0111" => N_SIGNAL_data <= Couleur_1;      -- Led 5 to 8 Orange
             when "1000" => N_SIGNAL_data <= Couleur_1;      -- Led 5 to 8 Orange
-            when "1001" => N_SIGNAL_data <= Couleur_0;      -- Led 9 to 10 Orange
-            when "1010" => N_SIGNAL_data <= Couleur_0;      -- Led 9 to 10 Orange
+            when "1001" => N_SIGNAL_data <= Couleur_0;      -- Led 9 to 10 Pink
+            when "1010" => N_SIGNAL_data <= Couleur_0;      -- Led 9 to 10 Pink
 
             when others => N_SIGNAL_data <= (others => '1'); -- Led else ( 11 ) white
         end case;
 
-        -- Masque AND 4 bits pour N_SIGNAL_led_nb
-        N_SIGNAL_led_nb <= N_SIGNAL_led_nb and "1111";
+        -- Securite Maj apres pause
+        if N_SIGNAL_reset_done = '0' then
+            -- Masque AND 4 bits pour N_SIGNAL_led_nb
+            N_SIGNAL_led_nb <= nb_led and "00001111";
 
-        -- Verifier si N_SIGNAL_led_nb > 12
-        if unsigned(N_SIGNAL_led_nb) > 12 then
-            N_SIGNAL_led_nb <= "1100";
+            -- Verifier si N_SIGNAL_led_nb > 12
+            if unsigned(N_SIGNAL_led_nb) > 12 then
+                N_SIGNAL_led_nb <= "00001100";
+            end if;
         end if;
 
         -- gestion du reset

@@ -81,6 +81,22 @@
          type = "String";
       }
    }
+   element Neopixel_Alone_bis
+   {
+      datum _originalDeviceFamily
+      {
+         value = "MAX 10";
+         type = "String";
+      }
+   }
+   element Neopixel_Alone_bis
+   {
+      datum _originalDeviceFamily
+      {
+         value = "MAX 10";
+         type = "String";
+      }
+   }
    element clk_0
    {
       datum _sortIndex

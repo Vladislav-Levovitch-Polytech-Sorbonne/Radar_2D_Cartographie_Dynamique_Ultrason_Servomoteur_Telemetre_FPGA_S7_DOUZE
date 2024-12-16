@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="Neopixel_Alone_bis" kind="system" version="18.1" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2024.12.16.13:44:00 -->
+ <!-- 2024.12.16.22:34:32 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1734353039</value>
+  <value>1734384871</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -613,6 +613,12 @@ parameters are a RESULT of the module parameters. -->
     <direction>Output</direction>
     <width>1</width>
     <role>commande_neopixel</role>
+   </port>
+   <port>
+    <name>nb_led</name>
+    <direction>Input</direction>
+    <width>8</width>
+    <role>nb_led</role>
    </port>
   </interface>
  </module>
@@ -1212,5 +1218,5 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <reportVersion>18.1 625</reportVersion>
- <uniqueIdentifier>F875A4AB532A00000193CF7F323B</uniqueIdentifier>
+ <uniqueIdentifier>F875A4AB532A00000193D164EC6F</uniqueIdentifier>
 </EnsembleReport>

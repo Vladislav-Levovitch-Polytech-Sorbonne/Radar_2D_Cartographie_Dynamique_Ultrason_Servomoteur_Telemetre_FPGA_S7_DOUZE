@@ -4,9 +4,10 @@
 
 `timescale 1 ps / 1 ps
 module Neopixel_Alone_bis (
-		input  wire  clk_clk,                                 //                   clk.clk
-		output wire  neopixel_alone_output_commande_neopixel, // neopixel_alone_output.commande_neopixel
-		input  wire  reset_reset_n                            //                 reset.reset_n
+		input  wire       clk_clk,                                 //                   clk.clk
+		output wire       neopixel_alone_output_commande_neopixel, // neopixel_alone_output.commande_neopixel
+		input  wire [7:0] neopixel_alone_output_nb_led,            //                      .nb_led
+		input  wire       reset_reset_n                            //                 reset.reset_n
 	);
 
 	wire    rst_controller_reset_out_reset; // rst_controller:reset_out -> neopixel_alone_cinquante_0:reset_n
@@ -14,7 +15,8 @@ module Neopixel_Alone_bis (
 	DE10_Lite_Neopixel_50MHz_Alone neopixel_alone_cinquante_0 (
 		.clk      (clk_clk),                                 //        clock.clk
 		.reset_n  (~rst_controller_reset_out_reset),         //        reset.reset_n
-		.commande (neopixel_alone_output_commande_neopixel)  // avalon_alone.commande_neopixel
+		.commande (neopixel_alone_output_commande_neopixel), // avalon_alone.commande_neopixel
+		.nb_led   (neopixel_alone_output_nb_led)             //             .nb_led
 	);
 
 	altera_reset_controller #(
