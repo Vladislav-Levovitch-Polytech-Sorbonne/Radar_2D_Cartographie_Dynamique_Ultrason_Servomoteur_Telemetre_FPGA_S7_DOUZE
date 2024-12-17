@@ -1,5 +1,5 @@
 Flow report for Neopixel_Alone
-Tue Dec 17 02:06:14 2024
+Tue Dec 17 02:45:55 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec 17 02:06:10 2024       ;
+; Flow Status                        ; Successful - Tue Dec 17 02:45:50 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Neopixel_Alone                              ;
 ; Top-level Entity Name              ; DE10_Lite_Neopixel_50MHz_Alone              ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C6GES                            ;
 ; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 104 / 49,760 ( < 1 % )                      ;
+; Total logic elements               ; 107 / 49,760 ( < 1 % )                      ;
 ;     Total combinational functions  ; 104 / 49,760 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 45 / 49,760 ( < 1 % )                       ;
 ; Total registers                    ; 45                                          ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/17/2024 02:05:42 ;
+; Start date & time ; 12/17/2024 02:45:17 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Neopixel_Alone      ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+----------------+--------------------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name                    ; Section Id ;
 +-------------------------------------+----------------------------------------+----------------+--------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273184157553450.173439754217812        ; --             ; --                             ; --         ;
+; COMPILER_SIGNATURE_ID               ; 273184157553450.173439991619644        ; --             ; --                             ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --                             ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --                             ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; DE10_Lite_Neopixel_50MHz_Alone ; Top        ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4791 MB             ; 00:00:28                           ;
-; Fitter               ; 00:00:09     ; 1.0                     ; 5634 MB             ; 00:00:13                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4683 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4816 MB             ; 00:00:03                           ;
-; Total                ; 00:00:28     ; --                      ; --                  ; 00:00:47                           ;
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4789 MB             ; 00:00:31                           ;
+; Fitter               ; 00:00:11     ; 1.0                     ; 5642 MB             ; 00:00:16                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4683 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 4816 MB             ; 00:00:04                           ;
+; Total                ; 00:00:34     ; --                      ; --                  ; 00:00:55                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

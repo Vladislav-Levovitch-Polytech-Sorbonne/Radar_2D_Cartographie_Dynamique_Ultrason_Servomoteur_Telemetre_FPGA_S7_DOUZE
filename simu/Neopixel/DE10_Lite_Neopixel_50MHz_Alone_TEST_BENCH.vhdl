@@ -55,23 +55,23 @@ begin
         wait for 500 ns;
         SIGNAL_Test_Bench_Neopixel_reset_n <= '1';
 
-        wait for 11550 us;
+        wait for 1550 us;
         SIGNAL_Test_Bench_Neopixel_nb_led <= "00000010";
-        wait for 11350 us;
+        wait for 1350 us;
         --SIGNAL_Test_Bench_Neopixel_reset_n <= '0';
-        wait for 1500 ns;
+        wait for 500 ns;
         --SIGNAL_Test_Bench_Neopixel_reset_n <= '1';
         
-        wait for 11000 us;
+        wait for 1000 us;
         SIGNAL_Test_Bench_Neopixel_nb_led <= "00000001";
-
-        wait for 11550 us;
-        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000000";
-        wait for 1350 us;
 
         wait for 1550 us;
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000000";
+        wait for 350 us;
+
+        wait for 550 us;
         SIGNAL_Test_Bench_Neopixel_nb_led <= "00000001";
-        wait for 1350 us;
+        wait for 350 us;
 
 
         wait;

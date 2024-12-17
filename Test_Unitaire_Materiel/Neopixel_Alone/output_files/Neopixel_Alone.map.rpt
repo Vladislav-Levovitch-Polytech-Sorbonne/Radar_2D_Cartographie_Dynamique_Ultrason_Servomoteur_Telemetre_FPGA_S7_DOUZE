@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Neopixel_Alone
-Tue Dec 17 02:05:55 2024
+Tue Dec 17 02:45:31 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 17 02:05:55 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 17 02:45:31 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Neopixel_Alone                              ;
 ; Top-level Entity Name              ; DE10_Lite_Neopixel_50MHz_Alone              ;
@@ -202,8 +202,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 45        ;
-; Total fan-out                               ; 488       ;
-; Average fan-out                             ; 2.87      ;
+; Total fan-out                               ; 492       ;
+; Average fan-out                             ; 2.89      ;
 +---------------------------------------------+-----------+
 
 
@@ -240,7 +240,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 45    ;
 ; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 37    ;
+; Number of registers using Asynchronous Clear ; 41    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 15    ;
 ; Number of registers using Preset             ; 0     ;
@@ -266,8 +266,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cycloneiii_ff         ; 45                          ;
 ;     CLR               ; 14                          ;
 ;     CLR SCLR          ; 16                          ;
-;     ENA               ; 8                           ;
-;     ENA CLR           ; 7                           ;
+;     ENA               ; 4                           ;
+;     ENA CLR           ; 11                          ;
 ; cycloneiii_lcell_comb ; 103                         ;
 ;     arith             ; 19                          ;
 ;         2 data inputs ; 19                          ;
@@ -278,7 +278,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;         4 data inputs ; 47                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.50                        ;
+; Average LUT depth     ; 3.51                        ;
 +-----------------------+-----------------------------+
 
 
@@ -297,7 +297,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 17 02:05:41 2024
+    Info: Processing started: Tue Dec 17 02:45:16 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Neopixel_Alone -c Neopixel_Alone
 Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -325,9 +325,9 @@ Info (21057): Implemented 114 device resources after synthesis - the final resou
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 103 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Tue Dec 17 02:05:55 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4789 megabytes
+    Info: Processing ended: Tue Dec 17 02:45:31 2024
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:31
 
 

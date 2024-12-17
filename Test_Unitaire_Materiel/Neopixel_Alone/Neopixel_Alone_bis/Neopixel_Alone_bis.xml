@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2024.12.16.22:34:32"
+ date="2024.12.17.02:45:07"
  outputDirectory="C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/Test_Unitaire_Materiel/Neopixel_Alone/Neopixel_Alone_bis/">
  <perimeter>
   <parameter
@@ -79,13 +79,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="Neopixel_Alone_bis:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C6GES,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1734384871,AUTO_UNIQUE_ID=(clock_source:18.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(neopixel_alone_cinquante:1.50:)(clock:18.1:)(reset:18.1:)"
+   parameterizationKey="Neopixel_Alone_bis:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C6GES,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1734399906,AUTO_UNIQUE_ID=(clock_source:18.1:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(neopixel_alone_cinquante:1.50:)(clock:18.1:)(reset:18.1:)"
    instancePathKey="Neopixel_Alone_bis"
    kind="Neopixel_Alone_bis"
    version="1.0"
    name="Neopixel_Alone_bis">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1734384871" />
+  <parameter name="AUTO_GENERATION_ID" value="1734399906" />
   <parameter name="AUTO_DEVICE" value="10M50DAF484C6GES" />
   <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
