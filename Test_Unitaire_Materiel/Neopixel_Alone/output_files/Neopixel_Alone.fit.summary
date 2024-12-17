@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Dec 16 22:39:38 2024
+Fitter Status : Successful - Tue Dec 17 02:06:05 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Neopixel_Alone
 Top-level Entity Name : DE10_Lite_Neopixel_50MHz_Alone
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 97 / 49,760 ( < 1 % )
-    Total combinational functions : 96 / 49,760 ( < 1 % )
+Total logic elements : 104 / 49,760 ( < 1 % )
+    Total combinational functions : 104 / 49,760 ( < 1 % )
     Dedicated logic registers : 45 / 49,760 ( < 1 % )
 Total registers : 45
 Total pins : 11 / 360 ( 3 % )

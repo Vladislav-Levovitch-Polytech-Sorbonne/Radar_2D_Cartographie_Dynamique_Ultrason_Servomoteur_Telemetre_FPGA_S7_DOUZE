@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Neopixel_Alone
-Mon Dec 16 22:39:26 2024
+Tue Dec 17 02:05:55 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,13 +44,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 16 22:39:26 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 17 02:05:55 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Neopixel_Alone                              ;
 ; Top-level Entity Name              ; DE10_Lite_Neopixel_50MHz_Alone              ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 95                                          ;
-;     Total combinational functions  ; 94                                          ;
+; Total logic elements               ; 103                                         ;
+;     Total combinational functions  ; 103                                         ;
 ;     Dedicated logic registers      ; 45                                          ;
 ; Total registers                    ; 45                                          ;
 ; Total pins                         ; 11                                          ;
@@ -180,16 +180,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 95        ;
+; Estimated Total logic elements              ; 103       ;
 ;                                             ;           ;
-; Total combinational functions               ; 94        ;
+; Total combinational functions               ; 103       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 47        ;
-;     -- 3 input functions                    ; 17        ;
-;     -- <=2 input functions                  ; 30        ;
+;     -- 3 input functions                    ; 20        ;
+;     -- <=2 input functions                  ; 36        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 75        ;
+;     -- normal mode                          ; 84        ;
 ;     -- arithmetic mode                      ; 19        ;
 ;                                             ;           ;
 ; Total registers                             ; 45        ;
@@ -202,8 +202,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 45        ;
-; Total fan-out                               ; 466       ;
-; Average fan-out                             ; 2.89      ;
+; Total fan-out                               ; 488       ;
+; Average fan-out                             ; 2.87      ;
 +---------------------------------------------+-----------+
 
 
@@ -212,7 +212,7 @@ refer to the applicable agreement for further details.
 +---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+--------------------------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name             ; Entity Name                    ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+--------------------------------+--------------+
-; |DE10_Lite_Neopixel_50MHz_Alone ; 94 (94)             ; 45 (45)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 11   ; 0            ; 0          ; |DE10_Lite_Neopixel_50MHz_Alone ; DE10_Lite_Neopixel_50MHz_Alone ; work         ;
+; |DE10_Lite_Neopixel_50MHz_Alone ; 103 (103)           ; 45 (45)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 11   ; 0            ; 0          ; |DE10_Lite_Neopixel_50MHz_Alone ; DE10_Lite_Neopixel_50MHz_Alone ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -225,9 +225,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; N_SIGNAL_led_nb[4..7]                  ; Stuck at GND due to stuck port data_in ;
 ; N_SIGNAL_data[4,5,7]                   ; Merged with N_SIGNAL_data[0]           ;
 ; N_SIGNAL_data[3,23]                    ; Merged with N_SIGNAL_data[1]           ;
+; N_SIGNAL_data[9,11,15,17]              ; Merged with N_SIGNAL_data[8]           ;
 ; N_SIGNAL_data[12..14,16,18,20]         ; Merged with N_SIGNAL_data[10]          ;
 ; N_SIGNAL_data[21]                      ; Merged with N_SIGNAL_data[19]          ;
-; N_SIGNAL_data[8,9,15,17]               ; Merged with N_SIGNAL_data[11]          ;
 ; Total Number of Removed Registers = 20 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
@@ -252,7 +252,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DE10_Lite_Neopixel_50MHz_Alone|N_SIGNAL_bit_counter[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE10_Lite_Neopixel_50MHz_Alone|N_SIGNAL_led_index[2]   ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |DE10_Lite_Neopixel_50MHz_Alone|N_SIGNAL_bit_counter[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
@@ -267,17 +268,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     CLR SCLR          ; 16                          ;
 ;     ENA               ; 8                           ;
 ;     ENA CLR           ; 7                           ;
-; cycloneiii_lcell_comb ; 94                          ;
+; cycloneiii_lcell_comb ; 103                         ;
 ;     arith             ; 19                          ;
 ;         2 data inputs ; 19                          ;
-;     normal            ; 75                          ;
+;     normal            ; 84                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 17                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 20                          ;
 ;         4 data inputs ; 47                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 3.72                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 3.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -296,7 +297,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Dec 16 22:39:11 2024
+    Info: Processing started: Tue Dec 17 02:05:41 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Neopixel_Alone -c Neopixel_Alone
 Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -310,6 +311,7 @@ Info (12127): Elaborating entity "DE10_Lite_Neopixel_50MHz_Alone" for the top le
 Warning (10540): VHDL Signal Declaration warning at DE10_Lite_Neopixel_50MHz_Alone.vhd(19): used explicit default value for signal "Couleur_0" because signal was never assigned a value File: C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/src/DE10_Lite_Neopixel_50MHz_Alone.vhd Line: 19
 Warning (10540): VHDL Signal Declaration warning at DE10_Lite_Neopixel_50MHz_Alone.vhd(20): used explicit default value for signal "Couleur_1" because signal was never assigned a value File: C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/src/DE10_Lite_Neopixel_50MHz_Alone.vhd Line: 20
 Warning (10540): VHDL Signal Declaration warning at DE10_Lite_Neopixel_50MHz_Alone.vhd(21): used explicit default value for signal "Couleur_2" because signal was never assigned a value File: C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/src/DE10_Lite_Neopixel_50MHz_Alone.vhd Line: 21
+Warning (10540): VHDL Signal Declaration warning at DE10_Lite_Neopixel_50MHz_Alone.vhd(25): used explicit default value for signal "Couleur_X" because signal was never assigned a value File: C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/src/DE10_Lite_Neopixel_50MHz_Alone.vhd Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -318,14 +320,14 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "nb_led[5]" File: C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/src/DE10_Lite_Neopixel_50MHz_Alone.vhd Line: 9
     Warning (15610): No output dependent on input pin "nb_led[6]" File: C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/src/DE10_Lite_Neopixel_50MHz_Alone.vhd Line: 9
     Warning (15610): No output dependent on input pin "nb_led[7]" File: C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/src/DE10_Lite_Neopixel_50MHz_Alone.vhd Line: 9
-Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 114 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 95 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4790 megabytes
-    Info: Processing ended: Mon Dec 16 22:39:26 2024
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:33
+    Info (21061): Implemented 103 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4791 megabytes
+    Info: Processing ended: Tue Dec 17 02:05:55 2024
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
 
 

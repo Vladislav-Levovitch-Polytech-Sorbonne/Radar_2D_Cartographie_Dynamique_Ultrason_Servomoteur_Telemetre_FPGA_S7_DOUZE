@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Dec 16 22:39:26 2024
+Analysis & Synthesis Status : Successful - Tue Dec 17 02:05:55 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Neopixel_Alone
 Top-level Entity Name : DE10_Lite_Neopixel_50MHz_Alone
 Family : MAX 10
-Total logic elements : 95
-    Total combinational functions : 94
+Total logic elements : 103
+    Total combinational functions : 103
     Dedicated logic registers : 45
 Total registers : 45
 Total pins : 11

@@ -12,6 +12,6 @@ vsim DE10_Lite_Neopixel_50MHz_Alone_TEST_BENCH_entity
 view signals
 add wave *
 
-run 10 ms 
+run 400 ms 
 #run -all 
 wave zoom full

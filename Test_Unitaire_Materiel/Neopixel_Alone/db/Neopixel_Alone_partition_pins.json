@@ -16,11 +16,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "nb_led[3]",
-					"strict" : false
-				},
-				{
-					"name" : "nb_led[2]",
+					"name" : "nb_led[0]",
 					"strict" : false
 				},
 				{
@@ -28,7 +24,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "nb_led[0]",
+					"name" : "nb_led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "nb_led[3]",
 					"strict" : false
 				}
 			]

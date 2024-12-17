@@ -50,21 +50,28 @@ begin
     Test_bench : process
     begin
         -- Reset
-        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000011";
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000010";
         SIGNAL_Test_Bench_Neopixel_reset_n <= '0';
         wait for 500 ns;
         SIGNAL_Test_Bench_Neopixel_reset_n <= '1';
 
-        wait for 550 us;
-        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000111";
-        wait for 350 us;
-        SIGNAL_Test_Bench_Neopixel_reset_n <= '0';
-        wait for 500 ns;
-        SIGNAL_Test_Bench_Neopixel_reset_n <= '1';
+        wait for 11550 us;
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000010";
+        wait for 11350 us;
+        --SIGNAL_Test_Bench_Neopixel_reset_n <= '0';
+        wait for 1500 ns;
+        --SIGNAL_Test_Bench_Neopixel_reset_n <= '1';
         
-        wait for 1000 us;
-        SIGNAL_Test_Bench_Neopixel_nb_led <= "11111111";
+        wait for 11000 us;
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000001";
 
+        wait for 11550 us;
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000000";
+        wait for 1350 us;
+
+        wait for 1550 us;
+        SIGNAL_Test_Bench_Neopixel_nb_led <= "00000001";
+        wait for 1350 us;
 
 
         wait;

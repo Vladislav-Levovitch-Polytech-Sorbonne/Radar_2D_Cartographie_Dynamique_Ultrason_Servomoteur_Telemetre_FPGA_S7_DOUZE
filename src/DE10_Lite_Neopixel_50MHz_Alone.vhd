@@ -22,6 +22,7 @@ architecture RTL of DE10_Lite_Neopixel_50MHz_Alone is
     signal Couleur_3   : std_logic_vector(23 downto 0) := "111111111111111111111111";  -- Couleur 3 : Blanc
     signal Couleur_4   : std_logic_vector(23 downto 0) := "111111110000000011111111";  -- Couleur 4 : Cyan
     signal Couleur_5   : std_logic_vector(23 downto 0) := "111111111111111100000000";  -- Couleur 5 : Jaune
+    signal Couleur_X   : std_logic_vector(23 downto 0) := "000000000000000000000000";  -- Couleur X : Reset Noir
 
     signal N_SIGNAL_bit_counter : std_logic_vector(4 downto 0)  := (others => '0');  -- Compteur pour les bits (0 a 24)
     signal N_SIGNAL_led_index   : std_logic_vector(3 downto 0)  := (others => '0');  -- Index des LEDs (0, 1, 2)
@@ -65,6 +66,7 @@ begin
             when "1001" => N_SIGNAL_data <= Couleur_0;      -- Led 9 to 10 Pink
             when "1010" => N_SIGNAL_data <= Couleur_0;      -- Led 9 to 10 Pink
 
+            when "1111" => N_SIGNAL_data <= Couleur_X;      -- Cleaning leds
             when others => N_SIGNAL_data <= (others => '1'); -- Led else ( 11 ) white
         end case;
 
@@ -77,6 +79,10 @@ begin
             if unsigned(N_SIGNAL_led_nb) > 12 then
                 N_SIGNAL_led_nb <= "00001100";
             end if;
+        end if;
+
+        if N_SIGNAL_led_nb = "00000000" then
+            N_SIGNAL_data <= Couleur_X;
         end if;
 
         -- gestion du reset
@@ -143,9 +149,13 @@ begin
                 N_SIGNAL_current_bit <= N_SIGNAL_data(23 - to_integer(unsigned(N_SIGNAL_bit_counter)));
             else
                 N_SIGNAL_bit_counter <= (others => '0');
-                if unsigned(N_SIGNAL_current_led) < unsigned(N_SIGNAL_led_nb) then
+                if unsigned(N_SIGNAL_current_led) < 11 then
                     N_SIGNAL_current_led <= std_logic_vector(unsigned(N_SIGNAL_current_led) + 1);
-                    N_SIGNAL_led_index   <= std_logic_vector(unsigned(N_SIGNAL_led_index) + 1);     -- Redondant mais pourquoi pas subdiviser en deux le presque meme parametre
+                    if unsigned(N_SIGNAL_current_led) > unsigned(N_SIGNAL_led_nb) then
+                        N_SIGNAL_led_index   <= "1111";
+                    else
+                        N_SIGNAL_led_index   <= std_logic_vector(unsigned(N_SIGNAL_led_index) + 1);
+                    end if;
                 else
                     N_SIGNAL_led_index   <= (others => '0');
                     N_SIGNAL_current_led <= (others => '0');
