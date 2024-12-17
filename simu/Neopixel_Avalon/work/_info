@@ -1,0 +1,62 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\simu\Neopixel_Avalon
+Ede10_lite_neopixel_avalon
+Z1 w1734406681
+Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 8../../src/DE10_Lite_Neopixel_Avalon.vhd
+Z5 F../../src/DE10_Lite_Neopixel_Avalon.vhd
+l0
+L5
+VVZj]eb<Ya@lmUQP[<87RE0
+Z6 OV;C;6.5b;42
+31
+Z7 o-93 -O0
+Z8 tExplicit 1
+!s100 ilfLF<J5hFUmPQ3n>nQ_B1
+Artl
+R2
+R3
+Z9 DEx4 work 25 de10_lite_neopixel_avalon 0 22 VZj]eb<Ya@lmUQP[<87RE0
+l41
+L17
+V6;OdD8GF3ZkVLBG9k:YJd3
+!s100 2Og9zLNEZWFeiHIekN^An3
+R6
+31
+Z10 Mx2 4 ieee 14 std_logic_1164
+Z11 Mx1 4 ieee 11 numeric_std
+R7
+R8
+Ede10_lite_neopixel_avalon_test_bench_entity
+Z12 w1734407266
+R2
+R3
+Z13 8DE10_Lite_Neopixel_Avalon_TEST_BENCH.vhdl
+Z14 FDE10_Lite_Neopixel_Avalon_TEST_BENCH.vhdl
+l0
+L5
+VN?189^SLCbj]=Uk7?4ihc3
+!s100 67Ba]_2?YIPS6ZGBE[eK00
+R6
+31
+R7
+R8
+Ade10_lite_neopixel_avalon_test_bench_architecture
+R9
+R2
+R3
+Z15 DEx4 work 43 de10_lite_neopixel_avalon_test_bench_entity 0 22 N?189^SLCbj]=Uk7?4ihc3
+l35
+L8
+VV_]BLRI5;9_3ZDO_??Q910
+!s100 ZhLSoe37J`ABFm^7>L6Tk2
+R6
+31
+R10
+R11
+R7
+R8

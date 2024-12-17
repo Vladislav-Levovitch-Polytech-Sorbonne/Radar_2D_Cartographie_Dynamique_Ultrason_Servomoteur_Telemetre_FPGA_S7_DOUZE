@@ -1,11 +1,11 @@
-library IEEE;
+library ieee;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 
-entity DE10_Lite_Neopixel_TEST_BENCH_entity is
-end DE10_Lite_Neopixel_TEST_BENCH_entity;
+entity DE10_Lite_Neopixel_Avalon_TEST_BENCH_entity is
+end DE10_Lite_Neopixel_Avalon_TEST_BENCH_entity;
 
-architecture DE10_Lite_Neopixel_TEST_BENCH_architecture of DE10_Lite_Neopixel_TEST_BENCH_entity is
+architecture DE10_Lite_Neopixel_Avalon_TEST_BENCH_architecture of DE10_Lite_Neopixel_Avalon_TEST_BENCH_entity is
 
     -- Signal
     signal SIGNAL_Test_Bench_Neopixel_clk        : std_logic := '0';
@@ -15,7 +15,7 @@ architecture DE10_Lite_Neopixel_TEST_BENCH_architecture of DE10_Lite_Neopixel_TE
     signal SIGNAL_Test_Bench_Neopixel_commande   : std_logic;
 
     -- Component Declaration
-    component DE10_Lite_Neopixel
+    component DE10_Lite_Neopixel_Avalon
         Port (
             clk         : In    std_logic;
             reset_n     : In    std_logic;
@@ -28,7 +28,7 @@ architecture DE10_Lite_Neopixel_TEST_BENCH_architecture of DE10_Lite_Neopixel_TE
 begin
 
     -- Instanciation
-    DUT : entity work.DE10_Lite_Neopixel
+    DUT : entity work.DE10_Lite_Neopixel_Avalon
         Port map (
             clk         => SIGNAL_Test_Bench_Neopixel_clk,
             reset_n     => SIGNAL_Test_Bench_Neopixel_reset_n,

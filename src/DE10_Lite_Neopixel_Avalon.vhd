@@ -2,18 +2,19 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity DE10_Lite_Neopixel is
+entity DE10_Lite_Neopixel_Avalon is
     port (
         clk         : in  std_logic;       -- horloge 100 MHz
         reset_n     : in  std_logic;       -- reset actif bas
-        nb_led      : in  std_logic_vector(7 downto 0);
+        chipselect  : In  std_logic;       -- Avalon CS
+        write_n     : In  std_logic;       -- Avalon WE (NOT)
+        WriteData   : In  std_logic_vector(7 downto 0);    -- Nb leds to turn ON  
 
         commande    : out std_logic        -- signal WS2812
     );
 end entity;
 
-architecture RTL of DE10_Lite_Neopixel is
-
+architecture RTL of DE10_Lite_Neopixel_Avalon is
 -- Signals
     -- Donnees initiales pour tester les LEDs GRB
     signal Couleur_0   : std_logic_vector(23 downto 0) := "000101111111111101000100";  -- Couleur 0 : Rose Baiser
@@ -22,6 +23,7 @@ architecture RTL of DE10_Lite_Neopixel is
     signal Couleur_3   : std_logic_vector(23 downto 0) := "111111111111111111111111";  -- Couleur 3 : Blanc
     signal Couleur_4   : std_logic_vector(23 downto 0) := "111111110000000011111111";  -- Couleur 4 : Cyan
     signal Couleur_5   : std_logic_vector(23 downto 0) := "111111111111111100000000";  -- Couleur 5 : Jaune
+    signal Couleur_X   : std_logic_vector(23 downto 0) := "000000000000000000000000";  -- Couleur X : Reset Noir
 
     signal N_SIGNAL_bit_counter : std_logic_vector(4 downto 0)  := (others => '0');  -- Compteur pour les bits (0 a 24)
     signal N_SIGNAL_led_index   : std_logic_vector(3 downto 0)  := (others => '0');  -- Index des LEDs (0, 1, 2)
@@ -29,15 +31,27 @@ architecture RTL of DE10_Lite_Neopixel is
     signal N_SIGNAL_state       : std_logic := '0';                        -- Etat FSM (0 = haut, 1 = bas)
     signal N_SIGNAL_reset_done  : std_logic := '0';                        -- Reset termine
     signal N_SIGNAL_current_bit : std_logic := '0';                        -- Bit actuel en cours de transmission
-    signal N_SIGNAL_current_led : std_logic_vector(3 downto 0)  := (others => '0');
+    signal N_SIGNAL_current_led : std_logic_vector(3 downto 0)  := "0000";
 
     signal N_SIGNAL_led_nb : std_logic_vector(7 downto 0) := (others => '0');
+    signal N_SIGNAL_led_bis: std_logic_vector(7 downto 0) := (others => '0');
 
     signal N_SIGNAL_data        : std_logic_vector(23 downto 0);           -- Donnees pour LED en cours
 
 begin
 
 -- Content
+
+Process( reset_n, chipselect, Clk )
+Begin
+    If ( reset_n = '0' ) Then
+        N_SIGNAL_led_bis <= ( others => '0' );
+    ElsIf Rising_Edge( clk ) Then
+        If ( write_n = '0' and chipselect = '1' ) Then
+            N_SIGNAL_led_bis <= WriteData; -- MAJ nb_led_stockage
+        End If;
+    End If;
+End Process;
 
 process(clk, reset_n)
 begin
@@ -49,15 +63,12 @@ begin
         N_SIGNAL_state        <= '0';
         N_SIGNAL_reset_done   <= '0';
         N_SIGNAL_data         <= (others => '0');
+        N_SIGNAL_current_led  <= "0000";
         commande <= '0';
     elsif rising_edge(clk) and reset_n = '1' then
         -- Selection des donnees en fonction de l index des LEDs
         case N_SIGNAL_led_index is
-            when "0000" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Bleu_Green
-            when "0001" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Bleu_Green
-            when "0010" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Bleu_Green
-            when "0011" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Bleu_Green
-            when "0100" => N_SIGNAL_data <= Couleur_2;      -- Led 0 to 4 Bleu_Green
+            when "0000" | "0001" | "0010" | "0011" | "0100" => N_SIGNAL_data <= Couleur_2;  -- Led 0 to 4 Bleu_Green
             when "0101" => N_SIGNAL_data <= Couleur_1;      -- Led 5 to 8 Orange
             when "0110" => N_SIGNAL_data <= Couleur_1;      -- Led 5 to 8 Orange
             when "0111" => N_SIGNAL_data <= Couleur_1;      -- Led 5 to 8 Orange
@@ -65,18 +76,23 @@ begin
             when "1001" => N_SIGNAL_data <= Couleur_0;      -- Led 9 to 10 Pink
             when "1010" => N_SIGNAL_data <= Couleur_0;      -- Led 9 to 10 Pink
 
+            when "1111" => N_SIGNAL_data <= Couleur_X;      -- Cleaning leds
             when others => N_SIGNAL_data <= (others => '1'); -- Led else ( 11 ) white
         end case;
 
         -- Securite Maj apres pause
         if N_SIGNAL_reset_done = '0' then
             -- Masque AND 4 bits pour N_SIGNAL_led_nb
-            N_SIGNAL_led_nb <= nb_led and "00001111";
+            N_SIGNAL_led_nb <= N_SIGNAL_led_bis and "00001111";
 
             -- Verifier si N_SIGNAL_led_nb > 12
             if unsigned(N_SIGNAL_led_nb) > 12 then
                 N_SIGNAL_led_nb <= "00001100";
             end if;
+        end if;
+
+        if N_SIGNAL_led_nb = "00000000" then
+            N_SIGNAL_data <= Couleur_X;
         end if;
 
         -- gestion du reset
@@ -143,9 +159,13 @@ begin
                 N_SIGNAL_current_bit <= N_SIGNAL_data(23 - to_integer(unsigned(N_SIGNAL_bit_counter)));
             else
                 N_SIGNAL_bit_counter <= (others => '0');
-                if unsigned(N_SIGNAL_current_led) < unsigned(N_SIGNAL_led_nb) then
+                if unsigned(N_SIGNAL_current_led) < 11 then
                     N_SIGNAL_current_led <= std_logic_vector(unsigned(N_SIGNAL_current_led) + 1);
-                    N_SIGNAL_led_index   <= std_logic_vector(unsigned(N_SIGNAL_led_index) + 1);     -- Redondant mais pourquoi pas subdiviser en deux le presque meme parametre
+                    if unsigned(N_SIGNAL_current_led) + 2 > unsigned(N_SIGNAL_led_nb) then
+                        N_SIGNAL_led_index   <= "1111";
+                    else
+                        N_SIGNAL_led_index   <= std_logic_vector(unsigned(N_SIGNAL_led_index) + 1);
+                    end if;
                 else
                     N_SIGNAL_led_index   <= (others => '0');
                     N_SIGNAL_current_led <= (others => '0');
