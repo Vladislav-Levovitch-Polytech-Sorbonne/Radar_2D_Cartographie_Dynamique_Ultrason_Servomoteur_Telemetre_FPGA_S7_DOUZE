@@ -1,6 +1,6 @@
-05:02:21 **** Incremental Build of configuration Nios II for project servomotor_v5_bsp ****
+05:58:12 **** Incremental Build of configuration Nios II for project servomotor_v5_bsp ****
 make all 
 [BSP build complete]
 
-05:02:22 Build Finished (took 822ms)
+05:58:14 Build Finished (took 1s.689ms)
 

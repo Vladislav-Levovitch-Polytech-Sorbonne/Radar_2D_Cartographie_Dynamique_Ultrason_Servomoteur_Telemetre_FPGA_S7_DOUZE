@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2024.12.14.23:47:37</td>
+    <td class="l">2024.12.21.22:13:01</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -166,6 +166,9 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <br/>&#160;&#160;
      <a href="#module_VGA_Subsystem_VGA_Pixel_RGB_Resampler"><b>VGA_Subsystem_VGA_Pixel_RGB_Resampler</b>
      </a> altera_up_avalon_video_rgb_resampler 18.0
+     <br/>&#160;&#160;
+     <a href="#module_avalon_neopixel"><b>avalon_neopixel</b>
+     </a> avalon_neopixel 1.0
      <br/>&#160;&#160;
      <a href="#module_avalon_servomoteur"><b>avalon_servomoteur</b>
      </a> avalon_servomoteur 2
@@ -697,6 +700,27 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">avalon_rgb_slave&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>04000000</td>
+    <td class="addr"><span style="color:#989898">0x</span>04000000</td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_avalon_neopixel"><b>avalon_neopixel</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">avalon_slave_0&#160;</td>
     <td class="addr"><span style="color:#989898">0x</span>04000004</td>
     <td class="addr"><span style="color:#989898">0x</span>04000004</td>
     <td class="empty"></td>
@@ -718,8 +742,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">avalon_slave_0&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>04000000</td>
-    <td class="addr"><span style="color:#989898">0x</span>04000000</td>
+    <td class="addr"><span style="color:#989898">0x</span>0400000c</td>
+    <td class="addr"><span style="color:#989898">0x</span>0400000c</td>
     <td class="empty"></td>
     <td class="empty"></td>
     <td class="empty"></td>
@@ -2169,7 +2193,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_System_PLL">System_PLL</a>
       </td>
       <td class="from">sys_clk&#160;&#160;</td>
-      <td class="main" rowspan="60">JTAG_to_FPGA_Bridge</td>
+      <td class="main" rowspan="63">JTAG_to_FPGA_Bridge</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -2218,6 +2242,22 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="from">master&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_avalon_servomoteur">avalon_servomoteur</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">master&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_avalon_neopixel">avalon_neopixel</a>
       </td>
      </tr>
      <tr>
@@ -2763,7 +2803,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_System_PLL">System_PLL</a>
       </td>
       <td class="from">sys_clk&#160;&#160;</td>
-      <td class="main" rowspan="77">Nios2</td>
+      <td class="main" rowspan="80">Nios2</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;clk</td>
@@ -2822,6 +2862,22 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="from">data_master&#160;&#160;</td>
       <td class="neighbor" rowspan="2">
        <a href="#module_avalon_servomoteur">avalon_servomoteur</a>
+      </td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td></td>
+      <td></td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_avalon_neopixel">avalon_neopixel</a>
       </td>
      </tr>
      <tr>
@@ -3860,7 +3916,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">dataSlaveMapParam</td>
-        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='SDRAM.s1' start='0x0' end='0x4000000' type='altera_avalon_new_sdram_controller.s1' /&gt;&lt;slave name='avalon_servomoteur.avalon_slave_0' start='0x4000000' end='0x4000002' type='avalon_servomoteur.avalon_slave_0' /&gt;&lt;slave name='VGA_Subsystem_VGA_Pixel_RGB_Resampler.avalon_rgb_slave' start='0x4000004' end='0x4000008' type='altera_up_avalon_video_rgb_resampler.avalon_rgb_slave' /&gt;&lt;slave name='avalon_telemetre.avalon_slave_0' start='0x4000008' end='0x400000C' type='avalon_telemetre.avalon_slave_0' /&gt;&lt;slave name='Onchip_SRAM.s1' start='0x8000000' end='0x8010000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM.s1' start='0x9000000' end='0x9002000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='Nios2.debug_mem_slave' start='0xA000000' end='0xA000800' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='LEDs.s1' start='0xFF200000' end='0xFF200010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX3_HEX0.s1' start='0xFF200020' end='0xFF200030' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX5_HEX4.s1' start='0xFF200030' end='0xFF200040' type='altera_avalon_pio.s1' /&gt;&lt;slave name='Slider_Switches.s1' start='0xFF200040' end='0xFF200050' type='altera_avalon_pio.s1' /&gt;&lt;slave name='Pushbuttons.s1' start='0xFF200050' end='0xFF200060' type='altera_avalon_pio.s1' /&gt;&lt;slave name='Arduino_GPIO.s1' start='0xFF200100' end='0xFF200110' type='altera_avalon_pio.s1' /&gt;&lt;slave name='Arduino_Reset_N.s1' start='0xFF200110' end='0xFF200120' type='altera_avalon_pio.s1' /&gt;&lt;slave name='JTAG_UART.avalon_jtag_slave' start='0xFF201000' end='0xFF201008' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;slave name='Interval_Timer.s1' start='0xFF202000' end='0xFF202020' type='altera_avalon_timer.s1' /&gt;&lt;slave name='Interval_Timer_2.s1' start='0xFF202020' end='0xFF202040' type='altera_avalon_timer.s1' /&gt;&lt;slave name='SysID.control_slave' start='0xFF202040' end='0xFF202048' type='altera_avalon_sysid_qsys.control_slave' /&gt;&lt;slave name='VGA_Subsystem_VGA_Pixel_DMA.avalon_dma_control_slave' start='0xFF203020' end='0xFF203030' type='altera_up_avalon_video_dma_controller.avalon_dma_control_slave' /&gt;&lt;slave name='VGA_Subsystem_Char_Buf_Subsystem_Char_Buf_DMA.avalon_dma_control_slave' start='0xFF203030' end='0xFF203040' type='altera_up_avalon_video_dma_controller.avalon_dma_control_slave' /&gt;&lt;/address-map&gt;</td>
+        <td class="parametervalue">&lt;address-map&gt;&lt;slave name='SDRAM.s1' start='0x0' end='0x4000000' type='altera_avalon_new_sdram_controller.s1' /&gt;&lt;slave name='VGA_Subsystem_VGA_Pixel_RGB_Resampler.avalon_rgb_slave' start='0x4000000' end='0x4000004' type='altera_up_avalon_video_rgb_resampler.avalon_rgb_slave' /&gt;&lt;slave name='avalon_neopixel.avalon_slave_0' start='0x4000004' end='0x4000008' type='avalon_neopixel.avalon_slave_0' /&gt;&lt;slave name='avalon_telemetre.avalon_slave_0' start='0x4000008' end='0x400000C' type='avalon_telemetre.avalon_slave_0' /&gt;&lt;slave name='avalon_servomoteur.avalon_slave_0' start='0x400000C' end='0x400000E' type='avalon_servomoteur.avalon_slave_0' /&gt;&lt;slave name='Onchip_SRAM.s1' start='0x8000000' end='0x8010000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='VGA_Subsystem_Char_Buf_Subsystem_Onchip_SRAM.s1' start='0x9000000' end='0x9002000' type='altera_avalon_onchip_memory2.s1' /&gt;&lt;slave name='Nios2.debug_mem_slave' start='0xA000000' end='0xA000800' type='altera_nios2_gen2.debug_mem_slave' /&gt;&lt;slave name='LEDs.s1' start='0xFF200000' end='0xFF200010' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX3_HEX0.s1' start='0xFF200020' end='0xFF200030' type='altera_avalon_pio.s1' /&gt;&lt;slave name='HEX5_HEX4.s1' start='0xFF200030' end='0xFF200040' type='altera_avalon_pio.s1' /&gt;&lt;slave name='Slider_Switches.s1' start='0xFF200040' end='0xFF200050' type='altera_avalon_pio.s1' /&gt;&lt;slave name='Pushbuttons.s1' start='0xFF200050' end='0xFF200060' type='altera_avalon_pio.s1' /&gt;&lt;slave name='Arduino_GPIO.s1' start='0xFF200100' end='0xFF200110' type='altera_avalon_pio.s1' /&gt;&lt;slave name='Arduino_Reset_N.s1' start='0xFF200110' end='0xFF200120' type='altera_avalon_pio.s1' /&gt;&lt;slave name='JTAG_UART.avalon_jtag_slave' start='0xFF201000' end='0xFF201008' type='altera_avalon_jtag_uart.avalon_jtag_slave' /&gt;&lt;slave name='Interval_Timer.s1' start='0xFF202000' end='0xFF202020' type='altera_avalon_timer.s1' /&gt;&lt;slave name='Interval_Timer_2.s1' start='0xFF202020' end='0xFF202040' type='altera_avalon_timer.s1' /&gt;&lt;slave name='SysID.control_slave' start='0xFF202040' end='0xFF202048' type='altera_avalon_sysid_qsys.control_slave' /&gt;&lt;slave name='VGA_Subsystem_VGA_Pixel_DMA.avalon_dma_control_slave' start='0xFF203020' end='0xFF203030' type='altera_up_avalon_video_dma_controller.avalon_dma_control_slave' /&gt;&lt;slave name='VGA_Subsystem_Char_Buf_Subsystem_Char_Buf_DMA.avalon_dma_control_slave' start='0xFF203030' end='0xFF203040' type='altera_up_avalon_video_dma_controller.avalon_dma_control_slave' /&gt;&lt;/address-map&gt;</td>
        </tr>
        <tr>
         <td class="parametername">tightlyCoupledDataMaster0MapParam</td>
@@ -5213,7 +5269,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">timestamp</td>
-        <td class="parametervalue">1734216456</td>
+        <td class="parametervalue">1734815580</td>
        </tr>
        <tr>
         <td class="parametername">deviceFamily</td>
@@ -5238,7 +5294,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">TIMESTAMP</td>
-        <td class="parametervalue">1734216456</td>
+        <td class="parametervalue">1734815580</td>
        </tr>
       </table>
      </td>
@@ -5342,7 +5398,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">AUTO_GENERATION_ID</td>
-        <td class="parametervalue">1734216456</td>
+        <td class="parametervalue">1734815580</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_UNIQUE_ID</td>
@@ -5425,7 +5481,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <table>
        <tr>
         <td class="parametername">AUTO_GENERATION_ID</td>
-        <td class="parametervalue">1734216456</td>
+        <td class="parametervalue">1734815580</td>
        </tr>
        <tr>
         <td class="parametername">AUTO_UNIQUE_ID</td>
@@ -7849,6 +7905,81 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
+  <a name="module_avalon_neopixel"> </a>
+  <div>
+   <hr/>
+   <h2>avalon_neopixel</h2>avalon_neopixel v1.0
+   <br/>
+   <div class="greydiv">
+    <table class="connectionboxes">
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_Nios2">Nios2</a>
+      </td>
+      <td class="from">data_master&#160;&#160;</td>
+      <td class="main" rowspan="10">avalon_neopixel</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="2">
+       <a href="#module_JTAG_to_FPGA_Bridge">JTAG_to_FPGA_Bridge</a>
+      </td>
+      <td class="from">master&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;avalon_slave_0</td>
+     </tr>
+     <tr style="height:6px">
+      <td></td>
+     </tr>
+     <tr>
+      <td class="neighbor" rowspan="4">
+       <a href="#module_System_PLL">System_PLL</a>
+      </td>
+      <td class="from">sys_clk&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;clock</td>
+     </tr>
+     <tr>
+      <td class="from">reset_source&#160;&#160;</td>
+     </tr>
+     <tr>
+      <td class="to">&#160;&#160;reset</td>
+     </tr>
+    </table>
+   </div>
+   <br/>
+   <br/>
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Parameters</h2>
+      <table>
+       <tr>
+        <td class="parametername">deviceFamily</td>
+        <td class="parametervalue">UNKNOWN</td>
+       </tr>
+       <tr>
+        <td class="parametername">generateLegacySim</td>
+        <td class="parametervalue">false</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>&#160;&#160;
+   <table class="flowbox">
+    <tr>
+     <td class="parametersbox">
+      <h2>Software Assignments</h2>(none)</td>
+    </tr>
+   </table>
+  </div>
   <a name="module_avalon_servomoteur"> </a>
   <div>
    <hr/>
@@ -8001,8 +8132,8 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </div>
   <table class="blueBar">
    <tr>
-    <td class="l">generation took 0,01 seconds</td>
-    <td class="r">rendering took 0,24 seconds</td>
+    <td class="l">generation took 0,00 seconds</td>
+    <td class="r">rendering took 0,06 seconds</td>
    </tr>
   </table>
  </body>

@@ -2,6 +2,7 @@
 module Computer_System (
 	arduino_gpio_export,
 	arduino_reset_n_export,
+	avalon_neopixel_output_commande_neopixel,
 	avalon_servomoteur_output_commande,
 	avalon_telemetre_output_trig,
 	avalon_telemetre_output_echo,
@@ -36,6 +37,7 @@ module Computer_System (
 
 	inout	[15:0]	arduino_gpio_export;
 	output		arduino_reset_n_export;
+	output		avalon_neopixel_output_commande_neopixel;
 	output		avalon_servomoteur_output_commande;
 	output		avalon_telemetre_output_trig;
 	input		avalon_telemetre_output_echo;

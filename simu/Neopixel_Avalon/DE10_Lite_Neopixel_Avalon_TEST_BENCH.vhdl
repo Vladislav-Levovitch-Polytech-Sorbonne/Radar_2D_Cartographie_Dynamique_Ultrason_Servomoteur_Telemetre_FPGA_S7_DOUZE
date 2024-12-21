@@ -82,10 +82,11 @@ begin
         wait for 150 us;
         SIGNAL_Test_Bench_Neopixel_Avalon_write_n<= '0';
         wait for 150 us;
-        SIGNAL_Test_Bench_Neopixel_Avalon_WriteData <= "00000111";
+        SIGNAL_Test_Bench_Neopixel_Avalon_WriteData <= "00000011";
         wait for 300 us;
         SIGNAL_Test_Bench_Neopixel_Avalon_write_n<= '1';
         wait for 450 us;
+        SIGNAL_Test_Bench_Neopixel_Avalon_WriteData <= "00000010";
         wait;
     end process;
 end;

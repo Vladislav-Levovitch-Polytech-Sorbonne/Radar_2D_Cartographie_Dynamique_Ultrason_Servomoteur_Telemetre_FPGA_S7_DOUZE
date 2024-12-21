@@ -805,3 +805,1365 @@ Info: Building ../telemetre_tournant_clk_corrigee_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
 [BSP build complete]
 [telemetre_tournant_clk_corrigee build complete]
+05:36:34 **** Clean-only build of configuration Nios II for project neopixel_bsp ****
+make clean 
+[BSP clean complete]
+05:36:44 **** Clean-only build of configuration Nios II for project neopixel ****
+make clean 
+[neopixel clean complete]
+05:41:56 **** Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+Compiling alt_alarm_start.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
+Compiling alt_busy_sleep.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_busy_sleep.o HAL/src/alt_busy_sleep.c
+Compiling alt_close.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_close.o HAL/src/alt_close.c
+Compiling alt_dcache_flush.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush.o HAL/src/alt_dcache_flush.c
+Compiling alt_dcache_flush_all.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_all.o HAL/src/alt_dcache_flush_all.c
+Compiling alt_dcache_flush_no_writeback.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_no_writeback.o HAL/src/alt_dcache_flush_no_writeback.c
+Compiling alt_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev.o HAL/src/alt_dev.c
+Compiling alt_dev_llist_insert.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev_llist_insert.o HAL/src/alt_dev_llist_insert.c
+Compiling alt_dma_rxchan_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_rxchan_open.o HAL/src/alt_dma_rxchan_open.c
+Compiling alt_dma_txchan_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_txchan_open.o HAL/src/alt_dma_txchan_open.c
+Compiling alt_do_ctors.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_do_ctors.o HAL/src/alt_do_ctors.c
+Compiling alt_do_dtors.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_do_dtors.o HAL/src/alt_do_dtors.c
+Compiling alt_ecc_fatal_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_ecc_fatal_entry.o HAL/src/alt_ecc_fatal_entry.S
+Compiling alt_ecc_fatal_exception.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ecc_fatal_exception.o HAL/src/alt_ecc_fatal_exception.c
+Compiling alt_env_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_env_lock.o HAL/src/alt_env_lock.c
+Compiling alt_environ.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_environ.o HAL/src/alt_environ.c
+Compiling alt_errno.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_errno.o HAL/src/alt_errno.c
+Compiling alt_exception_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_entry.o HAL/src/alt_exception_entry.S
+Compiling alt_exception_muldiv.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_muldiv.o HAL/src/alt_exception_muldiv.S
+Compiling alt_exception_trap.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_trap.o HAL/src/alt_exception_trap.S
+Compiling alt_execve.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_execve.o HAL/src/alt_execve.c
+Compiling alt_exit.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_exit.o HAL/src/alt_exit.c
+Compiling alt_fcntl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fcntl.o HAL/src/alt_fcntl.c
+Compiling alt_fd_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_lock.o HAL/src/alt_fd_lock.c
+Compiling alt_fd_unlock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_unlock.o HAL/src/alt_fd_unlock.c
+Compiling alt_find_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_dev.o HAL/src/alt_find_dev.c
+Compiling alt_find_file.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_file.o HAL/src/alt_find_file.c
+Compiling alt_flash_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_flash_dev.o HAL/src/alt_flash_dev.c
+Compiling alt_fork.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fork.o HAL/src/alt_fork.c
+Compiling alt_fs_reg.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fs_reg.o HAL/src/alt_fs_reg.c
+Compiling alt_fstat.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fstat.o HAL/src/alt_fstat.c
+Compiling alt_get_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_get_fd.o HAL/src/alt_get_fd.c
+Compiling alt_getchar.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_getchar.o HAL/src/alt_getchar.c
+Compiling alt_getpid.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_getpid.o HAL/src/alt_getpid.c
+Compiling alt_gettod.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gettod.o HAL/src/alt_gettod.c
+Compiling alt_gmon.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gmon.o HAL/src/alt_gmon.c
+Compiling alt_icache_flush.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush.o HAL/src/alt_icache_flush.c
+Compiling alt_icache_flush_all.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush_all.o HAL/src/alt_icache_flush_all.c
+Compiling alt_iic.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic.o HAL/src/alt_iic.c
+Compiling alt_iic_isr_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic_isr_register.o HAL/src/alt_iic_isr_register.c
+Compiling alt_instruction_exception_entry.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_entry.o HAL/src/alt_instruction_exception_entry.c
+Compiling alt_instruction_exception_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_register.o HAL/src/alt_instruction_exception_register.c
+Compiling alt_io_redirect.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_io_redirect.o HAL/src/alt_io_redirect.c
+Compiling alt_ioctl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ioctl.o HAL/src/alt_ioctl.c
+Compiling alt_irq_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_irq_entry.o HAL/src/alt_irq_entry.S
+Compiling alt_irq_handler.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_handler.o HAL/src/alt_irq_handler.c
+Compiling alt_irq_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_register.o HAL/src/alt_irq_register.c
+Compiling alt_irq_vars.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_vars.o HAL/src/alt_irq_vars.c
+Compiling alt_isatty.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_isatty.o HAL/src/alt_isatty.c
+Compiling alt_kill.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_kill.o HAL/src/alt_kill.c
+Compiling alt_link.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_link.o HAL/src/alt_link.c
+Compiling alt_load.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_load.o HAL/src/alt_load.c
+Compiling alt_log_macro.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_log_macro.o HAL/src/alt_log_macro.S
+Compiling alt_log_printf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_log_printf.o HAL/src/alt_log_printf.c
+Compiling alt_lseek.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_lseek.o HAL/src/alt_lseek.c
+Compiling alt_main.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_main.o HAL/src/alt_main.c
+Compiling alt_malloc_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_malloc_lock.o HAL/src/alt_malloc_lock.c
+Compiling alt_mcount.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_mcount.o HAL/src/alt_mcount.S
+Compiling alt_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_open.o HAL/src/alt_open.c
+Compiling alt_printf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_printf.o HAL/src/alt_printf.c
+Compiling alt_putchar.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putchar.o HAL/src/alt_putchar.c
+Compiling alt_putcharbuf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putcharbuf.o HAL/src/alt_putcharbuf.c
+Compiling alt_putstr.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putstr.o HAL/src/alt_putstr.c
+Compiling alt_read.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_read.o HAL/src/alt_read.c
+Compiling alt_release_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_release_fd.o HAL/src/alt_release_fd.c
+Compiling alt_remap_cached.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_cached.o HAL/src/alt_remap_cached.c
+Compiling alt_remap_uncached.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_uncached.o HAL/src/alt_remap_uncached.c
+Compiling alt_rename.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_rename.o HAL/src/alt_rename.c
+Compiling alt_sbrk.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_sbrk.o HAL/src/alt_sbrk.c
+Compiling alt_settod.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_settod.o HAL/src/alt_settod.c
+Compiling alt_software_exception.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_software_exception.o HAL/src/alt_software_exception.S
+Compiling alt_stat.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_stat.o HAL/src/alt_stat.c
+Compiling alt_tick.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_tick.o HAL/src/alt_tick.c
+Compiling alt_times.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_times.o HAL/src/alt_times.c
+Compiling alt_uncached_free.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_free.o HAL/src/alt_uncached_free.c
+Compiling alt_uncached_malloc.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_malloc.o HAL/src/alt_uncached_malloc.c
+Compiling alt_unlink.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_unlink.o HAL/src/alt_unlink.c
+Compiling alt_usleep.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_usleep.o HAL/src/alt_usleep.c
+Compiling alt_wait.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_wait.o HAL/src/alt_wait.c
+Compiling alt_write.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_write.o HAL/src/alt_write.c
+Compiling altera_nios2_gen2_irq.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/altera_nios2_gen2_irq.o HAL/src/altera_nios2_gen2_irq.c
+Compiling crt0.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/crt0.o HAL/src/crt0.S
+Compiling alt_sys_init.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/alt_sys_init.o alt_sys_init.c
+Compiling altera_avalon_jtag_uart_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_fd.o drivers/src/altera_avalon_jtag_uart_fd.c
+Compiling altera_avalon_jtag_uart_init.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_init.o drivers/src/altera_avalon_jtag_uart_init.c
+Compiling altera_avalon_jtag_uart_ioctl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o drivers/src/altera_avalon_jtag_uart_ioctl.c
+Compiling altera_avalon_jtag_uart_read.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_read.o drivers/src/altera_avalon_jtag_uart_read.c
+Compiling altera_avalon_jtag_uart_write.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_write.o drivers/src/altera_avalon_jtag_uart_write.c
+Compiling altera_avalon_sysid_qsys.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_sysid_qsys.o drivers/src/altera_avalon_sysid_qsys.c
+Compiling altera_avalon_timer_sc.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_sc.o drivers/src/altera_avalon_timer_sc.c
+Compiling altera_avalon_timer_ts.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
+Compiling altera_avalon_timer_vars.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
+Compiling altera_up_avalon_video_dma_controller.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_up_avalon_video_dma_controller.o drivers/src/altera_up_avalon_video_dma_controller.c
+Compiling altera_up_avalon_video_rgb_resampler.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_up_avalon_video_rgb_resampler.o drivers/src/altera_up_avalon_video_rgb_resampler.c
+Creating libhal_bsp.a...
+rm -f -f libhal_bsp.a
+nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o obj/drivers/src/altera_up_avalon_video_dma_controller.o obj/drivers/src/altera_up_avalon_video_rgb_resampler.o
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+neopixel.c:54:41: fatal error: turning_telemeter_clk_fixed.h: No such file or directory
+compilation terminated.
+make: *** [obj/default/neopixel.o] Error 1
+05:42:10 **** Build of configuration Nios II for project neopixel_bsp ****
+make all 
+[BSP build complete]
+05:42:11 **** Build of configuration Nios II for project servomotor_v5 ****
+make all 
+Info: Building C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+[BSP build complete]
+[servomotor_v5 build complete]
+05:42:13 **** Build of configuration Nios II for project servomotor_v5_bsp ****
+make all 
+[BSP build complete]
+05:42:14 **** Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+05:42:15 **** Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+05:42:58 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+Info: Linking neopixel.elf
+nios2-elf-g++  -T'../neopixel_bsp//linker.x' -msys-crt0='../neopixel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel.elf obj/default/neopixel.o -lm -msys-lib=m
+nios2-elf-insert neopixel.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734409220 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel/software/neopixel_bsp/../../Computer_System.sopcinfo
+Info: (neopixel.elf) 73 KBytes program size (code + initialized data).
+Info:                65455 KBytes free for stack + heap.
+Info: Creating neopixel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel.elf >neopixel.objdump
+[neopixel build complete]
+05:43:01 **** Incremental Build of configuration Nios II for project neopixel_bsp ****
+make all 
+[BSP build complete]
+05:43:02 **** Incremental Build of configuration Nios II for project servomotor_v5 ****
+make all 
+Info: Building C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+[BSP build complete]
+[servomotor_v5 build complete]
+05:43:04 **** Incremental Build of configuration Nios II for project servomotor_v5_bsp ****
+make all 
+[BSP build complete]
+05:43:05 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+05:43:06 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+05:55:33 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+neopixel.c: In function 'main':
+neopixel.c:144:26: error: lvalue required as left operand of assignment
+         if ((angle+1)%15 = 0 )
+                          ^
+neopixel.c:203:13: warning: statement with no effect [-Wunused-value]
+             for (pourcentage_neopixel; pourcentage_neopixel > 0; i++)
+             ^
+neopixel.c:203:66: error: 'i' undeclared (first use in this function)
+             for (pourcentage_neopixel; pourcentage_neopixel > 0; i++)
+                                                                  ^
+neopixel.c:203:66: note: each undeclared identifier is reported only once for each function it appears in
+neopixel.c:212:16: warning: spurious trailing '%' in format [-Wformat=]
+         printf("Angle = %d    Distance moyenne = %d cm\n     Allumage %d\%",angle, moyenne_distance, 12*pourcentage_neopixel);
+                ^
+neopixel.c:212:16: warning: spurious trailing '%' in format [-Wformat=]
+make: *** [obj/default/neopixel.o] Error 1
+05:55:34 **** Incremental Build of configuration Nios II for project neopixel_bsp ****
+make all 
+[BSP build complete]
+05:55:35 **** Incremental Build of configuration Nios II for project servomotor_v5 ****
+make all 
+Info: Building C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+[BSP build complete]
+[servomotor_v5 build complete]
+05:55:36 **** Incremental Build of configuration Nios II for project servomotor_v5_bsp ****
+make all 
+[BSP build complete]
+05:55:37 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+05:55:38 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+05:56:22 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+neopixel.c: In function 'main':
+neopixel.c:144:26: error: lvalue required as left operand of assignment
+         if ((angle+1)%15 = 0 )
+                          ^
+neopixel.c:203:13: warning: statement with no effect [-Wunused-value]
+             for (pourcentage_neopixel; pourcentage_neopixel > 0; pourcentage_neopixel--)
+             ^
+neopixel.c:212:16: warning: spurious trailing '%' in format [-Wformat=]
+         printf("Angle = %d    Distance moyenne = %d cm\n     Allumage %d\%",angle, moyenne_distance, 12*pourcentage_neopixel);
+                ^
+neopixel.c:212:16: warning: spurious trailing '%' in format [-Wformat=]
+make: *** [obj/default/neopixel.o] Error 1
+05:56:23 **** Incremental Build of configuration Nios II for project neopixel_bsp ****
+make all 
+[BSP build complete]
+05:56:24 **** Incremental Build of configuration Nios II for project servomotor_v5 ****
+make all 
+Info: Building C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+[BSP build complete]
+[servomotor_v5 build complete]
+05:56:25 **** Incremental Build of configuration Nios II for project servomotor_v5_bsp ****
+make all 
+[BSP build complete]
+05:56:26 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+05:56:27 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+05:56:54 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+neopixel.c: In function 'main':
+neopixel.c:144:26: error: lvalue required as left operand of assignment
+         if ((angle+1)%15 = 0 )
+                          ^
+neopixel.c:203:13: warning: statement with no effect [-Wunused-value]
+             for (pourcentage_neopixel; pourcentage_neopixel > 0; pourcentage_neopixel--)
+             ^
+neopixel.c:212:16: warning: spurious trailing '%' in format [-Wformat=]
+         printf("Angle = %d    Distance moyenne = %d cm\n     Allumage %d\%",angle, moyenne_distance, 12*pourcentage_neopixel);
+                ^
+neopixel.c:212:16: warning: spurious trailing '%' in format [-Wformat=]
+make: *** [obj/default/neopixel.o] Error 1
+05:56:56 **** Incremental Build of configuration Nios II for project neopixel_bsp ****
+make all 
+[BSP build complete]
+05:56:56 **** Incremental Build of configuration Nios II for project servomotor_v5 ****
+make all 
+Info: Building C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+[BSP build complete]
+[servomotor_v5 build complete]
+05:56:57 **** Incremental Build of configuration Nios II for project servomotor_v5_bsp ****
+make all 
+[BSP build complete]
+05:56:58 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+05:56:59 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+05:58:08 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+neopixel.c: In function 'main':
+neopixel.c:203:13: warning: statement with no effect [-Wunused-value]
+             for (pourcentage_neopixel; pourcentage_neopixel > 0; pourcentage_neopixel--)
+             ^
+neopixel.c:212:16: warning: spurious trailing '%' in format [-Wformat=]
+         printf("Angle = %d    Distance moyenne = %d cm\n     Allumage %d\%",angle, moyenne_distance, 12*pourcentage_neopixel);
+                ^
+neopixel.c:212:16: warning: spurious trailing '%' in format [-Wformat=]
+Info: Linking neopixel.elf
+nios2-elf-g++  -T'../neopixel_bsp//linker.x' -msys-crt0='../neopixel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel.elf obj/default/neopixel.o -lm -msys-lib=m
+nios2-elf-insert neopixel.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734409220 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel/software/neopixel_bsp/../../Computer_System.sopcinfo
+Info: (neopixel.elf) 73 KBytes program size (code + initialized data).
+Info:                65455 KBytes free for stack + heap.
+Info: Creating neopixel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel.elf >neopixel.objdump
+[neopixel build complete]
+05:58:10 **** Incremental Build of configuration Nios II for project neopixel_bsp ****
+make all 
+[BSP build complete]
+05:58:11 **** Incremental Build of configuration Nios II for project servomotor_v5 ****
+make all 
+Info: Building C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_servomoteur/servomotor_v5_bsp/
+[BSP build complete]
+[servomotor_v5 build complete]
+05:58:12 **** Incremental Build of configuration Nios II for project servomotor_v5_bsp ****
+make all 
+[BSP build complete]
+05:58:14 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+05:58:15 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+06:01:59 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:03:05 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+neopixel.c: In function 'main':
+neopixel.c:203:13: warning: statement with no effect [-Wunused-value]
+             for (pourcentage_neopixel; pourcentage_neopixel > 0; pourcentage_neopixel--)
+             ^
+Info: Linking neopixel.elf
+nios2-elf-g++  -T'../neopixel_bsp//linker.x' -msys-crt0='../neopixel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel.elf obj/default/neopixel.o -lm -msys-lib=m
+nios2-elf-insert neopixel.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734409220 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel/software/neopixel_bsp/../../Computer_System.sopcinfo
+Info: (neopixel.elf) 73 KBytes program size (code + initialized data).
+Info:                65455 KBytes free for stack + heap.
+Info: Creating neopixel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel.elf >neopixel.objdump
+[neopixel build complete]
+06:03:48 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+neopixel.c: In function 'main':
+neopixel.c:203:13: warning: statement with no effect [-Wunused-value]
+             for (pourcentage_neopixel; pourcentage_neopixel > 0; pourcentage_neopixel--)
+             ^
+Info: Linking neopixel.elf
+nios2-elf-g++  -T'../neopixel_bsp//linker.x' -msys-crt0='../neopixel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel.elf obj/default/neopixel.o -lm -msys-lib=m
+nios2-elf-insert neopixel.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734409220 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel/software/neopixel_bsp/../../Computer_System.sopcinfo
+Info: (neopixel.elf) 73 KBytes program size (code + initialized data).
+Info:                65455 KBytes free for stack + heap.
+Info: Creating neopixel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel.elf >neopixel.objdump
+[neopixel build complete]
+06:05:52 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+neopixel.c: In function 'main':
+neopixel.c:203:13: warning: statement with no effect [-Wunused-value]
+             for (pourcentage_neopixel; pourcentage_neopixel > 0; pourcentage_neopixel--)
+             ^
+Info: Linking neopixel.elf
+nios2-elf-g++  -T'../neopixel_bsp//linker.x' -msys-crt0='../neopixel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel.elf obj/default/neopixel.o -lm -msys-lib=m
+nios2-elf-insert neopixel.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734409220 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel/software/neopixel_bsp/../../Computer_System.sopcinfo
+Info: (neopixel.elf) 73 KBytes program size (code + initialized data).
+Info:                65455 KBytes free for stack + heap.
+Info: Creating neopixel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel.elf >neopixel.objdump
+[neopixel build complete]
+06:32:02 **** Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:32:38 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:32:54 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:33:16 **** Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:34:35 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:38:29 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+Info: Linking neopixel.elf
+nios2-elf-g++  -T'../neopixel_bsp//linker.x' -msys-crt0='../neopixel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel.elf obj/default/neopixel.o -lm -msys-lib=m
+nios2-elf-insert neopixel.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734409220 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel/software/neopixel_bsp/../../Computer_System.sopcinfo
+Info: (neopixel.elf) 72 KBytes program size (code + initialized data).
+Info:                65456 KBytes free for stack + heap.
+Info: Creating neopixel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel.elf >neopixel.objdump
+[neopixel build complete]
+06:39:09 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+Info: Linking neopixel.elf
+nios2-elf-g++  -T'../neopixel_bsp//linker.x' -msys-crt0='../neopixel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel.elf obj/default/neopixel.o -lm -msys-lib=m
+nios2-elf-insert neopixel.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734409220 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel/software/neopixel_bsp/../../Computer_System.sopcinfo
+Info: (neopixel.elf) 72 KBytes program size (code + initialized data).
+Info:                65456 KBytes free for stack + heap.
+Info: Creating neopixel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel.elf >neopixel.objdump
+[neopixel build complete]
+06:39:47 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+Info: Linking neopixel.elf
+nios2-elf-g++  -T'../neopixel_bsp//linker.x' -msys-crt0='../neopixel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel.elf obj/default/neopixel.o -lm -msys-lib=m
+nios2-elf-insert neopixel.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734409220 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel/software/neopixel_bsp/../../Computer_System.sopcinfo
+Info: (neopixel.elf) 72 KBytes program size (code + initialized data).
+Info:                65456 KBytes free for stack + heap.
+Info: Creating neopixel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel.elf >neopixel.objdump
+[neopixel build complete]
+06:40:11 **** Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:40:21 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:50:31 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+Info: Compiling neopixel.c to obj/default/neopixel.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_bsp//HAL/inc -I../neopixel_bsp/ -I../neopixel_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel.o neopixel.c
+Info: Linking neopixel.elf
+nios2-elf-g++  -T'../neopixel_bsp//linker.x' -msys-crt0='../neopixel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel.elf obj/default/neopixel.o -lm -msys-lib=m
+nios2-elf-insert neopixel.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734409220 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel/software/neopixel_bsp/../../Computer_System.sopcinfo
+Info: (neopixel.elf) 71 KBytes program size (code + initialized data).
+Info:                65457 KBytes free for stack + heap.
+Info: Creating neopixel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel.elf >neopixel.objdump
+[neopixel build complete]
+06:50:53 **** Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:50:54 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:51:13 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:51:47 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:52:26 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:52:56 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:53:09 **** Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+06:53:34 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+22:26:32 **** Clean-only build of configuration Nios II for project neopixel_v2_bsp ****
+make clean 
+[BSP clean complete]
+22:26:38 **** Clean-only build of configuration Nios II for project neopixel_v2 ****
+make clean 
+[neopixel_v2 clean complete]
+22:30:28 **** Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+22:30:29 **** Build of configuration Nios II for project neopixel_bsp ****
+make all 
+[BSP build complete]
+22:30:30 **** Build of configuration Nios II for project neopixel_v2 ****
+make all 
+Info: Building ../neopixel_v2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_v2_bsp/
+Compiling alt_alarm_start.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
+Compiling alt_busy_sleep.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_busy_sleep.o HAL/src/alt_busy_sleep.c
+Compiling alt_close.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_close.o HAL/src/alt_close.c
+Compiling alt_dcache_flush.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush.o HAL/src/alt_dcache_flush.c
+Compiling alt_dcache_flush_all.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_all.o HAL/src/alt_dcache_flush_all.c
+Compiling alt_dcache_flush_no_writeback.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_no_writeback.o HAL/src/alt_dcache_flush_no_writeback.c
+Compiling alt_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev.o HAL/src/alt_dev.c
+Compiling alt_dev_llist_insert.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev_llist_insert.o HAL/src/alt_dev_llist_insert.c
+Compiling alt_dma_rxchan_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_rxchan_open.o HAL/src/alt_dma_rxchan_open.c
+Compiling alt_dma_txchan_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_txchan_open.o HAL/src/alt_dma_txchan_open.c
+Compiling alt_do_ctors.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_do_ctors.o HAL/src/alt_do_ctors.c
+Compiling alt_do_dtors.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_do_dtors.o HAL/src/alt_do_dtors.c
+Compiling alt_ecc_fatal_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_ecc_fatal_entry.o HAL/src/alt_ecc_fatal_entry.S
+Compiling alt_ecc_fatal_exception.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ecc_fatal_exception.o HAL/src/alt_ecc_fatal_exception.c
+Compiling alt_env_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_env_lock.o HAL/src/alt_env_lock.c
+Compiling alt_environ.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_environ.o HAL/src/alt_environ.c
+Compiling alt_errno.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_errno.o HAL/src/alt_errno.c
+Compiling alt_exception_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_entry.o HAL/src/alt_exception_entry.S
+Compiling alt_exception_muldiv.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_muldiv.o HAL/src/alt_exception_muldiv.S
+Compiling alt_exception_trap.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_trap.o HAL/src/alt_exception_trap.S
+Compiling alt_execve.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_execve.o HAL/src/alt_execve.c
+Compiling alt_exit.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_exit.o HAL/src/alt_exit.c
+Compiling alt_fcntl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fcntl.o HAL/src/alt_fcntl.c
+Compiling alt_fd_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_lock.o HAL/src/alt_fd_lock.c
+Compiling alt_fd_unlock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_unlock.o HAL/src/alt_fd_unlock.c
+Compiling alt_find_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_dev.o HAL/src/alt_find_dev.c
+Compiling alt_find_file.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_file.o HAL/src/alt_find_file.c
+Compiling alt_flash_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_flash_dev.o HAL/src/alt_flash_dev.c
+Compiling alt_fork.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fork.o HAL/src/alt_fork.c
+Compiling alt_fs_reg.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fs_reg.o HAL/src/alt_fs_reg.c
+Compiling alt_fstat.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fstat.o HAL/src/alt_fstat.c
+Compiling alt_get_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_get_fd.o HAL/src/alt_get_fd.c
+Compiling alt_getchar.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_getchar.o HAL/src/alt_getchar.c
+Compiling alt_getpid.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_getpid.o HAL/src/alt_getpid.c
+Compiling alt_gettod.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gettod.o HAL/src/alt_gettod.c
+Compiling alt_gmon.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gmon.o HAL/src/alt_gmon.c
+Compiling alt_icache_flush.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush.o HAL/src/alt_icache_flush.c
+Compiling alt_icache_flush_all.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush_all.o HAL/src/alt_icache_flush_all.c
+Compiling alt_iic.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic.o HAL/src/alt_iic.c
+Compiling alt_iic_isr_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic_isr_register.o HAL/src/alt_iic_isr_register.c
+Compiling alt_instruction_exception_entry.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_entry.o HAL/src/alt_instruction_exception_entry.c
+Compiling alt_instruction_exception_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_register.o HAL/src/alt_instruction_exception_register.c
+Compiling alt_io_redirect.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_io_redirect.o HAL/src/alt_io_redirect.c
+Compiling alt_ioctl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ioctl.o HAL/src/alt_ioctl.c
+Compiling alt_irq_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_irq_entry.o HAL/src/alt_irq_entry.S
+Compiling alt_irq_handler.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_handler.o HAL/src/alt_irq_handler.c
+Compiling alt_irq_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_register.o HAL/src/alt_irq_register.c
+Compiling alt_irq_vars.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_vars.o HAL/src/alt_irq_vars.c
+Compiling alt_isatty.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_isatty.o HAL/src/alt_isatty.c
+Compiling alt_kill.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_kill.o HAL/src/alt_kill.c
+Compiling alt_link.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_link.o HAL/src/alt_link.c
+Compiling alt_load.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_load.o HAL/src/alt_load.c
+Compiling alt_log_macro.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_log_macro.o HAL/src/alt_log_macro.S
+Compiling alt_log_printf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_log_printf.o HAL/src/alt_log_printf.c
+Compiling alt_lseek.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_lseek.o HAL/src/alt_lseek.c
+Compiling alt_main.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_main.o HAL/src/alt_main.c
+Compiling alt_malloc_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_malloc_lock.o HAL/src/alt_malloc_lock.c
+Compiling alt_mcount.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_mcount.o HAL/src/alt_mcount.S
+Compiling alt_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_open.o HAL/src/alt_open.c
+Compiling alt_printf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_printf.o HAL/src/alt_printf.c
+Compiling alt_putchar.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putchar.o HAL/src/alt_putchar.c
+Compiling alt_putcharbuf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putcharbuf.o HAL/src/alt_putcharbuf.c
+Compiling alt_putstr.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putstr.o HAL/src/alt_putstr.c
+Compiling alt_read.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_read.o HAL/src/alt_read.c
+Compiling alt_release_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_release_fd.o HAL/src/alt_release_fd.c
+Compiling alt_remap_cached.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_cached.o HAL/src/alt_remap_cached.c
+Compiling alt_remap_uncached.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_uncached.o HAL/src/alt_remap_uncached.c
+Compiling alt_rename.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_rename.o HAL/src/alt_rename.c
+Compiling alt_sbrk.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_sbrk.o HAL/src/alt_sbrk.c
+Compiling alt_settod.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_settod.o HAL/src/alt_settod.c
+Compiling alt_software_exception.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_software_exception.o HAL/src/alt_software_exception.S
+Compiling alt_stat.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_stat.o HAL/src/alt_stat.c
+Compiling alt_tick.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_tick.o HAL/src/alt_tick.c
+Compiling alt_times.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_times.o HAL/src/alt_times.c
+Compiling alt_uncached_free.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_free.o HAL/src/alt_uncached_free.c
+Compiling alt_uncached_malloc.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_malloc.o HAL/src/alt_uncached_malloc.c
+Compiling alt_unlink.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_unlink.o HAL/src/alt_unlink.c
+Compiling alt_usleep.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_usleep.o HAL/src/alt_usleep.c
+Compiling alt_wait.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_wait.o HAL/src/alt_wait.c
+Compiling alt_write.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_write.o HAL/src/alt_write.c
+Compiling altera_nios2_gen2_irq.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/altera_nios2_gen2_irq.o HAL/src/altera_nios2_gen2_irq.c
+Compiling crt0.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/crt0.o HAL/src/crt0.S
+Compiling alt_sys_init.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/alt_sys_init.o alt_sys_init.c
+Compiling altera_avalon_jtag_uart_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_fd.o drivers/src/altera_avalon_jtag_uart_fd.c
+Compiling altera_avalon_jtag_uart_init.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_init.o drivers/src/altera_avalon_jtag_uart_init.c
+Compiling altera_avalon_jtag_uart_ioctl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o drivers/src/altera_avalon_jtag_uart_ioctl.c
+Compiling altera_avalon_jtag_uart_read.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_read.o drivers/src/altera_avalon_jtag_uart_read.c
+Compiling altera_avalon_jtag_uart_write.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_write.o drivers/src/altera_avalon_jtag_uart_write.c
+Compiling altera_avalon_sysid_qsys.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_sysid_qsys.o drivers/src/altera_avalon_sysid_qsys.c
+Compiling altera_avalon_timer_sc.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_sc.o drivers/src/altera_avalon_timer_sc.c
+Compiling altera_avalon_timer_ts.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
+Compiling altera_avalon_timer_vars.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
+Compiling altera_up_avalon_video_dma_controller.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_up_avalon_video_dma_controller.o drivers/src/altera_up_avalon_video_dma_controller.c
+Compiling altera_up_avalon_video_rgb_resampler.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_up_avalon_video_rgb_resampler.o drivers/src/altera_up_avalon_video_rgb_resampler.c
+Creating libhal_bsp.a...
+rm -f -f libhal_bsp.a
+nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o obj/drivers/src/altera_up_avalon_video_dma_controller.o obj/drivers/src/altera_up_avalon_video_rgb_resampler.o
+[BSP build complete]
+Info: Linking neopixel_v2.elf
+nios2-elf-g++  -T'../neopixel_v2_bsp//linker.x' -msys-crt0='../neopixel_v2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_v2_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_v2.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_v2.elf  -lm -msys-lib=m
+../neopixel_v2_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\sof\Neopixel_v2\software\neopixel_v2_bsp/HAL/src/alt_main.c:154: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [neopixel_v2.elf] Error 1
+22:30:41 **** Build of configuration Nios II for project neopixel_v2_bsp ****
+make all 
+[BSP build complete]
+22:30:42 **** Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+22:30:43 **** Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+22:33:04 **** Incremental Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+22:33:05 **** Incremental Build of configuration Nios II for project neopixel_bsp ****
+make all 
+[BSP build complete]
+22:33:06 **** Incremental Build of configuration Nios II for project neopixel_v2 ****
+make all 
+Info: Building ../neopixel_v2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_v2_bsp/
+[BSP build complete]
+Info: Linking neopixel_v2.elf
+nios2-elf-g++  -T'../neopixel_v2_bsp//linker.x' -msys-crt0='../neopixel_v2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_v2_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_v2.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_v2.elf  -lm -msys-lib=m
+../neopixel_v2_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\sof\Neopixel_v2\software\neopixel_v2_bsp/HAL/src/alt_main.c:154: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [neopixel_v2.elf] Error 1
+22:33:07 **** Incremental Build of configuration Nios II for project neopixel_v2_bsp ****
+make all 
+[BSP build complete]
+22:33:08 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+22:33:09 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+22:36:31 **** Build of configuration Nios II for project neopixel ****
+make all 
+Info: Building ../neopixel_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_bsp/
+[BSP build complete]
+[neopixel build complete]
+22:36:32 **** Build of configuration Nios II for project neopixel_bsp ****
+make all 
+[BSP build complete]
+22:36:33 **** Build of configuration Nios II for project neopixel_v2 ****
+make all 
+Info: Building ../neopixel_v2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_v2_bsp/
+[BSP build complete]
+Info: Linking neopixel_v2.elf
+nios2-elf-g++  -T'../neopixel_v2_bsp//linker.x' -msys-crt0='../neopixel_v2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_v2_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_v2.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_v2.elf  -lm -msys-lib=m
+../neopixel_v2_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\sof\Neopixel_v2\software\neopixel_v2_bsp/HAL/src/alt_main.c:154: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [neopixel_v2.elf] Error 1
+22:36:34 **** Build of configuration Nios II for project neopixel_v2_bsp ****
+make all 
+[BSP build complete]
+22:36:35 **** Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+22:36:36 **** Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+22:40:49 **** Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+22:48:11 **** Clean-only build of configuration Nios II for project neopixel_three_bsp ****
+make clean 
+[BSP clean complete]
+22:48:17 **** Clean-only build of configuration Nios II for project neopixel_three ****
+make clean 
+[neopixel_three clean complete]
+22:48:50 **** Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+Compiling alt_alarm_start.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
+Compiling alt_busy_sleep.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_busy_sleep.o HAL/src/alt_busy_sleep.c
+Compiling alt_close.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_close.o HAL/src/alt_close.c
+Compiling alt_dcache_flush.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush.o HAL/src/alt_dcache_flush.c
+Compiling alt_dcache_flush_all.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_all.o HAL/src/alt_dcache_flush_all.c
+Compiling alt_dcache_flush_no_writeback.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_no_writeback.o HAL/src/alt_dcache_flush_no_writeback.c
+Compiling alt_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev.o HAL/src/alt_dev.c
+Compiling alt_dev_llist_insert.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev_llist_insert.o HAL/src/alt_dev_llist_insert.c
+Compiling alt_dma_rxchan_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_rxchan_open.o HAL/src/alt_dma_rxchan_open.c
+Compiling alt_dma_txchan_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_txchan_open.o HAL/src/alt_dma_txchan_open.c
+Compiling alt_do_ctors.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_do_ctors.o HAL/src/alt_do_ctors.c
+Compiling alt_do_dtors.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_do_dtors.o HAL/src/alt_do_dtors.c
+Compiling alt_ecc_fatal_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_ecc_fatal_entry.o HAL/src/alt_ecc_fatal_entry.S
+Compiling alt_ecc_fatal_exception.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ecc_fatal_exception.o HAL/src/alt_ecc_fatal_exception.c
+Compiling alt_env_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_env_lock.o HAL/src/alt_env_lock.c
+Compiling alt_environ.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_environ.o HAL/src/alt_environ.c
+Compiling alt_errno.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_errno.o HAL/src/alt_errno.c
+Compiling alt_exception_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_entry.o HAL/src/alt_exception_entry.S
+Compiling alt_exception_muldiv.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_muldiv.o HAL/src/alt_exception_muldiv.S
+Compiling alt_exception_trap.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_trap.o HAL/src/alt_exception_trap.S
+Compiling alt_execve.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_execve.o HAL/src/alt_execve.c
+Compiling alt_exit.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_exit.o HAL/src/alt_exit.c
+Compiling alt_fcntl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fcntl.o HAL/src/alt_fcntl.c
+Compiling alt_fd_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_lock.o HAL/src/alt_fd_lock.c
+Compiling alt_fd_unlock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_unlock.o HAL/src/alt_fd_unlock.c
+Compiling alt_find_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_dev.o HAL/src/alt_find_dev.c
+Compiling alt_find_file.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_file.o HAL/src/alt_find_file.c
+Compiling alt_flash_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_flash_dev.o HAL/src/alt_flash_dev.c
+Compiling alt_fork.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fork.o HAL/src/alt_fork.c
+Compiling alt_fs_reg.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fs_reg.o HAL/src/alt_fs_reg.c
+Compiling alt_fstat.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fstat.o HAL/src/alt_fstat.c
+Compiling alt_get_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_get_fd.o HAL/src/alt_get_fd.c
+Compiling alt_getchar.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_getchar.o HAL/src/alt_getchar.c
+Compiling alt_getpid.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_getpid.o HAL/src/alt_getpid.c
+Compiling alt_gettod.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gettod.o HAL/src/alt_gettod.c
+Compiling alt_gmon.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gmon.o HAL/src/alt_gmon.c
+Compiling alt_icache_flush.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush.o HAL/src/alt_icache_flush.c
+Compiling alt_icache_flush_all.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush_all.o HAL/src/alt_icache_flush_all.c
+Compiling alt_iic.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic.o HAL/src/alt_iic.c
+Compiling alt_iic_isr_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic_isr_register.o HAL/src/alt_iic_isr_register.c
+Compiling alt_instruction_exception_entry.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_entry.o HAL/src/alt_instruction_exception_entry.c
+Compiling alt_instruction_exception_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_register.o HAL/src/alt_instruction_exception_register.c
+Compiling alt_io_redirect.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_io_redirect.o HAL/src/alt_io_redirect.c
+Compiling alt_ioctl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ioctl.o HAL/src/alt_ioctl.c
+Compiling alt_irq_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_irq_entry.o HAL/src/alt_irq_entry.S
+Compiling alt_irq_handler.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_handler.o HAL/src/alt_irq_handler.c
+Compiling alt_irq_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_register.o HAL/src/alt_irq_register.c
+Compiling alt_irq_vars.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_vars.o HAL/src/alt_irq_vars.c
+Compiling alt_isatty.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_isatty.o HAL/src/alt_isatty.c
+Compiling alt_kill.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_kill.o HAL/src/alt_kill.c
+Compiling alt_link.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_link.o HAL/src/alt_link.c
+Compiling alt_load.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_load.o HAL/src/alt_load.c
+Compiling alt_log_macro.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_log_macro.o HAL/src/alt_log_macro.S
+Compiling alt_log_printf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_log_printf.o HAL/src/alt_log_printf.c
+Compiling alt_lseek.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_lseek.o HAL/src/alt_lseek.c
+Compiling alt_main.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_main.o HAL/src/alt_main.c
+Compiling alt_malloc_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_malloc_lock.o HAL/src/alt_malloc_lock.c
+Compiling alt_mcount.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_mcount.o HAL/src/alt_mcount.S
+Compiling alt_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_open.o HAL/src/alt_open.c
+Compiling alt_printf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_printf.o HAL/src/alt_printf.c
+Compiling alt_putchar.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putchar.o HAL/src/alt_putchar.c
+Compiling alt_putcharbuf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putcharbuf.o HAL/src/alt_putcharbuf.c
+Compiling alt_putstr.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putstr.o HAL/src/alt_putstr.c
+Compiling alt_read.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_read.o HAL/src/alt_read.c
+Compiling alt_release_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_release_fd.o HAL/src/alt_release_fd.c
+Compiling alt_remap_cached.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_cached.o HAL/src/alt_remap_cached.c
+Compiling alt_remap_uncached.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_uncached.o HAL/src/alt_remap_uncached.c
+Compiling alt_rename.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_rename.o HAL/src/alt_rename.c
+Compiling alt_sbrk.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_sbrk.o HAL/src/alt_sbrk.c
+Compiling alt_settod.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_settod.o HAL/src/alt_settod.c
+Compiling alt_software_exception.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_software_exception.o HAL/src/alt_software_exception.S
+Compiling alt_stat.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_stat.o HAL/src/alt_stat.c
+Compiling alt_tick.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_tick.o HAL/src/alt_tick.c
+Compiling alt_times.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_times.o HAL/src/alt_times.c
+Compiling alt_uncached_free.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_free.o HAL/src/alt_uncached_free.c
+Compiling alt_uncached_malloc.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_malloc.o HAL/src/alt_uncached_malloc.c
+Compiling alt_unlink.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_unlink.o HAL/src/alt_unlink.c
+Compiling alt_usleep.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_usleep.o HAL/src/alt_usleep.c
+Compiling alt_wait.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_wait.o HAL/src/alt_wait.c
+Compiling alt_write.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_write.o HAL/src/alt_write.c
+Compiling altera_nios2_gen2_irq.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/altera_nios2_gen2_irq.o HAL/src/altera_nios2_gen2_irq.c
+Compiling crt0.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/crt0.o HAL/src/crt0.S
+Compiling alt_sys_init.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/alt_sys_init.o alt_sys_init.c
+Compiling altera_avalon_jtag_uart_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_fd.o drivers/src/altera_avalon_jtag_uart_fd.c
+Compiling altera_avalon_jtag_uart_init.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_init.o drivers/src/altera_avalon_jtag_uart_init.c
+Compiling altera_avalon_jtag_uart_ioctl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o drivers/src/altera_avalon_jtag_uart_ioctl.c
+Compiling altera_avalon_jtag_uart_read.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_read.o drivers/src/altera_avalon_jtag_uart_read.c
+Compiling altera_avalon_jtag_uart_write.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_jtag_uart_write.o drivers/src/altera_avalon_jtag_uart_write.c
+Compiling altera_avalon_sysid_qsys.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_sysid_qsys.o drivers/src/altera_avalon_sysid_qsys.c
+Compiling altera_avalon_timer_sc.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_sc.o drivers/src/altera_avalon_timer_sc.c
+Compiling altera_avalon_timer_ts.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_ts.o drivers/src/altera_avalon_timer_ts.c
+Compiling altera_avalon_timer_vars.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_timer_vars.o drivers/src/altera_avalon_timer_vars.c
+Compiling altera_up_avalon_video_dma_controller.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_up_avalon_video_dma_controller.o drivers/src/altera_up_avalon_video_dma_controller.c
+Compiling altera_up_avalon_video_rgb_resampler.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_up_avalon_video_rgb_resampler.o drivers/src/altera_up_avalon_video_rgb_resampler.c
+Creating libhal_bsp.a...
+rm -f -f libhal_bsp.a
+nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_jtag_uart_fd.o obj/drivers/src/altera_avalon_jtag_uart_init.o obj/drivers/src/altera_avalon_jtag_uart_ioctl.o obj/drivers/src/altera_avalon_jtag_uart_read.o obj/drivers/src/altera_avalon_jtag_uart_write.o obj/drivers/src/altera_avalon_sysid_qsys.o obj/drivers/src/altera_avalon_timer_sc.o obj/drivers/src/altera_avalon_timer_ts.o obj/drivers/src/altera_avalon_timer_vars.o obj/drivers/src/altera_up_avalon_video_dma_controller.o obj/drivers/src/altera_up_avalon_video_rgb_resampler.o
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 30 KBytes program size (code + initialized data).
+Info:                      65498 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+22:49:02 **** Build of configuration Nios II for project neopixel_three_bsp ****
+make all 
+[BSP build complete]
+22:49:03 **** Build of configuration Nios II for project neopixel_v2 ****
+make all 
+Info: Building ../neopixel_v2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_v2_bsp/
+[BSP build complete]
+Info: Linking neopixel_v2.elf
+nios2-elf-g++  -T'../neopixel_v2_bsp//linker.x' -msys-crt0='../neopixel_v2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_v2_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_v2.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_v2.elf  -lm -msys-lib=m
+../neopixel_v2_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\sof\Neopixel_v2\software\neopixel_v2_bsp/HAL/src/alt_main.c:154: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [neopixel_v2.elf] Error 1
+22:49:06 **** Build of configuration Nios II for project neopixel_v2_bsp ****
+make all 
+[BSP build complete]
+22:49:08 **** Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+22:49:09 **** Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+22:49:27 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+[neopixel_three build complete]
+22:51:25 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_alone.c to obj/default/neopixel_alone.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_alone.o neopixel_alone.c
+neopixel_alone.c:61:25: fatal error: neopixel_v2.h: No such file or directory
+compilation terminated.
+make: *** [obj/default/neopixel_alone.o] Error 1
+22:51:26 **** Incremental Build of configuration Nios II for project neopixel_three_bsp ****
+make all 
+[BSP build complete]
+22:51:27 **** Incremental Build of configuration Nios II for project neopixel_v2 ****
+make all 
+Info: Building ../neopixel_v2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_v2_bsp/
+[BSP build complete]
+Info: Linking neopixel_v2.elf
+nios2-elf-g++  -T'../neopixel_v2_bsp//linker.x' -msys-crt0='../neopixel_v2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_v2_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_v2.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_v2.elf  -lm -msys-lib=m
+../neopixel_v2_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\sof\Neopixel_v2\software\neopixel_v2_bsp/HAL/src/alt_main.c:154: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [neopixel_v2.elf] Error 1
+22:51:28 **** Incremental Build of configuration Nios II for project neopixel_v2_bsp ****
+make all 
+[BSP build complete]
+22:51:29 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+22:51:30 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+22:51:39 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_alone.c to obj/default/neopixel_alone.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_alone.o neopixel_alone.c
+neopixel_alone.c:61:25: fatal error: neopixel_v2.h: No such file or directory
+compilation terminated.
+make: *** [obj/default/neopixel_alone.o] Error 1
+22:51:40 **** Incremental Build of configuration Nios II for project neopixel_three_bsp ****
+make all 
+[BSP build complete]
+22:51:41 **** Incremental Build of configuration Nios II for project neopixel_v2 ****
+make all 
+Info: Building ../neopixel_v2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_v2_bsp/
+[BSP build complete]
+Info: Linking neopixel_v2.elf
+nios2-elf-g++  -T'../neopixel_v2_bsp//linker.x' -msys-crt0='../neopixel_v2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_v2_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_v2.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_v2.elf  -lm -msys-lib=m
+../neopixel_v2_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\sof\Neopixel_v2\software\neopixel_v2_bsp/HAL/src/alt_main.c:154: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [neopixel_v2.elf] Error 1
+22:51:42 **** Incremental Build of configuration Nios II for project neopixel_v2_bsp ****
+make all 
+[BSP build complete]
+22:51:43 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+22:51:44 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+22:51:54 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_alone.c to obj/default/neopixel_alone.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_alone.o neopixel_alone.c
+neopixel_alone.c:61:25: fatal error: neopixel_v2.h: No such file or directory
+compilation terminated.
+make: *** [obj/default/neopixel_alone.o] Error 1
+22:52:05 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_alone.c to obj/default/neopixel_alone.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_alone.o neopixel_alone.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_alone.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 71 KBytes program size (code + initialized data).
+Info:                      65457 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+22:52:07 **** Incremental Build of configuration Nios II for project neopixel_three_bsp ****
+make all 
+[BSP build complete]
+22:52:08 **** Incremental Build of configuration Nios II for project neopixel_v2 ****
+make all 
+Info: Building ../neopixel_v2_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_v2_bsp/
+[BSP build complete]
+Info: Linking neopixel_v2.elf
+nios2-elf-g++  -T'../neopixel_v2_bsp//linker.x' -msys-crt0='../neopixel_v2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_v2_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_v2.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_v2.elf  -lm -msys-lib=m
+../neopixel_v2_bsp/\libhal_bsp.a(alt_main.o): In function `alt_main':
+C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\sof\Neopixel_v2\software\neopixel_v2_bsp/HAL/src/alt_main.c:154: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [neopixel_v2.elf] Error 1
+22:52:10 **** Incremental Build of configuration Nios II for project neopixel_v2_bsp ****
+make all 
+[BSP build complete]
+22:52:11 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+22:52:12 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+22:52:17 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+[neopixel_three build complete]
+22:53:04 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_alone.c to obj/default/neopixel_alone.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_alone.o neopixel_alone.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_alone.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+22:53:46 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_alone.c to obj/default/neopixel_alone.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_alone.o neopixel_alone.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_alone.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+22:59:30 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_alone.c to obj/default/neopixel_alone.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_alone.o neopixel_alone.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_alone.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
