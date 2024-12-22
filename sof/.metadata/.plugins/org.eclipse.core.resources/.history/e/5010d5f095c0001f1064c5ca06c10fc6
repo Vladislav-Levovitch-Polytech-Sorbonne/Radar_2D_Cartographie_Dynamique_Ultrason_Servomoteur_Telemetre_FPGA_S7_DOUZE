@@ -67,6 +67,7 @@
 #include "altera_avalon_pio_regs.h"
 #include "neopixel_radar.h"
 #include "unistd.h" // Pour usleep
+int value = 30;
 int degres = 0;
 int main()
 {
@@ -83,7 +84,7 @@ int main()
 
 	  printf("Valeur Angulaire = %d.%d°\tTranche de Progression = %.1f%%\n", degres/10,degres%10, (degres/150*8.34));
 	  	  IOWR_ALTERA_AVALON_SERVOMOTEUR(degres); // Écriture en binaire
-	  	  IOWR_ALTERA_AVALON_NEOPIXEL(degres/150);
+	  	  IOWR_ALTERA_AVALON_NEOPIXEL(data)
 	  	  usleep(80000);
 	  	  degres += 10;
 
@@ -92,13 +93,10 @@ int main()
 	  	  {
 	  		degres = 1800;
 	  		IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, 1793);
-	  		IOWR_ALTERA_AVALON_NEOPIXEL(degres/150);
 	  		printf("Valeur Angulaire = %d.%d°\tTranche de Progression = %.1f%%\n", degres/10,degres%10, 100.0);
-	  		usleep(80000);
+	  		usleep(170000);
 	  		degres = 0;
-	  		IOWR_ALTERA_AVALON_NEOPIXEL(degres);
-	  		usleep(220000);
-
+	  		usleep(80000);
 	  	  }
   }
   return 0;

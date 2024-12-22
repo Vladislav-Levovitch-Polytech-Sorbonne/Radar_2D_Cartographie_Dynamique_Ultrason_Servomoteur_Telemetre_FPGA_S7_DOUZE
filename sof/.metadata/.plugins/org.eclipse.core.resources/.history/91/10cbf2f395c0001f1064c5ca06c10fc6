@@ -94,11 +94,9 @@ int main()
 	  		IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, 1793);
 	  		IOWR_ALTERA_AVALON_NEOPIXEL(degres/150);
 	  		printf("Valeur Angulaire = %d.%d°\tTranche de Progression = %.1f%%\n", degres/10,degres%10, 100.0);
-	  		usleep(80000);
+	  		usleep(170000);
 	  		degres = 0;
-	  		IOWR_ALTERA_AVALON_NEOPIXEL(degres);
-	  		usleep(220000);
-
+	  		usleep(80000);
 	  	  }
   }
   return 0;

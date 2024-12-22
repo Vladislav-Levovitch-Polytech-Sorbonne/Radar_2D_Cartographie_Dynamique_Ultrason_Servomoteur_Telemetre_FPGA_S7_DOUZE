@@ -96,9 +96,8 @@ int main()
 	  		printf("Valeur Angulaire = %d.%d°\tTranche de Progression = %.1f%%\n", degres/10,degres%10, 100.0);
 	  		usleep(80000);
 	  		degres = 0;
-	  		IOWR_ALTERA_AVALON_NEOPIXEL(degres);
+	  		IOWR_ALTERA_AVALON_NEOPIXEL(degres/150);
 	  		usleep(220000);
-
 	  	  }
   }
   return 0;
