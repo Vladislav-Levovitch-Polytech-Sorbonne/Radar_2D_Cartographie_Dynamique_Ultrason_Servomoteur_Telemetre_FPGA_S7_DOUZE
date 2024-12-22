@@ -1,9 +1,9 @@
-22:52:11 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+19:08:47 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
 make all 
 Info: Building ../telemetre_tournant_clk_corrigee_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
 [BSP build complete]
 [telemetre_tournant_clk_corrigee build complete]
 
-22:52:12 Build Finished (took 1s.124ms)
+19:08:48 Build Finished (took 906ms)
 

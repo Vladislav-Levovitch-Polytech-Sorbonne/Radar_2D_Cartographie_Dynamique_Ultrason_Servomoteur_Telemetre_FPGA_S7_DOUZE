@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>21 déc. 2024 22:48:32</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1734817712892</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>22 déc. 2024 19:09:44</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1734890984545</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\sof\Neopixel_v2\software\neopixel_three_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\Computer_System.sopcinfo</SopcDesignFile>

@@ -1,0 +1,106 @@
+/*
+ * neopixel_radar.c
+ *
+ *  Created on: 22 déc. 2024
+ *      Author: vladi
+ */
+
+/*
+ * neopixel_alone.c
+ *
+ *  Created on: 21 déc. 2024
+ *      Author: vladi
+ */
+
+/*
+ * neopixel.c
+ *
+ *  Created on: 17 déc. 2024
+ *      Author: vladi
+ */
+
+/*
+ * turning_telemetre_clk_fixed.c
+ *
+ *  Created on: 15 déc. 2024
+ *      Author: vladi
+ */
+
+/*
+ * servomotor.c
+ *
+ *  Created on: 13 dec. 2024
+ *      Author: vladi
+ */
+
+/*
+ * servomotor.c
+ *
+ *  Created on: 11 dec. 2024
+ *      Author: vladi
+ */
+
+ /*
+ * servomotor.c
+ *
+ *  Created on: 8 dec. 2024
+ *      Author: vladi
+ */
+
+/*
+ * servomoteur.c
+ *
+ *  Created on: 8 dec. 2024
+ *      Author: vladi
+ */
+
+/*
+ * telemetre_sept_seg.c
+ *
+ *  Created on: 3 dec. 2024
+ *      Author: vladi
+ */
+
+#include "system.h"
+#include "io.h"
+#include <stdio.h>
+#include "altera_avalon_pio_regs.h"
+#include "neopixel_radar.h"
+#include "unistd.h" // Pour usleep
+int value = 30;
+int degres = 0;
+int main()
+{
+  while (1)
+  {
+	  /*printf("Valeur actuelle : %d\n", value);
+	  IOWR_ALTERA_AVALON_NEOPIXEL(value); // Écriture en binaire
+	  usleep(200000);
+	  value ++;
+	  if (value>12)
+	  {
+		  value = 0;
+	  }*/
+
+	  printf("Valeur actuelle : %d.%d°\t Progression : %.2f%%\n", degres/10,degres%10, (degres/150*8.34));
+	  	  IOWR_ALTERA_AVALON_SERVOMOTEUR(degres); // Écriture en binaire
+	  	  usleep(80000);
+	  	  degres += 10;
+	  	  if (degres>1793)
+	  	  {
+	  		degres = 1793;
+	  		IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, degres);
+	  		printf("Valeur actuelle : %d.%d°\n", (degres+7)/10,(degres+7)%10);
+	  		usleep(170000);
+	  		degres = 0;
+	  		usleep(80000);
+	  	  }
+  }
+  return 0;
+}
+
+
+
+
+
+

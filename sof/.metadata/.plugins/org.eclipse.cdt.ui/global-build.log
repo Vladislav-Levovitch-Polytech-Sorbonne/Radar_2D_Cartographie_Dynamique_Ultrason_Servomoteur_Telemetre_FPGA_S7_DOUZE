@@ -2167,3 +2167,393 @@ Info:                      65456 KBytes free for stack + heap.
 Info: Creating neopixel_three.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
 [neopixel_three build complete]
+18:50:10 **** Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+[neopixel_three build complete]
+18:50:28 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+[neopixel_three build complete]
+18:50:47 **** Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+[neopixel_three build complete]
+18:51:20 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+[neopixel_three build complete]
+18:52:14 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+[neopixel_three build complete]
+18:56:21 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_alone.c to obj/default/neopixel_alone.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_alone.o neopixel_alone.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_alone.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:00:18 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_alone.c to obj/default/neopixel_alone.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_alone.o neopixel_alone.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_alone.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:02:22 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+[neopixel_three build complete]
+19:02:23 **** Build of configuration Nios II for project neopixel_three_bsp ****
+make all 
+[BSP build complete]
+19:02:24 **** Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+19:02:25 **** Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+19:02:30 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_alone.c to obj/default/neopixel_alone.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_alone.o neopixel_alone.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_alone.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:04:28 **** Incremental Build of configuration Nios II for project neopixel_three ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_alone.c to obj/default/neopixel_alone.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_alone.o neopixel_alone.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_alone.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:08:44 **** Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:08:46 **** Build of configuration Nios II for project neopixel_radar_bsp ****
+make all 
+[BSP build complete]
+19:08:47 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee ****
+make all 
+Info: Building ../telemetre_tournant_clk_corrigee_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../telemetre_tournant_clk_corrigee_bsp/
+[BSP build complete]
+[telemetre_tournant_clk_corrigee build complete]
+19:08:48 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+make all 
+[BSP build complete]
+19:10:24 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+[neopixel_three build complete]
+19:12:23 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:14:12 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:27:57 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+neopixel_radar.c: In function 'main':
+neopixel_radar.c:85:11: warning: unknown conversion type character 0xa in format [-Wformat=]
+    printf("Valeur actuelle : %d.%d°    Progression : %d\%\n", degres/10,degres%10, degres/150);
+           ^
+neopixel_radar.c:85:11: warning: unknown conversion type character 0xa in format [-Wformat=]
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:29:07 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+neopixel_radar.c: In function 'main':
+neopixel_radar.c:85:11: warning: unknown conversion type character 0xa in format [-Wformat=]
+    printf("Valeur actuelle : %d.%d°    Progression : %d%\n", degres/10,degres%10, (degres/150*12));
+           ^
+neopixel_radar.c:85:11: warning: unknown conversion type character 0xa in format [-Wformat=]
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:30:40 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+neopixel_radar.c: In function 'main':
+neopixel_radar.c:85:97: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+    printf("Valeur actuelle : %d.%d°    Progression : %d%%\n", degres/10,degres%10, (degres/150*8,34));
+                                                                                                 ^
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 72 KBytes program size (code + initialized data).
+Info:                      65456 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:31:13 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+neopixel_radar.c: In function 'main':
+neopixel_radar.c:85:11: warning: format '%d' expects argument of type 'int', but argument 4 has type 'double' [-Wformat=]
+    printf("Valeur actuelle : %d.%d°    Progression : %d%%\n", degres/10,degres%10, (degres/150*8.34));
+           ^
+neopixel_radar.c:85:11: warning: format '%d' expects argument of type 'int', but argument 4 has type 'double' [-Wformat=]
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:32:21 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:33:05 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:33:42 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:34:15 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:35:51 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:37:13 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:38:40 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:41:21 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+neopixel_radar.c: In function 'main':
+neopixel_radar.c:95:13: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat=]
+      printf("Valeur Angulaire = %d.%d°\tTranche de Progression = %.1f%%\n", degres/10,degres%10, 100);
+             ^
+neopixel_radar.c:95:13: warning: format '%f' expects argument of type 'double', but argument 4 has type 'int' [-Wformat=]
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]
+19:43:39 **** Incremental Build of configuration Nios II for project neopixel_radar ****
+make all 
+Info: Building ../neopixel_three_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../neopixel_three_bsp/
+[BSP build complete]
+Info: Compiling neopixel_radar.c to obj/default/neopixel_radar.o
+nios2-elf-gcc -xc -MP -MMD -c -I../neopixel_three_bsp//HAL/inc -I../neopixel_three_bsp/ -I../neopixel_three_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/neopixel_radar.o neopixel_radar.c
+Info: Linking neopixel_three.elf
+nios2-elf-g++  -T'../neopixel_three_bsp//linker.x' -msys-crt0='../neopixel_three_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../neopixel_three_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=neopixel_three.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o neopixel_three.elf obj/default/neopixel_radar.o -lm -msys-lib=m
+nios2-elf-insert neopixel_three.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1734815766 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three_bsp/../../Computer_System.sopcinfo
+Info: (neopixel_three.elf) 73 KBytes program size (code + initialized data).
+Info:                      65455 KBytes free for stack + heap.
+Info: Creating neopixel_three.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source neopixel_three.elf >neopixel_three.objdump
+[neopixel_three build complete]

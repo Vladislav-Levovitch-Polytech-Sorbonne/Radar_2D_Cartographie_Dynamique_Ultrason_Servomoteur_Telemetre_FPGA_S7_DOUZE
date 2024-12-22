@@ -1175,3 +1175,329 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/neopixel_bsp/
 
 !ENTRY com.altera.sbtgui.launch 1 0 2024-12-21 22:59:35.932
 !MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+!SESSION 2024-12-22 18:45:25.877 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-12-22 18:47:24.355
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-12-22 18:47:43.587
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-12-22 18:50:20.282
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1734409220", expected: "1734815766".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-12-22 18:50:20.300
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1734409220", expected: "1734815766".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-12-22 18:50:34.643
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1734409220", expected: "1734815766".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-12-22 18:50:34.649
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1734409220", expected: "1734815766".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-12-22 18:51:26.900
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1734409220", expected: "1734815766".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-12-22 18:51:26.903
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1734409220", expected: "1734815766".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 18:52:15.979
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 18:52:18.256
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 18:56:28.352
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 18:56:29.069
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 18:56:31.331
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:00:20.328
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:00:21.065
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:00:23.302
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:02:32.230
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:02:32.911
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:02:35.088
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:04:31.075
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:04:31.771
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:04:33.958
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-22 19:06:49.442
+!MESSAGE Indexed 'neopixel_radar' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-22 19:07:04.085
+!MESSAGE Indexed 'neopixel_radar_bsp' (85 sources, 155 headers) in 1,36 sec: 5 494 declarations; 9 512 references; 0 unresolved inclusions; 2 syntax errors; 8 unresolved names (0,053 %)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:08:39.694
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY org.eclipse.cdt.debug.core 4 103 2024-12-22 19:08:39.696
+!MESSAGE Project neopixel_three does not exist. Please check that your launch configuration specifies a valid project in your workspace.
+
+!ENTRY org.eclipse.cdt.debug.core 4 103 2024-12-22 19:08:58.573
+!MESSAGE Project neopixel_three does not exist. Please check that your launch configuration specifies a valid project in your workspace.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:10:26.539
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:10:28.814
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:12:26.111
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:12:26.830
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:12:29.097
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:14:14.840
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:14:15.527
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:14:17.711
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:27:59.930
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:28:00.669
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:28:03.270
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:29:10.543
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:29:11.262
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:29:13.732
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:30:42.592
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:30:43.324
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:30:45.779
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:31:15.990
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:31:16.779
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:31:19.321
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:32:24.513
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:32:25.278
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:32:27.712
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:33:08.160
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:33:08.933
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:33:11.351
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:33:45.417
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:33:46.167
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:33:47.050
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:33:48.932
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:33:49.669
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-12-22 19:33:52.634
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --go, --sidp=0xff202040, --id=0x0, --timestamp=1734815766, /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-12-22 19:33:52.634
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:34:18.212
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:34:19.108
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:34:21.563
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:35:54.477
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:35:55.288
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:35:57.875
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:37:17.137
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:37:19.632
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:38:42.974
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:38:43.741
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:38:46.117
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:41:24.582
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:41:25.545
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:41:28.311
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:43:42.244
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:43:43.059
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1734815766]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-22 19:43:45.343
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1734815766 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/software/neopixel_three/neopixel_three.elf]

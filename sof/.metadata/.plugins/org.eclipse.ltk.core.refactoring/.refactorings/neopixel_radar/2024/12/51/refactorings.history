@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;neopixel_three/hello_world.c&apos; to &apos;neopixel_alone.c&apos;" description="Rename resource &apos;hello_world.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="hello_world.c" name="neopixel_alone.c" stamp="1734817784436" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;neopixel_radar/neopixel_alone.c&apos; to &apos;neopixel_radar.c&apos;" description="Rename resource &apos;neopixel_alone.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="neopixel_alone.c" name="neopixel_radar.c" stamp="1734890909371" updateReferences="true"/>
+</session>

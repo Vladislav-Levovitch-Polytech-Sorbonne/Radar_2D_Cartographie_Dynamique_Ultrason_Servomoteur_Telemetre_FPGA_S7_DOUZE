@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;neopixel_radar_bsp/neopixel.h&apos; to &apos;neopixel_radar.h&apos;" description="Rename resource &apos;neopixel.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="neopixel.h" name="neopixel_radar.h" stamp="1734890860209" updateReferences="true"/>
+</session>

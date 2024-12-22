@@ -1,6 +1,6 @@
-22:52:12 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
+19:08:48 **** Incremental Build of configuration Nios II for project telemetre_tournant_clk_corrigee_bsp ****
 make all 
 [BSP build complete]
 
-22:52:13 Build Finished (took 1s.60ms)
+19:08:49 Build Finished (took 1s.67ms)
 

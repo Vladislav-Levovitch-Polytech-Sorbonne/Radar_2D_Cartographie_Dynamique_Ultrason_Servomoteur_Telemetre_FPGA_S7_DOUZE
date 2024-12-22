@@ -142,7 +142,7 @@ ACDS_VERSION := 18.1
 ELF := neopixel_three.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := neopixel_alone.c
+C_SRCS := neopixel_radar.c
 CXX_SRCS :=
 ASM_SRCS :=
 
