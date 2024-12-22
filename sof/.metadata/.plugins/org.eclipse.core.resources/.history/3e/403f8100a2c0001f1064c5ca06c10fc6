@@ -192,30 +192,25 @@ int main()
 		  Buffer_6_HEX[5 - i] = table_sept_seg[(moyenne_distance / puissance_10[i]) % 10];
 	  }
 
-	  printf("Valeur Angulaire = %d.%d°\tTranche de Progression = %.1f%%  \tDistance Moyenne Telemetre = %d\n", degres/10,degres%10, (degres/150*8.34), moyenne_distance);
-	  IOWR_ALTERA_AVALON_SERVOMOTEUR(degres); // Écriture en binaire
-	  IOWR_ALTERA_AVALON_NEOPIXEL(degres/150);
-	  usleep(80000);
-	  degres += 10;
-	  Buffer_6_HEX[2] = 0x63; // Caractere "°" pour l affichage
-	  Buffer_6_HEX[1] = table_sept_seg[(degres / puissance_10[1]) % 10];
-	  Buffer_6_HEX[0] = table_sept_seg[(degres / puissance_10[2]) % 10];
-	  update_display (Buffer_6_HEX);
+	  printf("Valeur Angulaire = %d.%d°\tTranche de Progression = %.1f%%\n", degres/10,degres%10, (degres/150*8.34));
+	  	  IOWR_ALTERA_AVALON_SERVOMOTEUR(degres); // Écriture en binaire
+	  	  IOWR_ALTERA_AVALON_NEOPIXEL(degres/150);
+	  	  usleep(80000);
+	  	  degres += 10;
 
-	  // Plafonnement de securite et gestion a part du retour
-	  if (degres>1793)
-	  {
-		degres = 1800;
-		IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, 1793);
-		IOWR_ALTERA_AVALON_NEOPIXEL(degres/150);
-		printf("Valeur Angulaire = %d.%d°\tTranche de Progression = %.1f%%  \tDistance Moyenne Telemetre = %d\n", degres/10,degres%10, 100.0, moyenne_distance);
-		usleep(140000);
-		degres = 0;
-		IOWR_ALTERA_AVALON_NEOPIXEL(degres);
-		usleep(220000);
+	  	  // Plafonnement de securite et gestion a part du retour
+	  	  if (degres>1793)
+	  	  {
+	  		degres = 1800;
+	  		IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, 1793);
+	  		IOWR_ALTERA_AVALON_NEOPIXEL(degres/150);
+	  		printf("Valeur Angulaire = %d.%d°\tTranche de Progression = %.1f%%\n", degres/10,degres%10, 100.0);
+	  		usleep(140000);
+	  		degres = 0;
+	  		IOWR_ALTERA_AVALON_NEOPIXEL(degres);
+	  		usleep(220000);
 
-	  }
-
+	  	  }
   }
   return 0;
 }
