@@ -1,0 +1,9 @@
+22:30:53 **** Incremental Build of configuration Nios II for project Neopixel_pour_telemetre_tournant ****
+make all 
+Info: Building ../Neopixel_pour_telemetre_tournant_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Neopixel_pour_telemetre_tournant_bsp/
+[BSP build complete]
+[Neopixel_pour_telemetre_tournant build complete]
+
+22:30:56 Build Finished (took 2s.471ms)
+

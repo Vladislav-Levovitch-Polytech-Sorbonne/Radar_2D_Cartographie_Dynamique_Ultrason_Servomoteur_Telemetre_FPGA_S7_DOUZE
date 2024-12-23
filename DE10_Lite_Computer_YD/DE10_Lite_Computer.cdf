@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484ES) Path("C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/servomoteur_tournant/") File("DE10_Lite_Computer.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484ES) Path("C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/Neopixel_v2/") File("DE10_Lite_Computer.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
