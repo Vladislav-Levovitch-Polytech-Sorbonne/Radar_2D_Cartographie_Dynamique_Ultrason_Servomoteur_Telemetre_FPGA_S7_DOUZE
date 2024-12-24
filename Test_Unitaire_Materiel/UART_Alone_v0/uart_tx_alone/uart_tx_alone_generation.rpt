@@ -1,0 +1,27 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\Test_Unitaire_Materiel\UART_Alone_v0\uart_tx_alone.qsys --block-symbol-file --output-directory=C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\Test_Unitaire_Materiel\UART_Alone_v0\uart_tx_alone --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading UART_Alone_v0/uart_tx_alone.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\Test_Unitaire_Materiel\UART_Alone_v0\uart_tx_alone.qsys --synthesis=VERILOG --output-directory=C:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\Test_Unitaire_Materiel\UART_Alone_v0\uart_tx_alone\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading UART_Alone_v0/uart_tx_alone.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: uart_tx_alone: Generating uart_tx_alone "uart_tx_alone" for QUARTUS_SYNTH
+Info: uart_tx_alone: Done "uart_tx_alone" with 1 modules, 1 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

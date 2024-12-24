@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Tue Dec 24 18:13:57 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : UART_v0
+Top-level Entity Name : uart_tx_merge_YD
+Family : MAX 10
+Total logic elements : 97
+    Total combinational functions : 88
+    Dedicated logic registers : 60
+Total registers : 60
+Total pins : 11
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

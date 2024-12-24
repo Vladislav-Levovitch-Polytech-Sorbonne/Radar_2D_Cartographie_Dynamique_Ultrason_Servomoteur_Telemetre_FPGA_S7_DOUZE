@@ -1,0 +1,8 @@
+
+State Machine - |uart_tx_merge_YD|UART_TX_YD:UART_TX_inst|State
+Name State.E5 State.E4 State.E3 State.E2 State.E1 
+State.E1 0 0 0 0 0 
+State.E2 0 0 0 1 1 
+State.E3 0 0 1 0 1 
+State.E4 0 1 0 0 1 
+State.E5 1 0 0 0 1 
