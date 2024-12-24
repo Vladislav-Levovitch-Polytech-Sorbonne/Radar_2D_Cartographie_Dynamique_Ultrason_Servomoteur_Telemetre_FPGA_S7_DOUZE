@@ -7,17 +7,17 @@ entity DE10_Lite_UART_tx_YD is
         Clk      : in std_logic;                    -- Horloge principale
         Reset_n  : in std_logic;                    -- Reset actif bas
         Load     : in std_logic;                    -- Signal de chargement
-        Ascii    : in std_logic_vector(7 downto 0); -- Donnee ASCII a transmettre
+        Ascii    : in std_logic_vector(7 downto 0); -- Donnée ASCII à transmettre
         Uart_Tx  : out std_logic                    -- Sortie UART tx
     );
 end entity;
 
 architecture Behavioral of DE10_Lite_UART_tx_YD is
     -- Etats du FSM
-    type StateType is (Waiting_step, Load_Reg, Start_Bit, Send_Bits, Stop_Bit);
+    type StateType is (Waiting_step, Wait_Release, Load_Reg, Start_Bit, Send_Bits, Stop_Bit);
     signal SIGNAL_Etape        : StateType := Waiting_step;
 
-    -- Registre interne pour les donnees
+    -- Registre interne pour les données
     signal SIGNAL_Data_Reg     : std_logic_vector(9 downto 0) := (others => '0'); -- 1 bit start, 8 bits data, 1 bit stop
     signal Bit_Index           : integer range 0 to 9 := 0; -- Index des bits en cours d'envoi
 
@@ -26,11 +26,11 @@ architecture Behavioral of DE10_Lite_UART_tx_YD is
     signal SIGNAL_Counter      : unsigned(13 downto 0) := (others => '0'); -- Compteur pour le diviseur
     signal SIGNAL_Tick         : std_logic := '0'; -- Signal Tick
 
-    -- Copie locale de la donnee
+    -- Copie locale de la donnée
     signal SIGNAL_Data    : std_logic_vector(7 downto 0) := (others => '0');
 begin
 
-    -- Diviseur d'horloge pour generer le signal Tick
+    -- Diviseur d'horloge pour générer le signal Tick
     process (Clk, Reset_n)
     begin
         if Reset_n = '0' then
@@ -47,7 +47,7 @@ begin
         end if;
     end process;
 
-    -- Copie de la donnee lors d'un reset inactif
+    -- Copie de la donnée lors d'un reset inactif
     process (Clk, Reset_n)
     begin
         if Reset_n = '0' then
@@ -59,7 +59,7 @@ begin
         end if;
     end process;
 
-    -- FSM pour gerer la transmission UART
+    -- FSM pour gérer la transmission UART
     process (Clk, Reset_n)
     begin
         if Reset_n = '0' then
@@ -71,7 +71,7 @@ begin
             if SIGNAL_Tick = '1' then
                 case SIGNAL_Etape is
                     when Waiting_step =>
-                        -- Transition vers Load_Reg uniquement si Load est actif
+                        -- Transition uniquement si Load est actif
                         if Load = '1' then
                             SIGNAL_Etape <= Load_Reg;
                         end if;
@@ -98,11 +98,13 @@ begin
                         end if;
 
                     when Stop_Bit =>
-                        -- Envoi du bit de stop et retour à l'état initial ou répétition si Load est toujours actif
+                        -- Envoi du bit de stop et transition vers l'attente de la libération de Load
                         Uart_Tx <= '1';
-                        if Load = '1' then
-                            SIGNAL_Etape <= Load_Reg; -- Répéter l'envoi si Load est toujours actif
-                        else
+                        SIGNAL_Etape <= Wait_Release;
+
+                    when Wait_Release =>
+                        -- Attendre que Load retombe à '0'
+                        if Load = '0' then
                             SIGNAL_Etape <= Waiting_step;
                         end if;
 
@@ -115,4 +117,4 @@ begin
 
 end architecture;
 
--- Code based on Yann DOUZE et gpt adapted
+-- Code based on Yann DOUZE and gpt adapted

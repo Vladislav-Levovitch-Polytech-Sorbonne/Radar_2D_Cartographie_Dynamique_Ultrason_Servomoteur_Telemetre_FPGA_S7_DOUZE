@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Dec 24 20:36:07 2024
+Analysis & Synthesis Status : Successful - Tue Dec 24 20:58:56 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : UART_Alone_tx
 Top-level Entity Name : DE10_Lite_UART_tx_YD
 Family : MAX 10
-Total logic elements : 67
-    Total combinational functions : 49
-    Dedicated logic registers : 42
-Total registers : 42
+Total logic elements : 69
+    Total combinational functions : 50
+    Dedicated logic registers : 43
+Total registers : 43
 Total pins : 12
 Total virtual pins : 0
 Total memory bits : 0

@@ -63,7 +63,7 @@ begin
         SIGNAL_Test_Bench_UART_tx_load <= '1'; -- Trigger the load signal
         wait for 600*CLK_PERIOD;
         SIGNAL_Test_Bench_UART_tx_load <= '0'; -- Deactivate load
-        wait for 90 us; -- Wait for the data to transmit completely
+        wait for 100 us; -- Wait for the data to transmit completely
 
         -- Test case 3: Transmit third data (ASCII 'C', 8'h43)
         SIGNAL_Test_Bench_UART_tx_ascii <= "01000011"; -- ASCII 'C'

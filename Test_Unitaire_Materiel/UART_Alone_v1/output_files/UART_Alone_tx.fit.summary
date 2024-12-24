@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Dec 24 20:36:17 2024
+Fitter Status : Successful - Tue Dec 24 20:59:08 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : UART_Alone_tx
 Top-level Entity Name : DE10_Lite_UART_tx_YD
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 60 / 49,760 ( < 1 % )
-    Total combinational functions : 51 / 49,760 ( < 1 % )
-    Dedicated logic registers : 42 / 49,760 ( < 1 % )
-Total registers : 42
+Total logic elements : 61 / 49,760 ( < 1 % )
+    Total combinational functions : 52 / 49,760 ( < 1 % )
+    Dedicated logic registers : 43 / 49,760 ( < 1 % )
+Total registers : 43
 Total pins : 12 / 360 ( 3 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )

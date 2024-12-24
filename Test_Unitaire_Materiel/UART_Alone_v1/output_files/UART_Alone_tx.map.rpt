@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART_Alone_tx
-Tue Dec 24 20:36:07 2024
+Tue Dec 24 20:58:56 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -46,15 +46,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 24 20:36:07 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 24 20:58:56 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; UART_Alone_tx                               ;
 ; Top-level Entity Name              ; DE10_Lite_UART_tx_YD                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 67                                          ;
-;     Total combinational functions  ; 49                                          ;
-;     Dedicated logic registers      ; 42                                          ;
-; Total registers                    ; 42                                          ;
+; Total logic elements               ; 69                                          ;
+;     Total combinational functions  ; 50                                          ;
+;     Dedicated logic registers      ; 43                                          ;
+; Total registers                    ; 43                                          ;
 ; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -182,20 +182,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 67        ;
+; Estimated Total logic elements              ; 69        ;
 ;                                             ;           ;
-; Total combinational functions               ; 49        ;
+; Total combinational functions               ; 50        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 19        ;
-;     -- 3 input functions                    ; 7         ;
+;     -- 4 input functions                    ; 22        ;
+;     -- 3 input functions                    ; 5         ;
 ;     -- <=2 input functions                  ; 23        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 36        ;
+;     -- normal mode                          ; 37        ;
 ;     -- arithmetic mode                      ; 13        ;
 ;                                             ;           ;
-; Total registers                             ; 42        ;
-;     -- Dedicated logic registers            ; 42        ;
+; Total registers                             ; 43        ;
+;     -- Dedicated logic registers            ; 43        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 12        ;
@@ -203,9 +203,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
-; Maximum fan-out                             ; 42        ;
-; Total fan-out                               ; 303       ;
-; Average fan-out                             ; 2.63      ;
+; Maximum fan-out                             ; 43        ;
+; Total fan-out                               ; 312       ;
+; Average fan-out                             ; 2.67      ;
 +---------------------------------------------+-----------+
 
 
@@ -214,23 +214,24 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+----------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name   ; Entity Name          ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+----------------------+--------------+
-; |DE10_Lite_UART_tx_YD      ; 49 (49)             ; 42 (42)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |DE10_Lite_UART_tx_YD ; DE10_Lite_UART_tx_YD ; work         ;
+; |DE10_Lite_UART_tx_YD      ; 50 (50)             ; 43 (43)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |DE10_Lite_UART_tx_YD ; DE10_Lite_UART_tx_YD ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |DE10_Lite_UART_tx_YD|SIGNAL_Etape                                                                                                      ;
-+---------------------------+-----------------------+------------------------+------------------------+-----------------------+---------------------------+
-; Name                      ; SIGNAL_Etape.Stop_Bit ; SIGNAL_Etape.Send_Bits ; SIGNAL_Etape.Start_Bit ; SIGNAL_Etape.Load_Reg ; SIGNAL_Etape.Waiting_step ;
-+---------------------------+-----------------------+------------------------+------------------------+-----------------------+---------------------------+
-; SIGNAL_Etape.Waiting_step ; 0                     ; 0                      ; 0                      ; 0                     ; 0                         ;
-; SIGNAL_Etape.Load_Reg     ; 0                     ; 0                      ; 0                      ; 1                     ; 1                         ;
-; SIGNAL_Etape.Start_Bit    ; 0                     ; 0                      ; 1                      ; 0                     ; 1                         ;
-; SIGNAL_Etape.Send_Bits    ; 0                     ; 1                      ; 0                      ; 0                     ; 1                         ;
-; SIGNAL_Etape.Stop_Bit     ; 1                     ; 0                      ; 0                      ; 0                     ; 1                         ;
-+---------------------------+-----------------------+------------------------+------------------------+-----------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DE10_Lite_UART_tx_YD|SIGNAL_Etape                                                                                                                                  ;
++---------------------------+-----------------------+------------------------+------------------------+-----------------------+---------------------------+---------------------------+
+; Name                      ; SIGNAL_Etape.Stop_Bit ; SIGNAL_Etape.Send_Bits ; SIGNAL_Etape.Start_Bit ; SIGNAL_Etape.Load_Reg ; SIGNAL_Etape.Wait_Release ; SIGNAL_Etape.Waiting_step ;
++---------------------------+-----------------------+------------------------+------------------------+-----------------------+---------------------------+---------------------------+
+; SIGNAL_Etape.Waiting_step ; 0                     ; 0                      ; 0                      ; 0                     ; 0                         ; 0                         ;
+; SIGNAL_Etape.Wait_Release ; 0                     ; 0                      ; 0                      ; 0                     ; 1                         ; 1                         ;
+; SIGNAL_Etape.Load_Reg     ; 0                     ; 0                      ; 0                      ; 1                     ; 0                         ; 1                         ;
+; SIGNAL_Etape.Start_Bit    ; 0                     ; 0                      ; 1                      ; 0                     ; 0                         ; 1                         ;
+; SIGNAL_Etape.Send_Bits    ; 0                     ; 1                      ; 0                      ; 0                     ; 0                         ; 1                         ;
+; SIGNAL_Etape.Stop_Bit     ; 1                     ; 0                      ; 0                      ; 0                     ; 0                         ; 1                         ;
++---------------------------+-----------------------+------------------------+------------------------+-----------------------+---------------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -248,12 +249,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 42    ;
+; Total registers                              ; 43    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 42    ;
+; Number of registers using Asynchronous Clear ; 43    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 23    ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -274,7 +275,7 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |DE10_Lite_UART_tx_YD|Bit_Index[3] ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |DE10_Lite_UART_tx_YD|SIGNAL_Etape ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |DE10_Lite_UART_tx_YD|SIGNAL_Etape ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
 
@@ -284,20 +285,20 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 12                          ;
-; cycloneiii_ff         ; 42                          ;
+; cycloneiii_ff         ; 43                          ;
 ;     CLR               ; 19                          ;
-;     ENA CLR           ; 23                          ;
-; cycloneiii_lcell_comb ; 50                          ;
+;     ENA CLR           ; 24                          ;
+; cycloneiii_lcell_comb ; 51                          ;
 ;     arith             ; 13                          ;
 ;         2 data inputs ; 13                          ;
-;     normal            ; 37                          ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 19                          ;
+;     normal            ; 38                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 22                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.39                        ;
+; Average LUT depth     ; 2.33                        ;
 +-----------------------+-----------------------------+
 
 
@@ -316,7 +317,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 24 20:35:53 2024
+    Info: Processing started: Tue Dec 24 20:58:40 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART_Alone_tx -c UART_Alone_tx
 Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -332,14 +333,14 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 82 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 69 logic cells
+    Info (21061): Implemented 70 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4790 megabytes
-    Info: Processing ended: Tue Dec 24 20:36:07 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Processing ended: Tue Dec 24 20:58:56 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:32
 
 
