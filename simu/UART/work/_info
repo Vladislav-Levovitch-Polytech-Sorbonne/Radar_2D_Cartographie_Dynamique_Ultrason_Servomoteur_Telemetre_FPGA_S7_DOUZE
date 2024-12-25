@@ -3,43 +3,71 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\simu\UART
-Ede10_lite_uart_tx_yd
-Z1 w1735095892
+Ede10_lite_uart
+Z1 w1735153545
 Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
-Z4 8../../src/DE10_Lite_UART_tx_YD.vhd
-Z5 F../../src/DE10_Lite_UART_tx_YD.vhd
+Z4 8../../src/DE10_Lite_UART.vhd
+Z5 F../../src/DE10_Lite_UART.vhd
 l0
 L5
-V;^]f:2PO`CUg@YZoXfDfF0
+Vl^dW<<cZcY^<A1W:ahSSD2
 Z6 OV;C;6.5b;42
 31
 Z7 o-93 -O0
 Z8 tExplicit 1
-!s100 Vjz?S;L7EMfFG:EbaU7EB1
+!s100 Y1bz<d1_nf67oiQA=_0SS2
 Abehavioral
 R2
 R3
-Z9 DEx4 work 20 de10_lite_uart_tx_yd 0 22 ;^]f:2PO`CUg@YZoXfDfF0
+Z9 DEx4 work 14 de10_lite_uart 0 22 l^dW<<cZcY^<A1W:ahSSD2
 l40
 L20
-Vjd5gW`e[75EllVf]8Hi=]0
+Vm`c<7QNDggoVJ7bn8i;mk0
+!s100 LM@a0O8IQBW]C4:U`0W<<2
 R6
 31
 Z10 Mx2 4 ieee 14 std_logic_1164
 Z11 Mx1 4 ieee 11 numeric_std
 R7
 R8
-!s100 m:`igLO>b5MfBEcYfN:>a3
-Etest_bench_de10_lite_uart_tx_yd_entity
-Z12 w1735095484
+Ede10_lite_uart_tx_yd
+Z12 w1735070279
+R2
 R3
-Z13 8DE10_Lite_UART_tx_TEST_BENCH.vhdl
-Z14 FDE10_Lite_UART_tx_TEST_BENCH.vhdl
+Z13 8../../src/DE10_Lite_UART_tx_YD.vhd
+Z14 F../../src/DE10_Lite_UART_tx_YD.vhd
+l0
+L5
+VXD6e1cT5ae@XZ7N:G3kX`0
+R6
+31
+R7
+R8
+!s100 ;C7>UGKn?l^ggoT7c:JkY1
+Abehavioral
+R2
+R3
+Z15 DEx4 work 20 de10_lite_uart_tx_yd 0 22 XD6e1cT5ae@XZ7N:G3kX`0
+l31
+L15
+V`ki5c@4:ZGY<J]QPCGdE82
+R6
+31
+R10
+R11
+R7
+R8
+!s100 e4W:ICTOoAGW5=`_2U4?30
+Etest_bench_de10_lite_uart_entity
+Z16 w1735154438
+R3
+Z17 8DE10_Lite_UART_TEST_BENCH.vhdl
+Z18 FDE10_Lite_UART_TEST_BENCH.vhdl
 l0
 L4
-V_@=UN[_fYBWR8^h]h>cgR2
-!s100 ;h3nAen>5O8U^HMIBdHi12
+V2_j4z^MJ1G_d;>9g8mgE03
+!s100 kWcJCedZFg`QALG[HhS<K3
 R6
 31
 R7
@@ -48,14 +76,42 @@ Abehavioral
 R2
 R9
 R3
-Z15 DEx4 work 38 test_bench_de10_lite_uart_tx_yd_entity 0 22 _@=UN[_fYBWR8^h]h>cgR2
+Z19 DEx4 work 32 test_bench_de10_lite_uart_entity 0 22 2_j4z^MJ1G_d;>9g8mgE03
 l23
 L7
-Z16 Vm=@5S^nl;KB4oUEe<^A8=0
-Z17 !s100 7a?zH;eBeG]3TWkO1:?@:3
+VLM7eWkVL4^GIJTOhN]EnN1
+!s100 nASb1I25Z5^zRkF;cDNhg2
 R6
 31
 R10
 R11
 R7
 R8
+Etest_bench_de10_lite_uart_tx_yd_entity
+Z20 w1735071384
+R3
+Z21 8DE10_Lite_UART_tx_TEST_BENCH.vhdl
+Z22 FDE10_Lite_UART_tx_TEST_BENCH.vhdl
+l0
+L4
+V_@=UN[_fYBWR8^h]h>cgR2
+R6
+31
+R7
+R8
+!s100 ;h3nAen>5O8U^HMIBdHi12
+Abehavioral
+R2
+R15
+R3
+DEx4 work 38 test_bench_de10_lite_uart_tx_yd_entity 0 22 _@=UN[_fYBWR8^h]h>cgR2
+l21
+L7
+VEUW>bm>S[HPH`mT=`KSXa3
+R6
+31
+R10
+R11
+R7
+R8
+!s100 fHaDWmRYo62;`oVnaL]Pb3
