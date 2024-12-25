@@ -11,7 +11,9 @@ architecture Behavioral of test_bench_DE10_Lite_UART_tx_YD_entity is
     signal SIGNAL_Test_Bench_UART_tx_reset_n    : std_logic := '1';
     signal SIGNAL_Test_Bench_UART_tx_load       : std_logic := '0';
     signal SIGNAL_Test_Bench_UART_tx_ascii      : std_logic_vector(31 downto 0) := (others => '0');
+    signal SIGNAL_Test_Bench_UART_tx_Uart_Rx    : std_logic := '1';
 
+    signal SIGNAL_Test_Bench_UART_Rx_Data       : std_logic_vector(31 downto 0);
     signal SIGNAL_Test_Bench_UART_tx_uart_tx    : std_logic;
 
     -- Constants for clock generation
@@ -27,7 +29,9 @@ begin
             Reset_n  => SIGNAL_Test_Bench_UART_tx_reset_n,
             Load     => SIGNAL_Test_Bench_UART_tx_load,
             Ascii    => SIGNAL_Test_Bench_UART_tx_ascii,
+            Uart_Rx  => SIGNAL_Test_Bench_UART_tx_Uart_Rx,
             
+            Rx_Data  => SIGNAL_Test_Bench_UART_Rx_Data,
             Uart_Tx  => SIGNAL_Test_Bench_UART_tx_uart_tx
         );
 
