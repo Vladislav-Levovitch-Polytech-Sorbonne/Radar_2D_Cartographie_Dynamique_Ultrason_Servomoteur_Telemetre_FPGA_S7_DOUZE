@@ -6,20 +6,25 @@ entity DE10_Lite_UART_tx_YD is
     port (
         Clk      : in std_logic;                    -- Horloge principale
         Reset_n  : in std_logic;                    -- Reset actif bas
+
         Load     : in std_logic;                    -- Signal de chargement
-        Ascii    : in std_logic_vector(7 downto 0); -- Donnée ASCII à transmettre
+        Ascii    : in std_logic_vector(31 downto 0);-- Donnee ASCii a transmettre
+
+
         Uart_Tx  : out std_logic                    -- Sortie UART tx
     );
 end entity;
 
 architecture Behavioral of DE10_Lite_UART_tx_YD is
+
     -- Etats du FSM
     type StateType is (Waiting_step, Wait_Release, Load_Reg, Start_Bit, Send_Bits, Stop_Bit);
     signal SIGNAL_Etape        : StateType := Waiting_step;
 
-    -- Registre interne pour les données
+    -- Registre interne pour les donnees
     signal SIGNAL_Data_Reg     : std_logic_vector(9 downto 0) := (others => '0'); -- 1 bit start, 8 bits data, 1 bit stop
-    signal Bit_Index           : integer range 0 to 9 := 0; -- Index des bits en cours d'envoi
+    signal Bit_Index           : integer range 0 to 9 := 0; -- Index des bits en cours d envoi
+    signal SIGNAL_Load_Save    : std_logic := '0';      -- Recopie de Load
 
     -- SIGNAL_Tick interne pour la gestion du timing
     constant DIV_FACTOR : integer := 434; -- Division pour une horloge de 50 MHz et un baud rate de 115200
@@ -30,7 +35,7 @@ architecture Behavioral of DE10_Lite_UART_tx_YD is
     signal SIGNAL_Data    : std_logic_vector(7 downto 0) := (others => '0');
 begin
 
-    -- Diviseur d'horloge pour générer le signal Tick
+    -- Diviseur d horloge pour generer le signal Tick
     process (Clk, Reset_n)
     begin
         if Reset_n = '0' then
@@ -47,19 +52,22 @@ begin
         end if;
     end process;
 
-    -- Copie de la donnée lors d'un reset inactif
+    -- Copie de la donnee lors d un reset inactif
     process (Clk, Reset_n)
     begin
         if Reset_n = '0' then
             SIGNAL_Data <= (others => '0');
         elsif rising_edge(Clk) then
             if Load = '1' then
-                SIGNAL_Data <= Ascii;
+                SIGNAL_Data <= Ascii(7 downto 0);
+                SIGNAL_Load_Save <= '1';
+            else 
+                SIGNAL_Load_Save <= '0';
             end if;
         end if;
     end process;
 
-    -- FSM pour gérer la transmission UART
+    -- Double FSM pour gerer la transmission UART
     process (Clk, Reset_n)
     begin
         if Reset_n = '0' then
@@ -69,48 +77,53 @@ begin
             Uart_Tx <= '1';
         elsif rising_edge(Clk) then
             if SIGNAL_Tick = '1' then
-                case SIGNAL_Etape is
-                    when Waiting_step =>
-                        -- Transition uniquement si Load est actif
-                        if Load = '1' then
-                            SIGNAL_Etape <= Load_Reg;
-                        end if;
+                if SIGNAL_Load_Save = '1' or SIGNAL_Etape /= Waiting_step then
+                    case SIGNAL_Etape is
+                        when Waiting_step =>
+                            -- Transition uniquement si Load est actif
+                            if SIGNAL_Load_Save = '1' then
+                                SIGNAL_Etape <= Load_Reg;
+                            end if;
 
-                    when Load_Reg =>
-                        -- Charger les données et passer à l'envoi
-                        SIGNAL_Data_Reg <= '1' & SIGNAL_Data & '0'; -- Ajout des bits start et stop
-                        Bit_Index <= 0;
-                        SIGNAL_Etape <= Start_Bit;
+                        when Load_Reg =>
+                            -- Charger les donnees et passer a l envoi
+                            SIGNAL_Data_Reg <= '1' & SIGNAL_Data & '0'; -- Ajout des bits start et stop
+                            Bit_Index <= 0;
+                            SIGNAL_Etape <= Start_Bit;
 
-                    when Start_Bit =>
-                        -- Envoi du bit de start
-                        Uart_Tx <= SIGNAL_Data_Reg(Bit_Index);
-                        Bit_Index <= Bit_Index + 1;
-                        SIGNAL_Etape <= Send_Bits;
-
-                    when Send_Bits =>
-                        -- Envoi des bits data
-                        Uart_Tx <= SIGNAL_Data_Reg(Bit_Index);
-                        if Bit_Index = 8 then
-                            SIGNAL_Etape <= Stop_Bit;
-                        else
+                        when Start_Bit =>
+                            -- Envoi du bit de start
+                            Uart_Tx <= SIGNAL_Data_Reg(Bit_Index);
                             Bit_Index <= Bit_Index + 1;
-                        end if;
+                            SIGNAL_Etape <= Send_Bits;
 
-                    when Stop_Bit =>
-                        -- Envoi du bit de stop et transition vers l'attente de la libération de Load
-                        Uart_Tx <= '1';
-                        SIGNAL_Etape <= Wait_Release;
+                        when Send_Bits =>
+                            -- Envoi des bits data
+                            Uart_Tx <= SIGNAL_Data_Reg(Bit_Index);
+                            if Bit_Index = 8 then
+                                SIGNAL_Etape <= Stop_Bit;
+                            else
+                                Bit_Index <= Bit_Index + 1;
+                            end if;
 
-                    when Wait_Release =>
-                        -- Attendre que Load retombe à '0'
-                        if Load = '0' then
+                        when Stop_Bit =>
+                            -- Envoi du bit de stop et transition vers l attente de la liberation de Load
+                            Uart_Tx <= '1';
+                            SIGNAL_Etape <= Wait_Release;
+
+                        when Wait_Release =>
+                            -- Attendre que Load retombe a '0'
+                            if SIGNAL_Load_Save = '0' then
+                                SIGNAL_Etape <= Waiting_step;
+                            end if;
+
+                        when others =>
                             SIGNAL_Etape <= Waiting_step;
-                        end if;
+                    end case;
 
-                    when others =>
-                        SIGNAL_Etape <= Waiting_step;
-                end case;
+                else 
+
+                end if;
             end if;
         end if;
     end process;

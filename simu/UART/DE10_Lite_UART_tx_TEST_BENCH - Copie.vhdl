@@ -10,7 +10,7 @@ architecture Behavioral of test_bench_DE10_Lite_UART_tx_YD_entity is
     signal SIGNAL_Test_Bench_UART_tx_clk        : std_logic := '0';
     signal SIGNAL_Test_Bench_UART_tx_reset_n    : std_logic := '1';
     signal SIGNAL_Test_Bench_UART_tx_load       : std_logic := '0';
-    signal SIGNAL_Test_Bench_UART_tx_ascii      : std_logic_vector(31 downto 0) := (others => '0');
+    signal SIGNAL_Test_Bench_UART_tx_ascii      : std_logic_vector(7 downto 0) := (others => '0');
 
     signal SIGNAL_Test_Bench_UART_tx_uart_tx    : std_logic;
 
@@ -52,24 +52,24 @@ begin
         wait for 50 ns;
 
         -- Test case 1: Transmit first data (ASCII 'A', 8'h41)
-        SIGNAL_Test_Bench_UART_tx_ascii <= "00000000000000000000000001000001"; -- ASCII 'A'
+        SIGNAL_Test_Bench_UART_tx_ascii <= "01000001"; -- ASCII 'A'
         SIGNAL_Test_Bench_UART_tx_load <= '1'; -- Trigger the load signal
         wait for 600*CLK_PERIOD;
         SIGNAL_Test_Bench_UART_tx_load <= '0'; -- Deactivate load
         wait for 130 us; -- Wait for the data to transmit completely (including stop bit)
 
         -- Test case 2: Transmit second data (ASCII 'B', 8'h42)
-        SIGNAL_Test_Bench_UART_tx_ascii <= "00000000000000000000000001000010"; -- ASCII 'B'
+        SIGNAL_Test_Bench_UART_tx_ascii <= "01000010"; -- ASCII 'B'
         SIGNAL_Test_Bench_UART_tx_load <= '1'; -- Trigger the load signal
         wait for 600*CLK_PERIOD;
         SIGNAL_Test_Bench_UART_tx_load <= '0'; -- Deactivate load
         wait for 100 us; -- Wait for the data to transmit completely
 
         -- Test case 3: Transmit third data (ASCII 'C', 8'h43)
-        SIGNAL_Test_Bench_UART_tx_ascii <= "00000000000000000000000001000011"; -- ASCII 'C'
-        SIGNAL_Test_Bench_UART_tx_load  <= '1'; -- Trigger the load signal
+        SIGNAL_Test_Bench_UART_tx_ascii <= "01000011"; -- ASCII 'C'
+        SIGNAL_Test_Bench_UART_tx_load <= '1'; -- Trigger the load signal
         wait for 600*CLK_PERIOD;
-        SIGNAL_Test_Bench_UART_tx_load  <='0'; -- Deactivate load
+        SIGNAL_Test_Bench_UART_tx_load <= '0'; -- Deactivate load
         wait for 120 us; -- Wait for the data to transmit completely
 
         SIGNAL_Test_Bench_UART_tx_reset_n <= '0';

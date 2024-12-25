@@ -1,0 +1,142 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\simu\UART_YD
+Efdiv_yd
+Z1 w1735006705
+Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 8../../src/fdiv_YD.vhd
+Z5 F../../src/fdiv_YD.vhd
+l0
+L5
+VmSzJ=b94c0;_]ao:aZlh83
+Z6 OV;C;6.5b;42
+31
+Z7 o-93 -O0
+Z8 tExplicit 1
+!s100 Uo>Na@NmidTl4WjeVRMR<1
+Artl
+R2
+R3
+Z9 DEx4 work 7 fdiv_yd 0 22 mSzJ=b94c0;_]ao:aZlh83
+l20
+L14
+VjXo]X:UZJUmNS=A^`RW8I1
+R6
+31
+Z10 Mx2 4 ieee 14 std_logic_1164
+Z11 Mx1 4 ieee 11 numeric_std
+R7
+R8
+!s100 @8QiS8BLnZI=M6TbK@<zz2
+Etest_bench_de10_lite_uart_tx_yd_entity
+Z12 w1735084084
+R3
+Z13 8uart_rx_tb_YD.vhd
+Z14 Fuart_rx_tb_YD.vhd
+l0
+L4
+Vii]Ho0DCL3aQ=`@QLQ=OA1
+!s100 d8AoUfH15LZ]>5gdDWMz03
+R6
+31
+R7
+R8
+Abench
+Z15 DEx4 work 10 uart_rx_yd 0 22 f8DZ2J9Y^dOd2F@LcQk3L3
+Z16 DEx4 work 10 uart_tx_yd 0 22 <j]<@2NHQ?UeKa_=TRVlf3
+R2
+R9
+R3
+Z17 DEx4 work 38 test_bench_de10_lite_uart_tx_yd_entity 0 22 ii]Ho0DCL3aQ=`@QLQ=OA1
+l16
+L7
+VXEeQzl?46jdPY=1foUVB;0
+!s100 efIcB?;2C_G?m2ziQ[ZX?2
+R6
+31
+R10
+R11
+R7
+R8
+Euart_rx_tb_yd
+Z18 w1735083932
+R3
+R13
+R14
+l0
+L4
+VQ4[<7_kFIA0;YFbIJlT8L2
+R6
+31
+R7
+R8
+!s100 i]P;[XhTcT[OO=<N<TV3U1
+Abench
+R15
+R2
+R9
+R3
+DEx4 work 13 uart_rx_tb_yd 0 22 Q4[<7_kFIA0;YFbIJlT8L2
+l16
+L7
+VGXS:K9oYgL;ai1AIo3zef1
+R6
+31
+R10
+R11
+R7
+R8
+!s100 Rm2KW0f8]M3=6bROdLVX41
+Euart_rx_yd
+Z19 w1735004886
+R3
+Z20 8../../src/uart_rx_YD.vhd
+Z21 F../../src/uart_rx_YD.vhd
+l0
+L4
+Vf8DZ2J9Y^dOd2F@LcQk3L3
+R6
+31
+R7
+R8
+!s100 j4abh7U=EmD^aQ2UcIH1d0
+Artl
+R3
+R15
+l23
+L17
+VPISZ>1Zf?D@bHX;[Zi:@=3
+!s100 XK^TVA2ccckQI`C`NRfo[1
+R6
+31
+Z22 Mx1 4 ieee 14 std_logic_1164
+R7
+R8
+Euart_tx_yd
+Z23 w1735084328
+R3
+Z24 8../../src/uart_tx_YD.vhd
+Z25 F../../src/uart_tx_YD.vhd
+l0
+L4
+V<j]<@2NHQ?UeKa_=TRVlf3
+R6
+31
+R7
+R8
+!s100 AjXMP7[[6T<RnE;5o0nY90
+Artl
+R3
+R16
+l22
+L16
+VmC`@0FbGCC_dcVGi^oUUi1
+R6
+31
+R22
+R7
+R8
+!s100 UZMfK8FIh;;a:gJ?NKE4n2

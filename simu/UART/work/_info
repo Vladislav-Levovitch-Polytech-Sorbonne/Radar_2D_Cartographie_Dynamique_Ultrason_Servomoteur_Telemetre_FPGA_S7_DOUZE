@@ -4,35 +4,35 @@ K3
 cModel Technology
 Z0 dC:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\simu\UART
 Ede10_lite_uart_tx_yd
-Z1 w1735070279
+Z1 w1735093829
 Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
 Z4 8../../src/DE10_Lite_UART_tx_YD.vhd
 Z5 F../../src/DE10_Lite_UART_tx_YD.vhd
 l0
 L5
-VXD6e1cT5ae@XZ7N:G3kX`0
+VWcJa4dO?zE5=_?9lJ?:NS1
 Z6 OV;C;6.5b;42
 31
 Z7 o-93 -O0
 Z8 tExplicit 1
-!s100 ;C7>UGKn?l^ggoT7c:JkY1
+!s100 ]4AKB@41_5HIQV?5?zLkM2
 Abehavioral
 R2
 R3
-Z9 DEx4 work 20 de10_lite_uart_tx_yd 0 22 XD6e1cT5ae@XZ7N:G3kX`0
-l31
-L15
-V`ki5c@4:ZGY<J]QPCGdE82
-!s100 e4W:ICTOoAGW5=`_2U4?30
+Z9 DEx4 work 20 de10_lite_uart_tx_yd 0 22 WcJa4dO?zE5=_?9lJ?:NS1
+l36
+L18
+VZaC6cc@Z1GGe^ReRIXSIk3
 R6
 31
 Z10 Mx2 4 ieee 14 std_logic_1164
 Z11 Mx1 4 ieee 11 numeric_std
 R7
 R8
+!s100 kJnOIMY>KMe3?_TR3VeS72
 Etest_bench_de10_lite_uart_tx_yd_entity
-Z12 w1735071384
+Z12 w1735093047
 R3
 Z13 8DE10_Lite_UART_tx_TEST_BENCH.vhdl
 Z14 FDE10_Lite_UART_tx_TEST_BENCH.vhdl
@@ -51,8 +51,8 @@ R3
 Z15 DEx4 work 38 test_bench_de10_lite_uart_tx_yd_entity 0 22 _@=UN[_fYBWR8^h]h>cgR2
 l21
 L7
-VEUW>bm>S[HPH`mT=`KSXa3
-!s100 fHaDWmRYo62;`oVnaL]Pb3
+Z16 V=2he;]97V6BR1QjE;lNTn2
+Z17 !s100 OQM6PS@cV6`l9IPIhI<mn3
 R6
 31
 R10

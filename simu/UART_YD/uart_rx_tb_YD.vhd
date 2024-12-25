@@ -1,10 +1,10 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity UART_RX_tb_YD is
-end UART_RX_tb_YD;
+entity test_bench_DE10_Lite_UART_tx_YD_entity is
+end test_bench_DE10_Lite_UART_tx_YD_entity;
 
-architecture Bench of UART_RX_tb_YD is
+architecture Bench of test_bench_DE10_Lite_UART_tx_YD_entity is
     signal Clk         : std_logic := '0';
     signal Reset      : std_logic := '0';
     signal Go , DAV, Err        : std_logic := '0';
@@ -110,7 +110,7 @@ begin
     wait;
 end process;
 
-fdiv_tx: entity work.FDIV
+fdiv_tx: entity work.FDIV_YD
     port map (
         Clk       => Clk,
         Reset     => Reset,
