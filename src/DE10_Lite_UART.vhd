@@ -21,13 +21,14 @@ architecture Behavioral of DE10_Lite_UART is
 
     -- Etats des FSM = Machines a etats
     type StateType_TX is (Waiting_step, Wait_Release, Load_Reg, Start_Bit, Send_Bits, Stop_Bit);
-    type StateType_RX is (Waiting_Start_Bit, Load_Data, Check_Stop_Bit, Refresh_Data ); -- On pourrait mettre State_error si on commence la lecture ailleurs qu en attente de 0 ( si on lit un 0 alors qu on devait etre en 1 par exemple )
+    type StateType_RX is (Waiting_Start_Bit, Load_Data, Check_Stop_Bit, Refresh_Data ); -- On pourrait mettre State_error si on commence la lecture ailleurs qu en attente de 0 ( si on lit un 0 alors qu on devait etre en 1 par exemple ) ou encore si les transitions de l entree sont pas de periode T_Tick standard
     signal SIGNAL_Etape        : StateType_TX := Waiting_step;
     signal SIGNAL_Etape_Lecture: StateType_RX := Waiting_Start_Bit;
 
     -- Registre interne pour les donnees
     signal SIGNAL_Data_Reg     : std_logic_vector(9 downto 0) := (others => '0'); -- 1 bit start, 8 bits data, 1 bit stop
-    signal Bit_Index           : integer range 0 to 9 := 0; -- Index des bits en cours d envoi
+    signal SIGNAL_Bit_Index_Tx : integer range 0 to 9 := 0; -- Index des bits en cours d envoi
+    signal SIGNAL_Bit_Index_Rx : integer range 0 to 9 := 0; -- Index des bits en cours de lecture
     signal SIGNAL_Load_Save    : std_logic := '0';          -- Recopie de Load
 
     -- SIGNAL_Tick interne pour la gestion du timing
@@ -35,8 +36,11 @@ architecture Behavioral of DE10_Lite_UART is
     signal SIGNAL_Counter      : unsigned(13 downto 0) := (others => '0'); -- Compteur pour le diviseur
     signal SIGNAL_Tick         : std_logic := '0'; -- Signal Tick
 
-    -- Copie locale de la donnée
-    signal SIGNAL_Data    : std_logic_vector(7 downto 0) := (others => '0');
+    -- Copie locale de la donnee
+    signal SIGNAL_Data_Tx   : std_logic_vector(7 downto 0) := (others => '0');
+    -- Sauvegarde courrante de la donnee a charger en lecture
+    signal SIGNAL_Data_Rx   : std_logic_vector(7 downto 0) := (others => '0');
+
 begin
 
     -- Diviseur d horloge pour generer le signal Tick
@@ -60,10 +64,10 @@ begin
     process (Clk, Reset_n)
     begin
         if Reset_n = '0' then
-            SIGNAL_Data <= (others => '0');
+            SIGNAL_Data_Tx<= (others => '0');
         elsif rising_edge(Clk) then
             if Load(0) = '1' then
-                SIGNAL_Data <= Ascii(7 downto 0);
+                SIGNAL_Data_Tx<= Ascii(7 downto 0);
                 SIGNAL_Load_Save <= '1';
             else 
                 SIGNAL_Load_Save <= '0';
@@ -76,9 +80,12 @@ begin
     begin
         if Reset_n = '0' then
             SIGNAL_Etape <= Waiting_step;
+            SIGNAL_Etape_Lecture <= Waiting_Start_Bit;
             SIGNAL_Data_Reg <= (others => '0');
             Rx_Data <= (others => '0');
-            Bit_Index <= 0;
+            SIGNAL_Bit_Index_Tx <= 0;
+            SIGNAL_Bit_Index_Rx <= 0;
+            SIGNAL_Data_Rx <= (others => '0');
             Uart_Tx <= '1';
         elsif rising_edge(Clk) then
             if SIGNAL_Tick = '1' then
@@ -89,26 +96,28 @@ begin
                             if SIGNAL_Load_Save = '1' then
                                 SIGNAL_Etape <= Load_Reg;
                             end if;
+                            -- Reset de la lecture
+                            SIGNAL_Etape_Lecture <= Waiting_Start_Bit;
 
                         when Load_Reg =>
                             -- Charger les donnees et passer a l envoi
-                            SIGNAL_Data_Reg <= '1' & SIGNAL_Data & '0'; -- Ajout des bits start et stop
-                            Bit_Index <= 0;
+                            SIGNAL_Data_Reg <= '1' & SIGNAL_Data_Tx& '0'; -- Ajout des bits start et stop
+                            SIGNAL_Bit_Index_Tx <= 0;
                             SIGNAL_Etape <= Start_Bit;
 
                         when Start_Bit =>
                             -- Envoi du bit de start
-                            Uart_Tx <= SIGNAL_Data_Reg(Bit_Index);
-                            Bit_Index <= Bit_Index + 1;
+                            Uart_Tx <= SIGNAL_Data_Reg(SIGNAL_Bit_Index_Tx);
+                            SIGNAL_Bit_Index_Tx <= SIGNAL_Bit_Index_Tx + 1;
                             SIGNAL_Etape <= Send_Bits;
 
                         when Send_Bits =>
                             -- Envoi des bits data
-                            Uart_Tx <= SIGNAL_Data_Reg(Bit_Index);
-                            if Bit_Index = 8 then
+                            Uart_Tx <= SIGNAL_Data_Reg(SIGNAL_Bit_Index_Tx);
+                            if SIGNAL_Bit_Index_Tx = 8 then
                                 SIGNAL_Etape <= Stop_Bit;
                             else
-                                Bit_Index <= Bit_Index + 1;
+                                SIGNAL_Bit_Index_Tx <= SIGNAL_Bit_Index_Tx + 1;
                             end if;
 
                         when Stop_Bit =>
@@ -130,16 +139,30 @@ begin
                 else 
                     case SIGNAL_Etape_Lecture is
                         when Waiting_Start_Bit =>
-                        
-                            SIGNAL_Etape_Lecture <= Load_Data;
+                            -- Transition uniquement si le bit de start a ete detecte
+                            if Uart_Rx = '0' then
+                                SIGNAL_Etape_Lecture <= Load_Data;
+                                SIGNAL_Bit_Index_Rx <= 0;
+                            end if;
                         
                         when Load_Data =>
-                            SIGNAL_Etape_Lecture <= Check_Stop_Bit;
+                            -- Chargement des donnees
+                            if SIGNAL_Bit_Index_Rx = 8 then
+                                SIGNAL_Etape_Lecture <= Check_Stop_Bit;
+                            else
+                                SIGNAL_Data_Rx(SIGNAL_Bit_Index_Rx) <= Uart_Rx;
+                                SIGNAL_Bit_Index_Rx <= SIGNAL_Bit_Index_Rx + 1;
+                            end if;
                         
                         when Check_Stop_Bit =>
-                            SIGNAL_Etape_Lecture <= Refresh_Data;
-
-                        when Refresh_Data =>
+                            -- Transition uniquement si le bit de stop a ete detecte
+                            if Uart_Rx = '1' then
+                                SIGNAL_Etape_Lecture <= Refresh_Data;
+                                Rx_Data (7 downto 0) <= SIGNAL_Data_Rx; -- Copie uniquement si la trame est conforme, entier Start data Stop inclu
+                                SIGNAL_Data_Rx <= (others => '0'); -- Reset de la sauvegarde
+                            end if;
+                            
+                        when Refresh_Data => -- Tempo pas utile sauf si on veut ajouter un bit de parite ou autre bit de stop /!\ peut etre problematique si l on envoi directement la prochaine lecture
                             SIGNAL_Etape_Lecture <= Waiting_Start_Bit;
 
                         when others =>

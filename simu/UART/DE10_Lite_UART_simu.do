@@ -14,7 +14,8 @@ add wave /test_bench_DE10_Lite_UART_entity/dut/SIGNAL_Etape
 add wave *
 add wave /test_bench_de10_lite_uart_entity/dut/signal_data_reg
 add wave /test_bench_de10_lite_uart_entity/dut/signal_etape_lecture
+add wave /test_bench_de10_lite_uart_entity/dut/SIGNAL_Data_Rx
 
-run 800 us 
+run 900 us 
 #run -all 
 wave zoom full

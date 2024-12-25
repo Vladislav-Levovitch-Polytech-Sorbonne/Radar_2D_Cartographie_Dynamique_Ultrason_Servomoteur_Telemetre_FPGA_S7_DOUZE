@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dC:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\simu\UART
 Ede10_lite_uart
-Z1 w1735153545
+Z1 w1735161402
 Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
 Z4 8../../src/DE10_Lite_UART.vhd
@@ -21,10 +21,10 @@ Abehavioral
 R2
 R3
 Z9 DEx4 work 14 de10_lite_uart 0 22 l^dW<<cZcY^<A1W:ahSSD2
-l40
+l44
 L20
-Vm`c<7QNDggoVJ7bn8i;mk0
-!s100 LM@a0O8IQBW]C4:U`0W<<2
+V4`;N46f?@^knH`^Di0??J2
+!s100 V5d?CP`z3zI_8o^E6_h2_1
 R6
 31
 Z10 Mx2 4 ieee 14 std_logic_1164
@@ -60,7 +60,7 @@ R7
 R8
 !s100 e4W:ICTOoAGW5=`_2U4?30
 Etest_bench_de10_lite_uart_entity
-Z16 w1735154438
+Z16 w1735161675
 R3
 Z17 8DE10_Lite_UART_TEST_BENCH.vhdl
 Z18 FDE10_Lite_UART_TEST_BENCH.vhdl
@@ -79,8 +79,8 @@ R3
 Z19 DEx4 work 32 test_bench_de10_lite_uart_entity 0 22 2_j4z^MJ1G_d;>9g8mgE03
 l23
 L7
-VLM7eWkVL4^GIJTOhN]EnN1
-!s100 nASb1I25Z5^zRkF;cDNhg2
+VVcU4N36MkU?CHE0DDKDbN2
+!s100 4<2;H[Y@Z5YF>7OUnXi4^0
 R6
 31
 R10
