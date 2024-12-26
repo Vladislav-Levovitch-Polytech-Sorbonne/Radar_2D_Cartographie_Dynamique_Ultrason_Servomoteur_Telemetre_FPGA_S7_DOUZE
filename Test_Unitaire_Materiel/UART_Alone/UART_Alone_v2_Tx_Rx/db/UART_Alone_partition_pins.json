@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Rx_Data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_Data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_Data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_Data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_Data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_Data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_Data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx_Data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Uart_Tx",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				},
+				{
+					"name" : "Reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "Uart_Rx",
+					"strict" : false
+				},
+				{
+					"name" : "Load[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Ascii[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Ascii[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Ascii[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Ascii[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Ascii[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Ascii[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Ascii[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Ascii[6]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

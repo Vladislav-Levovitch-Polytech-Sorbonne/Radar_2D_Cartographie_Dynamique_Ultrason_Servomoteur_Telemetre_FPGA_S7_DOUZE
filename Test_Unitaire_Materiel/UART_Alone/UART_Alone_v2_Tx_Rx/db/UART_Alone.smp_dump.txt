@@ -1,0 +1,16 @@
+
+State Machine - |DE10_Lite_UART|SIGNAL_Etape_Lecture
+Name SIGNAL_Etape_Lecture.Refresh_Data SIGNAL_Etape_Lecture.Check_Stop_Bit SIGNAL_Etape_Lecture.Load_Data SIGNAL_Etape_Lecture.Waiting_Start_Bit 
+SIGNAL_Etape_Lecture.Waiting_Start_Bit 0 0 0 0 
+SIGNAL_Etape_Lecture.Load_Data 0 0 1 1 
+SIGNAL_Etape_Lecture.Check_Stop_Bit 0 1 0 1 
+SIGNAL_Etape_Lecture.Refresh_Data 1 0 0 1 
+
+State Machine - |DE10_Lite_UART|SIGNAL_Etape
+Name SIGNAL_Etape.Stop_Bit SIGNAL_Etape.Send_Bits SIGNAL_Etape.Start_Bit SIGNAL_Etape.Load_Reg SIGNAL_Etape.Wait_Release SIGNAL_Etape.Waiting_step 
+SIGNAL_Etape.Waiting_step 0 0 0 0 0 0 
+SIGNAL_Etape.Wait_Release 0 0 0 0 1 1 
+SIGNAL_Etape.Load_Reg 0 0 0 1 0 1 
+SIGNAL_Etape.Start_Bit 0 0 1 0 0 1 
+SIGNAL_Etape.Send_Bits 0 1 0 0 0 1 
+SIGNAL_Etape.Stop_Bit 1 0 0 0 0 1 
