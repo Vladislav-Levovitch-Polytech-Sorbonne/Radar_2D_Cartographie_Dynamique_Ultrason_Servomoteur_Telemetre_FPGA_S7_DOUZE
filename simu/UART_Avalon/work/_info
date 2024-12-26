@@ -1,0 +1,61 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\vladi\Desktop\Elec\Architecture_SE\Radar_2D_Vlad\simu\UART_Avalon
+Ede10_lite_uart_avalon
+Z1 w1735213295
+Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 8../../src/DE10_Lite_UART_Avalon.vhd
+Z5 F../../src/DE10_Lite_UART_Avalon.vhd
+l0
+L5
+VGLfobdZB<5XdXLE6k[VJ?2
+Z6 OV;C;6.5b;42
+31
+Z7 o-93 -O0
+Z8 tExplicit 1
+!s100 1YoUHn`ziPW>`OeB<oQTn2
+Abehavioral
+R2
+R3
+Z9 DEx4 work 21 de10_lite_uart_avalon 0 22 GLfobdZB<5XdXLE6k[VJ?2
+l47
+L22
+VH>H<z^:VE^[=U>=aV0F_81
+!s100 naBW^:K@K;5f1V^kA^ASX1
+R6
+31
+Z10 Mx2 4 ieee 14 std_logic_1164
+Z11 Mx1 4 ieee 11 numeric_std
+R7
+R8
+Etest_bench_de10_lite_uart_avalon_entity
+Z12 w1735215422
+R3
+Z13 8DE10_Lite_UART_Avalon_TEST_BENCH.vhdl
+Z14 FDE10_Lite_UART_Avalon_TEST_BENCH.vhdl
+l0
+L4
+VUj;`hE51i[CJW0MB?2HDz0
+!s100 fU0bz@1YC[5PEh3L5ODa_3
+R6
+31
+R7
+R8
+Abehavioral
+R2
+R9
+R3
+Z15 DEx4 work 39 test_bench_de10_lite_uart_avalon_entity 0 22 Uj;`hE51i[CJW0MB?2HDz0
+l27
+L7
+VSoc0joo1aOTE^^<;90OiV0
+!s100 Te=i:SZaGYf@THd:oM;GQ1
+R6
+31
+R10
+R11
+R7
+R8
