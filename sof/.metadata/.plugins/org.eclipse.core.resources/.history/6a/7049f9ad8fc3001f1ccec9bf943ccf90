@@ -1,0 +1,33 @@
+/*
+ * Vlad 2024.12.26
+ *
+ */
+
+#include <stdio.h>
+
+
+void send_uart_data(char data) {
+    // Écrire dans le registre de l'adresse (offset 0)
+    IOWR(AVALON_UART_0_BASE, 0, 1);  // Par exemple, '1' pour signaler que l'on écrit des données
+
+    // Écrire la donnée ASCII (offset 1)
+    IOWR(AVALON_UART_0_BASE, 1, data);
+
+    // Charger/activer le registre 'Load' si nécessaire (par exemple offset 2)
+    IOWR(AVALON_UART_0_BASE, 2, 1);  // Signal d'envoi (peut dépendre de votre conception)
+}
+
+
+int main()
+{
+  printf("Hello from Nios II!\n");
+
+  while (1)
+  {
+
+	  IOWR(AVALON_UART_0_BASE, offset, value);
+
+	  int value = IORD(AVALON_UART_0_BASE, offset);
+  }
+  return 0;
+}

@@ -11,6 +11,8 @@ module Computer_System (
 		output wire        avalon_telemetre_output_trig,             //   avalon_telemetre_output.trig
 		input  wire        avalon_telemetre_output_echo,             //                          .echo
 		output wire [9:0]  avalon_telemetre_output_dist_cm,          //                          .dist_cm
+		input  wire        avalon_uart_output_uart_rx,               //        avalon_uart_output.uart_rx
+		output wire        avalon_uart_output_uart_tx,               //                          .uart_tx
 		output wire [31:0] hex3_hex0_export,                         //                 hex3_hex0.export
 		output wire [15:0] hex5_hex4_export,                         //                 hex5_hex4.export
 		output wire [9:0]  leds_export,                              //                      leds.export
@@ -40,7 +42,7 @@ module Computer_System (
 		input  wire        video_pll_ref_reset_reset                 //       video_pll_ref_reset.reset
 	);
 
-	wire         system_pll_sys_clk_clk;                                                   // System_PLL:sys_clk_clk -> [Arduino_GPIO:clk, Arduino_Reset_N:clk, HEX3_HEX0:clk, HEX5_HEX4:clk, Interval_Timer:clk, Interval_Timer_2:clk, JTAG_UART:clk, JTAG_to_FPGA_Bridge:clk_clk, LEDs:clk, Nios2:clk, Onchip_SRAM:clk, Pushbuttons:clk, SDRAM:clk, Slider_Switches:clk, SysID:clock, VGA_Subsystem:sys_clk_clk, avalon_neopixel:clk, avalon_servomoteur:clk, avalon_telemetre:clk, irq_mapper:clk, mm_interconnect_0:System_PLL_sys_clk_clk, rst_controller:clk, rst_controller_001:clk]
+	wire         system_pll_sys_clk_clk;                                                   // System_PLL:sys_clk_clk -> [Arduino_GPIO:clk, Arduino_Reset_N:clk, HEX3_HEX0:clk, HEX5_HEX4:clk, Interval_Timer:clk, Interval_Timer_2:clk, JTAG_UART:clk, JTAG_to_FPGA_Bridge:clk_clk, LEDs:clk, Nios2:clk, Onchip_SRAM:clk, Pushbuttons:clk, SDRAM:clk, Slider_Switches:clk, SysID:clock, VGA_Subsystem:sys_clk_clk, avalon_UART_0:Clk, avalon_neopixel:clk, avalon_servomoteur:clk, avalon_telemetre:clk, irq_mapper:clk, mm_interconnect_0:System_PLL_sys_clk_clk, rst_controller:clk, rst_controller_001:clk]
 	wire         video_pll_vga_clk_clk;                                                    // Video_PLL:vga_clk_clk -> VGA_Subsystem:vga_clk_clk
 	wire         system_pll_reset_source_reset;                                            // System_PLL:reset_source_reset -> [JTAG_to_FPGA_Bridge:clk_reset_reset, VGA_Subsystem:sys_reset_reset_n, rst_controller:reset_in0, rst_controller_001:reset_in1]
 	wire         video_pll_reset_source_reset;                                             // Video_PLL:reset_source_reset -> VGA_Subsystem:vga_reset_reset_n
@@ -147,6 +149,11 @@ module Computer_System (
 	wire         mm_interconnect_0_avalon_neopixel_avalon_slave_0_chipselect;              // mm_interconnect_0:avalon_neopixel_avalon_slave_0_chipselect -> avalon_neopixel:chipselect
 	wire         mm_interconnect_0_avalon_neopixel_avalon_slave_0_write;                   // mm_interconnect_0:avalon_neopixel_avalon_slave_0_write -> avalon_neopixel:write_n
 	wire  [31:0] mm_interconnect_0_avalon_neopixel_avalon_slave_0_writedata;               // mm_interconnect_0:avalon_neopixel_avalon_slave_0_writedata -> avalon_neopixel:WriteData
+	wire  [31:0] mm_interconnect_0_avalon_uart_0_avalon_slave_0_readdata;                  // avalon_UART_0:ReadData -> mm_interconnect_0:avalon_UART_0_avalon_slave_0_readdata
+	wire   [1:0] mm_interconnect_0_avalon_uart_0_avalon_slave_0_address;                   // mm_interconnect_0:avalon_UART_0_avalon_slave_0_address -> avalon_UART_0:Address
+	wire         mm_interconnect_0_avalon_uart_0_avalon_slave_0_read;                      // mm_interconnect_0:avalon_UART_0_avalon_slave_0_read -> avalon_UART_0:Read_n
+	wire         mm_interconnect_0_avalon_uart_0_avalon_slave_0_write;                     // mm_interconnect_0:avalon_UART_0_avalon_slave_0_write -> avalon_UART_0:Write_n
+	wire  [31:0] mm_interconnect_0_avalon_uart_0_avalon_slave_0_writedata;                 // mm_interconnect_0:avalon_UART_0_avalon_slave_0_writedata -> avalon_UART_0:WriteData
 	wire  [31:0] mm_interconnect_0_vga_subsystem_char_buffer_control_slave_readdata;       // VGA_Subsystem:char_buffer_control_slave_readdata -> mm_interconnect_0:VGA_Subsystem_char_buffer_control_slave_readdata
 	wire   [1:0] mm_interconnect_0_vga_subsystem_char_buffer_control_slave_address;        // mm_interconnect_0:VGA_Subsystem_char_buffer_control_slave_address -> VGA_Subsystem:char_buffer_control_slave_address
 	wire         mm_interconnect_0_vga_subsystem_char_buffer_control_slave_read;           // mm_interconnect_0:VGA_Subsystem_char_buffer_control_slave_read -> VGA_Subsystem:char_buffer_control_slave_read
@@ -249,7 +256,7 @@ module Computer_System (
 	wire         irq_mapper_receiver3_irq;                                                 // Interval_Timer:irq -> irq_mapper:receiver3_irq
 	wire         irq_mapper_receiver4_irq;                                                 // Interval_Timer_2:irq -> irq_mapper:receiver4_irq
 	wire  [31:0] nios2_irq_irq;                                                            // irq_mapper:sender_irq -> Nios2:irq
-	wire         rst_controller_reset_out_reset;                                           // rst_controller:reset_out -> [Arduino_GPIO:reset_n, Arduino_Reset_N:reset_n, HEX3_HEX0:reset_n, HEX5_HEX4:reset_n, Interval_Timer:reset_n, Interval_Timer_2:reset_n, JTAG_UART:rst_n, LEDs:reset_n, Onchip_SRAM:reset, Pushbuttons:reset_n, SDRAM:reset_n, Slider_Switches:reset_n, SysID:reset_n, avalon_neopixel:reset_n, avalon_servomoteur:reset_n, avalon_telemetre:Rst_n, mm_interconnect_0:JTAG_UART_reset_reset_bridge_in_reset_reset, mm_interconnect_0:JTAG_to_FPGA_Bridge_clk_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                                           // rst_controller:reset_out -> [Arduino_GPIO:reset_n, Arduino_Reset_N:reset_n, HEX3_HEX0:reset_n, HEX5_HEX4:reset_n, Interval_Timer:reset_n, Interval_Timer_2:reset_n, JTAG_UART:rst_n, LEDs:reset_n, Onchip_SRAM:reset, Pushbuttons:reset_n, SDRAM:reset_n, Slider_Switches:reset_n, SysID:reset_n, avalon_UART_0:Reset_n, avalon_neopixel:reset_n, avalon_servomoteur:reset_n, avalon_telemetre:Rst_n, mm_interconnect_0:JTAG_UART_reset_reset_bridge_in_reset_reset, mm_interconnect_0:JTAG_to_FPGA_Bridge_clk_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
 	wire         rst_controller_reset_out_reset_req;                                       // rst_controller:reset_req -> [Onchip_SRAM:reset_req, rst_translator:reset_req_in]
 	wire         rst_controller_001_reset_out_reset;                                       // rst_controller_001:reset_out -> [Nios2:reset_n, irq_mapper:reset, mm_interconnect_0:Nios2_reset_reset_bridge_in_reset_reset]
 	wire         nios2_debug_reset_request_reset;                                          // Nios2:debug_reset_request -> rst_controller_001:reset_in0
@@ -550,6 +557,18 @@ module Computer_System (
 		.reset_source_reset (video_pll_reset_source_reset)  // reset_source.reset
 	);
 
+	DE10_Lite_UART_Avalon avalon_uart_0 (
+		.Clk       (system_pll_sys_clk_clk),                                   //          clock.clk
+		.Reset_n   (~rst_controller_reset_out_reset),                          //          reset.reset_n
+		.Address   (mm_interconnect_0_avalon_uart_0_avalon_slave_0_address),   // avalon_slave_0.address
+		.Read_n    (~mm_interconnect_0_avalon_uart_0_avalon_slave_0_read),     //               .read_n
+		.WriteData (mm_interconnect_0_avalon_uart_0_avalon_slave_0_writedata), //               .writedata
+		.Write_n   (~mm_interconnect_0_avalon_uart_0_avalon_slave_0_write),    //               .write_n
+		.ReadData  (mm_interconnect_0_avalon_uart_0_avalon_slave_0_readdata),  //               .readdata
+		.Uart_Rx   (avalon_uart_output_uart_rx),                               //   UART_conduit.uart_rx
+		.Uart_Tx   (avalon_uart_output_uart_tx)                                //               .uart_tx
+	);
+
 	DE10_Lite_Neopixel_Avalon avalon_neopixel (
 		.clk        (system_pll_sys_clk_clk),                                      //          clock.clk
 		.reset_n    (~rst_controller_reset_out_reset),                             //          reset.reset_n
@@ -772,6 +791,11 @@ module Computer_System (
 		.avalon_telemetre_avalon_slave_0_read                      (mm_interconnect_0_avalon_telemetre_avalon_slave_0_read),               //                     avalon_telemetre_avalon_slave_0.read
 		.avalon_telemetre_avalon_slave_0_readdata                  (mm_interconnect_0_avalon_telemetre_avalon_slave_0_readdata),           //                                                    .readdata
 		.avalon_telemetre_avalon_slave_0_chipselect                (mm_interconnect_0_avalon_telemetre_avalon_slave_0_chipselect),         //                                                    .chipselect
+		.avalon_UART_0_avalon_slave_0_address                      (mm_interconnect_0_avalon_uart_0_avalon_slave_0_address),               //                        avalon_UART_0_avalon_slave_0.address
+		.avalon_UART_0_avalon_slave_0_write                        (mm_interconnect_0_avalon_uart_0_avalon_slave_0_write),                 //                                                    .write
+		.avalon_UART_0_avalon_slave_0_read                         (mm_interconnect_0_avalon_uart_0_avalon_slave_0_read),                  //                                                    .read
+		.avalon_UART_0_avalon_slave_0_readdata                     (mm_interconnect_0_avalon_uart_0_avalon_slave_0_readdata),              //                                                    .readdata
+		.avalon_UART_0_avalon_slave_0_writedata                    (mm_interconnect_0_avalon_uart_0_avalon_slave_0_writedata),             //                                                    .writedata
 		.HEX3_HEX0_s1_address                                      (mm_interconnect_0_hex3_hex0_s1_address),                               //                                        HEX3_HEX0_s1.address
 		.HEX3_HEX0_s1_write                                        (mm_interconnect_0_hex3_hex0_s1_write),                                 //                                                    .write
 		.HEX3_HEX0_s1_readdata                                     (mm_interconnect_0_hex3_hex0_s1_readdata),                              //                                                    .readdata

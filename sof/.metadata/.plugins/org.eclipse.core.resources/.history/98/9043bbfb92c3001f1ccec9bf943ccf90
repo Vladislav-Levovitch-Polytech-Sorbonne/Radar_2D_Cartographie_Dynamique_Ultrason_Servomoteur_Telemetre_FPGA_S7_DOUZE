@@ -1,0 +1,49 @@
+/*
+ * Vlad 2024.12.26
+ *
+ */
+
+#include <stdio.h>
+
+#include "unistd.h" // Pour usleep
+
+/*
+void send_uart_data(char data) {
+    // Écrire dans le registre de l'adresse (offset 0)
+    IOWR(AVALON_UART_0_BASE, 0, 1);  // Par exemple, '1' pour signaler que l'on écrit des données
+
+    // Écrire la donnée ASCII (offset 1)
+    IOWR(AVALON_UART_0_BASE, 1, data);
+
+    // Charger/activer le registre 'Load' si nécessaire (par exemple offset 2)
+    IOWR(AVALON_UART_0_BASE, 2, 1);  // Signal d'envoi (peut dépendre de votre conception)
+}
+
+void send_uart_string(const char* str) {
+    while (*str) {
+        send_uart_data(*str); // Envoyer chaque caractère
+        str++;                // Passer au suivant
+    }
+}*/
+
+uint8_t read_uart_data() {
+    // Lire les données UART (offset 0x8)
+    uint32_t read_value = IORD_32DIRECT(UART_BASE, 0x8);
+    return (uint8_t)(read_value & 0xFF); // Extraire les 8 bits de poids faible
+}
+
+    //send_uart_string("DE10 Lite Vlad TEST");
+int main()
+{
+  printf("DE10 Lite TEST\n");
+
+  while (1)
+  {
+
+	  IOWR(AVALON_UART_0_BASE, offset, value);
+	  printf("Test %d\n",  read_uart_data());
+
+	  usleep(1000000); // Delay 1 seconde
+  }
+  return 0;
+}

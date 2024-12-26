@@ -456,6 +456,7 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
 set_global_assignment -name BOARD "MAX 10 DE10 - Lite"
+set_global_assignment -name VHDL_FILE ../src/DE10_Lite_UART_Avalon.vhd
 set_global_assignment -name VHDL_FILE ../src/DE10_Lite_Neopixel_Avalon.vhd
 set_global_assignment -name VHDL_FILE ../src/DE10_Lite_Servomoteur_Avalon.vhd
 set_global_assignment -name QSYS_FILE Computer_System.qsys

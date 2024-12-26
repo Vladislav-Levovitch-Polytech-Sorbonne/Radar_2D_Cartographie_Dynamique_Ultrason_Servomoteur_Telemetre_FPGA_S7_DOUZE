@@ -103,10 +103,12 @@ architecture Behavioral of DE10_Lite_Computer is
             vga_B                        : out   std_logic_vector(3 downto 0);                     -- B
             video_pll_ref_clk_clk        : in    std_logic                     := 'X';             -- clk
             video_pll_ref_reset_reset    : in    std_logic                     := 'X';             -- reset
-				avalon_neopixel_output_commande_neopixel 	: out   std_logic;                                        -- commande_neopixel
+				avalon_neopixel_output_commande_neopixel 	: out   std_logic;                           -- commande_neopixel
+				avalon_uart_output_uart_rx                : in    std_logic        := 'X';             -- uart_rx
+            avalon_uart_output_uart_tx                : out   std_logic;                           -- uart_tx
 				avalon_servomoteur_output_commande 			: out   std_logic; 
-				avalon_telemetre_output_trig 		  			: out   std_logic;   													-- writeresponsevalid_n
-            avalon_telemetre_output_echo 					: in    std_logic    	 := 'X';               						-- beginbursttransfer
+				avalon_telemetre_output_trig 		  			: out   std_logic;   								-- writeresponsevalid_n
+            avalon_telemetre_output_echo 					: in    std_logic    	 := 'X';             -- beginbursttransfer
 				avalon_telemetre_output_dist_cm    			: out   std_logic_vector(9 downto 0) 
 		 );
 		  
@@ -172,6 +174,11 @@ begin
 				
 				-- Neopixel
 				avalon_neopixel_output_commande_neopixel	=> GPIO(2),
+				
+				-- UART
+				avalon_uart_output_uart_rx => GPIO(4), -- UART_Rx
+				avalon_uart_output_uart_tx	=> GPIO(5), -- UART_Tx
+				
 				
             -- SDRAM
             sdram_clk_clk             => DRAM_CLK,

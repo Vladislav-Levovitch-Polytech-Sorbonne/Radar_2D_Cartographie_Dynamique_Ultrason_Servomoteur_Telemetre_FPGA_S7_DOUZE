@@ -6,6 +6,8 @@
 		.avalon_telemetre_output_trig             (<connected-to-avalon_telemetre_output_trig>),             //   avalon_telemetre_output.trig
 		.avalon_telemetre_output_echo             (<connected-to-avalon_telemetre_output_echo>),             //                          .echo
 		.avalon_telemetre_output_dist_cm          (<connected-to-avalon_telemetre_output_dist_cm>),          //                          .dist_cm
+		.avalon_uart_output_uart_rx               (<connected-to-avalon_uart_output_uart_rx>),               //        avalon_uart_output.uart_rx
+		.avalon_uart_output_uart_tx               (<connected-to-avalon_uart_output_uart_tx>),               //                          .uart_tx
 		.hex3_hex0_export                         (<connected-to-hex3_hex0_export>),                         //                 hex3_hex0.export
 		.hex5_hex4_export                         (<connected-to-hex5_hex4_export>),                         //                 hex5_hex4.export
 		.leds_export                              (<connected-to-leds_export>),                              //                      leds.export

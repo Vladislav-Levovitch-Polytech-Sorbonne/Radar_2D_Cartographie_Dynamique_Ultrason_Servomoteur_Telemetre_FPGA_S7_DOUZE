@@ -1,0 +1,54 @@
+/*
+ * Vlad 2024.12.26
+ *
+ */
+
+#include <stdio.h>
+
+#include "system.h"
+#include "io.h"
+#include "unistd.h" // Pour usleep
+
+#include <io.h>      // Pour utiliser IOWR_32DIRECT
+#include <system.h>  // Définition des adresses de base et des offsets
+
+#define UART_BASE 0x4000000  // Adresse de base de ton UART
+
+void send_ascii(int ascii_char) {
+    // Charger le signal "Load" (offset 0x0)
+    IOWR_32DIRECT(UART_BASE, 0x0, 1);  // Met Load à 1 pour commencer la transmission
+
+    // Charger la donnée ASCII (offset 0x4)
+    IOWR_32DIRECT(UART_BASE, 0x4, ascii_char);  // Envoie le caractère ASCII à transmettre
+
+    // Libérer le signal "Load" (offset 0x0)
+    IOWR_32DIRECT(UART_BASE, 0x0, 0);  // Remet Load à 0 pour signaler la fin de l'écriture
+}
+
+int main() {
+    // Une boucle infinie pour envoyer des caractères ASCII en boucle
+    while (1) {
+        send_ascii('V');  // Envoie le caractère 'A'
+        for (volatile int i = 0; i < 2000; i++);  // Délai pour éviter un envoi trop rapide
+        send_ascii('L');  // Envoie le caractère 'B'
+        for (volatile int i = 0; i < 2000; i++);  // Délai pour éviter un envoi trop rapide
+        send_ascii('A');  // Envoie le caractère 'C'
+        for (volatile int i = 0; i < 2000; i++);  // Délai pour éviter un envoi trop rapide
+        send_ascii('D');  // Envoie le caractère 'A'
+		for (volatile int i = 0; i < 2000; i++);  // Délai pour éviter un envoi trop rapide
+		send_ascii('I');  // Envoie le caractère 'B'
+		for (volatile int i = 0; i < 2000; i++);  // Délai pour éviter un envoi trop rapide
+		send_ascii('S');  // Envoie le caractère 'C'
+		for (volatile int i = 0; i < 2000; i++);  // Délai pour éviter un envoi trop rapide
+
+		send_ascii('l');  // Envoie le caractère 'A'
+		for (volatile int i = 0; i < 2000; i++);  // Délai pour éviter un envoi trop rapide
+		send_ascii('a');  // Envoie le caractère 'B'
+		for (volatile int i = 0; i < 2000; i++);  // Délai pour éviter un envoi trop rapide
+		send_ascii('v');  // Envoie le caractère 'C'
+		for (volatile int i = 0; i < 2000; i++);  // Délai pour éviter un envoi trop rapide
+
+    }
+    return 0;
+}
+

@@ -1,0 +1,60 @@
+/*
+ * Vlad 2024.12.26
+ *
+ */
+
+#include <stdio.h>
+
+#include "system.h"
+#include "io.h"
+#include "unistd.h" // Pour usleep
+
+#include <io.h>      // Pour utiliser IOWR_32DIRECT
+#include <system.h>  // Définition des adresses de base et des offsets
+
+#define UART_BASE 0x4000000  // Adresse de base de ton UART
+
+void send_ascii(int ascii_char)
+{
+    // Charger la donnée ASCII (offset 0x4)
+    IOWR_32DIRECT(UART_BASE, 0x4, ascii_char);  // Envoie le caractère ASCII à transmettre
+
+    // Charger le signal "Load" (offset 0x0)
+    IOWR_32DIRECT(UART_BASE, 0x0, 1);  // Met Load à 1 pour commencer la transmission
+    usleep(1000);  // Petit délai pour éviter les collisions
+
+    // Libérer le signal "Load" (offset 0x0)
+    IOWR_32DIRECT(UART_BASE, 0x0, 0);  // Remet Load à 0 pour signaler la fin de l'écriture
+}
+
+void send_word_with_count(const char *word, int count)
+{
+    // Créer un tampon pour construire le mot + compteur
+    char buffer[100];  // Tampon suffisant pour contenir le mot + le compteur
+    snprintf(buffer, sizeof(buffer), "%s %d", word, count);  // Construire la chaîne avec le mot et le compteur
+
+    // Envoie chaque caractère du mot (y compris le compteur)
+    for (int i = 0; buffer[i] != '\0'; i++) {
+        send_ascii(buffer[i]);  // Envoie chaque caractère
+        usleep(1000);  // Délai entre les caractères
+    }
+
+    // Envoie le retour à la ligne (code ASCII 0x0D)
+    send_ascii(0x0D);
+}
+
+int main()
+{
+    const char *word = "Vladislav";  // Mot à envoyer
+    int count = 1;  // Initialisation du compteur
+
+    // Boucle infinie pour envoyer plusieurs fois le mot avec le compteur
+    while (1) {
+        send_word_with_count(word, count);  // Envoie le mot + compteur
+        count++;  // Incrémente le compteur
+        usleep(1000000);  // Délai d'une seconde avant de renvoyer le mot
+    }
+
+    return 0;
+}
+

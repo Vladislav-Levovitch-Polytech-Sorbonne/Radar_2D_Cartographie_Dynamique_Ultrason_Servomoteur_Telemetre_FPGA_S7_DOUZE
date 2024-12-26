@@ -7,6 +7,8 @@
 			avalon_telemetre_output_trig             : out   std_logic;                                        -- trig
 			avalon_telemetre_output_echo             : in    std_logic                     := 'X';             -- echo
 			avalon_telemetre_output_dist_cm          : out   std_logic_vector(9 downto 0);                     -- dist_cm
+			avalon_uart_output_uart_rx               : in    std_logic                     := 'X';             -- uart_rx
+			avalon_uart_output_uart_tx               : out   std_logic;                                        -- uart_tx
 			hex3_hex0_export                         : out   std_logic_vector(31 downto 0);                    -- export
 			hex5_hex4_export                         : out   std_logic_vector(15 downto 0);                    -- export
 			leds_export                              : out   std_logic_vector(9 downto 0);                     -- export
@@ -46,6 +48,8 @@
 			avalon_telemetre_output_trig             => CONNECTED_TO_avalon_telemetre_output_trig,             --   avalon_telemetre_output.trig
 			avalon_telemetre_output_echo             => CONNECTED_TO_avalon_telemetre_output_echo,             --                          .echo
 			avalon_telemetre_output_dist_cm          => CONNECTED_TO_avalon_telemetre_output_dist_cm,          --                          .dist_cm
+			avalon_uart_output_uart_rx               => CONNECTED_TO_avalon_uart_output_uart_rx,               --        avalon_uart_output.uart_rx
+			avalon_uart_output_uart_tx               => CONNECTED_TO_avalon_uart_output_uart_tx,               --                          .uart_tx
 			hex3_hex0_export                         => CONNECTED_TO_hex3_hex0_export,                         --                 hex3_hex0.export
 			hex5_hex4_export                         => CONNECTED_TO_hex5_hex4_export,                         --                 hex5_hex4.export
 			leds_export                              => CONNECTED_TO_leds_export,                              --                      leds.export

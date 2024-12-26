@@ -1,0 +1,19 @@
+/*
+ * Vlad 2024.12.26
+ *
+ */
+
+#include <stdio.h>
+
+int main()
+{
+  printf("Hello from Nios II!\n");
+
+  while (1)
+  {
+
+	  IOWR(AVALON_UART_0_BASE, offset, value);
+
+  }
+  return 0;
+}

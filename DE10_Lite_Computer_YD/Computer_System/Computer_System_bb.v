@@ -7,6 +7,8 @@ module Computer_System (
 	avalon_telemetre_output_trig,
 	avalon_telemetre_output_echo,
 	avalon_telemetre_output_dist_cm,
+	avalon_uart_output_uart_rx,
+	avalon_uart_output_uart_tx,
 	hex3_hex0_export,
 	hex5_hex4_export,
 	leds_export,
@@ -42,6 +44,8 @@ module Computer_System (
 	output		avalon_telemetre_output_trig;
 	input		avalon_telemetre_output_echo;
 	output	[9:0]	avalon_telemetre_output_dist_cm;
+	input		avalon_uart_output_uart_rx;
+	output		avalon_uart_output_uart_tx;
 	output	[31:0]	hex3_hex0_export;
 	output	[15:0]	hex5_hex4_export;
 	output	[9:0]	leds_export;
