@@ -169,10 +169,10 @@ void send_ascii(int ascii_char)
     IOWR_ALTERA_AVALON_UART_Load(0);
 }
 
-void send_word_with_count(const char *word, int angle)
+void envoi_terminal_externe(const char *word, int angle, int distance)
 {
     char buffer[100];
-    snprintf(buffer, sizeof(buffer), "%s %d*   [%d ; %d]  Vitesse: %d", word, angle, angle_min, angle_max, vitesse); //GPT -ed
+    snprintf(buffer, sizeof(buffer), "%s Angle=%d deg [%d ; %d]  +  Speed_mod=%d  +  Dist_moy=%d cm", word, angle, angle_min, angle_max, vitesse, distance); //GPT -ed
 
     for (int i = 0; buffer[i] != '\0'; i++)
     {
@@ -189,7 +189,7 @@ int RD_Ascii()
     return IOWR_ALTERA_AVALON_UART_Rx_ASCii();
 }
 
-void Maj_Affichage()
+void Maj_donnees_UART()
 {
     int received_char = RD_Ascii();		// Lecture instruction a la volee
 
@@ -233,20 +233,99 @@ void Maj_Affichage()
 
 int main()
 {
-    const char *word = "Radar_Vladislav";
+	// Pause de demarrage
+	IOWR_ALTERA_AVALON_NEOPIXEL(degres);
+	IOWR_ALTERA_AVALON_SERVOMOTEUR(degres);
+	usleep(1800000);
+	unsigned int distance = 0;                    // Distance brute mesuree
+	unsigned int moyenne_distance = 0;            // Moyenne des distances
+	unsigned int Buffer_6_HEX[6] = {0};           // Buffer pour l affichage
+	unsigned int somme_distance = 0;              // Somme des distances valides
+	unsigned int nb_valeurs_valides = 0;          // Nombre de valeurs valides
+	unsigned int nb_valeurs_aberrantes = 0;       // Compteur de valeurs aberrantes
+
+	// Initialisation de l affichage
+	init_affichage();
+
+    const char *word = "Radar_Vlad";
 
     while (1)
     {
-        Maj_Affichage();
-        send_word_with_count(word, angle);
+    	// Reset pour les calculs de ditstance
+    	somme_distance = 0;
+	    nb_valeurs_valides = 0;
+	    nb_valeurs_aberrantes = 0;
+
+	    // Lecture des distances
+	    for (int i = 0; i < NB_PRELEVEMENTS; i++)
+	    {
+		    distance = IORD_ALTERA_AVALON_TELEMETRE();
+		    if (distance > SEUIL_ABERRANT)
+		    {
+			    nb_valeurs_aberrantes++;
+		    }
+		    else
+		    {
+			    somme_distance += distance;
+			    nb_valeurs_valides++;
+		    }
+		    usleep(1000);
+	    }
+
+	    // Calcul de la distance moyenne
+	    if (nb_valeurs_aberrantes > NB_PRELEVEMENTS / 5 || nb_valeurs_valides == 0)
+	    {
+		    moyenne_distance = 0;
+	    }
+	    else
+	    {
+		    moyenne_distance = somme_distance /  nb_valeurs_valides;
+	    }
+
+	    // Mise a jour de l affichage
+	    for (int i = 0; i < 3; i++)
+	    {
+	  	    Buffer_6_HEX[5 - i] = table_sept_seg[(moyenne_distance / puissance_10[i]) % 10];
+	    }
+
+	 // MAJ donnees
+	    // MAJ UART
+        Maj_donnees_UART();
+        envoi_terminal_externe(word, angle, moyenne_distance);
+
+        float progression = 0;
+        if (angle_max != angle_min) {
+            progression = ((float)(angle - angle_min) / (angle_max - angle_min)) * 100; // Calcul de la progression en pourcentage
+        }
+        else {
+            progression = 0; // Eviter la division par zero
+        }
+
+        printf("Valeur Angulaire = %d.0° --> [ %d ; %d ] \t Progression = %.1f%%  Nb_NeoPixel_Led = %d \tDistance Moyenne Telemetre = %d\n", angle, angle_min,angle_max, progression, (int)(progression / 100 * 12), moyenne_distance);
+
+        IOWR_ALTERA_AVALON_SERVOMOTEUR(degres * 10);
+        IOWR_ALTERA_AVALON_NEOPIXEL((int)(progression / 100 * 12)); // Assurez-vous que la valeur ne dépasse pas 12
         usleep(10000 + (40000 * (10-vitesse)));
         if (angle < angle_max && angle >= angle_min)
             {
                 angle ++;
+                // MAJ Afficheur 7 seg
+				Buffer_6_HEX[2] = 0x63; // Caractere "°" pour l affichage
+				Buffer_6_HEX[1] = table_sept_seg[(angle / puissance_10[0]) % 10];
+				Buffer_6_HEX[0] = table_sept_seg[(angle / puissance_10[1]) % 10];
+				update_display (Buffer_6_HEX);
             }
         else
             {
+        		// Elements manuels
                 angle = angle_min;
+                IOWR_ALTERA_AVALON_SERVOMOTEUR(angle*10); // Retour angle init
+				IOWR_ALTERA_AVALON_NEOPIXEL(12); // 100% Retour depot
+				printf("Valeur Angulaire = %d.%d°\tTranche de Progression = %.1f%%  \tDistance Moyenne Telemetre = %d\n", degres/10,degres%10, 100.0, moyenne_distance);
+				usleep(140000);
+				degres = 0;
+				IOWR_ALTERA_AVALON_NEOPIXEL(0);
+				usleep(220000);
             }
     }
     return 0;
