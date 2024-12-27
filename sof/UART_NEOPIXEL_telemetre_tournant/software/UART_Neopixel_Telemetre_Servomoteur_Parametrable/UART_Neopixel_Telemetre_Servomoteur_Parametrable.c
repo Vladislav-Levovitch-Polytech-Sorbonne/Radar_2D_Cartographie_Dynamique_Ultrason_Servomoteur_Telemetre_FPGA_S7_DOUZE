@@ -303,7 +303,7 @@ int main()
 
         printf("Valeur Angulaire = %d.0° --> [ %d ; %d ] \t Progression = %.1f%%  Nb_NeoPixel_Led = %d \tDistance Moyenne Telemetre = %d\n", angle, angle_min,angle_max, progression, (int)(progression / 100 * 12), moyenne_distance);
 
-        IOWR_ALTERA_AVALON_SERVOMOTEUR(degres * 10);
+        IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, degres * 10);
         IOWR_ALTERA_AVALON_NEOPIXEL((int)(progression / 100 * 12)); // Assurez-vous que la valeur ne dépasse pas 12
         usleep(10000 + (40000 * (10-vitesse)));
         if (angle < angle_max && angle >= angle_min)
@@ -319,7 +319,7 @@ int main()
             {
         		// Elements manuels
                 angle = angle_min;
-                IOWR_ALTERA_AVALON_SERVOMOTEUR(angle*10); // Retour angle init
+                IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, angle*10); // Retour angle init
 				IOWR_ALTERA_AVALON_NEOPIXEL(12); // 100% Retour depot
 				printf("Valeur Angulaire = %d.%d°\tTranche de Progression = %.1f%%  \tDistance Moyenne Telemetre = %d\n", degres/10,degres%10, 100.0, moyenne_distance);
 				usleep(140000);

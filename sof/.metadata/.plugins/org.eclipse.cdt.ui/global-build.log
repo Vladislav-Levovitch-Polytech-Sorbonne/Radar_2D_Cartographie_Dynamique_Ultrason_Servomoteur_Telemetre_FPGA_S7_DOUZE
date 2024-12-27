@@ -1727,3 +1727,30 @@ Info:                                                        65438 KBytes free f
 Info: Creating UART_Neopixel_Telemetre_Servomoteur_Parametrable.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf >UART_Neopixel_Telemetre_Servomoteur_Parametrable.objdump
 [UART_Neopixel_Telemetre_Servomoteur_Parametrable build complete]
+14:52:19 **** Build of configuration Nios II for project UART_Neopixel_Telemetre_Servomoteur_Parametrable ****
+make all 
+Info: Building ../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp/
+[BSP build complete]
+[UART_Neopixel_Telemetre_Servomoteur_Parametrable build complete]
+15:07:53 **** Incremental Build of configuration Nios II for project UART_Neopixel_Telemetre_Servomoteur_Parametrable ****
+make all 
+Info: Building ../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp/
+[BSP build complete]
+Info: Compiling UART_Neopixel_Telemetre_Servomoteur_Parametrable.c to obj/default/UART_Neopixel_Telemetre_Servomoteur_Parametrable.o
+nios2-elf-gcc -xc -MP -MMD -c -I../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp//HAL/inc -I../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp/ -I../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/UART_Neopixel_Telemetre_Servomoteur_Parametrable.o UART_Neopixel_Telemetre_Servomoteur_Parametrable.c
+Info: Linking UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf
+nios2-elf-g++  -T'../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp//linker.x' -msys-crt0='../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=UART_Neopixel_Telemetre_Servomoteur_Parametrable.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf obj/default/UART_Neopixel_Telemetre_Servomoteur_Parametrable.o -lm -msys-lib=m
+nios2-elf-insert UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1735218915 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/UART_NEOPIXEL_telemetre_tournant" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/UART_NEOPIXEL_telemetre_tournant/software/UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp/../../Computer_System.sopcinfo
+Info: (UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf) 90 KBytes program size (code + initialized data).
+Info:                                                        65438 KBytes free for stack + heap.
+Info: Creating UART_Neopixel_Telemetre_Servomoteur_Parametrable.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf >UART_Neopixel_Telemetre_Servomoteur_Parametrable.objdump
+[UART_Neopixel_Telemetre_Servomoteur_Parametrable build complete]
+15:25:53 **** Incremental Build of configuration Nios II for project UART_Neopixel_Telemetre_Servomoteur_Parametrable ****
+make all 
+Info: Building ../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp/
+[BSP build complete]
+[UART_Neopixel_Telemetre_Servomoteur_Parametrable build complete]

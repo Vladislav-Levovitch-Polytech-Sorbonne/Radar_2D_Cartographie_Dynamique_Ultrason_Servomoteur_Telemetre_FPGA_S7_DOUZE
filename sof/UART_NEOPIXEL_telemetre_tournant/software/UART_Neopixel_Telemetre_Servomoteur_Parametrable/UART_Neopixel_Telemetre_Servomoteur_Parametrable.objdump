@@ -1740,7 +1740,7 @@ int main()
      9e0:	21119504 	addi	r4,r4,18004
      9e4:	00010f80 	call	10f8 <printf>
 
-        IOWR_ALTERA_AVALON_SERVOMOTEUR(degres * 10);
+        IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, degres * 10);
      9e8:	d0a72817 	ldw	r2,-25440(gp)
      9ec:	01400284 	movi	r5,10
      9f0:	1009883a 	mov	r4,r2
@@ -1839,7 +1839,7 @@ int main()
                 angle = angle_min;
      b2c:	d0a72617 	ldw	r2,-25448(gp)
      b30:	d0a72715 	stw	r2,-25444(gp)
-                IOWR_ALTERA_AVALON_SERVOMOTEUR(angle*10); // Retour angle init
+                IOWR_16DIRECT(AVALON_SERVOMOTEUR_BASE, 0, angle*10); // Retour angle init
      b34:	d0a72717 	ldw	r2,-25444(gp)
      b38:	01400284 	movi	r5,10
      b3c:	1009883a 	mov	r4,r2
