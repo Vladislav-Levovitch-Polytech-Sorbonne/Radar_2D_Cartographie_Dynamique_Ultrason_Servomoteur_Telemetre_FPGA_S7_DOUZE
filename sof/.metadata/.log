@@ -398,3 +398,21 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 
 !ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:07:32.714
 !MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/UART_NEOPIXEL_telemetre_tournant/software/UART_Neopixel_Telemetre_Servomoteur_Parametrable/UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:25:39.549
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:25:40.222
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:25:42.400
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/UART_NEOPIXEL_telemetre_tournant/software/UART_Neopixel_Telemetre_Servomoteur_Parametrable/UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:28:20.472
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:28:21.173
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:28:23.450
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/UART_NEOPIXEL_telemetre_tournant/software/UART_Neopixel_Telemetre_Servomoteur_Parametrable/UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf]

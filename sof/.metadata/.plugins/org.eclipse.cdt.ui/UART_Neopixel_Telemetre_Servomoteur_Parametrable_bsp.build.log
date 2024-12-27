@@ -1,6 +1,6 @@
-12:54:23 **** Incremental Build of configuration Nios II for project UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp ****
+13:27:59 **** Incremental Build of configuration Nios II for project UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp ****
 make all 
 [BSP build complete]
 
-12:54:24 Build Finished (took 1s.20ms)
+13:28:00 Build Finished (took 761ms)
 
