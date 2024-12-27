@@ -1,18 +1,9 @@
-17:04:01 **** Incremental Build of configuration Nios II for project UART_v0 ****
+13:03:35 **** Incremental Build of configuration Nios II for project UART_v0 ****
 make all 
 Info: Building ../UART_v0_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../UART_v0_bsp/
 [BSP build complete]
-Info: Compiling UART_Test_0.c to obj/default/UART_Test_0.o
-nios2-elf-gcc -xc -MP -MMD -c -I../UART_v0_bsp//HAL/inc -I../UART_v0_bsp/ -I../UART_v0_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/UART_Test_0.o UART_Test_0.c
-Info: Linking UART_v0.elf
-nios2-elf-g++  -T'../UART_v0_bsp//linker.x' -msys-crt0='../UART_v0_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../UART_v0_bsp/  -mcustom-fpu-cfg=60-2  -Wl,-Map=UART_v0.map   -O0 -g -Wall   -mno-hw-div -mcustom-fpu-cfg=60-2 -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o UART_v0.elf obj/default/UART_Test_0.o -lm -msys-lib=m
-nios2-elf-insert UART_v0.elf --thread_model hal --cpu_name Nios2 --qsys true --simulation_enabled false --id 0 --sidp 0xff202040 --timestamp 1735218915 --stderr_dev JTAG_UART --stdin_dev JTAG_UART --stdout_dev JTAG_UART --sopc_system_name Computer_System --quartus_project_dir "C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART" --sopcinfo C:/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0_bsp/../../Computer_System.sopcinfo
-Info: (UART_v0.elf) 64 KBytes program size (code + initialized data).
-Info:               65464 KBytes free for stack + heap.
-Info: Creating UART_v0.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source UART_v0.elf >UART_v0.objdump
 [UART_v0 build complete]
 
-17:04:03 Build Finished (took 2s.147ms)
+13:03:36 Build Finished (took 1s.80ms)
 

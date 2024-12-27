@@ -213,3 +213,188 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 
 !ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:04:06.762
 !MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:18:01.795
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:18:02.541
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:18:05.199
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:21:42.764
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:21:43.507
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:21:45.883
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:22:49.687
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:22:50.481
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:22:53.038
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:23:10.812
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:23:11.652
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:23:14.328
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:45:56.585
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:45:57.558
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:46:00.336
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+!SESSION 2024-12-26 17:52:55.048 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-12-26 17:53:04.132
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-12-26 17:53:24.946
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:53:49.030
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 17:53:51.765
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 18:08:23.101
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 18:08:23.797
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 18:08:26.096
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 18:13:44.630
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 18:13:45.325
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-26 18:13:47.620
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-27 12:33:23.869
+!MESSAGE Indexed 'UART_Neopixel_Telemetre_Servomoteur_Parametrable_bsp' (85 sources, 66 headers) in 2,54 sec: 1 447 declarations; 3 601 references; 116 unresolved inclusions; 6 syntax errors; 212 unresolved names (4 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-27 12:33:28.410
+!MESSAGE Indexed 'UART_Neopixel_Telemetre_Servomoteur_Parametrable' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 12:40:03.094
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 12:40:04.033
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 12:40:06.526
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 12:54:38.430
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 12:54:39.126
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 12:54:41.361
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 12:59:39.201
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 12:59:39.886
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 12:59:42.149
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:00:43.761
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:00:44.438
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:00:46.672
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:03:36.617
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:03:37.339
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:03:39.580
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/TEST_UART/software/UART_v0/UART_v0.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:04:19.053
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:04:19.762
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:04:22.039
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/UART_NEOPIXEL_telemetre_tournant/software/UART_Neopixel_Telemetre_Servomoteur_Parametrable/UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:05:16.011
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:05:16.732
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:05:18.993
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/UART_NEOPIXEL_telemetre_tournant/software/UART_Neopixel_Telemetre_Servomoteur_Parametrable/UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:05:58.708
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:05:59.389
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:06:01.655
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/UART_NEOPIXEL_telemetre_tournant/software/UART_Neopixel_Telemetre_Servomoteur_Parametrable/UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:07:29.756
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:07:30.439
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xff202040 --id=0x0 --timestamp=1735218915]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-27 13:07:32.714
+!MESSAGE Executing: [C:/intelfpga_lite/18.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xff202040 --id=0x0 --timestamp=1735218915 /cygdrive/c/Users/vladi/Desktop/Elec/Architecture_SE/Radar_2D_Vlad/sof/UART_NEOPIXEL_telemetre_tournant/software/UART_Neopixel_Telemetre_Servomoteur_Parametrable/UART_Neopixel_Telemetre_Servomoteur_Parametrable.elf]

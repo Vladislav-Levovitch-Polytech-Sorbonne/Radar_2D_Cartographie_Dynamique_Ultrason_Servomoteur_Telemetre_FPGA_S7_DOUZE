@@ -4,54 +4,96 @@
  */
 
 #include <stdio.h>
-
 #include "system.h"
 #include "io.h"
 #include "unistd.h"
 
-#define UART_BASE 0x4000000  // Adresse de base de ton UART
+#define UART_BASE 0x4000000
+
+int delay = 1000;
+int angle_min = 0;
+int angle_max = 180;
+int angle = 0;
+int vitesse = 5;
 
 void send_ascii(int ascii_char)
 {
-    // Charger la donnée ASCII (offset 0x4)
-    IOWR_32DIRECT(UART_BASE, 0x4, ascii_char);  // Envoie le caractère ASCII à transmettre
-
-    // Charger le signal "Load" (offset 0x0)
-    IOWR_32DIRECT(UART_BASE, 0x0, 1);  // Met Load à 1 pour commencer la transmission
-    usleep(1000);  // Petit délai pour éviter les collisions
-
-    // Libérer le signal "Load" (offset 0x0)
-    IOWR_32DIRECT(UART_BASE, 0x0, 0);  // Remet Load à 0 pour signaler la fin de l'écriture
+    IOWR_32DIRECT(UART_BASE, 0x4, ascii_char);
+    IOWR_32DIRECT(UART_BASE, 0x0, 1);
+    usleep(delay);
+    IOWR_32DIRECT(UART_BASE, 0x0, 0);
 }
 
-void send_word_with_count(const char *word, int count)
+void send_word_with_count(const char *word, int angle)
 {
-    // Créer un tampon pour construire le mot + compteur
-    char buffer[100];  // Tampon suffisant pour contenir le mot + le compteur
-    snprintf(buffer, sizeof(buffer), "%s %d", word, count);  // Construire la chaîne avec le mot et le compteur
+    char buffer[100];
+    snprintf(buffer, sizeof(buffer), "%s %d°   [%d ; %d]  Vitesse: %d", word, angle, angle_min, angle_max, vitesse);
 
-    // Envoie chaque caractère du mot (y compris le compteur)
     for (int i = 0; buffer[i] != '\0'; i++)
     {
-        send_ascii(buffer[i]);  // Envoie chaque caractère
+        send_ascii(buffer[i]);
     }
     usleep(1000);
-    // Envoie le retour à la ligne (code ASCII 0x0D)
     send_ascii(0x0D);
+}
+
+int RD_Ascii()
+{
+    IOWR_32DIRECT(UART_BASE, 0x0, 0);
+    usleep(1000);
+    return IORD_32DIRECT(UART_BASE, 0x8);
+}
+
+void Maj_Affichage()
+{
+    int received_char = RD_Ascii();		// Lecture instruction a la volee
+
+    // Maj Vitesse
+    if (received_char >= '0' && received_char <= '9')
+    {
+        vitesse = received_char - '0';
+        if (vitesse < 0) vitesse = 0;
+        if (vitesse > 9) vitesse = 9;
+    }
+
+    // Maj Angle_min
+    else if (received_char >= 'a' && received_char <= 'z')
+    {
+    	angle_min = (received_char - 'a') * 10;
+    }
+    // Maj Angle_max
+    else if (received_char >= 'A' && received_char <= 'Z')
+    {
+    	angle_max = (received_char - 'A') * 10;
+    }
+
+    //Check up borne
+    if (angle_min > angle_max)
+    {
+        int temp  = angle_min;
+        angle_min = angle_max;
+        angle_max = temp;
+    }
 }
 
 int main()
 {
-    const char *word = "VLADIslav";  // Mot à envoyer
-    int count = 1;  // Initialisation du compteur
+    const char *word = "VLADIslav";
 
-    // Boucle infinie pour envoyer plusieurs fois le mot avec le compteur
     while (1)
     {
-        send_word_with_count(word, count);  // Envoie le mot + compteur
-        count++;  // Incrémente le compteur
+        Maj_Affichage();
+        send_word_with_count(word, angle);
+        usleep(10000 + (40000 * (10-vitesse)));
+        if (angle < angle_max)
+            {
+                angle ++;
+            }
+        else
+            {
+                angle = angle_min;
+            }
     }
-
     return 0;
 }
 

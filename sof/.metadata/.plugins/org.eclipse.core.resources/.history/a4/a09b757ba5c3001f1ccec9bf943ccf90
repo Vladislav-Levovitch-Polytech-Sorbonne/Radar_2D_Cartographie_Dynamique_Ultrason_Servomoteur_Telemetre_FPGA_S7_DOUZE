@@ -1,0 +1,68 @@
+/*
+ * Vlad 2024.12.26 et gtp debug et com
+ *
+ */
+
+#include <stdio.h>
+#include "system.h"
+#include "io.h"
+#include "unistd.h"
+
+#define UART_BASE 0x4000000
+
+int
+
+void send_ascii(int ascii_char)
+{
+    // Charger la donnée ASCII (offset 0x4)
+    IOWR_32DIRECT(UART_BASE, 0x4, ascii_char);
+    IOWR_32DIRECT(UART_BASE, 0x0, 1);
+    usleep(1000);
+
+    IOWR_32DIRECT(UART_BASE, 0x0, 0);
+}
+
+void send_word_with_count(const char *word, int count)
+{
+    // Creation d un tampon pour construire le mot + nombre
+    char buffer[100];
+    snprintf(buffer, sizeof(buffer), "%s %d", word, count);
+
+    for (int i = 0; buffer[i] != '\0'; i++)
+    {
+        send_ascii(buffer[i]);
+    }
+    usleep(1000);
+
+    send_ascii(0x0D); // Retour a la ligne ( code ASCii 0x0D )
+}
+
+int read_ascii()
+{
+	// Libérer le signal "Load" (offset 0x0)
+	IOWR_32DIRECT(UART_BASE, 0x0, 0);  // Remet Load à 0 pour signaler la fin de l'écriture
+	usleep(1000);
+
+    // Charger le signal "Load" (offset 0x0)
+    int returne = IORD_32DIRECT(UART_BASE, 0x8);  // Met Load à 1 pour commencer la transmission
+    usleep(1000);  // Petit délai pour éviter les collisions
+
+    return returne;
+}
+
+int main()
+{
+    const char *word = "VLADIslav";
+    int count = 1;
+
+    while (1)
+    {
+        //send_word_with_count(word, count);  // Envoie le mot + compteur
+        //count++;  // Incrémente le compteur
+
+    	printf ("%d\n", read_ascii());
+    }
+
+    return 0;
+}
+

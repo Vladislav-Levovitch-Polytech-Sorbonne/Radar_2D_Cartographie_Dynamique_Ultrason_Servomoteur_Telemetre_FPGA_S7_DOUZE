@@ -1,0 +1,113 @@
+/*
+ * Vlad 2024.12.26 et gtp debug et com
+ *
+ */
+
+#include <stdio.h>
+#include "system.h"
+#include "io.h"
+#include "unistd.h"
+
+#define UART_BASE 0x4000000
+
+int delay = 1000;
+int min_angle = 0;
+int max_angle = 180;
+int angle = 0;
+int vitesse = 5;
+
+void send_ascii(int ascii_char)
+{
+    IOWR_32DIRECT(UART_BASE, 0x4, ascii_char);
+    IOWR_32DIRECT(UART_BASE, 0x0, 1);
+    usleep(delay);
+    IOWR_32DIRECT(UART_BASE, 0x0, 0);
+}
+
+void send_word_with_count(const char *word, int angle, int count)
+{
+    char buffer[100];
+    snprintf(buffer, sizeof(buffer), "%s %d [%d; %d] vitesse: %d", word, count, min_angle, max_angle, vitesse);
+
+    for (int i = 0; buffer[i] != '\0'; i++)
+    {
+        send_ascii(buffer[i]);
+    }
+    usleep(1000);
+    send_ascii(0x0D);
+}
+
+int read_ascii()
+{
+    IOWR_32DIRECT(UART_BASE, 0x0, 0);
+    usleep(1000);
+    return IORD_32DIRECT(UART_BASE, 0x8);
+}
+
+void update_speed_and_angle()
+{
+    int received_char = read_ascii();
+
+    if (received_char >= '0' && received_char <= '9')
+    {
+        vitesse = received_char - '0';
+        if (vitesse < 0) vitesse = 0;
+        if (vitesse > 9) vitesse = 9;
+    }
+    else if (received_char >= 'a' && received_char <= 'z')
+    {
+        min_angle = (received_char - 'a') * 10;
+    }
+    else if (received_char >= 'A' && received_char <= 'Z')
+    {
+        max_angle = (received_char - 'A') * 10;
+    }
+
+    if (min_angle > max_angle)
+    {
+        int temp = min_angle;
+        min_angle = max_angle;
+        max_angle = temp;
+    }
+}
+
+void adjust_angles()
+{
+    if (angle < max_angle)
+    {
+        angle++;
+    } else
+    {
+        angle = min_angle;
+    }
+}
+
+int main()
+{
+    const char *word = "VLADIslav";
+    int count = 0;
+
+    while (1) {
+        update_speed_and_angle();
+
+        if (count % 100 == 0)
+        {
+
+        }
+        send_word_with_count(word, angle, count);
+        usleep(10000 + (20000 * vitesse));
+        if (angle < max_angle)
+            {
+                angle++;
+            }
+        else
+            {
+                angle = min_angle;
+            }
+
+        count++;
+    }
+
+    return 0;
+}
+

@@ -1,0 +1,94 @@
+/*
+ * Vlad 2024.12.26 et gtp debug et com
+ *
+ */
+
+#include <stdio.h>
+#include "system.h"
+#include "io.h"
+#include "unistd.h"
+
+#define UART_BASE 0x4000000
+
+int delay = 1000;
+int min_speed = 0;
+int max_speed = 5;
+int angle = 0;
+int vitesse = 5;
+
+void send_ascii(int ascii_char)
+{
+    IOWR_32DIRECT(UART_BASE, 0x4, ascii_char);
+    IOWR_32DIRECT(UART_BASE, 0x0, 1);
+    usleep(delay);
+    IOWR_32DIRECT(UART_BASE, 0x0, 0);
+}
+
+void send_word_with_count(const char *word, int angle)
+{
+    char buffer[100];
+    snprintf(buffer, sizeof(buffer), "%s %d", word, angle);
+
+    for (int i = 0; buffer[i] != '\0'; i++) {
+        send_ascii(buffer[i]);
+    }
+
+    send_ascii(0x0D);
+}
+
+int read_ascii()
+{
+    IOWR_32DIRECT(UART_BASE, 0x0, 0);
+    usleep(1000);
+    return IORD_32DIRECT(UART_BASE, 0x8);
+}
+
+void update_speed()
+{
+    int received_char = read_ascii();
+
+    if (received_char >= '0' && received_char <= '9') {
+        vitesse = received_char - '0';
+
+        if (vitesse < min_speed) {
+            vitesse = min_speed;
+        } else if (vitesse > max_speed) {
+            vitesse = max_speed;
+        }
+    }
+}
+
+void adjust_angles()
+{
+    if (angle < 180) {
+        angle += 10;
+    } else {
+        angle = 180;
+    }
+}
+
+int main()
+{
+    const char *word = "VLADIslav";
+    int count = 1;
+
+    while (1) {
+        update_speed();
+
+        if (count % 100 == 0) {
+            printf("\nREADY to receive new data\n");
+            printf("VLADIslav %d [%d; %d] vitesse: %d\n", count, min_speed, max_speed, vitesse);
+
+            int interval = 1000 + (2000 * vitesse);
+            usleep(interval);
+        }
+
+        send_word_with_count(word, angle);
+
+        adjust_angles();
+
+        count++;
+    }
+
+    return 0;
+}
